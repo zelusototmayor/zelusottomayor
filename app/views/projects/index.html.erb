@@ -1,0 +1,28 @@
+<div class="portfolio-container">
+  <header class="portfolio-header">
+    <h1>All Projects</h1>
+    <%= link_to "← Back to Portfolio", root_path, class: "back-link" %>
+  </header>
+
+  <main class="projects-section">
+    <% if @projects.any? %>
+      <div class="projects-grid">
+        <% @projects.each do |project| %>
+          <div class="project-card">
+            <h3><%= link_to project.name, project_path(project), class: "project-title" %></h3>
+            <p class="project-description"><%= project.description %></p>
+            <% if project.link.present? %>
+              <a href="<%= project.link %>" target="_blank" rel="noopener" class="project-link">
+                View Project →
+              </a>
+            <% end %>
+          </div>
+        <% end %>
+      </div>
+    <% else %>
+      <div class="no-projects">
+        <p>No projects available.</p>
+      </div>
+    <% end %>
+  </main>
+</div>

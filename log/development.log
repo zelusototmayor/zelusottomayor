@@ -1,0 +1,56 @@
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY) /*application='ZelusottomayorPortfolio'*/[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL) /*application='ZelusottomayorPortfolio'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='ZelusottomayorPortfolio'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.1ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ('environment', 'development', '2025-09-10 18:15:57.543745', '2025-09-10 18:15:57.543747') RETURNING "key" /*application='ZelusottomayorPortfolio'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='ZelusottomayorPortfolio'*/[0m
+Migrating to CreateProjects (20250910180631)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='ZelusottomayorPortfolio'*/[0m
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE TABLE "projects" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "description" text, "link" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL) /*application='ZelusottomayorPortfolio'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20250910180631') RETURNING "version" /*application='ZelusottomayorPortfolio'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='ZelusottomayorPortfolio'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='ZelusottomayorPortfolio'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='ZelusottomayorPortfolio'*/[0m
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."name" = 'E-commerce Website' LIMIT 1 /*application='ZelusottomayorPortfolio'*/[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='ZelusottomayorPortfolio'*/[0m
+  [1m[36mProject Create (0.1ms)[0m  [1m[32mINSERT INTO "projects" ("name", "description", "link", "created_at", "updated_at") VALUES ('E-commerce Website', 'A full-stack e-commerce platform built with Rails and React. Features include user authentication, product catalog, shopping cart, and payment processing.', 'https://github.com/example/ecommerce-app', '2025-09-10 18:16:17.724054', '2025-09-10 18:16:17.724054') RETURNING "id" /*application='ZelusottomayorPortfolio'*/[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='ZelusottomayorPortfolio'*/[0m
+  [1m[36mProject Load (0.0ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."name" = 'Task Management API' LIMIT 1 /*application='ZelusottomayorPortfolio'*/[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='ZelusottomayorPortfolio'*/[0m
+  [1m[36mProject Create (0.7ms)[0m  [1m[32mINSERT INTO "projects" ("name", "description", "link", "created_at", "updated_at") VALUES ('Task Management API', 'RESTful API for task management with user authentication, CRUD operations, and real-time updates using WebSockets.', 'https://github.com/example/task-api', '2025-09-10 18:16:17.726747', '2025-09-10 18:16:17.726747') RETURNING "id" /*application='ZelusottomayorPortfolio'*/[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='ZelusottomayorPortfolio'*/[0m
+  [1m[36mProject Load (0.0ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."name" = 'Weather Dashboard' LIMIT 1 /*application='ZelusottomayorPortfolio'*/[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='ZelusottomayorPortfolio'*/[0m
+  [1m[36mProject Create (0.8ms)[0m  [1m[32mINSERT INTO "projects" ("name", "description", "link", "created_at", "updated_at") VALUES ('Weather Dashboard', 'A responsive weather dashboard that displays current conditions and forecasts using external weather APIs. Built with modern CSS Grid and JavaScript.', 'https://github.com/example/weather-dashboard', '2025-09-10 18:16:17.729907', '2025-09-10 18:16:17.729907') RETURNING "id" /*application='ZelusottomayorPortfolio'*/[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='ZelusottomayorPortfolio'*/[0m
+  [1m[36mProject Load (0.0ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."name" = 'Blog Platform' LIMIT 1 /*application='ZelusottomayorPortfolio'*/[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='ZelusottomayorPortfolio'*/[0m
+  [1m[36mProject Create (0.7ms)[0m  [1m[32mINSERT INTO "projects" ("name", "description", "link", "created_at", "updated_at") VALUES ('Blog Platform', 'A multi-user blog platform with markdown support, comment system, and admin panel. Includes SEO optimization and responsive design.', 'https://github.com/example/blog-platform', '2025-09-10 18:16:17.732705', '2025-09-10 18:16:17.732705') RETURNING "id" /*application='ZelusottomayorPortfolio'*/[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='ZelusottomayorPortfolio'*/[0m
+Started GET "/" for ::1 at 2025-09-10 19:18:42 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='ZelusottomayorPortfolio'*/[0m
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mProject Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "projects" LIMIT 1 /*action='index',application='ZelusottomayorPortfolio',controller='home'*/[0m
+  ↳ app/views/home/index.html.erb:10
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT "projects".* FROM "projects" /*action='index',application='ZelusottomayorPortfolio',controller='home'*/[0m
+  ↳ app/views/home/index.html.erb:12
+  Rendered home/index.html.erb within layouts/application (Duration: 20.9ms | GC: 4.4ms)
+  Rendered layout layouts/application.html.erb (Duration: 57.0ms | GC: 25.9ms)
+Completed 200 OK in 257ms (Views: 59.0ms | ActiveRecord: 5.1ms (2 queries, 0 cached) | GC: 28.8ms)
+
+
+Started GET "/assets/application-1ece75a9.css" for ::1 at 2025-09-10 19:18:42 +0100
+Started GET "/assets/turbo.min-3a2e143f.js" for ::1 at 2025-09-10 19:18:42 +0100
+Started GET "/projects/3" for ::1 at 2025-09-10 19:26:12 +0100
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mProject Load (31.4ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = 3 LIMIT 1 /*action='show',application='ZelusottomayorPortfolio',controller='projects'*/[0m
+  ↳ app/controllers/projects_controller.rb:7:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering projects/show.html.erb within layouts/application
+  Rendered projects/show.html.erb within layouts/application (Duration: 16.6ms | GC: 1.9ms)
+  Rendered layout layouts/application.html.erb (Duration: 35.8ms | GC: 1.9ms)
+Completed 200 OK in 215ms (Views: 38.1ms | ActiveRecord: 31.4ms (1 query, 0 cached) | GC: 1.9ms)
+
+

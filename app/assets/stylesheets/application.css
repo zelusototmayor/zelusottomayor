@@ -1,0 +1,217 @@
+/*
+ * This is a manifest file that'll be compiled into application.css.
+ *
+ * With Propshaft, assets are served efficiently without preprocessing steps. You can still include
+ * application-wide styles in this file, but keep in mind that CSS precedence will follow the standard
+ * cascading order, meaning styles declared later in the document or manifest will override earlier ones,
+ * depending on specificity.
+ *
+ * Consider organizing styles into separate files for maintainability.
+ */
+
+/* Base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f8f9fa;
+}
+
+/* Portfolio container */
+.portfolio-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+/* Header styles */
+.portfolio-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.portfolio-header h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: #2c3e50;
+}
+
+.portfolio-header p {
+  font-size: 1.2rem;
+  color: #6c757d;
+}
+
+/* Navigation */
+.project-nav {
+  margin-bottom: 1rem;
+}
+
+.back-link {
+  color: #007bff;
+  text-decoration: none;
+  margin-right: 1rem;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.back-link:hover {
+  color: #0056b3;
+  text-decoration: underline;
+}
+
+/* Projects section */
+.projects-section h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: #2c3e50;
+  text-align: center;
+}
+
+/* Projects grid */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+/* Project cards */
+.project-card {
+  background: white;
+  border-radius: 8px;
+  padding: 2rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+}
+
+.project-title {
+  color: #2c3e50;
+  text-decoration: none;
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  display: block;
+  transition: color 0.2s ease;
+}
+
+.project-title:hover {
+  color: #007bff;
+}
+
+.project-description {
+  color: #6c757d;
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
+
+.project-link {
+  color: #007bff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.project-link:hover {
+  color: #0056b3;
+  text-decoration: underline;
+}
+
+.primary-link {
+  background: #007bff;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  display: inline-block;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background-color 0.2s ease;
+}
+
+.primary-link:hover {
+  background: #0056b3;
+  color: white;
+  text-decoration: none;
+}
+
+/* Project details page */
+.project-details {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.project-content {
+  background: white;
+  border-radius: 8px;
+  padding: 2rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.project-content h2 {
+  color: #2c3e50;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
+.project-links {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+/* No projects state */
+.no-projects {
+  text-align: center;
+  padding: 3rem;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.no-projects p {
+  font-size: 1.1rem;
+  color: #6c757d;
+  margin-bottom: 1rem;
+}
+
+.projects-link {
+  color: #007bff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.projects-link:hover {
+  color: #0056b3;
+  text-decoration: underline;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .portfolio-container {
+    padding: 1rem;
+  }
+  
+  .portfolio-header h1 {
+    font-size: 2rem;
+  }
+  
+  .projects-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .project-card {
+    padding: 1.5rem;
+  }
+}
