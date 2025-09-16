@@ -54,3 +54,65 @@ Processing by ProjectsController#show as HTML
 Completed 200 OK in 215ms (Views: 38.1ms | ActiveRecord: 31.4ms (1 query, 0 cached) | GC: 1.9ms)
 
 
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='ZelusottomayorPortfolio'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='ZelusottomayorPortfolio'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='ZelusottomayorPortfolio'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='ZelusottomayorPortfolio'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='ZelusottomayorPortfolio'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.0ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='ZelusottomayorPortfolio'*/[0m
+  [1m[35m (0.9ms)[0m  [1m[35mDROP TABLE IF EXISTS "projects" /*application='ZelusottomayorPortfolio'*/[0m
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE TABLE "projects" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "description" text, "link" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL) /*application='ZelusottomayorPortfolio'*/[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY) /*application='ZelusottomayorPortfolio'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='ZelusottomayorPortfolio'*/[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20250910180631) /*application='ZelusottomayorPortfolio'*/[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL) /*application='ZelusottomayorPortfolio'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.0ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='ZelusottomayorPortfolio'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.1ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ('environment', 'development', '2025-09-10 18:27:40.155872', '2025-09-10 18:27:40.155873') RETURNING "key" /*application='ZelusottomayorPortfolio'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.0ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='ZelusottomayorPortfolio'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.0ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'schema_sha1' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='ZelusottomayorPortfolio'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.1ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ('schema_sha1', 'a4a7c8b33b131d860d564b662b5f6e4d199d6708', '2025-09-10 18:27:40.157603', '2025-09-10 18:27:40.157604') RETURNING "key" /*application='ZelusottomayorPortfolio'*/[0m
+  [1m[35m (0.7ms)[0m  [1m[35mDROP TABLE IF EXISTS "projects" /*application='ZelusottomayorPortfolio'*/[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "projects" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "description" text, "link" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL) /*application='ZelusottomayorPortfolio'*/[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY) /*application='ZelusottomayorPortfolio'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='ZelusottomayorPortfolio'*/[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20250910180631) /*application='ZelusottomayorPortfolio'*/[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL) /*application='ZelusottomayorPortfolio'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.0ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='ZelusottomayorPortfolio'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.1ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ('environment', 'development', '2025-09-10 18:27:40.165035', '2025-09-10 18:27:40.165036') RETURNING "key" /*application='ZelusottomayorPortfolio'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.0ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='ZelusottomayorPortfolio'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Update (0.1ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = 'test', "updated_at" = '2025-09-10 18:27:40.166490' WHERE "ar_internal_metadata"."key" = 'environment' /*application='ZelusottomayorPortfolio'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.0ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'schema_sha1' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='ZelusottomayorPortfolio'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ('schema_sha1', 'a4a7c8b33b131d860d564b662b5f6e4d199d6708', '2025-09-10 18:27:40.167967', '2025-09-10 18:27:40.167968') RETURNING "key" /*application='ZelusottomayorPortfolio'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='ZelusottomayorPortfolio'*/[0m
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."name" = 'Floating Clock' LIMIT 1 /*application='ZelusottomayorPortfolio'*/[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='ZelusottomayorPortfolio'*/[0m
+  [1m[36mProject Create (0.1ms)[0m  [1m[32mINSERT INTO "projects" ("name", "description", "link", "created_at", "updated_at") VALUES ('Floating Clock', 'An elegant floating clock application with customizable display options and smooth animations. Features real-time updates and responsive design.', 'https://floatingclock.zelusottomayor.com', '2025-09-10 18:27:40.223954', '2025-09-10 18:27:40.223954') RETURNING "id" /*application='ZelusottomayorPortfolio'*/[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='ZelusottomayorPortfolio'*/[0m
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."name" = 'Image Scraping Tool' LIMIT 1 /*application='ZelusottomayorPortfolio'*/[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='ZelusottomayorPortfolio'*/[0m
+  [1m[36mProject Create (0.9ms)[0m  [1m[32mINSERT INTO "projects" ("name", "description", "link", "created_at", "updated_at") VALUES ('Image Scraping Tool', 'A powerful web scraping tool for extracting and downloading images from websites. Built with modern web technologies and optimized for performance.', 'https://imagescrapingtool.zelusottomayor.com', '2025-09-10 18:27:40.229161', '2025-09-10 18:27:40.229161') RETURNING "id" /*application='ZelusottomayorPortfolio'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='ZelusottomayorPortfolio'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='ZelusottomayorPortfolio'*/[0m
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."name" = 'Floating Clock' LIMIT 1 /*application='ZelusottomayorPortfolio'*/[0m
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."name" = 'Image Scraping Tool' LIMIT 1 /*application='ZelusottomayorPortfolio'*/[0m
+Started GET "/" for ::1 at 2025-09-11 20:21:24 +0100
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mProject Exists? (30.3ms)[0m  [1m[34mSELECT 1 AS one FROM "projects" LIMIT 1 /*action='index',application='ZelusottomayorPortfolio',controller='home'*/[0m
+  ↳ app/views/home/index.html.erb:10
+  [1m[36mProject Load (8.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects" /*action='index',application='ZelusottomayorPortfolio',controller='home'*/[0m
+  ↳ app/views/home/index.html.erb:12
+  Rendered home/index.html.erb within layouts/application (Duration: 94.8ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 123.2ms | GC: 0.0ms)
+Completed 200 OK in 224ms (Views: 99.5ms | ActiveRecord: 38.6ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/assets/application-1ece75a9.css" for ::1 at 2025-09-11 20:21:25 +0100
+Started GET "/assets/stimulus-loading-1fc53fe7.js" for ::1 at 2025-09-11 20:21:25 +0100
+Started GET "/assets/stimulus.min-4b1e420e.js" for ::1 at 2025-09-11 20:21:25 +0100
+Started GET "/assets/controllers/application-3affb389.js" for ::1 at 2025-09-11 20:21:25 +0100
+Started GET "/assets/turbo.min-3a2e143f.js" for ::1 at 2025-09-11 20:21:25 +0100
+Started GET "/assets/application-bfcdf840.js" for ::1 at 2025-09-11 20:21:25 +0100
+Started GET "/assets/controllers/hello_controller-708796bd.js" for ::1 at 2025-09-11 20:21:25 +0100
+Started GET "/assets/controllers/index-ee64e1f1.js" for ::1 at 2025-09-11 20:21:25 +0100
