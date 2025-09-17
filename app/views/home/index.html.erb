@@ -1,31 +1,44 @@
-<div class="portfolio-container">
-  <header class="portfolio-header">
-    <h1>My Portfolio</h1>
-    <p>Welcome to my project showcase</p>
-  </header>
+<main class="min-h-screen">
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <div class="hero-content">
+      <h1 class="hero-title">
+        Building <span class="hero-highlight">experiences</span><br>
+        for myself, for you to enjoy
+      </h1>
+      <p class="hero-subtitle">Welcome to my project showcase</p>
+    </div>
+  </section>
 
-  <main class="projects-section">
-    <h2>Projects</h2>
-    
-    <% if @projects.any? %>
-      <div class="projects-grid">
-        <% @projects.each do |project| %>
-          <div class="project-card">
-            <h3><%= link_to project.name, project_path(project), class: "project-title" %></h3>
-            <p class="project-description"><%= project.description %></p>
-            <% if project.link.present? %>
-              <a href="<%= project.link %>" target="_blank" rel="noopener" class="project-link">
-                View Project →
-              </a>
-            <% end %>
-          </div>
-        <% end %>
-      </div>
-    <% else %>
-      <div class="no-projects">
-        <p>No projects yet. Check back soon!</p>
-        <%= link_to "View All Projects", projects_path, class: "projects-link" %>
-      </div>
-    <% end %>
-  </main>
-</div>
+  <!-- Projects Section -->
+  <section class="projects-section">
+    <div class="projects-container">
+      <% if @projects.any? %>
+        <div class="projects-grid">
+          <% @projects.each do |project| %>
+            <div class="project-folder">
+              <div class="project-icon">📁</div>
+              <div class="project-content">
+                <h3 class="project-title">
+                  <%= link_to project.name, project_path(project), class: "project-link" %>
+                </h3>
+                <p class="project-description"><%= project.description %></p>
+                <% if project.link.present? %>
+                  <a href="<%= project.link %>" target="_blank" rel="noopener" class="external-link">
+                    View Project <span class="external-icon">↗</span>
+                  </a>
+                <% end %>
+              </div>
+            </div>
+          <% end %>
+        </div>
+      <% else %>
+        <div class="no-projects">
+          <div class="empty-folder">📁</div>
+          <p>No projects yet. Check back soon!</p>
+          <%= link_to "View All Projects", projects_path, class: "projects-link" %>
+        </div>
+      <% end %>
+    </div>
+  </section>
+</main>
