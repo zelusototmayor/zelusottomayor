@@ -20,6 +20,10 @@
 !/log/.keep
 !/tmp/.keep
 
+# Ignore cache and compiled assets that will be rebuilt
+/tmp/cache/*
+/public/assets/*
+
 # Ignore pidfiles, but keep the directory.
 /tmp/pids/*
 !/tmp/pids/.keep
