@@ -17,14 +17,20 @@
         <div class="projects-grid">
           <% @projects.each do |project| %>
             <div class="project-folder">
-              <div class="project-icon">📁</div>
+              <div class="project-icon">
+                <% if project[:icon].present? %>
+                  <%= image_tag project[:icon], alt: project[:name], class: "project-icon-img" %>
+                <% else %>
+                  📁
+                <% end %>
+              </div>
               <div class="project-content">
                 <h3 class="project-title">
-                  <%= link_to project.name, project_path(project), class: "project-link" %>
+                  <%= project[:name] %>
                 </h3>
-                <p class="project-description"><%= project.description %></p>
-                <% if project.link.present? %>
-                  <a href="<%= project.link %>" target="_blank" rel="noopener" class="external-link">
+                <p class="project-description"><%= project[:description] %></p>
+                <% if project[:link].present? %>
+                  <a href="<%= project[:link] %>" target="_blank" rel="noopener" class="external-link">
                     View Project <span class="external-icon">↗</span>
                   </a>
                 <% end %>

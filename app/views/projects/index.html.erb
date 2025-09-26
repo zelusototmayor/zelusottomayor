@@ -9,10 +9,15 @@
       <div class="projects-grid">
         <% @projects.each do |project| %>
           <div class="project-card">
-            <h3><%= link_to project.name, project_path(project), class: "project-title" %></h3>
-            <p class="project-description"><%= project.description %></p>
-            <% if project.link.present? %>
-              <a href="<%= project.link %>" target="_blank" rel="noopener" class="project-link">
+            <% if project[:icon].present? %>
+              <div class="project-card-icon">
+                <%= image_tag project[:icon], alt: project[:name], class: "project-card-icon-img" %>
+              </div>
+            <% end %>
+            <h3><%= project[:name] %></h3>
+            <p class="project-description"><%= project[:description] %></p>
+            <% if project[:link].present? %>
+              <a href="<%= project[:link] %>" target="_blank" rel="noopener" class="project-link">
                 View Project →
               </a>
             <% end %>
