@@ -17,7 +17,7 @@ end
 
 Project.find_or_create_by!(name: "UXPilot") do |project|
   project.description = "An AI-powered UX analysis tool that analyzes screen recordings to detect user interaction friction points and provides actionable improvement suggestions. Perfect for startups and product teams who need quick UX insights."
-  project.link = "https://uxauditapp.zelusottomayor.com"
+  project.link = "https://uxauditapp.com"
   project.icon = "ux-audit-app.png"
 end
 

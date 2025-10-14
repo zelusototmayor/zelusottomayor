@@ -10,7 +10,7 @@ class ProjectsController < ApplicationController
       {
         name: "UXPilot",
         description: "An AI-powered UX analysis tool that analyzes screen recordings to detect user interaction friction points and provides actionable improvement suggestions. Perfect for startups and product teams who need quick UX insights.",
-        link: "https://uxauditapp.zelusottomayor.com",
+        link: "https://uxauditapp.com",
         icon: "ux-audit-app.png"
       },
       {
