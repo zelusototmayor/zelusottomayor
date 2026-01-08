@@ -1,7 +1,7 @@
 class ContactSubmission < ApplicationRecord
   # Enums
   enum :status, {
-    new: 0,
+    pending: 0,
     contacted: 1,
     qualified: 2,
     converted: 3,
@@ -15,7 +15,7 @@ class ContactSubmission < ApplicationRecord
 
   # Scopes
   scope :recent, -> { order(created_at: :desc) }
-  scope :unread, -> { where(status: :new) }
+  scope :unread, -> { where(status: :pending) }
   scope :active, -> { where.not(status: :archived) }
 
   # Instance methods
