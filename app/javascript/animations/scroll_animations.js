@@ -11,10 +11,14 @@ import { gsap, ScrollTrigger } from './gsap_init';
 export function initScrollAnimations() {
   // Check if user prefers reduced motion
   const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const root = document.documentElement;
 
   if (prefersReducedMotion) {
+    root.classList.remove('js-animations');
     return; // Skip animations if user prefers reduced motion
   }
+
+  root.classList.add('js-animations');
 
   // Section fade-up animations
   const sections = document.querySelectorAll('.scroll-reveal, .section-padding');

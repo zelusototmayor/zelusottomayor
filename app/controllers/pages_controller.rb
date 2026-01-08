@@ -1,8 +1,8 @@
 class PagesController < ApplicationController
-  before_action :load_content_config, only: [:home, :about]
+  before_action :load_content_config, only: [:home, :work, :about]
 
   def home
-    @featured_case_studies = CaseStudy.featured.published.ordered.limit(6)
+    @featured_projects = (@config[:projects] || []).select { |project| project["featured"] }.first(6)
     @testimonials = Testimonial.featured.ordered.limit(3)
     @services = @config[:services] if @config
     @process_steps = @config[:process] if @config
@@ -10,9 +10,9 @@ class PagesController < ApplicationController
   end
 
   def work
-    @case_studies = CaseStudy.published.ordered
-    @client_projects = @case_studies.client_work
-    @product_projects = @case_studies.products
+    @projects = @config[:projects] || []
+    @client_projects = @projects.select { |project| project["type"] == "client" }
+    @product_projects = @projects.select { |project| project["type"] == "product" }
   end
 
   def about
@@ -52,6 +52,10 @@ class PagesController < ApplicationController
 
     if File.exist?(config_path.join('about.yml'))
       @config[:about] = YAML.load_file(config_path.join('about.yml'))
+    end
+
+    if File.exist?(config_path.join('projects.yml'))
+      @config[:projects] = YAML.load_file(config_path.join('projects.yml'))
     end
   rescue => e
     Rails.logger.error "Error loading content config: #{e.message}"

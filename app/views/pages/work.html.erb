@@ -1,4 +1,4 @@
-<% content_for :title, "Work & Case Studies - Zalu Sottomayor" %>
+<% content_for :title, "Work & Case Studies - Ze Lu Sottomayor" %>
 <% content_for :meta_description, "Selected projects including AI tools and automation systems. See how I build practical solutions for real problems." %>
 
 <div class="page-hero">
@@ -12,11 +12,11 @@
 
 <section class="work-section section-padding">
   <div class="container">
-    <% if @case_studies.present? && @case_studies.any? %>
+    <% if @projects.present? && @projects.any? %>
       <div class="work-tabs" data-controller="tabs">
         <div class="tabs-nav">
           <button class="tab-button active" data-action="click->tabs#show" data-category="all">
-            All (<%= @case_studies.count %>)
+            All (<%= @projects.count %>)
           </button>
           <button class="tab-button" data-action="click->tabs#show" data-category="client">
             Client Work (<%= @client_projects.count %>)
@@ -28,8 +28,8 @@
       </div>
 
       <div class="case-studies-grid">
-        <% @case_studies.each do |case_study| %>
-          <%= render 'shared/case_study_card', case_study: case_study %>
+        <% @projects.each do |project| %>
+          <%= render 'shared/project_card', project: project %>
         <% end %>
       </div>
     <% else %>

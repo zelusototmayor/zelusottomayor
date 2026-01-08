@@ -11,57 +11,60 @@
    1. CSS VARIABLES & DESIGN TOKENS
    ======================================== */
 :root {
-  /* Colors - Primary Palette */
-  --color-slate-900: #0f172a;
-  --color-slate-800: #1e293b;
-  --color-slate-700: #334155;
-  --color-slate-600: #475569;
-  --color-slate-500: #64748b;
-  --color-slate-400: #94a3b8;
-  --color-slate-300: #cbd5e1;
-  --color-slate-200: #e2e8f0;
-  --color-slate-100: #f1f5f9;
-  --color-slate-50: #f8fafc;
+  /* Colors - Professional Palette */
+  --color-ink-900: #0b1220;
+  --color-ink-800: #121a2b;
+  --color-ink-700: #1b2538;
+  --color-ink-600: #27324a;
+  --color-ink-500: #3b4863;
+  --color-ink-400: #5d6a82;
+  --color-ink-300: #8692a8;
+  --color-ink-200: #c1c8d4;
+  --color-ink-100: #e6e9ef;
+  --color-ink-50: #f5f6f9;
 
-  --color-blue-600: #2563eb;
-  --color-blue-500: #3b82f6;
-  --color-blue-400: #60a5fa;
-  --color-blue-700: #1d4ed8;
+  --color-sand-50: #fbfaf7;
+  --color-sand-100: #f4f0e8;
+  --color-sand-200: #e7dfd1;
+  --color-sand-300: #d8ccb8;
 
-  --color-green-600: #16a34a;
-  --color-green-500: #22c55e;
+  --color-gold-600: #b8893d;
+  --color-gold-500: #c8a15a;
+  --color-forest-600: #275a4e;
+  --color-forest-500: #2f6f5e;
 
-  --color-red-600: #dc2626;
-  --color-red-500: #ef4444;
-
-  /* Accent colors for bold design */
-  --color-cyan-500: #06b6d4;
-  --color-purple-600: #9333ea;
-  --color-pink-500: #ec4899;
+  --color-green-600: #2f6f5e;
+  --color-green-500: #3c826f;
+  --color-red-600: #c0392b;
+  --color-red-500: #d6453a;
 
   /* Semantic Colors */
-  --color-primary: var(--color-blue-600);
-  --color-primary-hover: var(--color-blue-700);
-  --color-text-primary: var(--color-slate-900);
-  --color-text-secondary: var(--color-slate-600);
-  --color-text-muted: var(--color-slate-500);
-  --color-background: #ffffff;
+  --color-primary: var(--color-forest-600);
+  --color-primary-hover: #214c43;
+  --color-text-primary: var(--color-ink-900);
+  --color-text-secondary: var(--color-ink-600);
+  --color-text-muted: var(--color-ink-400);
+  --color-background: var(--color-sand-50);
   --color-surface: #ffffff;
-  --color-border: var(--color-slate-200);
+  --color-border: var(--color-ink-100);
+  --color-accent: var(--color-gold-500);
 
-  /* Enhanced gradients for bold design */
-  --gradient-primary: linear-gradient(135deg, var(--color-blue-600) 0%, var(--color-blue-500) 100%);
-  --gradient-hero: linear-gradient(135deg, var(--color-blue-600) 0%, var(--color-purple-600) 100%);
-  --gradient-accent: linear-gradient(135deg, var(--color-cyan-500) 0%, var(--color-blue-500) 100%);
-  --gradient-mesh: radial-gradient(at 0% 0%, rgba(37, 99, 235, 0.1) 0px, transparent 50%),
-                   radial-gradient(at 100% 0%, rgba(147, 51, 234, 0.08) 0px, transparent 50%),
-                   radial-gradient(at 100% 100%, rgba(6, 182, 212, 0.06) 0px, transparent 50%);
-  --gradient-text: linear-gradient(135deg, var(--color-blue-600) 0%, var(--color-purple-600) 60%, var(--color-pink-500) 100%);
+  /* Gradients */
+  --gradient-primary: linear-gradient(135deg, var(--color-ink-900) 0%, var(--color-ink-700) 100%);
+  --gradient-hero: radial-gradient(circle at 20% 20%, rgba(200, 161, 90, 0.16), transparent 45%),
+                   radial-gradient(circle at 80% 0%, rgba(39, 90, 78, 0.18), transparent 45%),
+                   linear-gradient(180deg, var(--color-sand-50) 0%, var(--color-sand-100) 100%);
+  --gradient-accent: linear-gradient(135deg, var(--color-gold-500) 0%, var(--color-gold-600) 100%);
+  --gradient-mesh: radial-gradient(circle at 10% 0%, rgba(39, 90, 78, 0.08), transparent 55%),
+                   radial-gradient(circle at 90% 20%, rgba(200, 161, 90, 0.12), transparent 55%),
+                   radial-gradient(circle at 50% 100%, rgba(18, 26, 43, 0.06), transparent 60%);
+  --gradient-text: linear-gradient(120deg, var(--color-ink-900) 0%, var(--color-forest-600) 55%, var(--color-gold-500) 100%);
+  --gradient-surface: linear-gradient(180deg, #ffffff 0%, var(--color-sand-50) 100%);
 
-  /* Typography - Enhanced with custom fonts */
-  --font-display: 'Sora', sans-serif; /* Bold headlines */
-  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-  --font-mono: 'JetBrains Mono', "SF Mono", Monaco, "Cascadia Code", "Roboto Mono", Consolas, "Courier New", monospace;
+  /* Typography - Refined pairing */
+  --font-display: 'Fraunces', serif;
+  --font-sans: 'Manrope', "Helvetica Neue", Arial, sans-serif;
+  --font-mono: 'IBM Plex Mono', "SF Mono", Monaco, Consolas, "Courier New", monospace;
 
   --font-size-xs: 0.75rem;
   --font-size-sm: 0.875rem;
@@ -102,7 +105,7 @@
   --container-max-width: 1400px;
   --container-narrow: 900px;
   --container-wide: 1600px;
-  --section-padding: var(--spacing-4xl);
+  --section-padding: var(--spacing-3xl);
   --edge-padding: 1rem;
 
   /* Border Radius */
@@ -113,10 +116,10 @@
   --radius-full: 9999px;
 
   /* Shadows */
-  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
-  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
-  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+  --shadow-sm: 0 1px 2px rgba(11, 18, 32, 0.08);
+  --shadow-md: 0 8px 20px rgba(11, 18, 32, 0.08);
+  --shadow-lg: 0 18px 30px rgba(11, 18, 32, 0.12);
+  --shadow-xl: 0 25px 50px rgba(11, 18, 32, 0.16);
 
   /* Transitions */
   --transition-fast: 150ms ease;
@@ -147,6 +150,9 @@ body {
   line-height: var(--line-height-normal);
   color: var(--color-text-primary);
   background: var(--color-background);
+  background-image:
+    radial-gradient(circle at 15% -10%, rgba(200, 161, 90, 0.12), transparent 45%),
+    radial-gradient(circle at 85% 0%, rgba(39, 90, 78, 0.1), transparent 40%);
   min-height: 100vh;
   margin: 0;
   padding: 0;
@@ -208,7 +214,7 @@ li {
 }
 
 blockquote {
-  border-left: 4px solid var(--color-primary);
+  border-left: 4px solid var(--color-accent);
   padding-left: var(--spacing-lg);
   margin: var(--spacing-xl) 0;
   font-style: italic;
@@ -246,7 +252,7 @@ blockquote {
 }
 
 .bg-gradient {
-  background: var(--color-slate-50);
+  background: linear-gradient(180deg, var(--color-sand-50) 0%, var(--color-sand-100) 100%);
   width: 100%;
 }
 
@@ -317,9 +323,9 @@ section {
 .site-navigation {
   position: sticky;
   top: 0;
-  background: rgba(255, 255, 255, 0.9);
+  background: rgba(251, 250, 247, 0.95);
   backdrop-filter: blur(20px);
-  border-bottom: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-sand-200);
   z-index: 1000;
   padding: var(--spacing-xl) 0;
   transition: padding var(--transition-base), backdrop-filter var(--transition-base);
@@ -362,6 +368,7 @@ section {
   font-weight: var(--font-weight-bold);
   color: var(--color-text-primary);
   text-decoration: none;
+  font-family: var(--font-display);
 }
 
 .nav-logo:hover {
@@ -391,8 +398,8 @@ section {
 
 .nav-link:hover,
 .nav-link.active {
-  color: var(--color-primary);
-  background: var(--color-slate-100);
+  color: var(--color-text-primary);
+  background: var(--color-sand-100);
 }
 
 .mobile-menu-toggle {
@@ -416,8 +423,8 @@ section {
    5. FOOTER
    ======================================== */
 .site-footer {
-  background: var(--color-slate-900);
-  color: var(--color-slate-300);
+  background: var(--color-ink-900);
+  color: var(--color-ink-200);
   padding: var(--spacing-4xl) 0 var(--spacing-2xl);
   margin: 0;
   width: 100%;
@@ -439,7 +446,7 @@ section {
 
 .footer-tagline,
 .footer-location {
-  color: var(--color-slate-400);
+  color: var(--color-ink-300);
   font-size: var(--font-size-sm);
 }
 
@@ -460,7 +467,7 @@ section {
 }
 
 .footer-links a {
-  color: var(--color-slate-400);
+  color: var(--color-ink-300);
   transition: color var(--transition-fast);
 }
 
@@ -477,11 +484,11 @@ section {
   justify-content: space-between;
   align-items: center;
   padding-top: var(--spacing-2xl);
-  border-top: 1px solid var(--color-slate-700);
+  border-top: 1px solid var(--color-ink-700);
 }
 
 .footer-copyright {
-  color: var(--color-slate-400);
+  color: var(--color-ink-300);
   font-size: var(--font-size-sm);
   margin: 0;
 }
@@ -526,7 +533,7 @@ section {
 
 .cta-button--primary:hover {
   transform: translateY(-2px);
-  box-shadow: 0 10px 25px rgba(37, 99, 235, 0.3);
+  box-shadow: 0 10px 25px rgba(11, 18, 32, 0.25);
   color: white;
 }
 
@@ -541,8 +548,8 @@ section {
 
 .cta-button--secondary {
   background: transparent;
-  color: var(--color-primary);
-  border: 2px solid var(--color-primary);
+  color: var(--color-text-primary);
+  border: 2px solid var(--color-ink-900);
   position: relative;
   overflow: hidden;
 }
@@ -565,7 +572,7 @@ section {
 }
 
 .cta-button--secondary:hover {
-  background: var(--color-primary);
+  background: var(--color-ink-900);
   color: white;
 }
 
@@ -577,7 +584,7 @@ section {
 }
 
 .cta-button--text:hover {
-  background: var(--color-slate-100);
+  background: var(--color-sand-100);
 }
 
 .cta-button--small {
@@ -598,11 +605,11 @@ section {
    7. HERO SECTIONS
    ======================================== */
 .hero-above-fold {
-  min-height: 90vh;
+  min-height: 78vh;
   display: flex;
   align-items: center;
-  justify-content: center;
-  text-align: center;
+  justify-content: flex-start;
+  text-align: left;
   padding: var(--spacing-3xl) 0;
   width: 100%;
   margin: 0;
@@ -620,20 +627,27 @@ section {
   width: 100%;
   height: 100%;
   z-index: 0;
+  background: var(--gradient-hero);
 }
 
 .hero-headline {
-  font-size: clamp(2.5rem, 6vw, 4.5rem);
-  font-weight: var(--font-weight-bold);
+  font-size: clamp(2.75rem, 6vw, 4.75rem);
+  font-weight: var(--font-weight-extrabold);
   margin-bottom: var(--spacing-lg);
   line-height: var(--line-height-tight);
 }
 
 .hero-headline .highlight {
-  background: var(--gradient-primary);
+  background: var(--gradient-text);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+.hero-subtitle {
+  max-width: 640px;
+  color: var(--color-text-secondary);
+  margin-bottom: var(--spacing-2xl);
 }
 
 .hero-subheadline {
@@ -648,13 +662,13 @@ section {
 .hero-cta-group {
   display: flex;
   gap: var(--spacing-lg);
-  justify-content: center;
+  justify-content: flex-start;
   flex-wrap: wrap;
 }
 
 .page-hero {
   padding: var(--spacing-3xl) 0 var(--spacing-2xl);
-  text-align: center;
+  text-align: left;
   width: 100%;
   margin: 0;
 }
@@ -675,7 +689,7 @@ section {
    8. SECTION HEADERS
    ======================================== */
 .section-header {
-  text-align: center;
+  text-align: left;
   margin-bottom: var(--spacing-2xl);
 }
 
@@ -687,6 +701,7 @@ section {
 .section-subtitle {
   font-size: var(--font-size-lg);
   color: var(--color-text-secondary);
+  max-width: 680px;
 }
 
 .section-cta {
@@ -705,16 +720,16 @@ section {
   background: var(--color-surface);
   border-radius: var(--radius-lg);
   padding: var(--spacing-2xl);
-  box-shadow: var(--shadow-md);
+  box-shadow: var(--shadow-sm);
   transition: all var(--transition-base);
-  border: 1px solid var(--color-border);
+  border: 1px solid var(--color-ink-100);
 }
 
 .service-card:hover,
 .case-study-card:hover,
 .contact-method-card:hover {
-  transform: translateY(-4px);
-  box-shadow: var(--shadow-xl);
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-lg);
 }
 
 /* Service Card */
@@ -756,7 +771,7 @@ section {
   content: "✓";
   position: absolute;
   left: 0;
-  color: var(--color-green-500);
+  color: var(--color-forest-500);
   font-weight: var(--font-weight-bold);
 }
 
@@ -797,7 +812,7 @@ section {
 .case-study-type-badge {
   display: inline-block;
   padding: var(--spacing-xs) var(--spacing-md);
-  background: var(--color-slate-100);
+  background: var(--color-sand-100);
   border-radius: var(--radius-full);
   font-size: var(--font-size-xs);
   font-weight: var(--font-weight-semibold);
@@ -908,7 +923,7 @@ section {
 .package-header {
   margin-bottom: var(--spacing-lg);
   padding-bottom: var(--spacing-lg);
-  border-bottom: 2px solid var(--color-border);
+  border-bottom: 1px solid var(--color-ink-100);
 }
 
 .package-name {
@@ -946,13 +961,13 @@ section {
   content: "✓";
   position: absolute;
   left: 0;
-  color: var(--color-green-500);
+  color: var(--color-forest-500);
   font-weight: var(--font-weight-bold);
 }
 
 .package-timeline {
   padding: var(--spacing-md);
-  background: var(--color-slate-50);
+  background: var(--color-sand-50);
   border-radius: var(--radius-sm);
   margin: var(--spacing-lg) 0;
   font-size: var(--font-size-sm);
@@ -1004,7 +1019,7 @@ section {
 .process-duration {
   display: inline-block;
   padding: var(--spacing-xs) var(--spacing-md);
-  background: var(--color-slate-100);
+  background: var(--color-sand-100);
   border-radius: var(--radius-full);
   font-size: var(--font-size-sm);
   color: var(--color-text-muted);
@@ -1064,7 +1079,7 @@ section {
 .metric-value {
   font-size: var(--font-size-4xl);
   font-weight: var(--font-weight-bold);
-  color: var(--color-primary);
+  color: var(--color-text-primary);
   margin-bottom: var(--spacing-sm);
 }
 
@@ -1076,7 +1091,12 @@ section {
 .trust-strip {
   margin-top: var(--spacing-2xl);
   padding: var(--spacing-xl) 0;
-  text-align: center;
+  text-align: left;
+}
+
+.hero-above-fold .trust-strip {
+  margin-top: var(--spacing-xl);
+  padding-bottom: 0;
 }
 
 .trust-strip-title {
@@ -1090,7 +1110,7 @@ section {
 
 .trust-strip-items {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   flex-wrap: wrap;
   gap: var(--spacing-xl);
 }
@@ -1117,7 +1137,7 @@ section {
 .tab-button {
   padding: var(--spacing-md) var(--spacing-xl);
   background: var(--color-surface);
-  border: 2px solid var(--color-border);
+  border: 1px solid var(--color-ink-100);
   border-radius: var(--radius-md);
   font-weight: var(--font-weight-medium);
   color: var(--color-text-secondary);
@@ -1127,8 +1147,8 @@ section {
 
 .tab-button:hover,
 .tab-button.active {
-  background: var(--gradient-primary);
-  border-color: transparent;
+  background: var(--color-ink-900);
+  border-color: var(--color-ink-900);
   color: white;
 }
 
@@ -1184,7 +1204,7 @@ section {
 .form-select {
   width: 100%;
   padding: var(--spacing-md);
-  border: 2px solid var(--color-border);
+  border: 1px solid var(--color-ink-100);
   border-radius: var(--radius-md);
   font-family: inherit;
   font-size: var(--font-size-base);
@@ -1197,7 +1217,7 @@ section {
 .form-select:focus {
   outline: none;
   border-color: var(--color-primary);
-  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+  box-shadow: 0 0 0 3px rgba(39, 90, 78, 0.12);
 }
 
 .form-textarea {
@@ -1315,7 +1335,7 @@ section {
   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   gap: var(--spacing-2xl);
   padding: var(--spacing-2xl);
-  background: var(--color-slate-50);
+  background: var(--color-sand-100);
   border-radius: var(--radius-lg);
   margin-bottom: var(--spacing-3xl);
 }
@@ -1400,7 +1420,7 @@ section {
   content: "✓";
   position: absolute;
   left: 0;
-  color: var(--color-green-500);
+  color: var(--color-forest-500);
   font-weight: var(--font-weight-bold);
   font-size: var(--font-size-lg);
 }
@@ -1416,7 +1436,7 @@ section {
 .cta-section {
   padding: var(--spacing-4xl) 0;
   text-align: center;
-  background: var(--gradient-surface);
+  background: linear-gradient(180deg, var(--color-sand-50) 0%, var(--color-sand-100) 100%);
   backdrop-filter: blur(10px);
   width: 100%;
   margin: 0;
@@ -1454,6 +1474,29 @@ section {
 /* ========================================
    18. ABOUT PAGE
    ======================================== */
+.about-hero {
+  display: grid;
+  grid-template-columns: minmax(240px, 320px) minmax(0, 1fr);
+  gap: var(--spacing-2xl);
+  align-items: start;
+  margin-bottom: var(--spacing-2xl);
+}
+
+.about-portrait {
+  position: relative;
+  background: var(--color-sand-100);
+  border-radius: var(--radius-xl);
+  padding: var(--spacing-sm);
+  box-shadow: var(--shadow-lg);
+}
+
+.about-portrait-img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: calc(var(--radius-xl) - 6px);
+}
+
 .about-intro {
   font-size: var(--font-size-lg);
   line-height: var(--line-height-relaxed);
@@ -1508,7 +1551,7 @@ section {
 
 .about-list--inline li {
   padding: var(--spacing-sm) var(--spacing-lg);
-  background: var(--color-slate-100);
+  background: var(--color-sand-100);
   border-radius: var(--radius-full);
   margin-bottom: 0;
 }
@@ -1596,7 +1639,7 @@ section {
     top: 100%;
     left: 0;
     right: 0;
-    background: white;
+    background: var(--color-sand-50);
     flex-direction: column;
     padding: var(--spacing-xl);
     box-shadow: var(--shadow-lg);
@@ -1658,6 +1701,15 @@ section {
 
   .contact-methods {
     grid-template-columns: 1fr;
+  }
+
+  .about-hero {
+    grid-template-columns: 1fr;
+  }
+
+  .about-portrait {
+    max-width: 360px;
+    margin: 0 auto;
   }
 }
 

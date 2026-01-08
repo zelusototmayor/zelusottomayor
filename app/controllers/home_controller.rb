@@ -8,7 +8,7 @@ class HomeController < ApplicationController
         icon: "ai-talk-coach.png"
       },
       {
-        name: "UXPilot",
+        name: "UX Audit App",
         description: "An AI-powered UX analysis tool that analyzes screen recordings to detect user interaction friction points and provides actionable improvement suggestions. Perfect for startups and product teams who need quick UX insights.",
         link: "https://uxauditapp.com",
         icon: "ux-audit-app.png"
@@ -24,6 +24,12 @@ class HomeController < ApplicationController
         description: "An elegant floating clock application with customizable display options and smooth animations. Features real-time updates and responsive design.",
         link: "https://floatingclock.zelusottomayor.com",
         icon: "floating-clock.png"
+      },
+      {
+        name: "Signal Harvester",
+        description: "Find high-intent comments on Instagram and TikTok, draft replies or DMs, and turn social conversations into new customers.",
+        link: "https://signalharvester.com",
+        icon: "signal-harvester-logo.png"
       }
     ]
   end

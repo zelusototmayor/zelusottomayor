@@ -12,8 +12,8 @@ Testimonial.destroy_all
 puts "Creating case studies..."
 
 CaseStudy.create!(
-  name: "UXPilot",
-  client_name: "UXPilot",
+  name: "UX Audit App",
+  client_name: "UX Audit App",
   client_type: :product,
   tagline: "AI tool that analyzes user session recordings to find UX problems",
   slug: "uxpilot",
@@ -46,6 +46,23 @@ CaseStudy.create!(
 )
 
 CaseStudy.create!(
+  name: "Signal Harvester",
+  client_name: "Signal Harvester",
+  client_type: :product,
+  tagline: "Turn Instagram and TikTok comments into new customers",
+  slug: "signal-harvester",
+  problem: "High-intent leads hide in social comment sections, but manually scanning thousands of posts is slow and inconsistent.",
+  approach: "Built a tool that monitors influencer and competitor comment threads, detects intent signals, and drafts replies or DMs so you can engage fast.",
+  results: "Turns social listening into a repeatable pipeline for inbound leads by surfacing questions, complaints, and buying signals in real time.",
+  metrics: [],
+  link: "https://signalharvester.com",
+  icon: "signal-harvester-logo.png",
+  featured: true,
+  display_order: 3,
+  published_at: Time.current
+)
+
+CaseStudy.create!(
   name: "Floating Clock",
   client_name: "Floating Clock",
   client_type: :product,
@@ -58,7 +75,7 @@ CaseStudy.create!(
   link: "https://floatingclock.zelusottomayor.com",
   icon: "floating-clock.png",
   featured: false,
-  display_order: 3,
+  display_order: 4,
   published_at: Time.current
 )
 
@@ -75,7 +92,7 @@ CaseStudy.create!(
   link: "https://imagescrapingtool.zelusottomayor.com",
   icon: "website-image-scraper.png",
   featured: false,
-  display_order: 4,
+  display_order: 5,
   published_at: Time.current
 )
 

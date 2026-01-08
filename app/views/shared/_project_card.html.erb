@@ -1,0 +1,48 @@
+<%
+  # Usage: render 'shared/project_card', project: project_hash
+  return unless project.present?
+
+  project_name = project["name"]
+  project_type = project["type"].to_s.titleize
+  project_tagline = project["tagline"]
+  project_metrics = project["metrics"] || []
+  project_link = project["link"]
+  project_icon = project["icon"]
+  project_thumbnail = project["thumbnail"]
+%>
+
+<div class="case-study-card" data-category="<%= project["type"] %>">
+  <% if project_thumbnail.present? %>
+    <div class="case-study-thumbnail">
+      <%= image_tag project_thumbnail, alt: project_name, class: "case-study-image" %>
+    </div>
+  <% elsif project_icon.present? %>
+    <div class="case-study-icon-wrapper">
+      <%= image_tag project_icon, alt: project_name, class: "case-study-icon" %>
+    </div>
+  <% end %>
+
+  <div class="case-study-content">
+    <div class="case-study-type-badge">
+      <%= project_type %>
+    </div>
+
+    <h3 class="case-study-title"><%= project_name %></h3>
+
+    <% if project_tagline.present? %>
+      <p class="case-study-tagline"><%= project_tagline %></p>
+    <% end %>
+
+    <% if project_metrics.any? %>
+      <div class="case-study-metrics">
+        <% project_metrics.take(2).each do |metric| %>
+          <span class="metric-pill"><%= metric %></span>
+        <% end %>
+      </div>
+    <% end %>
+
+    <% if project_link.present? %>
+      <%= link_to "View case study →", project_link, class: "case-study-link", target: "_blank", rel: "noopener" %>
+    <% end %>
+  </div>
+</div>

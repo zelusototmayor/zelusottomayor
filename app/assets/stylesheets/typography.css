@@ -33,7 +33,7 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  animation: gradient-shift 8s ease infinite;
+  animation: gradient-shift 16s ease infinite;
 }
 
 @keyframes gradient-shift {
@@ -95,7 +95,7 @@
 .pull-quote::before {
   content: '"';
   font-size: var(--font-size-6xl);
-  color: var(--color-primary);
+  color: var(--color-accent);
   opacity: 0.2;
   position: absolute;
   left: -20px;
@@ -162,6 +162,11 @@
 
 /* Text that will be animated with GSAP */
 .text-reveal {
+  opacity: 1;
+  transform: none;
+}
+
+.js-animations .text-reveal {
   opacity: 0;
   transform: translateY(20px);
 }
@@ -208,14 +213,14 @@
 .text-highlight {
   position: relative;
   display: inline;
-  background: linear-gradient(180deg, transparent 60%, rgba(37, 99, 235, 0.2) 60%);
+  background: linear-gradient(180deg, transparent 60%, rgba(200, 161, 90, 0.2) 60%);
   padding: 0 0.2em;
 }
 
 /* Glow effect on text */
 .text-glow {
-  text-shadow: 0 0 20px rgba(37, 99, 235, 0.4),
-               0 0 40px rgba(37, 99, 235, 0.2);
+  text-shadow: 0 0 18px rgba(200, 161, 90, 0.3),
+               0 0 36px rgba(39, 90, 78, 0.2);
 }
 
 /* ========================================

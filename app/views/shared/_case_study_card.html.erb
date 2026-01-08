@@ -1,6 +1,23 @@
 <%
   # Usage: render 'shared/case_study_card', case_study: @case_study
   return unless case_study.present?
+
+  external_links = {
+    "ai-talk-coach" => "https://aitalkcoach.com",
+    "uxpilot" => "https://uxauditapp.com",
+    "ux-pilot" => "https://uxauditapp.com",
+    "ux-audit-app" => "https://uxauditapp.com",
+    "image-scraping-tool" => "https://imagescrapingtool.zelusottomayor.com",
+    "website-image-scraper" => "https://imagescrapingtool.zelusottomayor.com",
+    "imagesweep" => "https://imagescrapingtool.zelusottomayor.com",
+    "image-sweep" => "https://imagescrapingtool.zelusottomayor.com",
+    "floating-clock" => "https://floatingclock.zelusottomayor.com",
+    "signal-harvester" => "https://signalharvester.com"
+  }
+
+  case_study_key = case_study.name.to_s.parameterize
+  case_study_url = external_links.fetch(case_study_key, case_study_path(case_study))
+  case_study_name = case_study_key == "uxpilot" || case_study_key == "ux-pilot" ? "UX Audit App" : case_study.name
 %>
 
 <div class="case-study-card" data-category="<%= case_study.client_type %>">
@@ -19,7 +36,7 @@
       <%= case_study.client_type.titleize %>
     </div>
 
-    <h3 class="case-study-title"><%= case_study.name %></h3>
+    <h3 class="case-study-title"><%= case_study_name %></h3>
 
     <% if case_study.tagline.present? %>
       <p class="case-study-tagline"><%= case_study.tagline %></p>
@@ -33,6 +50,6 @@
       </div>
     <% end %>
 
-    <%= link_to "View case study →", case_study_path(case_study), class: "case-study-link" %>
+    <%= link_to "View case study →", case_study_url, class: "case-study-link" %>
   </div>
 </div>

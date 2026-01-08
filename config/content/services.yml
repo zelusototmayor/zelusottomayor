@@ -19,7 +19,7 @@ product_development:
   title: "Product Development"
   icon: ""
   tagline: "Build web applications with AI integration"
-  description: "I develop web applications using Rails, integrate AI APIs (Claude, OpenAI), and focus on getting to a working version quickly. My recent work includes UXPilot and AI Talk Coach."
+  description: "I develop web applications using Rails, integrate AI APIs (Claude, OpenAI), and focus on getting to a working version quickly. My recent work includes UX Audit App and AI Talk Coach."
   outcomes:
     - "Working web applications in production"
     - "AI integration using Claude or OpenAI APIs"

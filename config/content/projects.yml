@@ -1,0 +1,49 @@
+- name: "UX Audit App"
+  type: "product"
+  tagline: "AI tool that analyzes user session recordings to find UX problems"
+  link: "https://uxauditapp.com"
+  icon: "ux-audit-app.png"
+  featured: true
+  metrics:
+    - "AI session analysis"
+    - "Friction detection"
+
+- name: "AI Talk Coach"
+  type: "product"
+  tagline: "Practice speaking with AI feedback on filler words and pacing"
+  link: "https://aitalkcoach.com"
+  icon: "ai-talk-coach.png"
+  featured: true
+  metrics:
+    - "Speech feedback"
+    - "Interview prep"
+
+- name: "Signal Harvester"
+  type: "product"
+  tagline: "Turn Instagram and TikTok comments into new customers"
+  link: "https://signalharvester.com"
+  icon: "signal-harvester-logo.png"
+  featured: true
+  metrics:
+    - "Intent detection"
+    - "DM drafting"
+
+- name: "Floating Clock"
+  type: "product"
+  tagline: "Minimal floating timer for presentations and recordings"
+  link: "https://floatingclock.zelusottomayor.com"
+  icon: "floating-clock.png"
+  featured: false
+  metrics:
+    - "Clean overlay"
+    - "Customizable"
+
+- name: "Image Scraping Tool"
+  type: "product"
+  tagline: "Bulk download images from websites"
+  link: "https://imagescrapingtool.zelusottomayor.com"
+  icon: "website-image-scraper.png"
+  featured: false
+  metrics:
+    - "Bulk export"
+    - "Filterable"

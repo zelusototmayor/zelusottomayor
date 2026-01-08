@@ -1,4 +1,4 @@
-<% content_for :title, "Zalu Sottomayor - Full-Stack Developer & Automation Specialist" %>
+<% content_for :title, "Ze Lu Sottomayor - Full-Stack Developer & Automation Specialist" %>
 <% content_for :meta_description, "Full-stack developer building AI tools and automation systems. Based in Lisbon, working with clients worldwide on web applications and workflow automation." %>
 
 <%# ======================================
@@ -6,7 +6,7 @@
     ====================================== %>
 <section class="hero-above-fold" style="position: relative; overflow: hidden;">
   <%# Gradient mesh background %>
-  <div class="gradient-mesh-bg" style="position: absolute; inset: 0; z-index: 0; background: var(--gradient-mesh);"></div>
+  <div class="gradient-mesh-bg" style="position: absolute; inset: 0; z-index: 0;"></div>
 
   <div class="container container--narrow" style="position: relative; z-index: 1;">
     <h1 class="hero-headline gradient-text-animated">
@@ -21,6 +21,10 @@
       <%= link_to "Schedule a call", book_call_path, class: "cta-button cta-button--primary cta-button--large" %>
       <%= link_to "View my work", work_path, class: "cta-button cta-button--secondary cta-button--large" %>
     </div>
+
+    <%= render 'shared/trust_strip',
+      title: "Trusted for",
+      items: ["Productized Rails builds", "AI workflow automation", "Long-term partnerships"] %>
   </div>
 </section>
 
@@ -122,7 +126,7 @@
       <p class="section-subtitle">Selected client work and personal products</p>
     </div>
 
-    <% if @featured_case_studies.present? && @featured_case_studies.any? %>
+    <% if @featured_projects.present? && @featured_projects.any? %>
       <div class="work-tabs" data-controller="tabs">
         <div class="tabs-nav">
           <button class="tab-button active" data-action="click->tabs#show" data-category="all">
@@ -138,8 +142,8 @@
       </div>
 
       <div class="case-studies-grid">
-        <% @featured_case_studies.each do |case_study| %>
-          <%= render 'shared/case_study_card', case_study: case_study %>
+        <% @featured_projects.each do |project| %>
+          <%= render 'shared/project_card', project: project %>
         <% end %>
       </div>
 
@@ -226,7 +230,7 @@
         <%= simple_format @about_content['bio'], class: "about-preview-text" %>
       <% else %>
         <p class="about-preview-text">
-          I'm Zalu Sottomayor, a full-stack developer based in Lisbon.
+          I'm Ze Lu Sottomayor, a full-stack developer based in Lisbon.
         </p>
         <p class="about-preview-text">
           I build AI-powered tools and automation systems for founders and small teams.

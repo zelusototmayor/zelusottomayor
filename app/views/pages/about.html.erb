@@ -1,4 +1,4 @@
-<% content_for :title, "About - Zalu Sottomayor" %>
+<% content_for :title, "About - Ze Lu Sottomayor" %>
 <% content_for :meta_description, "Full-stack developer building AI tools and automation systems. Based in Lisbon, working with clients worldwide on web applications and workflow automation." %>
 
 <div class="page-hero">
@@ -15,12 +15,17 @@
 
 <section class="about-content section-padding">
   <div class="container container--narrow">
-    <div class="about-intro">
+    <div class="about-hero">
+      <div class="about-portrait">
+        <%= image_tag "ze-lu-portrait.jpg", alt: "Ze Lu Sottomayor", class: "about-portrait-img" %>
+      </div>
+
+      <div class="about-intro">
       <% if @about_content.present? && @about_content['bio'].present? %>
         <%= simple_format @about_content['bio'], class: "about-text" %>
       <% else %>
         <p class="about-text">
-          I'm Zalu Sottomayor, a full-stack developer based in Lisbon.
+          I'm Ze Lu Sottomayor, a full-stack developer based in Lisbon.
         </p>
         <p class="about-text">
           I build AI-powered tools and automation systems for founders and small teams.
@@ -29,6 +34,7 @@
           I've worked on projects ranging from AI coaching apps to UX analysis tools, always focusing on practical solutions that work in production.
         </p>
       <% end %>
+    </div>
     </div>
 
     <% if @about_content.present? && @about_content['current_focus'].present? %>
