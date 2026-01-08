@@ -2,27 +2,84 @@
 # development, test). The code here should be idempotent so that it can be executed at any point in every environment.
 # The data can then be loaded with the bin/rails db:seed command (or created alongside the database with db:setup).
 
-# Create actual projects
-Project.find_or_create_by!(name: "Floating Clock") do |project|
-  project.description = "An elegant floating clock application with customizable display options and smooth animations. Features real-time updates and responsive design."
-  project.link = "https://floatingclock.zelusottomayor.com"
-  project.icon = "floating-clock.png"
-end
+puts "Seeding database..."
 
-Project.find_or_create_by!(name: "Image Scraping Tool") do |project|
-  project.description = "A powerful web scraping tool for extracting and downloading images from websites. Built with modern web technologies and optimized for performance."
-  project.link = "https://imagescrapingtool.zelusottomayor.com"
-  project.icon = "website-image-scraper.png"
-end
+# Clear existing data (optional - comment out if you want to keep existing data)
+CaseStudy.destroy_all
+Testimonial.destroy_all
 
-Project.find_or_create_by!(name: "UXPilot") do |project|
-  project.description = "An AI-powered UX analysis tool that analyzes screen recordings to detect user interaction friction points and provides actionable improvement suggestions. Perfect for startups and product teams who need quick UX insights."
-  project.link = "https://uxauditapp.com"
-  project.icon = "ux-audit-app.png"
-end
+# Create Case Studies (Personal Products)
+puts "Creating case studies..."
 
-Project.find_or_create_by!(name: "AI Talk Coach") do |project|
-  project.description = "AI Talk Coach helps you practice 60–180 second responses, detect filler words, measure clarity & pace, and gives you targeted drills to improve—anytime, on the web."
-  project.link = "https://aitalkcoach.com"
-  project.icon = "ai-talk-coach.png"
-end
+CaseStudy.create!(
+  name: "UXPilot",
+  client_name: "UXPilot",
+  client_type: :product,
+  tagline: "AI tool that analyzes user session recordings to find UX problems",
+  slug: "uxpilot",
+  problem: "Watching user session recordings to find UX issues is tedious and time-consuming. Product teams need to review hours of footage to spot where users struggle.",
+  approach: "Built a Rails app that uses Claude API to analyze user session recordings. The AI watches the recordings and identifies where users hesitate, click repeatedly, or seem confused. It generates a report with specific UX issues and timestamps.",
+  results: "Currently in use by several product teams. Turns hours of manual review into a 5-minute AI analysis. Most useful for finding obvious friction points that are easy to miss when reviewing manually.",
+  metrics: [],
+  link: "https://uxauditapp.com",
+  icon: "ux-audit-app.png",
+  featured: true,
+  display_order: 1,
+  published_at: Time.current
+)
+
+CaseStudy.create!(
+  name: "AI Talk Coach",
+  client_name: "AI Talk Coach",
+  client_type: :product,
+  tagline: "Practice speaking with AI feedback on filler words and pacing",
+  slug: "ai-talk-coach",
+  problem: "Practicing for interviews or presentations is awkward because you need someone to listen and give feedback. Recording yourself doesn't help you identify what to improve.",
+  approach: "Built a web app where you practice 60-180 second responses on common topics. Uses browser speech recognition to transcribe your answer, then sends it to Claude for feedback on filler words, pacing, clarity, and structure. Provides specific drills to improve weak areas.",
+  results: "Useful for interview prep and presentation practice. The AI feedback is surprisingly good at catching filler words and suggesting clearer phrasing. Several users have mentioned it helped them prepare for job interviews.",
+  metrics: [],
+  link: "https://aitalkcoach.com",
+  icon: "ai-talk-coach.png",
+  featured: true,
+  display_order: 2,
+  published_at: Time.current
+)
+
+CaseStudy.create!(
+  name: "Floating Clock",
+  client_name: "Floating Clock",
+  client_type: :product,
+  tagline: "Minimal floating timer for presentations and recordings",
+  slug: "floating-clock",
+  problem: "When recording videos or giving presentations, I needed a simple, clean timer that wouldn't clutter the screen.",
+  approach: "Built a minimal web app with a floating timer. Customizable size, position, and color. No unnecessary features - just a clean timer that does one thing well.",
+  results: "Use it myself for timed presentations. Simple, works reliably. Some content creators have found it useful too.",
+  metrics: [],
+  link: "https://floatingclock.zelusottomayor.com",
+  icon: "floating-clock.png",
+  featured: false,
+  display_order: 3,
+  published_at: Time.current
+)
+
+CaseStudy.create!(
+  name: "Website Image Scraper",
+  client_name: "Image Scraping Tool",
+  client_type: :product,
+  tagline: "Bulk download images from websites",
+  slug: "image-scraper",
+  problem: "Manually downloading images from a website one by one is tedious. Right-clicking and saving dozens of images wastes time.",
+  approach: "Built a web scraping tool that extracts all images from a given URL and lets you download them in bulk. Handles different image formats and provides filtering options.",
+  results: "Practical tool for when you need to grab multiple images quickly. Works on most standard websites. Useful for research and competitive analysis.",
+  metrics: [],
+  link: "https://imagescrapingtool.zelusottomayor.com",
+  icon: "website-image-scraper.png",
+  featured: false,
+  display_order: 4,
+  published_at: Time.current
+)
+
+# Testimonials removed - will add real client feedback when available
+
+puts "Seeding complete!"
+puts "Created #{CaseStudy.count} case studies"

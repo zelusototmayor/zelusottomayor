@@ -1,0 +1,251 @@
+<% content_for :title, "Zalu Sottomayor - Full-Stack Developer & Automation Specialist" %>
+<% content_for :meta_description, "Full-stack developer building AI tools and automation systems. Based in Lisbon, working with clients worldwide on web applications and workflow automation." %>
+
+<%# ======================================
+    SECTION 1: ABOVE THE FOLD - ENHANCED WITH BOLD TYPOGRAPHY
+    ====================================== %>
+<section class="hero-above-fold" style="position: relative; overflow: hidden;">
+  <%# Gradient mesh background %>
+  <div class="gradient-mesh-bg" style="position: absolute; inset: 0; z-index: 0; background: var(--gradient-mesh);"></div>
+
+  <div class="container container--narrow" style="position: relative; z-index: 1;">
+    <h1 class="hero-headline gradient-text-animated">
+      I build AI tools and automation systems
+    </h1>
+
+    <p class="hero-subtitle text-lead">
+      Full-stack developer based in Lisbon, specializing in web applications that integrate AI and automate workflows. I work with Rails, Claude API, and various automation tools to solve practical problems.
+    </p>
+
+    <div class="cta-group hero-cta-group">
+      <%= link_to "Schedule a call", book_call_path, class: "cta-button cta-button--primary cta-button--large" %>
+      <%= link_to "View my work", work_path, class: "cta-button cta-button--secondary cta-button--large" %>
+    </div>
+  </div>
+</section>
+
+<%# ======================================
+    SECTION 2: WHAT I DO (Service Clarity)
+    ====================================== %>
+<section class="services-section section-padding">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title">How I can help</h2>
+      <p class="section-subtitle">Two ways to work together</p>
+    </div>
+
+    <div class="services-grid">
+      <% if @services.present? %>
+        <% @services.each do |key, service| %>
+          <%= render 'shared/service_card', service: service %>
+        <% end %>
+      <% else %>
+        <%# Fallback if YAML not loaded %>
+        <div class="service-card">
+          <h3 class="service-title">Automation Projects</h3>
+          <p class="service-tagline">Connect your tools and eliminate manual data work</p>
+          <p class="service-description">I build automation systems that connect your existing tools to reduce manual data entry and keep everything in sync.</p>
+          <ul class="service-outcomes">
+            <li>Automated data sync between tools</li>
+            <li>Custom workflows using Make, Zapier, or n8n</li>
+            <li>API integrations for unique business needs</li>
+          </ul>
+        </div>
+
+        <div class="service-card">
+          <h3 class="service-title">Product Development</h3>
+          <p class="service-tagline">Build web applications with AI integration</p>
+          <p class="service-description">I develop web applications using Rails and integrate AI APIs, focusing on getting to a working version quickly.</p>
+          <ul class="service-outcomes">
+            <li>Working web applications in production</li>
+            <li>AI integration using Claude or OpenAI APIs</li>
+            <li>Clean, maintainable Rails codebases</li>
+          </ul>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</section>
+
+<%# ======================================
+    SECTION 3: HOW IT WORKS (Process)
+    ====================================== %>
+<section class="process-section section-padding bg-gradient">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title">How we'll work together</h2>
+      <p class="section-subtitle">A clear, structured process that reduces risk</p>
+    </div>
+
+    <div class="process-steps">
+      <% if @process_steps.present? && @process_steps['steps'].present? %>
+        <% @process_steps['steps'].each_with_index do |step, index| %>
+          <%= render 'shared/process_step', step: step, number: index + 1 %>
+        <% end %>
+      <% else %>
+        <%# Fallback %>
+        <%= render 'shared/process_step',
+            step: { 'title' => 'Discovery', 'description' => 'Understand your workflow, pain points, and goals' },
+            number: 1 %>
+        <%= render 'shared/process_step',
+            step: { 'title' => 'Blueprint', 'description' => 'Map the solution and define deliverables' },
+            number: 2 %>
+        <%= render 'shared/process_step',
+            step: { 'title' => 'Build', 'description' => 'Ship iteratively with fast feedback loops' },
+            number: 3 %>
+        <%= render 'shared/process_step',
+            step: { 'title' => 'Iterate', 'description' => 'Monitor, improve, and evolve over time' },
+            number: 4 %>
+      <% end %>
+    </div>
+
+    <% if @process_steps.present? && @process_steps['principles'].present? %>
+      <div class="process-principles">
+        <h3 class="principles-title">My principles:</h3>
+        <ul class="principles-list">
+          <% @process_steps['principles'].each do |principle| %>
+            <li><%= principle %></li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
+  </div>
+</section>
+
+<%# ======================================
+    SECTION 4: SELECTED WORK (Case Studies Preview)
+    ====================================== %>
+<section class="work-preview-section section-padding">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title">Recent wins</h2>
+      <p class="section-subtitle">Selected client work and personal products</p>
+    </div>
+
+    <% if @featured_case_studies.present? && @featured_case_studies.any? %>
+      <div class="work-tabs" data-controller="tabs">
+        <div class="tabs-nav">
+          <button class="tab-button active" data-action="click->tabs#show" data-category="all">
+            All
+          </button>
+          <button class="tab-button" data-action="click->tabs#show" data-category="client">
+            Client Work
+          </button>
+          <button class="tab-button" data-action="click->tabs#show" data-category="product">
+            Products
+          </button>
+        </div>
+      </div>
+
+      <div class="case-studies-grid">
+        <% @featured_case_studies.each do |case_study| %>
+          <%= render 'shared/case_study_card', case_study: case_study %>
+        <% end %>
+      </div>
+
+      <div class="section-cta">
+        <%= link_to "View all case studies →", work_path, class: "cta-button cta-button--text" %>
+      </div>
+    <% else %>
+      <div class="empty-state">
+        <p>Case studies coming soon. Check back shortly!</p>
+        <p class="empty-state-note">In the meantime, <%= link_to "reach out", contact_path %> to discuss your project.</p>
+      </div>
+    <% end %>
+  </div>
+</section>
+
+<%# Testimonials section removed - will add real client feedback when available %>
+
+<%# ======================================
+    SECTION 6: OFFER / PACKAGES
+    ====================================== %>
+<section class="packages-section section-padding">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title">Ways to work together</h2>
+      <p class="section-subtitle">Choose the engagement that fits your needs</p>
+    </div>
+
+    <div class="packages-grid">
+      <% if @packages.present? %>
+        <% @packages.each do |key, package| %>
+          <%= render 'shared/package_card', package: package %>
+        <% end %>
+      <% else %>
+        <%# Fallback %>
+        <div class="package-card">
+          <div class="package-header">
+            <h3 class="package-name">Automation Audit</h3>
+            <p class="package-tagline">Perfect for exploring opportunities</p>
+          </div>
+          <p class="package-description">A focused audit of your workflow to identify automation opportunities and quick wins.</p>
+          <div class="package-timeline"><strong>Timeline:</strong> 5 business days</div>
+          <div class="package-cta">
+            <%= link_to "Book an audit", contact_path, class: "cta-button cta-button--primary cta-button--full-width" %>
+          </div>
+        </div>
+      <% end %>
+    </div>
+
+    <div class="fit-section">
+      <div class="fit-column">
+        <h3 class="fit-title">Great fit if you:</h3>
+        <ul class="fit-list">
+          <li>Have a clear problem or opportunity to address</li>
+          <li>Value fast iteration and weekly updates</li>
+          <li>Want measurable outcomes, not just deliverables</li>
+          <li>Are open to feedback and collaboration</li>
+        </ul>
+      </div>
+
+      <div class="fit-column">
+        <h3 class="fit-title">Not a fit if you:</h3>
+        <ul class="fit-list fit-list--negative">
+          <li>Need a large team or multiple specialists</li>
+          <li>Require waterfall process with detailed upfront specs</li>
+          <li>Have an urgent deadline (less than 1 week)</li>
+          <li>Aren't ready to provide feedback during development</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<%# ======================================
+    SECTION 7: ABOUT PREVIEW
+    ====================================== %>
+<section class="about-preview-section section-padding bg-gradient">
+  <div class="container container--narrow">
+    <div class="section-header">
+      <h2 class="section-title">About me</h2>
+    </div>
+
+    <div class="about-preview-content">
+      <% if @about_content.present? && @about_content['bio'].present? %>
+        <%= simple_format @about_content['bio'], class: "about-preview-text" %>
+      <% else %>
+        <p class="about-preview-text">
+          I'm Zalu Sottomayor, a full-stack developer based in Lisbon.
+        </p>
+        <p class="about-preview-text">
+          I build AI-powered tools and automation systems for founders and small teams.
+        </p>
+      <% end %>
+
+      <%= link_to "More about me →", about_path, class: "cta-button cta-button--text" %>
+    </div>
+  </div>
+</section>
+
+<%# ======================================
+    SECTION 8: FINAL CTA
+    ====================================== %>
+<%= render 'shared/cta_section',
+    headline: "Have a project in mind?",
+    subheadline: "Let's discuss what you're working on and how I can help.",
+    button_text: "Schedule a call",
+    button_url: book_call_path,
+    secondary_text: "Or email me",
+    secondary_url: contact_path,
+    extra_info: "I typically respond within 24 hours." %>

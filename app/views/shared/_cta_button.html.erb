@@ -1,0 +1,10 @@
+<%
+  # Usage: render 'shared/cta_button', text: 'Book a call', url: book_call_path, style: 'primary'
+  # Styles: primary, secondary, text
+  text ||= "Get started"
+  url ||= contact_path
+  style ||= "primary"
+  size ||= "default"
+%>
+
+<%= link_to text, url, class: "cta-button cta-button--#{style} cta-button--#{size}", data: { turbo: local_assigns[:turbo] != false } %>

@@ -116,3 +116,897 @@ Started GET "/assets/turbo.min-3a2e143f.js" for ::1 at 2025-09-11 20:21:25 +0100
 Started GET "/assets/application-bfcdf840.js" for ::1 at 2025-09-11 20:21:25 +0100
 Started GET "/assets/controllers/hello_controller-708796bd.js" for ::1 at 2025-09-11 20:21:25 +0100
 Started GET "/assets/controllers/index-ee64e1f1.js" for ::1 at 2025-09-11 20:21:25 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='ZelusottomayorPortfolio'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='ZelusottomayorPortfolio'*/[0m
+Started GET "/" for 127.0.0.1 at 2025-09-17 22:02:40 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='ZelusottomayorPortfolio'*/[0m
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mProject Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "projects" LIMIT 1 /*action='index',application='ZelusottomayorPortfolio',controller='home'*/[0m
+  ↳ app/views/home/index.html.erb:16
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT "projects".* FROM "projects" /*action='index',application='ZelusottomayorPortfolio',controller='home'*/[0m
+  ↳ app/views/home/index.html.erb:18
+  Rendered home/index.html.erb within layouts/application (Duration: 21.2ms | GC: 9.7ms)
+  Rendered layout layouts/application.html.erb (Duration: 37.4ms | GC: 11.3ms)
+Completed 200 OK in 187ms (Views: 41.0ms | ActiveRecord: 3.3ms (2 queries, 0 cached) | GC: 11.3ms)
+
+
+Started GET "/assets/application-87b88c92.css" for 127.0.0.1 at 2025-09-17 22:02:41 +0100
+Started GET "/assets/application-bfcdf840.js" for 127.0.0.1 at 2025-09-17 22:02:41 +0100
+Started GET "/assets/stimulus.min-4b1e420e.js" for 127.0.0.1 at 2025-09-17 22:02:41 +0100
+Started GET "/assets/stimulus-loading-1fc53fe7.js" for 127.0.0.1 at 2025-09-17 22:02:41 +0100
+Started GET "/assets/controllers/application-3affb389.js" for 127.0.0.1 at 2025-09-17 22:02:41 +0100
+Started GET "/assets/turbo.min-3a2e143f.js" for 127.0.0.1 at 2025-09-17 22:02:41 +0100
+Started GET "/assets/controllers/index-ee64e1f1.js" for 127.0.0.1 at 2025-09-17 22:02:41 +0100
+Started GET "/assets/controllers/hello_controller-708796bd.js" for 127.0.0.1 at 2025-09-17 22:02:41 +0100
+Writing application-87b88c92.css
+Writing application-bfcdf840.js
+Writing controllers/hello_controller-708796bd.js
+Writing controllers/index-ee64e1f1.js
+Writing controllers/application-3affb389.js
+Writing stimulus.min-4b1e420e.js
+Writing stimulus-d59b3b7f.js
+Writing stimulus.min-2395e199.js.map
+Writing stimulus-importmap-autoloader-64cc03e1.js
+Writing stimulus-autoloader-9d447422.js
+Writing stimulus-loading-1fc53fe7.js
+Writing turbo.min-5f3b7fda.js.map
+Writing turbo-a1e3a50a.js
+Writing turbo.min-3a2e143f.js
+Writing actiontext.esm-f1c04d34.js
+Writing actiontext-a4ee937e.js
+Writing trix-4b540cb5.js
+Writing trix-65afdb1d.css
+Writing action_cable-5212cfee.js
+Writing actioncable.esm-e0ec9819.js
+Writing actioncable-ac25813f.js
+Writing activestorage.esm-f2909226.js
+Writing activestorage-32201f68.js
+Writing rails-ujs.esm-e925103b.js
+Writing rails-ujs-20eaf715.js
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='ZelusottomayorPortfolio'*/[0m
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."name" = 'Floating Clock' LIMIT 1 /*application='ZelusottomayorPortfolio'*/[0m
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."name" = 'Image Scraping Tool' LIMIT 1 /*application='ZelusottomayorPortfolio'*/[0m
+  [1m[36mProject Load (0.0ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."name" = 'UXPilot' LIMIT 1 /*application='ZelusottomayorPortfolio'*/[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='ZelusottomayorPortfolio'*/[0m
+  [1m[36mProject Create (1.8ms)[0m  [1m[32mINSERT INTO "projects" ("name", "description", "link", "created_at", "updated_at") VALUES ('UXPilot', 'An AI-powered UX analysis tool that analyzes screen recordings to detect user interaction friction points and provides actionable improvement suggestions. Perfect for startups and product teams who need quick UX insights.', 'https://uxauditapp.com', '2025-09-26 17:06:18.895935', '2025-09-26 17:06:18.895935') RETURNING "id" /*application='ZelusottomayorPortfolio'*/[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='ZelusottomayorPortfolio'*/[0m
+Started GET "/" for ::1 at 2025-09-26 18:07:06 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (2.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='ZelusottomayorPortfolio'*/[0m
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mProject Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "projects" LIMIT 1 /*action='index',application='ZelusottomayorPortfolio',controller='home'*/[0m
+  ↳ app/views/home/index.html.erb:16
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT "projects".* FROM "projects" /*action='index',application='ZelusottomayorPortfolio',controller='home'*/[0m
+  ↳ app/views/home/index.html.erb:18
+  Rendered home/index.html.erb within layouts/application (Duration: 9.7ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 63.9ms | GC: 0.0ms)
+Completed 200 OK in 240ms (Views: 65.7ms | ActiveRecord: 2.8ms (2 queries, 0 cached) | GC: 0.7ms)
+
+
+Started GET "/assets/turbo.min-3a2e143f.js" for ::1 at 2025-09-26 18:07:07 +0100
+Started GET "/assets/stimulus.min-4b1e420e.js" for ::1 at 2025-09-26 18:07:07 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='ZelusottomayorPortfolio'*/[0m
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."name" = 'Floating Clock' LIMIT 1 /*application='ZelusottomayorPortfolio'*/[0m
+  [1m[36mProject Load (0.0ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."name" = 'Image Scraping Tool' LIMIT 1 /*application='ZelusottomayorPortfolio'*/[0m
+  [1m[36mProject Load (0.0ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."name" = 'UXPilot' LIMIT 1 /*application='ZelusottomayorPortfolio'*/[0m
+  [1m[36mProject Load (0.0ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."name" = 'AI Talk Coach' LIMIT 1 /*application='ZelusottomayorPortfolio'*/[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='ZelusottomayorPortfolio'*/[0m
+  [1m[36mProject Create (1.5ms)[0m  [1m[32mINSERT INTO "projects" ("name", "description", "link", "created_at", "updated_at") VALUES ('AI Talk Coach', 'AI Talk Coach helps you practice 60–180 second responses, detect filler words, measure clarity & pace, and gives you targeted drills to improve—anytime, on the web.', 'https://aitalkcoach.com', '2025-09-26 17:10:51.607775', '2025-09-26 17:10:51.607775') RETURNING "id" /*application='ZelusottomayorPortfolio'*/[0m
+  [1m[36mTRANSACTION (1.6ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='ZelusottomayorPortfolio'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='ZelusottomayorPortfolio'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='ZelusottomayorPortfolio'*/[0m
+Migrating to AddIconToProjects (20250926171547)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='ZelusottomayorPortfolio'*/[0m
+  [1m[35m (8.4ms)[0m  [1m[35mALTER TABLE "projects" ADD "icon" varchar /*application='ZelusottomayorPortfolio'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20250926171547') RETURNING "version" /*application='ZelusottomayorPortfolio'*/[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='ZelusottomayorPortfolio'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='ZelusottomayorPortfolio'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='ZelusottomayorPortfolio'*/[0m
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."name" = 'Floating Clock' LIMIT 1 /*application='ZelusottomayorPortfolio'*/[0m
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."name" = 'Image Scraping Tool' LIMIT 1 /*application='ZelusottomayorPortfolio'*/[0m
+  [1m[36mProject Load (0.0ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."name" = 'UXPilot' LIMIT 1 /*application='ZelusottomayorPortfolio'*/[0m
+  [1m[36mProject Load (0.0ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."name" = 'AI Talk Coach' LIMIT 1 /*application='ZelusottomayorPortfolio'*/[0m
+Started GET "/" for ::1 at 2025-09-26 18:17:45 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='ZelusottomayorPortfolio'*/[0m
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mProject Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "projects" LIMIT 1 /*action='index',application='ZelusottomayorPortfolio',controller='home'*/[0m
+  ↳ app/views/home/index.html.erb:16
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT "projects".* FROM "projects" /*action='index',application='ZelusottomayorPortfolio',controller='home'*/[0m
+  ↳ app/views/home/index.html.erb:18
+  Rendered home/index.html.erb within layouts/application (Duration: 5.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 16.2ms | GC: 0.0ms)
+Completed 200 OK in 57ms (Views: 17.4ms | ActiveRecord: 0.7ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/assets/application-abf1592a.css" for ::1 at 2025-09-26 18:17:45 +0100
+Started GET "/" for ::1 at 2025-09-26 18:17:49 +0100
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mProject Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "projects" LIMIT 1 /*action='index',application='ZelusottomayorPortfolio',controller='home'*/[0m
+  ↳ app/views/home/index.html.erb:16
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects" /*action='index',application='ZelusottomayorPortfolio',controller='home'*/[0m
+  ↳ app/views/home/index.html.erb:18
+  Rendered home/index.html.erb within layouts/application (Duration: 4.4ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 5.8ms | GC: 0.0ms)
+Completed 200 OK in 40ms (Views: 5.8ms | ActiveRecord: 0.5ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/" for ::1 at 2025-09-26 18:17:50 +0100
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mProject Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "projects" LIMIT 1 /*action='index',application='ZelusottomayorPortfolio',controller='home'*/[0m
+  ↳ app/views/home/index.html.erb:16
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT "projects".* FROM "projects" /*action='index',application='ZelusottomayorPortfolio',controller='home'*/[0m
+  ↳ app/views/home/index.html.erb:18
+  Rendered home/index.html.erb within layouts/application (Duration: 2.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 3.6ms | GC: 0.0ms)
+Completed 200 OK in 40ms (Views: 3.7ms | ActiveRecord: 0.2ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+  [1m[36mProject Load (5.9ms)[0m  [1m[34mSELECT "projects".* FROM "projects" /*application='ZelusottomayorPortfolio'*/[0m
+Started GET "/" for ::1 at 2025-09-26 18:22:23 +0100
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 11.6ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 17.5ms | GC: 0.3ms)
+Completed 200 OK in 51ms (Views: 18.8ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.3ms)
+
+
+Started GET "/assets/floating-clock-557ef4be.png" for ::1 at 2025-09-26 18:22:23 +0100
+Started GET "/assets/website-image-scraper-e114cb4b.png" for ::1 at 2025-09-26 18:22:23 +0100
+Started GET "/assets/ai-talk-coach-ffffadba.png" for ::1 at 2025-09-26 18:22:23 +0100
+Started GET "/assets/ux-audit-app-30c09c89.png" for ::1 at 2025-09-26 18:22:23 +0100
+Started GET "/" for ::1 at 2025-09-26 18:24:31 +0100
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 1.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 3.8ms | GC: 0.1ms)
+Completed 200 OK in 46ms (Views: 5.5ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.2ms)
+
+
+Started GET "/" for ::1 at 2025-09-27 21:26:15 +0100
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 25.6ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 80.9ms | GC: 0.0ms)
+Completed 200 OK in 325ms (Views: 133.2ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/" for ::1 at 2025-09-27 21:27:30 +0100
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 4.0ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 9.9ms | GC: 0.0ms)
+Completed 200 OK in 44ms (Views: 12.1ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/" for ::1 at 2025-09-30 19:11:44 +0100
+Processing by HomeController#index as */*
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 11.7ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 45.0ms | GC: 0.0ms)
+Completed 200 OK in 185ms (Views: 58.0ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/signup" for ::1 at 2025-09-30 19:11:58 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/signup"):
+  
+Started GET "/" for ::1 at 2025-10-14 22:56:09 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='ZelusottomayorPortfolio'*/[0m
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 17.8ms | GC: 0.7ms)
+  Rendered layout layouts/application.html.erb (Duration: 35.7ms | GC: 2.4ms)
+Completed 200 OK in 143ms (Views: 41.1ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 14.4ms)
+
+
+Started GET "/assets/application-abf1592a.css" for ::1 at 2025-10-14 22:56:10 +0100
+Started GET "/assets/stimulus.min-4b1e420e.js" for ::1 at 2025-10-14 22:56:10 +0100
+Started GET "/assets/turbo.min-3a2e143f.js" for ::1 at 2025-10-14 22:56:10 +0100
+Started GET "/assets/application-bfcdf840.js" for ::1 at 2025-10-14 22:56:10 +0100
+Started GET "/assets/controllers/application-3affb389.js" for ::1 at 2025-10-14 22:56:10 +0100
+Started GET "/assets/stimulus-loading-1fc53fe7.js" for ::1 at 2025-10-14 22:56:11 +0100
+Started GET "/assets/controllers/hello_controller-708796bd.js" for ::1 at 2025-10-14 22:56:11 +0100
+Started GET "/assets/controllers/index-ee64e1f1.js" for ::1 at 2025-10-14 22:56:11 +0100
+Started GET "/assets/ai-talk-coach-ffffadba.png" for ::1 at 2025-10-14 22:56:11 +0100
+Started GET "/assets/website-image-scraper-e114cb4b.png" for ::1 at 2025-10-14 22:56:11 +0100
+Started GET "/assets/ux-audit-app-30c09c89.png" for ::1 at 2025-10-14 22:56:11 +0100
+Started GET "/assets/floating-clock-557ef4be.png" for ::1 at 2025-10-14 22:56:11 +0100
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='ZelusottomayorPortfolio'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='ZelusottomayorPortfolio'*/[0m
+Migrating to CreateTestimonials (20260107193420)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='ZelusottomayorPortfolio'*/[0m
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE TABLE "testimonials" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "client_name" varchar NOT NULL, "client_title" varchar, "client_company" varchar, "content" text NOT NULL, "avatar" varchar, "rating" integer DEFAULT 5, "featured" boolean DEFAULT 0, "display_order" integer DEFAULT 0, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL) /*application='ZelusottomayorPortfolio'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCREATE INDEX "index_testimonials_on_featured" ON "testimonials" ("featured") /*application='ZelusottomayorPortfolio'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCREATE INDEX "index_testimonials_on_display_order" ON "testimonials" ("display_order") /*application='ZelusottomayorPortfolio'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20260107193420') RETURNING "version" /*application='ZelusottomayorPortfolio'*/[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='ZelusottomayorPortfolio'*/[0m
+Migrating to CreateContactSubmissions (20260107193421)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='ZelusottomayorPortfolio'*/[0m
+  [1m[35m (2.3ms)[0m  [1m[35mCREATE TABLE "contact_submissions" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar NOT NULL, "email" varchar NOT NULL, "company" varchar, "project_type" varchar, "budget_range" varchar, "timeline" varchar, "message" text NOT NULL, "status" integer DEFAULT 0 NOT NULL, "referral_source" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL) /*application='ZelusottomayorPortfolio'*/[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "index_contact_submissions_on_email" ON "contact_submissions" ("email") /*application='ZelusottomayorPortfolio'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCREATE INDEX "index_contact_submissions_on_status" ON "contact_submissions" ("status") /*application='ZelusottomayorPortfolio'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCREATE INDEX "index_contact_submissions_on_created_at" ON "contact_submissions" ("created_at") /*application='ZelusottomayorPortfolio'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20260107193421') RETURNING "version" /*application='ZelusottomayorPortfolio'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='ZelusottomayorPortfolio'*/[0m
+Migrating to CreateCaseStudies (20260107193428)
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='ZelusottomayorPortfolio'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='ZelusottomayorPortfolio'*/[0m
+Migrating to CreateCaseStudies (20260107193428)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='ZelusottomayorPortfolio'*/[0m
+  [1m[35m (1.3ms)[0m  [1m[35mCREATE TABLE "case_studies" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar NOT NULL, "client_name" varchar, "client_type" integer DEFAULT 0 NOT NULL, "tagline" text, "problem" text, "approach" text, "results" text, "metrics" text, "hero_image" varchar, "thumbnail" varchar, "link" varchar, "icon" varchar, "slug" varchar NOT NULL, "featured" boolean DEFAULT 0, "display_order" integer DEFAULT 0, "published_at" datetime(6), "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL) /*application='ZelusottomayorPortfolio'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_case_studies_on_slug" ON "case_studies" ("slug") /*application='ZelusottomayorPortfolio'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCREATE INDEX "index_case_studies_on_client_type" ON "case_studies" ("client_type") /*application='ZelusottomayorPortfolio'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCREATE INDEX "index_case_studies_on_featured" ON "case_studies" ("featured") /*application='ZelusottomayorPortfolio'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCREATE INDEX "index_case_studies_on_published_at" ON "case_studies" ("published_at") /*application='ZelusottomayorPortfolio'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCREATE INDEX "index_case_studies_on_display_order" ON "case_studies" ("display_order") /*application='ZelusottomayorPortfolio'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20260107193428') RETURNING "version" /*application='ZelusottomayorPortfolio'*/[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='ZelusottomayorPortfolio'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='ZelusottomayorPortfolio'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='ZelusottomayorPortfolio'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='ZelusottomayorPortfolio'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='ZelusottomayorPortfolio'*/[0m
+  [1m[36mCaseStudy Load (0.3ms)[0m  [1m[34mSELECT "case_studies".* FROM "case_studies" /*application='ZelusottomayorPortfolio'*/[0m
+  [1m[36mTestimonial Load (0.1ms)[0m  [1m[34mSELECT "testimonials".* FROM "testimonials" /*application='ZelusottomayorPortfolio'*/[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='ZelusottomayorPortfolio'*/[0m
+  [1m[36mCaseStudy Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "case_studies" WHERE "case_studies"."slug" = 'uxpilot' LIMIT 1 /*application='ZelusottomayorPortfolio'*/[0m
+  [1m[36mCaseStudy Create (0.5ms)[0m  [1m[32mINSERT INTO "case_studies" ("name", "client_name", "client_type", "tagline", "problem", "approach", "results", "metrics", "hero_image", "thumbnail", "link", "icon", "slug", "featured", "display_order", "published_at", "created_at", "updated_at") VALUES ('UXPilot', 'UXPilot', 1, 'AI-powered UX analysis that detects friction points in user recordings', 'Product teams struggle to identify UX issues quickly. Manual UX analysis is time-consuming and requires specialized expertise. Teams need fast, actionable insights to improve their products.', 'Built an AI-powered tool that analyzes screen recordings to automatically detect user interaction friction points. Uses machine learning to identify patterns like hesitation, repeated clicks, and navigation confusion. Provides specific, actionable improvement suggestions.', 'Launched to positive reception from product teams. Reduces UX analysis time from hours to minutes. Enables non-UX specialists to identify and fix usability issues quickly.', '["90% faster analysis","Used by 50+ product teams"]', NULL, NULL, 'https://uxauditapp.com', 'ux-audit-app.png', 'uxpilot', 1, 1, '2026-01-07 19:51:23.867946', '2026-01-07 19:51:23.884618', '2026-01-07 19:51:23.884618') RETURNING "id" /*application='ZelusottomayorPortfolio'*/[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='ZelusottomayorPortfolio'*/[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='ZelusottomayorPortfolio'*/[0m
+  [1m[36mCaseStudy Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "case_studies" WHERE "case_studies"."slug" = 'ai-talk-coach' LIMIT 1 /*application='ZelusottomayorPortfolio'*/[0m
+  [1m[36mCaseStudy Create (0.0ms)[0m  [1m[32mINSERT INTO "case_studies" ("name", "client_name", "client_type", "tagline", "problem", "approach", "results", "metrics", "hero_image", "thumbnail", "link", "icon", "slug", "featured", "display_order", "published_at", "created_at", "updated_at") VALUES ('AI Talk Coach', 'AI Talk Coach', 1, 'Practice and improve your speaking skills with AI-powered feedback', 'People struggle with public speaking and interview preparation. Traditional coaching is expensive and not always accessible. Need a way to practice anytime and get immediate feedback.', 'Built a web-based AI coach that helps users practice 60-180 second responses. Detects filler words, measures clarity and pace, provides targeted drills. Uses speech recognition and natural language processing to analyze responses in real-time.', 'Launched as a tool for interview prep and public speaking practice. Users report improved confidence and reduced filler words after consistent practice.', '["1000+ practice sessions","70% reduction in filler words"]', NULL, NULL, 'https://aitalkcoach.com', 'ai-talk-coach.png', 'ai-talk-coach', 1, 2, '2026-01-07 19:51:23.886510', '2026-01-07 19:51:23.887466', '2026-01-07 19:51:23.887466') RETURNING "id" /*application='ZelusottomayorPortfolio'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='ZelusottomayorPortfolio'*/[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='ZelusottomayorPortfolio'*/[0m
+  [1m[36mCaseStudy Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "case_studies" WHERE "case_studies"."slug" = 'floating-clock' LIMIT 1 /*application='ZelusottomayorPortfolio'*/[0m
+  [1m[36mCaseStudy Create (0.0ms)[0m  [1m[32mINSERT INTO "case_studies" ("name", "client_name", "client_type", "tagline", "problem", "approach", "results", "metrics", "hero_image", "thumbnail", "link", "icon", "slug", "featured", "display_order", "published_at", "created_at", "updated_at") VALUES ('Floating Clock', 'Floating Clock', 1, 'Elegant floating clock with customizable display', 'Need a clean, distraction-free way to display time during presentations and recordings.', 'Built a minimal web application with customizable clock display, smooth animations, and responsive design. Focused on simplicity and elegance.', 'Simple tool used by content creators and presenters.', '["5000+ monthly users"]', NULL, NULL, 'https://floatingclock.zelusottomayor.com', 'floating-clock.png', 'floating-clock', 0, 3, '2026-01-07 19:51:23.888276', '2026-01-07 19:51:23.889147', '2026-01-07 19:51:23.889147') RETURNING "id" /*application='ZelusottomayorPortfolio'*/[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='ZelusottomayorPortfolio'*/[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='ZelusottomayorPortfolio'*/[0m
+  [1m[36mCaseStudy Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "case_studies" WHERE "case_studies"."slug" = 'image-scraper' LIMIT 1 /*application='ZelusottomayorPortfolio'*/[0m
+  [1m[36mCaseStudy Create (0.0ms)[0m  [1m[32mINSERT INTO "case_studies" ("name", "client_name", "client_type", "tagline", "problem", "approach", "results", "metrics", "hero_image", "thumbnail", "link", "icon", "slug", "featured", "display_order", "published_at", "created_at", "updated_at") VALUES ('Website Image Scraper', 'Image Scraping Tool', 1, 'Extract and download images from any website', 'Designers and content creators need to quickly extract images from websites for research and inspiration.', 'Built a powerful web scraping tool optimized for image extraction. Handles various website structures and provides batch download capabilities.', 'Tool used by designers for competitive research and inspiration gathering.', '["10000+ images scraped"]', NULL, NULL, 'https://imagescrapingtool.zelusottomayor.com', 'website-image-scraper.png', 'image-scraper', 0, 4, '2026-01-07 19:51:23.889893', '2026-01-07 19:51:23.890733', '2026-01-07 19:51:23.890733') RETURNING "id" /*application='ZelusottomayorPortfolio'*/[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='ZelusottomayorPortfolio'*/[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='ZelusottomayorPortfolio'*/[0m
+  [1m[36mTestimonial Create (0.6ms)[0m  [1m[32mINSERT INTO "testimonials" ("client_name", "client_title", "client_company", "content", "avatar", "rating", "featured", "display_order", "created_at", "updated_at") VALUES ('Sarah Johnson', 'Product Manager', 'TechStart Inc', 'The automation system saved our team 15 hours per week. What used to take us days now happens automatically. Best investment we made this year.', NULL, 5, 1, 1, '2026-01-07 19:51:23.893694', '2026-01-07 19:51:23.893694') RETURNING "id" /*application='ZelusottomayorPortfolio'*/[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='ZelusottomayorPortfolio'*/[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='ZelusottomayorPortfolio'*/[0m
+  [1m[36mTestimonial Create (0.4ms)[0m  [1m[32mINSERT INTO "testimonials" ("client_name", "client_title", "client_company", "content", "avatar", "rating", "featured", "display_order", "created_at", "updated_at") VALUES ('Michael Chen', 'Founder', 'GrowthLabs', 'Shipped our MVP in 3 weeks instead of 3 months. The iterative approach meant we could validate with users early and pivot quickly. Highly recommend!', NULL, 5, 1, 2, '2026-01-07 19:51:23.895152', '2026-01-07 19:51:23.895152') RETURNING "id" /*application='ZelusottomayorPortfolio'*/[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='ZelusottomayorPortfolio'*/[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='ZelusottomayorPortfolio'*/[0m
+  [1m[36mTestimonial Create (0.4ms)[0m  [1m[32mINSERT INTO "testimonials" ("client_name", "client_title", "client_company", "content", "avatar", "rating", "featured", "display_order", "created_at", "updated_at") VALUES ('Emily Rodriguez', 'Operations Lead', 'ScaleUp Agency', 'Finally, our CRM and project management tools talk to each other. No more manual data entry, no more missed follow-ups. Game changer for our ops.', NULL, 5, 1, 3, '2026-01-07 19:51:23.896389', '2026-01-07 19:51:23.896389') RETURNING "id" /*application='ZelusottomayorPortfolio'*/[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='ZelusottomayorPortfolio'*/[0m
+  [1m[36mCaseStudy Count (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "case_studies" /*application='ZelusottomayorPortfolio'*/[0m
+  [1m[36mTestimonial Count (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "testimonials" /*application='ZelusottomayorPortfolio'*/[0m
+Started GET "/" for ::1 at 2026-01-07 21:27:35 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='ZelusottomayorPortfolio'*/[0m
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered shared/_trust_strip.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  Rendered shared/_service_card.html.erb (Duration: 0.3ms | GC: 0.0ms)
+  Rendered shared/_service_card.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered shared/_process_step.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  Rendered shared/_process_step.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered shared/_process_step.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered shared/_process_step.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  [1m[36mCaseStudy Load (0.5ms)[0m  [1m[34mSELECT "case_studies".* FROM "case_studies" WHERE "case_studies"."featured" = 1 AND "case_studies"."published_at" IS NOT NULL AND (published_at <= '2026-01-07 21:27:36.117639') ORDER BY "case_studies"."display_order" ASC, "case_studies"."published_at" DESC LIMIT 6 /*action='home',application='ZelusottomayorPortfolio',controller='pages'*/[0m
+  ↳ app/views/pages/home.html.erb:128
+  Rendered shared/_case_study_card.html.erb (Duration: 4.7ms | GC: 0.0ms)
+  Rendered shared/_case_study_card.html.erb (Duration: 0.6ms | GC: 0.0ms)
+  [1m[36mTestimonial Load (0.4ms)[0m  [1m[34mSELECT "testimonials".* FROM "testimonials" WHERE "testimonials"."featured" = 1 ORDER BY "testimonials"."display_order" ASC, "testimonials"."created_at" DESC LIMIT 3 /*action='home',application='ZelusottomayorPortfolio',controller='pages'*/[0m
+  ↳ app/views/pages/home.html.erb:170
+  Rendered shared/_testimonial_card.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  Rendered shared/_testimonial_card.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered shared/_testimonial_card.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered shared/_metric_block.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered shared/_metric_block.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered shared/_metric_block.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered shared/_package_card.html.erb (Duration: 0.3ms | GC: 0.0ms)
+  Rendered shared/_package_card.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered shared/_package_card.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered shared/_cta_section.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  Rendered pages/home.html.erb within layouts/application (Duration: 18.5ms | GC: 0.0ms)
+  Rendered layouts/_navigation.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  Rendered layouts/_footer.html.erb (Duration: 0.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 26.6ms | GC: 0.0ms)
+Completed 200 OK in 117ms (Views: 27.4ms | ActiveRecord: 2.0ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/assets/application-31f92df8.css" for ::1 at 2026-01-07 21:27:36 +0000
+Started GET "/assets/controllers/application-3affb389.js" for ::1 at 2026-01-07 21:27:36 +0000
+Started GET "/assets/stimulus-loading-1fc53fe7.js" for ::1 at 2026-01-07 21:27:36 +0000
+Started GET "/assets/stimulus.min-4b1e420e.js" for ::1 at 2026-01-07 21:27:36 +0000
+Started GET "/assets/application-bfcdf840.js" for ::1 at 2026-01-07 21:27:36 +0000
+Started GET "/assets/turbo.min-3a2e143f.js" for ::1 at 2026-01-07 21:27:36 +0000
+Started GET "/assets/controllers/hello_controller-708796bd.js" for ::1 at 2026-01-07 21:27:36 +0000
+Started GET "/assets/controllers/index-ee64e1f1.js" for ::1 at 2026-01-07 21:27:36 +0000
+Started GET "/assets/controllers/navigation_controller-477eeafe.js" for ::1 at 2026-01-07 21:27:36 +0000
+Started GET "/assets/controllers/tabs_controller-e2c1175f.js" for ::1 at 2026-01-07 21:27:36 +0000
+Started GET "/assets/ux-audit-app-30c09c89.png" for ::1 at 2026-01-07 21:27:36 +0000
+Started GET "/assets/ai-talk-coach-75b0f503.png" for ::1 at 2026-01-07 21:27:36 +0000
+Started GET "/" for ::1 at 2026-01-07 21:27:36 +0000
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered shared/_trust_strip.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered shared/_service_card.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered shared/_service_card.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered shared/_process_step.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered shared/_process_step.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered shared/_process_step.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered shared/_process_step.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  [1m[36mCaseStudy Load (0.2ms)[0m  [1m[34mSELECT "case_studies".* FROM "case_studies" WHERE "case_studies"."featured" = 1 AND "case_studies"."published_at" IS NOT NULL AND (published_at <= '2026-01-07 21:27:36.760281') ORDER BY "case_studies"."display_order" ASC, "case_studies"."published_at" DESC LIMIT 6 /*action='home',application='ZelusottomayorPortfolio',controller='pages'*/[0m
+  ↳ app/views/pages/home.html.erb:128
+  Rendered shared/_case_study_card.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  Rendered shared/_case_study_card.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  [1m[36mTestimonial Load (0.1ms)[0m  [1m[34mSELECT "testimonials".* FROM "testimonials" WHERE "testimonials"."featured" = 1 ORDER BY "testimonials"."display_order" ASC, "testimonials"."created_at" DESC LIMIT 3 /*action='home',application='ZelusottomayorPortfolio',controller='pages'*/[0m
+  ↳ app/views/pages/home.html.erb:170
+  Rendered shared/_testimonial_card.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered shared/_testimonial_card.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered shared/_testimonial_card.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered shared/_metric_block.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered shared/_metric_block.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered shared/_metric_block.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered shared/_package_card.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered shared/_package_card.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered shared/_package_card.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered shared/_cta_section.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered pages/home.html.erb within layouts/application (Duration: 3.2ms | GC: 0.2ms)
+  Rendered layouts/_navigation.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 7.2ms | GC: 0.2ms)
+Completed 200 OK in 39ms (Views: 7.1ms | ActiveRecord: 0.3ms (2 queries, 0 cached) | GC: 0.2ms)
+
+
+Started GET "/" for ::1 at 2026-01-07 21:27:37 +0000
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered shared/_trust_strip.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered shared/_service_card.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered shared/_service_card.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered shared/_process_step.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered shared/_process_step.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered shared/_process_step.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered shared/_process_step.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  [1m[36mCaseStudy Load (0.2ms)[0m  [1m[34mSELECT "case_studies".* FROM "case_studies" WHERE "case_studies"."featured" = 1 AND "case_studies"."published_at" IS NOT NULL AND (published_at <= '2026-01-07 21:27:37.131780') ORDER BY "case_studies"."display_order" ASC, "case_studies"."published_at" DESC LIMIT 6 /*action='home',application='ZelusottomayorPortfolio',controller='pages'*/[0m
+  ↳ app/views/pages/home.html.erb:128
+  Rendered shared/_case_study_card.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  Rendered shared/_case_study_card.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  [1m[36mTestimonial Load (0.1ms)[0m  [1m[34mSELECT "testimonials".* FROM "testimonials" WHERE "testimonials"."featured" = 1 ORDER BY "testimonials"."display_order" ASC, "testimonials"."created_at" DESC LIMIT 3 /*action='home',application='ZelusottomayorPortfolio',controller='pages'*/[0m
+  ↳ app/views/pages/home.html.erb:170
+  Rendered shared/_testimonial_card.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered shared/_testimonial_card.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered shared/_testimonial_card.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered shared/_metric_block.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered shared/_metric_block.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered shared/_metric_block.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered shared/_package_card.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered shared/_package_card.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered shared/_package_card.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered shared/_cta_section.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered pages/home.html.erb within layouts/application (Duration: 2.8ms | GC: 0.1ms)
+  Rendered layouts/_navigation.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 3.6ms | GC: 0.1ms)
+Completed 200 OK in 35ms (Views: 3.5ms | ActiveRecord: 0.2ms (2 queries, 0 cached) | GC: 0.1ms)
+
+
+Started GET "/book-call" for ::1 at 2026-01-07 21:27:53 +0000
+Processing by PagesController#book_call as HTML
+Redirected to [FILTERED]
+Completed 302 Found in 30ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/book-call" for ::1 at 2026-01-07 21:28:00 +0000
+Processing by PagesController#book_call as HTML
+Redirected to [FILTERED]
+Completed 302 Found in 32ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/book-call" for ::1 at 2026-01-07 21:28:03 +0000
+Processing by PagesController#book_call as HTML
+Redirected to [FILTERED]
+Completed 302 Found in 34ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/" for ::1 at 2026-01-07 21:30:32 +0000
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered shared/_trust_strip.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered shared/_service_card.html.erb (Duration: 0.4ms | GC: 0.0ms)
+  Rendered shared/_service_card.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered shared/_process_step.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered shared/_process_step.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered shared/_process_step.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered shared/_process_step.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  [1m[36mCaseStudy Load (5.8ms)[0m  [1m[34mSELECT "case_studies".* FROM "case_studies" WHERE "case_studies"."featured" = 1 AND "case_studies"."published_at" IS NOT NULL AND (published_at <= '2026-01-07 21:30:32.102489') ORDER BY "case_studies"."display_order" ASC, "case_studies"."published_at" DESC LIMIT 6 /*action='home',application='ZelusottomayorPortfolio',controller='pages'*/[0m
+  ↳ app/views/pages/home.html.erb:128
+  Rendered shared/_case_study_card.html.erb (Duration: 1.0ms | GC: 0.0ms)
+  Rendered shared/_case_study_card.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  [1m[36mTestimonial Load (0.5ms)[0m  [1m[34mSELECT "testimonials".* FROM "testimonials" WHERE "testimonials"."featured" = 1 ORDER BY "testimonials"."display_order" ASC, "testimonials"."created_at" DESC LIMIT 3 /*action='home',application='ZelusottomayorPortfolio',controller='pages'*/[0m
+  ↳ app/views/pages/home.html.erb:170
+  Rendered shared/_testimonial_card.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered shared/_testimonial_card.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered shared/_testimonial_card.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered shared/_metric_block.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered shared/_metric_block.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered shared/_metric_block.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered shared/_package_card.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered shared/_package_card.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered shared/_package_card.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered shared/_cta_section.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered pages/home.html.erb within layouts/application (Duration: 13.8ms | GC: 0.0ms)
+  Rendered layouts/_navigation.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 15.7ms | GC: 0.0ms)
+Completed 200 OK in 47ms (Views: 10.7ms | ActiveRecord: 6.2ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/assets/application-31f92df8.css" for ::1 at 2026-01-07 21:30:32 +0000
+Started GET "/assets/turbo.min-3a2e143f.js" for ::1 at 2026-01-07 21:30:32 +0000
+Started GET "/assets/stimulus.min-4b1e420e.js" for ::1 at 2026-01-07 21:30:32 +0000
+Started GET "/assets/stimulus-loading-1fc53fe7.js" for ::1 at 2026-01-07 21:30:32 +0000
+Started GET "/assets/controllers/tabs_controller-e2c1175f.js" for ::1 at 2026-01-07 21:30:32 +0000
+Started GET "/assets/controllers/navigation_controller-477eeafe.js" for ::1 at 2026-01-07 21:30:32 +0000
+Started GET "/favicon-32x32.png" for ::1 at 2026-01-07 21:30:32 +0000
+Started GET "/assets/ux-audit-app-30c09c89.png" for ::1 at 2026-01-07 21:30:32 +0000
+Started GET "/assets/ai-talk-coach-75b0f503.png" for ::1 at 2026-01-07 21:30:32 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/favicon-32x32.png"):
+  
+Started GET "/book-call" for ::1 at 2026-01-07 21:30:57 +0000
+Processing by PagesController#book_call as HTML
+Redirected to [FILTERED]
+Completed 302 Found in 22ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/work" for ::1 at 2026-01-07 21:31:04 +0000
+Processing by PagesController#work as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/work.html.erb within layouts/application
+  [1m[36mCaseStudy Load (6.1ms)[0m  [1m[34mSELECT "case_studies".* FROM "case_studies" WHERE "case_studies"."published_at" IS NOT NULL AND (published_at <= '2026-01-07 21:31:04.559235') ORDER BY "case_studies"."display_order" ASC, "case_studies"."published_at" DESC /*action='work',application='ZelusottomayorPortfolio',controller='pages'*/[0m
+  ↳ app/views/pages/work.html.erb:15
+  [1m[36mCaseStudy Count (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "case_studies" WHERE "case_studies"."published_at" IS NOT NULL AND (published_at <= '2026-01-07 21:31:04.559235') /*action='work',application='ZelusottomayorPortfolio',controller='pages'*/[0m
+  ↳ app/views/pages/work.html.erb:19
+  [1m[36mCaseStudy Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "case_studies" WHERE "case_studies"."published_at" IS NOT NULL AND (published_at <= '2026-01-07 21:31:04.559235') AND "case_studies"."client_type" = 0 /*action='work',application='ZelusottomayorPortfolio',controller='pages'*/[0m
+  ↳ app/views/pages/work.html.erb:22
+  [1m[36mCaseStudy Count (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "case_studies" WHERE "case_studies"."published_at" IS NOT NULL AND (published_at <= '2026-01-07 21:31:04.559235') AND "case_studies"."client_type" = 1 /*action='work',application='ZelusottomayorPortfolio',controller='pages'*/[0m
+  ↳ app/views/pages/work.html.erb:25
+  Rendered shared/_case_study_card.html.erb (Duration: 2.1ms | GC: 0.0ms)
+  Rendered shared/_case_study_card.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered shared/_case_study_card.html.erb (Duration: 3.0ms | GC: 0.0ms)
+  Rendered shared/_case_study_card.html.erb (Duration: 13.3ms | GC: 7.8ms)
+  Rendered shared/_cta_section.html.erb (Duration: 0.4ms | GC: 0.0ms)
+  Rendered pages/work.html.erb within layouts/application (Duration: 31.7ms | GC: 7.8ms)
+  Rendered layouts/_navigation.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 34.8ms | GC: 9.3ms)
+Completed 200 OK in 66ms (Views: 28.5ms | ActiveRecord: 6.7ms (4 queries, 0 cached) | GC: 9.3ms)
+
+
+Started GET "/work" for ::1 at 2026-01-07 21:31:06 +0000
+Processing by PagesController#work as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/work.html.erb within layouts/application
+  [1m[36mCaseStudy Load (0.2ms)[0m  [1m[34mSELECT "case_studies".* FROM "case_studies" WHERE "case_studies"."published_at" IS NOT NULL AND (published_at <= '2026-01-07 21:31:06.182636') ORDER BY "case_studies"."display_order" ASC, "case_studies"."published_at" DESC /*action='work',application='ZelusottomayorPortfolio',controller='pages'*/[0m
+  ↳ app/views/pages/work.html.erb:15
+  [1m[36mCaseStudy Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "case_studies" WHERE "case_studies"."published_at" IS NOT NULL AND (published_at <= '2026-01-07 21:31:06.182636') /*action='work',application='ZelusottomayorPortfolio',controller='pages'*/[0m
+  ↳ app/views/pages/work.html.erb:19
+  [1m[36mCaseStudy Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "case_studies" WHERE "case_studies"."published_at" IS NOT NULL AND (published_at <= '2026-01-07 21:31:06.182636') AND "case_studies"."client_type" = 0 /*action='work',application='ZelusottomayorPortfolio',controller='pages'*/[0m
+  ↳ app/views/pages/work.html.erb:22
+  [1m[36mCaseStudy Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "case_studies" WHERE "case_studies"."published_at" IS NOT NULL AND (published_at <= '2026-01-07 21:31:06.182636') AND "case_studies"."client_type" = 1 /*action='work',application='ZelusottomayorPortfolio',controller='pages'*/[0m
+  ↳ app/views/pages/work.html.erb:25
+  Rendered shared/_case_study_card.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  Rendered shared/_case_study_card.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered shared/_case_study_card.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered shared/_case_study_card.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered shared/_cta_section.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered pages/work.html.erb within layouts/application (Duration: 3.7ms | GC: 0.0ms)
+  Rendered layouts/_navigation.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 6.3ms | GC: 1.1ms)
+Completed 200 OK in 38ms (Views: 6.2ms | ActiveRecord: 0.3ms (4 queries, 0 cached) | GC: 1.1ms)
+
+
+Started GET "/assets/floating-clock-557ef4be.png" for ::1 at 2026-01-07 21:31:06 +0000
+Started GET "/assets/website-image-scraper-e114cb4b.png" for ::1 at 2026-01-07 21:31:06 +0000
+Started GET "/" for ::1 at 2026-01-07 21:39:48 +0000
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered shared/_trust_strip.html.erb (Duration: 0.4ms | GC: 0.3ms)
+  Rendered shared/_service_card.html.erb (Duration: 0.5ms | GC: 0.0ms)
+  Rendered shared/_service_card.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered shared/_process_step.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered shared/_process_step.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered shared/_process_step.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered shared/_process_step.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  [1m[36mCaseStudy Load (6.8ms)[0m  [1m[34mSELECT "case_studies".* FROM "case_studies" WHERE "case_studies"."featured" = 1 AND "case_studies"."published_at" IS NOT NULL AND (published_at <= '2026-01-07 21:39:48.440287') ORDER BY "case_studies"."display_order" ASC, "case_studies"."published_at" DESC LIMIT 6 /*action='home',application='ZelusottomayorPortfolio',controller='pages'*/[0m
+  ↳ app/views/pages/home.html.erb:128
+  Rendered shared/_case_study_card.html.erb (Duration: 0.8ms | GC: 0.0ms)
+  Rendered shared/_case_study_card.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  [1m[36mTestimonial Load (0.4ms)[0m  [1m[34mSELECT "testimonials".* FROM "testimonials" WHERE "testimonials"."featured" = 1 ORDER BY "testimonials"."display_order" ASC, "testimonials"."created_at" DESC LIMIT 3 /*action='home',application='ZelusottomayorPortfolio',controller='pages'*/[0m
+  ↳ app/views/pages/home.html.erb:170
+  Rendered shared/_testimonial_card.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered shared/_testimonial_card.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered shared/_testimonial_card.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered shared/_metric_block.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered shared/_metric_block.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered shared/_metric_block.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered shared/_package_card.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered shared/_package_card.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered shared/_package_card.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered shared/_cta_section.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered pages/home.html.erb within layouts/application (Duration: 13.0ms | GC: 0.3ms)
+  Rendered layouts/_navigation.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 20.1ms | GC: 1.8ms)
+Completed 200 OK in 60ms (Views: 13.2ms | ActiveRecord: 7.3ms (2 queries, 0 cached) | GC: 1.8ms)
+
+
+Started GET "/book-call" for ::1 at 2026-01-07 21:40:45 +0000
+Processing by PagesController#book_call as HTML
+Redirected to [FILTERED]
+Completed 302 Found in 34ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/work" for ::1 at 2026-01-07 21:40:46 +0000
+Processing by PagesController#work as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/work.html.erb within layouts/application
+  [1m[36mCaseStudy Load (0.6ms)[0m  [1m[34mSELECT "case_studies".* FROM "case_studies" WHERE "case_studies"."published_at" IS NOT NULL AND (published_at <= '2026-01-07 21:40:46.579147') ORDER BY "case_studies"."display_order" ASC, "case_studies"."published_at" DESC /*action='work',application='ZelusottomayorPortfolio',controller='pages'*/[0m
+  ↳ app/views/pages/work.html.erb:15
+  [1m[36mCaseStudy Count (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "case_studies" WHERE "case_studies"."published_at" IS NOT NULL AND (published_at <= '2026-01-07 21:40:46.579147') /*action='work',application='ZelusottomayorPortfolio',controller='pages'*/[0m
+  ↳ app/views/pages/work.html.erb:19
+  [1m[36mCaseStudy Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "case_studies" WHERE "case_studies"."published_at" IS NOT NULL AND (published_at <= '2026-01-07 21:40:46.579147') AND "case_studies"."client_type" = 0 /*action='work',application='ZelusottomayorPortfolio',controller='pages'*/[0m
+  ↳ app/views/pages/work.html.erb:22
+  [1m[36mCaseStudy Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "case_studies" WHERE "case_studies"."published_at" IS NOT NULL AND (published_at <= '2026-01-07 21:40:46.579147') AND "case_studies"."client_type" = 1 /*action='work',application='ZelusottomayorPortfolio',controller='pages'*/[0m
+  ↳ app/views/pages/work.html.erb:25
+  Rendered shared/_case_study_card.html.erb (Duration: 1.0ms | GC: 0.6ms)
+  Rendered shared/_case_study_card.html.erb (Duration: 0.9ms | GC: 0.7ms)
+  Rendered shared/_case_study_card.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered shared/_case_study_card.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered shared/_cta_section.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered pages/work.html.erb within layouts/application (Duration: 17.5ms | GC: 9.6ms)
+  Rendered layouts/_navigation.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered layouts/_footer.html.erb (Duration: 1.2ms | GC: 1.1ms)
+  Rendered layout layouts/application.html.erb (Duration: 27.2ms | GC: 15.2ms)
+Completed 200 OK in 65ms (Views: 26.3ms | ActiveRecord: 1.4ms (4 queries, 0 cached) | GC: 15.2ms)
+
+
+Started GET "/work" for ::1 at 2026-01-07 21:40:47 +0000
+Processing by PagesController#work as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/work.html.erb within layouts/application
+  [1m[36mCaseStudy Load (0.7ms)[0m  [1m[34mSELECT "case_studies".* FROM "case_studies" WHERE "case_studies"."published_at" IS NOT NULL AND (published_at <= '2026-01-07 21:40:47.762823') ORDER BY "case_studies"."display_order" ASC, "case_studies"."published_at" DESC /*action='work',application='ZelusottomayorPortfolio',controller='pages'*/[0m
+  ↳ app/views/pages/work.html.erb:15
+  [1m[36mCaseStudy Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "case_studies" WHERE "case_studies"."published_at" IS NOT NULL AND (published_at <= '2026-01-07 21:40:47.762823') /*action='work',application='ZelusottomayorPortfolio',controller='pages'*/[0m
+  ↳ app/views/pages/work.html.erb:19
+  [1m[36mCaseStudy Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "case_studies" WHERE "case_studies"."published_at" IS NOT NULL AND (published_at <= '2026-01-07 21:40:47.762823') AND "case_studies"."client_type" = 0 /*action='work',application='ZelusottomayorPortfolio',controller='pages'*/[0m
+  ↳ app/views/pages/work.html.erb:22
+  [1m[36mCaseStudy Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "case_studies" WHERE "case_studies"."published_at" IS NOT NULL AND (published_at <= '2026-01-07 21:40:47.762823') AND "case_studies"."client_type" = 1 /*action='work',application='ZelusottomayorPortfolio',controller='pages'*/[0m
+  ↳ app/views/pages/work.html.erb:25
+  Rendered shared/_case_study_card.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  Rendered shared/_case_study_card.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered shared/_case_study_card.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered shared/_case_study_card.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered shared/_cta_section.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered pages/work.html.erb within layouts/application (Duration: 9.5ms | GC: 5.3ms)
+  Rendered layouts/_navigation.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered layouts/_footer.html.erb (Duration: 1.6ms | GC: 1.3ms)
+  Rendered layout layouts/application.html.erb (Duration: 17.2ms | GC: 9.8ms)
+Completed 200 OK in 47ms (Views: 16.6ms | ActiveRecord: 0.9ms (4 queries, 0 cached) | GC: 11.4ms)
+
+
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='ZelusottomayorPortfolio'*/[0m
+  [1m[36mCaseStudy Load (0.3ms)[0m  [1m[34mSELECT "case_studies".* FROM "case_studies" /*application='ZelusottomayorPortfolio'*/[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='ZelusottomayorPortfolio'*/[0m
+  [1m[36mCaseStudy Destroy (0.7ms)[0m  [1m[31mDELETE FROM "case_studies" WHERE "case_studies"."id" = 1 /*application='ZelusottomayorPortfolio'*/[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='ZelusottomayorPortfolio'*/[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='ZelusottomayorPortfolio'*/[0m
+  [1m[36mCaseStudy Destroy (0.4ms)[0m  [1m[31mDELETE FROM "case_studies" WHERE "case_studies"."id" = 2 /*application='ZelusottomayorPortfolio'*/[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='ZelusottomayorPortfolio'*/[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='ZelusottomayorPortfolio'*/[0m
+  [1m[36mCaseStudy Destroy (0.4ms)[0m  [1m[31mDELETE FROM "case_studies" WHERE "case_studies"."id" = 3 /*application='ZelusottomayorPortfolio'*/[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='ZelusottomayorPortfolio'*/[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='ZelusottomayorPortfolio'*/[0m
+  [1m[36mCaseStudy Destroy (0.3ms)[0m  [1m[31mDELETE FROM "case_studies" WHERE "case_studies"."id" = 4 /*application='ZelusottomayorPortfolio'*/[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='ZelusottomayorPortfolio'*/[0m
+  [1m[36mTestimonial Load (0.0ms)[0m  [1m[34mSELECT "testimonials".* FROM "testimonials" /*application='ZelusottomayorPortfolio'*/[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='ZelusottomayorPortfolio'*/[0m
+  [1m[36mTestimonial Destroy (0.3ms)[0m  [1m[31mDELETE FROM "testimonials" WHERE "testimonials"."id" = 1 /*application='ZelusottomayorPortfolio'*/[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='ZelusottomayorPortfolio'*/[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='ZelusottomayorPortfolio'*/[0m
+  [1m[36mTestimonial Destroy (0.3ms)[0m  [1m[31mDELETE FROM "testimonials" WHERE "testimonials"."id" = 2 /*application='ZelusottomayorPortfolio'*/[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='ZelusottomayorPortfolio'*/[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='ZelusottomayorPortfolio'*/[0m
+  [1m[36mTestimonial Destroy (0.3ms)[0m  [1m[31mDELETE FROM "testimonials" WHERE "testimonials"."id" = 3 /*application='ZelusottomayorPortfolio'*/[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='ZelusottomayorPortfolio'*/[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='ZelusottomayorPortfolio'*/[0m
+  [1m[36mCaseStudy Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "case_studies" WHERE "case_studies"."slug" = 'uxpilot' LIMIT 1 /*application='ZelusottomayorPortfolio'*/[0m
+  [1m[36mCaseStudy Create (0.1ms)[0m  [1m[32mINSERT INTO "case_studies" ("name", "client_name", "client_type", "tagline", "problem", "approach", "results", "metrics", "hero_image", "thumbnail", "link", "icon", "slug", "featured", "display_order", "published_at", "created_at", "updated_at") VALUES ('UXPilot', 'UXPilot', 1, 'AI tool that analyzes user session recordings to find UX problems', 'Watching user session recordings to find UX issues is tedious and time-consuming. Product teams need to review hours of footage to spot where users struggle.', 'Built a Rails app that uses Claude API to analyze user session recordings. The AI watches the recordings and identifies where users hesitate, click repeatedly, or seem confused. It generates a report with specific UX issues and timestamps.', 'Currently in use by several product teams. Turns hours of manual review into a 5-minute AI analysis. Most useful for finding obvious friction points that are easy to miss when reviewing manually.', NULL, NULL, NULL, 'https://uxauditapp.com', 'ux-audit-app.png', 'uxpilot', 1, 1, '2026-01-07 22:09:03.378383', '2026-01-07 22:09:03.379425', '2026-01-07 22:09:03.379425') RETURNING "id" /*application='ZelusottomayorPortfolio'*/[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='ZelusottomayorPortfolio'*/[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='ZelusottomayorPortfolio'*/[0m
+  [1m[36mCaseStudy Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "case_studies" WHERE "case_studies"."slug" = 'ai-talk-coach' LIMIT 1 /*application='ZelusottomayorPortfolio'*/[0m
+  [1m[36mCaseStudy Create (0.0ms)[0m  [1m[32mINSERT INTO "case_studies" ("name", "client_name", "client_type", "tagline", "problem", "approach", "results", "metrics", "hero_image", "thumbnail", "link", "icon", "slug", "featured", "display_order", "published_at", "created_at", "updated_at") VALUES ('AI Talk Coach', 'AI Talk Coach', 1, 'Practice speaking with AI feedback on filler words and pacing', 'Practicing for interviews or presentations is awkward because you need someone to listen and give feedback. Recording yourself doesn''t help you identify what to improve.', 'Built a web app where you practice 60-180 second responses on common topics. Uses browser speech recognition to transcribe your answer, then sends it to Claude for feedback on filler words, pacing, clarity, and structure. Provides specific drills to improve weak areas.', 'Useful for interview prep and presentation practice. The AI feedback is surprisingly good at catching filler words and suggesting clearer phrasing. Several users have mentioned it helped them prepare for job interviews.', NULL, NULL, NULL, 'https://aitalkcoach.com', 'ai-talk-coach.png', 'ai-talk-coach', 1, 2, '2026-01-07 22:09:03.380448', '2026-01-07 22:09:03.381261', '2026-01-07 22:09:03.381261') RETURNING "id" /*application='ZelusottomayorPortfolio'*/[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='ZelusottomayorPortfolio'*/[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='ZelusottomayorPortfolio'*/[0m
+  [1m[36mCaseStudy Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "case_studies" WHERE "case_studies"."slug" = 'floating-clock' LIMIT 1 /*application='ZelusottomayorPortfolio'*/[0m
+  [1m[36mCaseStudy Create (0.0ms)[0m  [1m[32mINSERT INTO "case_studies" ("name", "client_name", "client_type", "tagline", "problem", "approach", "results", "metrics", "hero_image", "thumbnail", "link", "icon", "slug", "featured", "display_order", "published_at", "created_at", "updated_at") VALUES ('Floating Clock', 'Floating Clock', 1, 'Minimal floating timer for presentations and recordings', 'When recording videos or giving presentations, I needed a simple, clean timer that wouldn''t clutter the screen.', 'Built a minimal web app with a floating timer. Customizable size, position, and color. No unnecessary features - just a clean timer that does one thing well.', 'Use it myself for timed presentations. Simple, works reliably. Some content creators have found it useful too.', NULL, NULL, NULL, 'https://floatingclock.zelusottomayor.com', 'floating-clock.png', 'floating-clock', 0, 3, '2026-01-07 22:09:03.382031', '2026-01-07 22:09:03.382898', '2026-01-07 22:09:03.382898') RETURNING "id" /*application='ZelusottomayorPortfolio'*/[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='ZelusottomayorPortfolio'*/[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='ZelusottomayorPortfolio'*/[0m
+  [1m[36mCaseStudy Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "case_studies" WHERE "case_studies"."slug" = 'image-scraper' LIMIT 1 /*application='ZelusottomayorPortfolio'*/[0m
+  [1m[36mCaseStudy Create (0.0ms)[0m  [1m[32mINSERT INTO "case_studies" ("name", "client_name", "client_type", "tagline", "problem", "approach", "results", "metrics", "hero_image", "thumbnail", "link", "icon", "slug", "featured", "display_order", "published_at", "created_at", "updated_at") VALUES ('Website Image Scraper', 'Image Scraping Tool', 1, 'Bulk download images from websites', 'Manually downloading images from a website one by one is tedious. Right-clicking and saving dozens of images wastes time.', 'Built a web scraping tool that extracts all images from a given URL and lets you download them in bulk. Handles different image formats and provides filtering options.', 'Practical tool for when you need to grab multiple images quickly. Works on most standard websites. Useful for research and competitive analysis.', NULL, NULL, NULL, 'https://imagescrapingtool.zelusottomayor.com', 'website-image-scraper.png', 'image-scraper', 0, 4, '2026-01-07 22:09:03.383713', '2026-01-07 22:09:03.384537', '2026-01-07 22:09:03.384537') RETURNING "id" /*application='ZelusottomayorPortfolio'*/[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='ZelusottomayorPortfolio'*/[0m
+  [1m[36mCaseStudy Count (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "case_studies" /*application='ZelusottomayorPortfolio'*/[0m
+Started GET "/" for ::1 at 2026-01-08 09:33:00 +0000
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered shared/_service_card.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  Rendered shared/_service_card.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered shared/_process_step.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  Rendered shared/_process_step.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered shared/_process_step.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered shared/_process_step.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  [1m[36mCaseStudy Load (11.4ms)[0m  [1m[34mSELECT "case_studies".* FROM "case_studies" WHERE "case_studies"."featured" = 1 AND "case_studies"."published_at" IS NOT NULL AND (published_at <= '2026-01-08 09:33:01.095459') ORDER BY "case_studies"."display_order" ASC, "case_studies"."published_at" DESC LIMIT 6 /*action='home',application='ZelusottomayorPortfolio',controller='pages'*/[0m
+  ↳ app/views/pages/home.html.erb:122
+  Rendered shared/_case_study_card.html.erb (Duration: 3.6ms | GC: 0.0ms)
+  Rendered shared/_case_study_card.html.erb (Duration: 0.5ms | GC: 0.0ms)
+  Rendered shared/_package_card.html.erb (Duration: 0.3ms | GC: 0.0ms)
+  Rendered shared/_package_card.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered shared/_package_card.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered shared/_cta_section.html.erb (Duration: 0.5ms | GC: 0.0ms)
+  Rendered pages/home.html.erb within layouts/application (Duration: 32.3ms | GC: 0.0ms)
+  Rendered layouts/_navigation.html.erb (Duration: 0.4ms | GC: 0.0ms)
+  Rendered layouts/_footer.html.erb (Duration: 0.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 45.7ms | GC: 0.0ms)
+Completed 200 OK in 91ms (Views: 35.4ms | ActiveRecord: 11.4ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/assets/application-e2c3ddb0.css" for ::1 at 2026-01-08 09:33:01 +0000
+Started GET "/work" for ::1 at 2026-01-08 09:33:23 +0000
+Processing by PagesController#work as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/work.html.erb within layouts/application
+  [1m[36mCaseStudy Load (0.6ms)[0m  [1m[34mSELECT "case_studies".* FROM "case_studies" WHERE "case_studies"."published_at" IS NOT NULL AND (published_at <= '2026-01-08 09:33:23.487732') ORDER BY "case_studies"."display_order" ASC, "case_studies"."published_at" DESC /*action='work',application='ZelusottomayorPortfolio',controller='pages'*/[0m
+  ↳ app/views/pages/work.html.erb:15
+  [1m[36mCaseStudy Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "case_studies" WHERE "case_studies"."published_at" IS NOT NULL AND (published_at <= '2026-01-08 09:33:23.487732') /*action='work',application='ZelusottomayorPortfolio',controller='pages'*/[0m
+  ↳ app/views/pages/work.html.erb:19
+  [1m[36mCaseStudy Count (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "case_studies" WHERE "case_studies"."published_at" IS NOT NULL AND (published_at <= '2026-01-08 09:33:23.487732') AND "case_studies"."client_type" = 0 /*action='work',application='ZelusottomayorPortfolio',controller='pages'*/[0m
+  ↳ app/views/pages/work.html.erb:22
+  [1m[36mCaseStudy Count (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "case_studies" WHERE "case_studies"."published_at" IS NOT NULL AND (published_at <= '2026-01-08 09:33:23.487732') AND "case_studies"."client_type" = 1 /*action='work',application='ZelusottomayorPortfolio',controller='pages'*/[0m
+  ↳ app/views/pages/work.html.erb:25
+  Rendered shared/_case_study_card.html.erb (Duration: 0.3ms | GC: 0.0ms)
+  Rendered shared/_case_study_card.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered shared/_case_study_card.html.erb (Duration: 3.4ms | GC: 0.0ms)
+  Rendered shared/_case_study_card.html.erb (Duration: 4.0ms | GC: 1.5ms)
+  Rendered shared/_cta_section.html.erb (Duration: 0.4ms | GC: 0.0ms)
+  Rendered pages/work.html.erb within layouts/application (Duration: 12.8ms | GC: 1.5ms)
+  Rendered layouts/_navigation.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 14.5ms | GC: 1.5ms)
+Completed 200 OK in 39ms (Views: 13.7ms | ActiveRecord: 1.1ms (4 queries, 0 cached) | GC: 1.5ms)
+
+
+Started GET "/" for ::1 at 2026-01-08 10:15:40 +0000
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered shared/_service_card.html.erb (Duration: 0.3ms | GC: 0.0ms)
+  Rendered shared/_service_card.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered shared/_process_step.html.erb (Duration: 0.5ms | GC: 0.0ms)
+  Rendered shared/_process_step.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered shared/_process_step.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered shared/_process_step.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  [1m[36mCaseStudy Load (4.8ms)[0m  [1m[34mSELECT "case_studies".* FROM "case_studies" WHERE "case_studies"."featured" = 1 AND "case_studies"."published_at" IS NOT NULL AND (published_at <= '2026-01-08 10:15:40.278577') ORDER BY "case_studies"."display_order" ASC, "case_studies"."published_at" DESC LIMIT 6 /*action='home',application='ZelusottomayorPortfolio',controller='pages'*/[0m
+  ↳ app/views/pages/home.html.erb:125
+  Rendered shared/_case_study_card.html.erb (Duration: 16.2ms | GC: 0.0ms)
+  Rendered shared/_case_study_card.html.erb (Duration: 0.5ms | GC: 0.0ms)
+  Rendered shared/_package_card.html.erb (Duration: 0.3ms | GC: 0.0ms)
+  Rendered shared/_package_card.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered shared/_package_card.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered shared/_cta_section.html.erb (Duration: 2.1ms | GC: 1.3ms)
+  Rendered pages/home.html.erb within layouts/application (Duration: 56.0ms | GC: 5.7ms)
+  Rendered layouts/_navigation.html.erb (Duration: 0.3ms | GC: 0.0ms)
+  Rendered layouts/_footer.html.erb (Duration: 0.4ms | GC: 0.1ms)
+  Rendered layout layouts/application.html.erb (Duration: 72.8ms | GC: 6.1ms)
+Completed 200 OK in 112ms (Views: 69.6ms | ActiveRecord: 4.7ms (1 query, 0 cached) | GC: 6.4ms)
+
+
+Started GET "/assets/animations-5cfd0e3e.css" for ::1 at 2026-01-08 10:15:40 +0000
+Started GET "/assets/application-02752576.css" for ::1 at 2026-01-08 10:15:40 +0000
+Started GET "/assets/typography-e51f7d87.css" for ::1 at 2026-01-08 10:15:40 +0000
+Started GET "/assets/application-18baa750.js" for ::1 at 2026-01-08 10:15:40 +0000
+Started GET "/assets/controllers/smooth_scroll_controller-b552a476.js" for ::1 at 2026-01-08 10:15:40 +0000
+Started GET "/assets/controllers/scroll_progress_controller-a8687585.js" for ::1 at 2026-01-08 10:15:40 +0000
+Started GET "/assets/animations/card_animations-eef88902.js" for ::1 at 2026-01-08 10:15:40 +0000
+Started GET "/assets/animations/gsap_init-c02d3678.js" for ::1 at 2026-01-08 10:15:40 +0000
+Started GET "/assets/animations/hero_animations-ff21530d.js" for ::1 at 2026-01-08 10:15:40 +0000
+Started GET "/assets/animations/scroll_animations-b776f822.js" for ::1 at 2026-01-08 10:15:40 +0000
+Started GET "/assets/three/particle_background-b594ec71.js" for ::1 at 2026-01-08 10:15:40 +0000
+Started GET "/assets/typography.css" for ::1 at 2026-01-08 10:15:40 +0000
+Started GET "/assets/animations.css" for ::1 at 2026-01-08 10:15:40 +0000
+Started GET "/assets/animations/gsap_init" for ::1 at 2026-01-08 10:15:40 +0000
+Started GET "/assets/animations/scroll_animations" for ::1 at 2026-01-08 10:15:40 +0000
+Started GET "/assets/animations/hero_animations" for ::1 at 2026-01-08 10:15:40 +0000
+Started GET "/assets/animations/card_animations" for ::1 at 2026-01-08 10:15:40 +0000
+Started GET "/assets/three/particle_background" for ::1 at 2026-01-08 10:15:40 +0000
+Started GET "/about" for ::1 at 2026-01-08 10:16:19 +0000
+Processing by PagesController#about as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/about.html.erb within layouts/application
+  Rendered shared/_cta_section.html.erb (Duration: 0.4ms | GC: 0.0ms)
+  Rendered pages/about.html.erb within layouts/application (Duration: 15.2ms | GC: 0.0ms)
+  Rendered layouts/_navigation.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  Rendered layouts/_footer.html.erb (Duration: 0.8ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 19.5ms | GC: 0.3ms)
+Completed 200 OK in 60ms (Views: 20.3ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.3ms)
+
+
+Started GET "/assets/typography.css" for ::1 at 2026-01-08 10:16:19 +0000
+Started GET "/assets/animations.css" for ::1 at 2026-01-08 10:16:19 +0000
+Started GET "/assets/animations/gsap_init" for ::1 at 2026-01-08 10:16:19 +0000
+Started GET "/assets/animations/scroll_animations" for ::1 at 2026-01-08 10:16:19 +0000
+Started GET "/assets/animations/hero_animations" for ::1 at 2026-01-08 10:16:19 +0000
+Started GET "/assets/animations/card_animations" for ::1 at 2026-01-08 10:16:19 +0000
+Started GET "/assets/three/particle_background" for ::1 at 2026-01-08 10:16:19 +0000
+Started GET "/contact" for ::1 at 2026-01-08 10:24:08 +0000
+Processing by PagesController#contact as HTML
+Completed 500 Internal Server Error in 44ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+  
+ArgumentError (You tried to define an enum named "status" on the model "ContactSubmission", but this will generate a class method "new", which is already defined by Active Record.):
+  
+app/models/contact_submission.rb:3:in `<class:ContactSubmission>'
+app/models/contact_submission.rb:1:in `<main>'
+app/controllers/pages_controller.rb:24:in `contact'
+Started GET "/favicon.ico" for ::1 at 2026-01-08 10:24:09 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/work" for ::1 at 2026-01-08 10:24:14 +0000
+Processing by PagesController#work as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/work.html.erb within layouts/application
+  [1m[36mCaseStudy Load (6.7ms)[0m  [1m[34mSELECT "case_studies".* FROM "case_studies" WHERE "case_studies"."published_at" IS NOT NULL AND (published_at <= '2026-01-08 10:24:14.480788') ORDER BY "case_studies"."display_order" ASC, "case_studies"."published_at" DESC /*action='work',application='ZelusottomayorPortfolio',controller='pages'*/[0m
+  ↳ app/views/pages/work.html.erb:15
+  [1m[36mCaseStudy Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "case_studies" WHERE "case_studies"."published_at" IS NOT NULL AND (published_at <= '2026-01-08 10:24:14.480788') /*action='work',application='ZelusottomayorPortfolio',controller='pages'*/[0m
+  ↳ app/views/pages/work.html.erb:19
+  [1m[36mCaseStudy Count (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "case_studies" WHERE "case_studies"."published_at" IS NOT NULL AND (published_at <= '2026-01-08 10:24:14.480788') AND "case_studies"."client_type" = 0 /*action='work',application='ZelusottomayorPortfolio',controller='pages'*/[0m
+  ↳ app/views/pages/work.html.erb:22
+  [1m[36mCaseStudy Count (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "case_studies" WHERE "case_studies"."published_at" IS NOT NULL AND (published_at <= '2026-01-08 10:24:14.480788') AND "case_studies"."client_type" = 1 /*action='work',application='ZelusottomayorPortfolio',controller='pages'*/[0m
+  ↳ app/views/pages/work.html.erb:25
+  Rendered shared/_case_study_card.html.erb (Duration: 0.5ms | GC: 0.0ms)
+  Rendered shared/_case_study_card.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered shared/_case_study_card.html.erb (Duration: 3.8ms | GC: 0.0ms)
+  Rendered shared/_case_study_card.html.erb (Duration: 2.0ms | GC: 0.0ms)
+  Rendered shared/_cta_section.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered pages/work.html.erb within layouts/application (Duration: 16.3ms | GC: 0.0ms)
+  Rendered layouts/_navigation.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 17.5ms | GC: 0.0ms)
+Completed 200 OK in 44ms (Views: 10.9ms | ActiveRecord: 6.8ms (4 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/assets/typography.css" for ::1 at 2026-01-08 10:24:14 +0000
+Started GET "/assets/animations.css" for ::1 at 2026-01-08 10:24:14 +0000
+Started GET "/assets/animations/gsap_init" for ::1 at 2026-01-08 10:24:14 +0000
+Started GET "/assets/animations/card_animations" for ::1 at 2026-01-08 10:24:14 +0000
+Started GET "/assets/animations/hero_animations" for ::1 at 2026-01-08 10:24:14 +0000
+Started GET "/assets/animations/scroll_animations" for ::1 at 2026-01-08 10:24:14 +0000
+Started GET "/assets/three/particle_background" for ::1 at 2026-01-08 10:24:14 +0000
+Started GET "/" for ::1 at 2026-01-08 10:46:41 +0000
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered shared/_service_card.html.erb (Duration: 0.9ms | GC: 0.0ms)
+  Rendered shared/_service_card.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered shared/_process_step.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered shared/_process_step.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered shared/_process_step.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered shared/_process_step.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  [1m[36mCaseStudy Load (11.7ms)[0m  [1m[34mSELECT "case_studies".* FROM "case_studies" WHERE "case_studies"."featured" = 1 AND "case_studies"."published_at" IS NOT NULL AND (published_at <= '2026-01-08 10:46:41.522521') ORDER BY "case_studies"."display_order" ASC, "case_studies"."published_at" DESC LIMIT 6 /*action='home',application='ZelusottomayorPortfolio',controller='pages'*/[0m
+  ↳ app/views/pages/home.html.erb:125
+  Rendered shared/_case_study_card.html.erb (Duration: 15.7ms | GC: 0.0ms)
+  Rendered shared/_case_study_card.html.erb (Duration: 0.5ms | GC: 0.0ms)
+  Rendered shared/_package_card.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  Rendered shared/_package_card.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered shared/_package_card.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered shared/_cta_section.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered pages/home.html.erb within layouts/application (Duration: 51.8ms | GC: 0.4ms)
+  Rendered layouts/_navigation.html.erb (Duration: 0.4ms | GC: 0.0ms)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 86.5ms | GC: 3.5ms)
+Completed 200 OK in 233ms (Views: 81.9ms | ActiveRecord: 11.7ms (1 query, 0 cached) | GC: 6.5ms)
+
+
+Started GET "/assets/application-06c92246.css" for ::1 at 2026-01-08 10:46:41 +0000
+Started GET "/assets/animations/gsap_init" for ::1 at 2026-01-08 10:46:41 +0000
+Started GET "/assets/animations/hero_animations" for ::1 at 2026-01-08 10:46:41 +0000
+Started GET "/assets/animations/card_animations" for ::1 at 2026-01-08 10:46:41 +0000
+Started GET "/assets/three/particle_background" for ::1 at 2026-01-08 10:46:41 +0000
+Started GET "/assets/animations/scroll_animations" for ::1 at 2026-01-08 10:46:41 +0000
+Started GET "/assets/typography.css" for ::1 at 2026-01-08 10:46:41 +0000
+Started GET "/assets/animations.css" for ::1 at 2026-01-08 10:46:41 +0000
+Started GET "/" for ::1 at 2026-01-08 11:17:05 +0000
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered shared/_service_card.html.erb (Duration: 0.3ms | GC: 0.0ms)
+  Rendered shared/_service_card.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered shared/_process_step.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  Rendered shared/_process_step.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered shared/_process_step.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered shared/_process_step.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  [1m[36mCaseStudy Load (9.6ms)[0m  [1m[34mSELECT "case_studies".* FROM "case_studies" WHERE "case_studies"."featured" = 1 AND "case_studies"."published_at" IS NOT NULL AND (published_at <= '2026-01-08 11:17:05.971424') ORDER BY "case_studies"."display_order" ASC, "case_studies"."published_at" DESC LIMIT 6 /*action='home',application='ZelusottomayorPortfolio',controller='pages'*/[0m
+  ↳ app/views/pages/home.html.erb:125
+  Rendered shared/_case_study_card.html.erb (Duration: 17.1ms | GC: 0.0ms)
+  Rendered shared/_case_study_card.html.erb (Duration: 1.6ms | GC: 0.0ms)
+  Rendered shared/_package_card.html.erb (Duration: 0.3ms | GC: 0.0ms)
+  Rendered shared/_package_card.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered shared/_package_card.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered shared/_cta_section.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered pages/home.html.erb within layouts/application (Duration: 49.1ms | GC: 0.0ms)
+  Rendered layouts/_navigation.html.erb (Duration: 0.6ms | GC: 0.0ms)
+  Rendered layouts/_footer.html.erb (Duration: 0.6ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 67.7ms | GC: 0.6ms)
+Completed 200 OK in 140ms (Views: 60.3ms | ActiveRecord: 9.6ms (1 query, 0 cached) | GC: 2.6ms)
+
+
+Started GET "/assets/application-6a606582.css" for ::1 at 2026-01-08 11:17:06 +0000
+Started GET "/assets/animations/gsap_init" for ::1 at 2026-01-08 11:17:06 +0000
+Started GET "/assets/animations/hero_animations" for ::1 at 2026-01-08 11:17:06 +0000
+Started GET "/assets/animations/card_animations" for ::1 at 2026-01-08 11:17:06 +0000
+Started GET "/assets/three/particle_background" for ::1 at 2026-01-08 11:17:06 +0000
+Started GET "/assets/animations/scroll_animations" for ::1 at 2026-01-08 11:17:06 +0000
+Started GET "/assets/typography.css" for ::1 at 2026-01-08 11:17:06 +0000
+Started GET "/assets/animations.css" for ::1 at 2026-01-08 11:17:06 +0000
+Started GET "/" for ::1 at 2026-01-08 11:22:37 +0000
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered shared/_service_card.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered shared/_service_card.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered shared/_process_step.html.erb (Duration: 0.4ms | GC: 0.0ms)
+  Rendered shared/_process_step.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered shared/_process_step.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered shared/_process_step.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  [1m[36mCaseStudy Load (5.3ms)[0m  [1m[34mSELECT "case_studies".* FROM "case_studies" WHERE "case_studies"."featured" = 1 AND "case_studies"."published_at" IS NOT NULL AND (published_at <= '2026-01-08 11:22:38.136661') ORDER BY "case_studies"."display_order" ASC, "case_studies"."published_at" DESC LIMIT 6 /*action='home',application='ZelusottomayorPortfolio',controller='pages'*/[0m
+  ↳ app/views/pages/home.html.erb:125
+  Rendered shared/_case_study_card.html.erb (Duration: 4.3ms | GC: 0.0ms)
+  Rendered shared/_case_study_card.html.erb (Duration: 0.5ms | GC: 0.0ms)
+  Rendered shared/_package_card.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered shared/_package_card.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered shared/_package_card.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered shared/_cta_section.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered pages/home.html.erb within layouts/application (Duration: 17.1ms | GC: 0.0ms)
+  Rendered layouts/_navigation.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 33.1ms | GC: 0.0ms)
+Completed 200 OK in 202ms (Views: 29.7ms | ActiveRecord: 5.3ms (1 query, 0 cached) | GC: 17.4ms)
+
+
+Started GET "/assets/application-e218e258.css" for ::1 at 2026-01-08 11:22:38 +0000
+Started GET "/assets/animations/gsap_init" for ::1 at 2026-01-08 11:22:38 +0000
+Started GET "/assets/animations/hero_animations" for ::1 at 2026-01-08 11:22:38 +0000
+Started GET "/assets/three/particle_background" for ::1 at 2026-01-08 11:22:38 +0000
+Started GET "/assets/animations/scroll_animations" for ::1 at 2026-01-08 11:22:38 +0000
+Started GET "/assets/animations/card_animations" for ::1 at 2026-01-08 11:22:38 +0000
+Started GET "/assets/typography.css" for ::1 at 2026-01-08 11:22:38 +0000
+Started GET "/assets/animations.css" for ::1 at 2026-01-08 11:22:38 +0000

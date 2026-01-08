@@ -1,0 +1,271 @@
+/*
+ * ENHANCED TYPOGRAPHY SYSTEM
+ * Oversized headlines, gradient effects, and refined text styling
+ */
+
+/* ========================================
+   HERO & DISPLAY TYPOGRAPHY
+   ======================================== */
+
+/* Hero headline with dramatic scale */
+.hero-headline {
+  font-family: var(--font-display);
+  font-size: clamp(3rem, 10vw, 7.5rem);
+  font-weight: var(--font-weight-extrabold);
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+  margin-bottom: var(--spacing-lg);
+}
+
+/* Gradient text effect for hero headlines */
+.hero-headline.gradient-text,
+.gradient-text {
+  background: var(--gradient-text);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Animated gradient that shifts */
+.gradient-text-animated {
+  background: var(--gradient-text);
+  background-size: 200% 200%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: gradient-shift 8s ease infinite;
+}
+
+@keyframes gradient-shift {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+/* Case study/page hero title */
+.page-hero-title {
+  font-family: var(--font-display);
+  font-size: clamp(3rem, 8vw, 5.25rem);
+  font-weight: var(--font-weight-extrabold);
+  line-height: 1.15;
+  letter-spacing: -0.025em;
+}
+
+/* Section title with enhanced scale */
+.section-title {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-weight: var(--font-weight-extrabold);
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  margin-bottom: var(--spacing-lg);
+}
+
+/* Text with outline/stroke effect */
+.text-outline {
+  -webkit-text-stroke: 2px var(--color-primary);
+  -webkit-text-fill-color: transparent;
+}
+
+/* ========================================
+   BODY TEXT ENHANCEMENTS
+   ======================================== */
+
+/* Larger lead paragraph */
+.text-lead {
+  font-size: var(--font-size-xl);
+  line-height: var(--line-height-relaxed);
+  color: var(--color-text-secondary);
+}
+
+/* Pull quote styling */
+.pull-quote {
+  font-family: var(--font-display);
+  font-size: var(--font-size-2xl);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-normal);
+  color: var(--color-text-primary);
+  padding: var(--spacing-xl) 0;
+  position: relative;
+}
+
+.pull-quote::before {
+  content: '"';
+  font-size: var(--font-size-6xl);
+  color: var(--color-primary);
+  opacity: 0.2;
+  position: absolute;
+  left: -20px;
+  top: 0;
+  line-height: 1;
+}
+
+/* Monospace for metrics and technical text */
+.text-mono {
+  font-family: var(--font-mono);
+  font-weight: var(--font-weight-medium);
+}
+
+/* ========================================
+   TEXT UTILITY CLASSES
+   ======================================== */
+
+/* Font sizes */
+.text-xs { font-size: var(--font-size-xs); }
+.text-sm { font-size: var(--font-size-sm); }
+.text-base { font-size: var(--font-size-base); }
+.text-lg { font-size: var(--font-size-lg); }
+.text-xl { font-size: var(--font-size-xl); }
+.text-2xl { font-size: var(--font-size-2xl); }
+.text-3xl { font-size: var(--font-size-3xl); }
+.text-4xl { font-size: var(--font-size-4xl); }
+.text-5xl { font-size: var(--font-size-5xl); }
+.text-6xl { font-size: var(--font-size-6xl); }
+.text-7xl { font-size: var(--font-size-7xl); }
+.text-8xl { font-size: var(--font-size-8xl); }
+
+/* Font weights */
+.font-normal { font-weight: var(--font-weight-normal); }
+.font-medium { font-weight: var(--font-weight-medium); }
+.font-semibold { font-weight: var(--font-weight-semibold); }
+.font-bold { font-weight: var(--font-weight-bold); }
+.font-extrabold { font-weight: var(--font-weight-extrabold); }
+
+/* Font families */
+.font-display { font-family: var(--font-display); }
+.font-sans { font-family: var(--font-sans); }
+.font-mono { font-family: var(--font-mono); }
+
+/* Letter spacing */
+.tracking-tight { letter-spacing: -0.05em; }
+.tracking-normal { letter-spacing: 0; }
+.tracking-wide { letter-spacing: 0.025em; }
+
+/* Line heights */
+.leading-none { line-height: 1; }
+.leading-tight { line-height: var(--line-height-tight); }
+.leading-normal { line-height: var(--line-height-normal); }
+.leading-relaxed { line-height: var(--line-height-relaxed); }
+
+/* Text colors */
+.text-primary { color: var(--color-text-primary); }
+.text-secondary { color: var(--color-text-secondary); }
+.text-muted { color: var(--color-text-muted); }
+.text-accent { color: var(--color-primary); }
+
+/* ========================================
+   ANIMATED TEXT EFFECTS
+   ======================================== */
+
+/* Text that will be animated with GSAP */
+.text-reveal {
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+/* Split text animation wrapper */
+.split-text {
+  overflow: hidden;
+  display: inline-block;
+}
+
+.split-text .word {
+  display: inline-block;
+  overflow: hidden;
+  vertical-align: top;
+}
+
+.split-text .char {
+  display: inline-block;
+  transform: translateY(100%);
+}
+
+/* Underline animation on hover */
+.text-underline-animated {
+  position: relative;
+  display: inline-block;
+}
+
+.text-underline-animated::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--gradient-primary);
+  transition: width var(--transition-base);
+}
+
+.text-underline-animated:hover::after {
+  width: 100%;
+}
+
+/* Highlight effect */
+.text-highlight {
+  position: relative;
+  display: inline;
+  background: linear-gradient(180deg, transparent 60%, rgba(37, 99, 235, 0.2) 60%);
+  padding: 0 0.2em;
+}
+
+/* Glow effect on text */
+.text-glow {
+  text-shadow: 0 0 20px rgba(37, 99, 235, 0.4),
+               0 0 40px rgba(37, 99, 235, 0.2);
+}
+
+/* ========================================
+   RESPONSIVE TYPOGRAPHY
+   ======================================== */
+
+@media (max-width: 768px) {
+  .hero-headline {
+    font-size: clamp(2.5rem, 12vw, 4rem);
+    letter-spacing: -0.02em;
+  }
+
+  .page-hero-title {
+    font-size: clamp(2rem, 10vw, 3.5rem);
+  }
+
+  .section-title {
+    font-size: clamp(1.75rem, 8vw, 2.5rem);
+  }
+
+  .pull-quote {
+    font-size: var(--font-size-xl);
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-headline {
+    font-size: clamp(2rem, 14vw, 3rem);
+  }
+
+  .text-lead {
+    font-size: var(--font-size-lg);
+  }
+}
+
+/* ========================================
+   REDUCED MOTION
+   ======================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  .gradient-text-animated {
+    animation: none;
+  }
+
+  .text-reveal {
+    opacity: 1;
+    transform: none;
+  }
+
+  .split-text .char {
+    transform: none;
+  }
+}

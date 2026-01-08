@@ -1,0 +1,70 @@
+<%
+  # Usage: render 'shared/contact_form', contact: @contact
+  contact ||= ContactSubmission.new
+%>
+
+<%= form_with(model: contact, url: create_contact_path, class: "contact-form", local: true) do |f| %>
+  <% if contact.errors.any? %>
+    <div class="form-errors">
+      <h4><%= pluralize(contact.errors.count, "error") %> prevented this form from being submitted:</h4>
+      <ul>
+        <% contact.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="form-row form-row--split">
+    <div class="form-field">
+      <%= f.label :name, "Name *", class: "form-label" %>
+      <%= f.text_field :name, class: "form-input", placeholder: "Your name", required: true %>
+    </div>
+
+    <div class="form-field">
+      <%= f.label :email, "Email *", class: "form-label" %>
+      <%= f.email_field :email, class: "form-input", placeholder: "your.email@example.com", required: true %>
+    </div>
+  </div>
+
+  <div class="form-field">
+    <%= f.label :company, "Company (optional)", class: "form-label" %>
+    <%= f.text_field :company, class: "form-input", placeholder: "Your company name" %>
+  </div>
+
+  <div class="form-field">
+    <%= f.label :message, "What are you trying to achieve? *", class: "form-label" %>
+    <%= f.text_area :message, class: "form-textarea", rows: 5, placeholder: "Tell me about your project, challenge, or what you're looking to build...", required: true %>
+  </div>
+
+  <div class="form-row form-row--split">
+    <div class="form-field">
+      <%= f.label :timeline, "Timeline", class: "form-label" %>
+      <%= f.select :timeline,
+          ["ASAP", "Within 1 month", "1-3 months", "3+ months", "Just exploring"],
+          { prompt: "Select timeline" },
+          class: "form-select" %>
+    </div>
+
+    <div class="form-field">
+      <%= f.label :budget_range, "Budget range (optional)", class: "form-label" %>
+      <%= f.select :budget_range,
+          ["Under $5k", "$5k-$10k", "$10k-$25k", "$25k+", "Not sure yet"],
+          { prompt: "Select budget" },
+          class: "form-select" %>
+    </div>
+  </div>
+
+  <div class="form-field">
+    <%= f.label :referral_source, "How did you hear about me? (optional)", class: "form-label" %>
+    <%= f.text_field :referral_source, class: "form-input", placeholder: "LinkedIn, referral, search, etc." %>
+  </div>
+
+  <div class="form-submit">
+    <%= f.submit "Send message", class: "cta-button cta-button--primary cta-button--large" %>
+  </div>
+
+  <p class="form-privacy-note">
+    I'll respond within 24 hours. Your information is never shared.
+  </p>
+<% end %>

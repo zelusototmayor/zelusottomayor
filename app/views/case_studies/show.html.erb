@@ -1,0 +1,111 @@
+<% content_for :title, "#{@case_study.name} - Case Study - Zalu Sottomayor" %>
+<% content_for :meta_description, @case_study.tagline || "See how I helped #{@case_study.client_name} achieve their goals." %>
+
+<div class="case-study-hero">
+  <div class="container">
+    <div class="case-study-breadcrumb">
+      <%= link_to "← Back to work", work_path, class: "breadcrumb-link" %>
+    </div>
+
+    <div class="case-study-type-badge">
+      <%= @case_study.client_type.titleize %>
+    </div>
+
+    <h1 class="page-hero-title case-study-hero-title text-reveal"><%= @case_study.name %></h1>
+
+    <% if @case_study.tagline.present? %>
+      <p class="case-study-hero-tagline text-lead text-reveal"><%= @case_study.tagline %></p>
+    <% end %>
+
+    <% if @case_study.hero_image.present? %>
+      <div class="case-study-hero-image">
+        <%= image_tag @case_study.hero_image, alt: @case_study.name %>
+      </div>
+    <% end %>
+  </div>
+</div>
+
+<section class="case-study-content section-padding">
+  <div class="container container--narrow">
+    <div class="case-study-overview">
+      <div class="overview-item">
+        <h4 class="overview-label">Client</h4>
+        <p class="overview-value"><%= @case_study.client_name || @case_study.name %></p>
+      </div>
+
+      <div class="overview-item">
+        <h4 class="overview-label">Type</h4>
+        <p class="overview-value"><%= @case_study.client_type.titleize %></p>
+      </div>
+
+      <% if @case_study.published_at.present? %>
+        <div class="overview-item">
+          <h4 class="overview-label">Completed</h4>
+          <p class="overview-value"><%= @case_study.published_at.strftime("%B %Y") %></p>
+        </div>
+      <% end %>
+
+      <% if @case_study.link.present? %>
+        <div class="overview-item">
+          <h4 class="overview-label">Live project</h4>
+          <p class="overview-value">
+            <%= link_to "Visit site →", @case_study.link, target: "_blank", rel: "noopener", class: "overview-link" %>
+          </p>
+        </div>
+      <% end %>
+    </div>
+
+    <% if @case_study.problem.present? %>
+      <div class="case-study-section">
+        <h2 class="case-study-section-title">The challenge</h2>
+        <%= simple_format @case_study.problem, class: "case-study-text" %>
+      </div>
+    <% end %>
+
+    <% if @case_study.approach.present? %>
+      <div class="case-study-section">
+        <h2 class="case-study-section-title">What we built</h2>
+        <%= simple_format @case_study.approach, class: "case-study-text" %>
+      </div>
+    <% end %>
+
+    <% if @case_study.results.present? %>
+      <div class="case-study-section">
+        <h2 class="case-study-section-title">The impact</h2>
+        <%= simple_format @case_study.results, class: "case-study-text" %>
+      </div>
+    <% end %>
+
+    <% if @case_study.key_metrics.any? %>
+      <div class="case-study-metrics-highlight">
+        <h3 class="metrics-highlight-title">Key results</h3>
+        <div class="metrics-grid">
+          <% @case_study.key_metrics.each do |metric| %>
+            <%= render 'shared/metric_block', value: metric, label: "" %>
+          <% end %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</section>
+
+<% if @related_studies.present? && @related_studies.any? %>
+  <section class="related-studies section-padding bg-gradient">
+    <div class="container">
+      <h2 class="section-title">More like this</h2>
+      <div class="case-studies-grid">
+        <% @related_studies.each do |case_study| %>
+          <%= render 'shared/case_study_card', case_study: case_study %>
+        <% end %>
+      </div>
+    </div>
+  </section>
+<% end %>
+
+<%= render 'shared/cta_section',
+    headline: "Want similar results?",
+    subheadline: "Let's talk about how I can help with your project.",
+    button_text: "Book a discovery call",
+    button_url: book_call_path,
+    secondary_text: "See all work",
+    secondary_url: work_path %>

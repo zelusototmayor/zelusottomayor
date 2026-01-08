@@ -1,0 +1,31 @@
+<%
+  # Usage: render 'shared/cta_section', headline: 'Ready to...', subheadline: '...', button_text: 'Book a call', button_url: book_call_path
+  headline ||= "Ready to work together?"
+  subheadline ||= "Let's talk about your project"
+  button_text ||= "Book a call"
+  button_url ||= book_call_path
+  secondary_text ||= nil
+  secondary_url ||= nil
+%>
+
+<section class="cta-section">
+  <div class="container container--narrow">
+    <div class="cta-section-content">
+      <h2 class="cta-section-headline"><%= headline %></h2>
+      <% if subheadline.present? %>
+        <p class="cta-section-subheadline"><%= subheadline %></p>
+      <% end %>
+
+      <div class="cta-section-buttons">
+        <%= link_to button_text, button_url, class: "cta-button cta-button--primary cta-button--large" %>
+        <% if secondary_text.present? && secondary_url.present? %>
+          <%= link_to secondary_text, secondary_url, class: "cta-button cta-button--secondary cta-button--large" %>
+        <% end %>
+      </div>
+
+      <% if local_assigns[:extra_info].present? %>
+        <p class="cta-section-extra"><%= extra_info %></p>
+      <% end %>
+    </div>
+  </div>
+</section>

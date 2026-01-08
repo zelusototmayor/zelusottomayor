@@ -1,0 +1,32 @@
+NEW CONTACT FORM SUBMISSION
+====================================
+
+FROM: <%= @contact.name %>
+EMAIL: <%= @contact.email %>
+<% if @contact.company.present? %>COMPANY: <%= @contact.company %><% end %>
+
+MESSAGE:
+--------
+<%= @contact.message %>
+
+<% if @contact.timeline.present? %>
+TIMELINE: <%= @contact.timeline %>
+<% end %>
+
+<% if @contact.budget_range.present? %>
+BUDGET RANGE: <%= @contact.budget_range %>
+<% end %>
+
+<% if @contact.project_type.present? %>
+PROJECT TYPE: <%= @contact.project_type %>
+<% end %>
+
+<% if @contact.referral_source.present? %>
+HOW THEY FOUND YOU: <%= @contact.referral_source %>
+<% end %>
+
+====================================
+Submitted: <%= @contact.created_at.strftime("%B %d, %Y at %I:%M %p") %>
+Contact ID: #<%= @contact.id %>
+
+Reply to: <%= @contact.email %>

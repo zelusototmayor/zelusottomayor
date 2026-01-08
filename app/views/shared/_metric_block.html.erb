@@ -1,0 +1,14 @@
+<%
+  # Usage: render 'shared/metric_block', value: '300%', label: 'Increase in conversions', icon: '📈'
+  value ||= "[Metric]"
+  label ||= "[Description]"
+  icon ||= nil
+%>
+
+<div class="metric-block">
+  <% if icon.present? %>
+    <div class="metric-icon"><%= icon %></div>
+  <% end %>
+  <div class="metric-value"><%= value %></div>
+  <div class="metric-label"><%= label %></div>
+</div>

@@ -1,0 +1,38 @@
+<%
+  # Usage: render 'shared/case_study_card', case_study: @case_study
+  return unless case_study.present?
+%>
+
+<div class="case-study-card" data-category="<%= case_study.client_type %>">
+  <% if case_study.thumbnail.present? %>
+    <div class="case-study-thumbnail">
+      <%= image_tag case_study.thumbnail, alt: case_study.name, class: "case-study-image" %>
+    </div>
+  <% elsif case_study.icon.present? %>
+    <div class="case-study-icon-wrapper">
+      <%= image_tag case_study.icon, alt: case_study.name, class: "case-study-icon" %>
+    </div>
+  <% end %>
+
+  <div class="case-study-content">
+    <div class="case-study-type-badge">
+      <%= case_study.client_type.titleize %>
+    </div>
+
+    <h3 class="case-study-title"><%= case_study.name %></h3>
+
+    <% if case_study.tagline.present? %>
+      <p class="case-study-tagline"><%= case_study.tagline %></p>
+    <% end %>
+
+    <% if case_study.key_metrics.any? %>
+      <div class="case-study-metrics">
+        <% case_study.key_metrics.take(2).each do |metric| %>
+          <span class="metric-pill"><%= metric %></span>
+        <% end %>
+      </div>
+    <% end %>
+
+    <%= link_to "View case study →", case_study_path(case_study), class: "case-study-link" %>
+  </div>
+</div>

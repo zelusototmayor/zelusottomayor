@@ -1,0 +1,48 @@
+discovery:
+  name: "Workflow Audit"
+  tagline: "See what can be automated"
+  description: "A review of your current workflow to identify what's manual, repetitive, and could be automated. I provide specific recommendations with rough time estimates."
+  ideal_for:
+    - "You're doing too much manual data entry"
+    - "You want to see if automation makes sense"
+    - "You need a roadmap before committing to build"
+  whats_included:
+    - "Call to review your current workflow"
+    - "Written report of automation opportunities"
+    - "Recommended approach for each"
+    - "Rough estimates for implementation"
+  timeline: "About a week"
+  cta_text: "Request an audit"
+
+build_sprint:
+  name: "Automation Build"
+  tagline: "Build a specific automation"
+  description: "I build a defined automation or integration. This works when you know what you need automated and we can scope it clearly upfront."
+  ideal_for:
+    - "You know exactly what needs automating"
+    - "You want a fixed scope and timeline"
+    - "You need something specific built and deployed"
+  whats_included:
+    - "Development of the automation"
+    - "Testing with your actual data"
+    - "Documentation of how it works"
+    - "Support for any bugs after launch"
+  timeline: "Typically 1-3 weeks"
+  cta_text: "Discuss your automation"
+
+product_sprint:
+  name: "Product Build"
+  tagline: "Build a web application"
+  description: "I develop a web application from scratch or add significant features to an existing one. Works best when requirements are clear and scope is defined."
+  ideal_for:
+    - "You have a clear product idea to build"
+    - "You need a working version quickly"
+    - "You want a Rails developer with AI experience"
+  whats_included:
+    - "Planning and feature scoping"
+    - "Full-stack development (Rails, JS, etc.)"
+    - "Deployment to production"
+    - "Documentation and code handoff"
+    - "Bug fixes after launch"
+  timeline: "Depends on scope, typically weeks not months"
+  cta_text: "Discuss your project"

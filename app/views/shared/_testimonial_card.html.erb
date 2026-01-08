@@ -1,0 +1,33 @@
+<%
+  # Usage: render 'shared/testimonial_card', testimonial: @testimonial
+  return unless testimonial.present?
+%>
+
+<div class="testimonial-card">
+  <div class="testimonial-rating">
+    <%= testimonial.star_rating %>
+  </div>
+
+  <blockquote class="testimonial-content">
+    <%= testimonial.content %>
+  </blockquote>
+
+  <div class="testimonial-author">
+    <% if testimonial.avatar.present? %>
+      <%= image_tag testimonial.avatar, alt: testimonial.client_name, class: "testimonial-avatar" %>
+    <% else %>
+      <div class="testimonial-avatar-placeholder">
+        <%= testimonial.client_name[0].upcase %>
+      </div>
+    <% end %>
+
+    <div class="testimonial-author-info">
+      <strong class="testimonial-name"><%= testimonial.client_name %></strong>
+      <% if testimonial.client_title.present? || testimonial.client_company.present? %>
+        <span class="testimonial-role">
+          <%= [testimonial.client_title, testimonial.client_company].compact.join(" at ") %>
+        </span>
+      <% end %>
+    </div>
+  </div>
+</div>

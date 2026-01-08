@@ -1,0 +1,51 @@
+<% content_for :title, "Work & Case Studies - Zalu Sottomayor" %>
+<% content_for :meta_description, "Selected projects including AI tools and automation systems. See how I build practical solutions for real problems." %>
+
+<div class="page-hero">
+  <div class="container">
+    <h1 class="page-hero-title text-reveal">Work & Case Studies</h1>
+    <p class="page-subtitle text-lead text-reveal">
+      Real projects, real results. See how I help teams automate operations and ship products.
+    </p>
+  </div>
+</div>
+
+<section class="work-section section-padding">
+  <div class="container">
+    <% if @case_studies.present? && @case_studies.any? %>
+      <div class="work-tabs" data-controller="tabs">
+        <div class="tabs-nav">
+          <button class="tab-button active" data-action="click->tabs#show" data-category="all">
+            All (<%= @case_studies.count %>)
+          </button>
+          <button class="tab-button" data-action="click->tabs#show" data-category="client">
+            Client Work (<%= @client_projects.count %>)
+          </button>
+          <button class="tab-button" data-action="click->tabs#show" data-category="product">
+            Products (<%= @product_projects.count %>)
+          </button>
+        </div>
+      </div>
+
+      <div class="case-studies-grid">
+        <% @case_studies.each do |case_study| %>
+          <%= render 'shared/case_study_card', case_study: case_study %>
+        <% end %>
+      </div>
+    <% else %>
+      <div class="empty-state">
+        <h2>Case studies coming soon</h2>
+        <p>I'm currently documenting recent projects. Check back soon, or <%= link_to "reach out", contact_path %> to discuss your needs.</p>
+        <%= link_to "Contact me", contact_path, class: "cta-button cta-button--primary" %>
+      </div>
+    <% end %>
+  </div>
+</section>
+
+<%= render 'shared/cta_section',
+    headline: "Like what you see?",
+    subheadline: "Let's discuss how I can help with your project.",
+    button_text: "Book a call",
+    button_url: book_call_path,
+    secondary_text: "View services",
+    secondary_url: root_path(anchor: 'services') %>

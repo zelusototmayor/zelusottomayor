@@ -1,0 +1,31 @@
+<%
+  # Usage: render 'shared/trust_strip', title: 'Trusted by teams at', logos: ['logo1.png', 'logo2.png']
+  # Or: render 'shared/trust_strip', items: ['50+ projects delivered', '100% client satisfaction']
+  title ||= "Trusted by"
+  logos ||= []
+  items ||= []
+%>
+
+<div class="trust-strip">
+  <% if title.present? %>
+    <div class="trust-strip-title"><%= title %></div>
+  <% end %>
+
+  <% if logos.any? %>
+    <div class="trust-strip-logos">
+      <% logos.each do |logo| %>
+        <%= image_tag logo, alt: "Client logo", class: "trust-logo" %>
+      <% end %>
+    </div>
+  <% elsif items.any? %>
+    <div class="trust-strip-items">
+      <% items.each do |item| %>
+        <div class="trust-item"><%= item %></div>
+      <% end %>
+    </div>
+  <% else %>
+    <div class="trust-strip-placeholder">
+      <div class="trust-item">[CLIENT_LOGOS]</div>
+    </div>
+  <% end %>
+</div>

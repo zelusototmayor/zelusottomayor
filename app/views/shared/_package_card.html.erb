@@ -1,0 +1,57 @@
+<%
+  # Usage: render 'shared/package_card', package: package_hash
+  return unless package.present?
+
+  name = package['name'] || package[:name]
+  tagline = package['tagline'] || package[:tagline]
+  description = package['description'] || package[:description]
+  ideal_for = package['ideal_for'] || package[:ideal_for] || []
+  whats_included = package['whats_included'] || package[:whats_included] || []
+  timeline = package['timeline'] || package[:timeline]
+  cta_text = package['cta_text'] || package[:cta_text] || "Learn more"
+%>
+
+<div class="package-card">
+  <div class="package-header">
+    <h3 class="package-name"><%= name %></h3>
+    <% if tagline.present? %>
+      <p class="package-tagline"><%= tagline %></p>
+    <% end %>
+  </div>
+
+  <% if description.present? %>
+    <p class="package-description"><%= description %></p>
+  <% end %>
+
+  <% if ideal_for.any? %>
+    <div class="package-section">
+      <h4 class="package-section-title">Ideal for:</h4>
+      <ul class="package-list">
+        <% ideal_for.each do |item| %>
+          <li><%= item %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <% if whats_included.any? %>
+    <div class="package-section">
+      <h4 class="package-section-title">What's included:</h4>
+      <ul class="package-list package-list--checkmarks">
+        <% whats_included.each do |item| %>
+          <li><%= item %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <% if timeline.present? %>
+    <div class="package-timeline">
+      <strong>Timeline:</strong> <%= timeline %>
+    </div>
+  <% end %>
+
+  <div class="package-cta">
+    <%= link_to cta_text, contact_path, class: "cta-button cta-button--primary cta-button--full-width" %>
+  </div>
+</div>

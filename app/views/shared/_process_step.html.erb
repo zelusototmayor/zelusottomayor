@@ -1,0 +1,23 @@
+<%
+  # Usage: render 'shared/process_step', step: step_hash, number: 1
+  return unless step.present?
+
+  number ||= step['number'] || step[:number] || 1
+  title = step['title'] || step[:title]
+  description = step['description'] || step[:description]
+  duration = step['duration'] || step[:duration]
+%>
+
+<div class="process-step">
+  <div class="process-number"><%= number %></div>
+
+  <div class="process-content">
+    <h3 class="process-title"><%= title %></h3>
+    <% if description.present? %>
+      <p class="process-description"><%= description %></p>
+    <% end %>
+    <% if duration.present? %>
+      <span class="process-duration"><%= duration %></span>
+    <% end %>
+  </div>
+</div>

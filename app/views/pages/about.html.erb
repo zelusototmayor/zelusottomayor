@@ -1,0 +1,97 @@
+<% content_for :title, "About - Zalu Sottomayor" %>
+<% content_for :meta_description, "Full-stack developer building AI tools and automation systems. Based in Lisbon, working with clients worldwide on web applications and workflow automation." %>
+
+<div class="page-hero">
+  <div class="container container--narrow">
+    <h1 class="page-hero-title text-reveal">
+      <% if @about_content.present? && @about_content['headline'].present? %>
+        <%= @about_content['headline'] %>
+      <% else %>
+        Builder & Operator
+      <% end %>
+    </h1>
+  </div>
+</div>
+
+<section class="about-content section-padding">
+  <div class="container container--narrow">
+    <div class="about-intro">
+      <% if @about_content.present? && @about_content['bio'].present? %>
+        <%= simple_format @about_content['bio'], class: "about-text" %>
+      <% else %>
+        <p class="about-text">
+          I'm Zalu Sottomayor, a full-stack developer based in Lisbon.
+        </p>
+        <p class="about-text">
+          I build AI-powered tools and automation systems for founders and small teams.
+        </p>
+        <p class="about-text">
+          I've worked on projects ranging from AI coaching apps to UX analysis tools, always focusing on practical solutions that work in production.
+        </p>
+      <% end %>
+    </div>
+
+    <% if @about_content.present? && @about_content['current_focus'].present? %>
+      <div class="about-section">
+        <h2 class="about-section-title">What I'm doing now</h2>
+        <%= simple_format @about_content['current_focus'], class: "about-text" %>
+      </div>
+    <% end %>
+
+    <% if @about_content.present? && @about_content['how_i_work'].present? %>
+      <div class="about-section">
+        <h2 class="about-section-title">How I work</h2>
+        <ul class="about-list">
+          <% @about_content['how_i_work'].each do |item| %>
+            <li><%= item %></li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
+
+    <div class="about-section">
+      <h2 class="about-section-title">Expertise</h2>
+      <% if @about_content.present? && @about_content['expertise'].present? %>
+        <ul class="about-list about-list--inline">
+          <% @about_content['expertise'].each do |item| %>
+            <li><%= item %></li>
+          <% end %>
+        </ul>
+      <% else %>
+        <ul class="about-list about-list--inline">
+          <li>Full-stack development (Ruby on Rails, JavaScript, Python)</li>
+          <li>AI integration and automation (OpenAI, Claude)</li>
+          <li>No-code/low-code automation</li>
+          <li>Product design and UX</li>
+        </ul>
+      <% end %>
+    </div>
+
+    <% if @about_content.present? && @about_content['credentials'].present? %>
+      <div class="about-section">
+        <h2 class="about-section-title">Credentials</h2>
+        <ul class="about-list">
+          <% @about_content['credentials'].each do |item| %>
+            <li><%= item %></li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
+
+    <% if @about_content.present? && @about_content['personal_touch'].present? %>
+      <div class="about-section">
+        <%= simple_format @about_content['personal_touch'], class: "about-text" %>
+      </div>
+    <% end %>
+  </div>
+</section>
+
+<%# Testimonials section removed - will add real client feedback when available %>
+
+<%= render 'shared/cta_section',
+    headline: "Have a project in mind?",
+    subheadline: "Let's discuss how I can help.",
+    button_text: "Schedule a call",
+    button_url: book_call_path,
+    secondary_text: "Email me",
+    secondary_url: contact_path %>

@@ -1,8 +1,23 @@
 Rails.application.routes.draw do
-  root "home#index"
-  
+  # Main pages
+  root "pages#home"
+
+  get "/work",    to: "pages#work",    as: :work
+  get "/about",   to: "pages#about",   as: :about
+  get "/contact", to: "pages#contact", as: :contact
+
+  # Case studies (individual project detail pages)
+  resources :case_studies, only: [:show], path: 'work'
+
+  # Contact form submission
+  post "/contact", to: "contacts#create", as: :create_contact
+
+  # CTA endpoint (redirects to scheduling tool)
+  get "/book-call", to: "pages#book_call", as: :book_call
+
+  # Keep legacy projects routes for backward compatibility (optional)
   resources :projects, only: [:index, :show]
-  
+
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Reveal health status on /up that returns 200 if the app boots with no exceptions, otherwise 500.

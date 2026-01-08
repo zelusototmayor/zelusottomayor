@@ -1,0 +1,34 @@
+<%
+  # Usage: render 'shared/service_card', service: @service_hash
+  return unless service.present?
+
+  title = service['title'] || service[:title]
+  icon = service['icon'] || service[:icon]
+  tagline = service['tagline'] || service[:tagline]
+  description = service['description'] || service[:description]
+  outcomes = service['outcomes'] || service[:outcomes] || []
+%>
+
+<div class="service-card">
+  <% if icon.present? %>
+    <div class="service-icon"><%= icon %></div>
+  <% end %>
+
+  <h3 class="service-title"><%= title %></h3>
+
+  <% if tagline.present? %>
+    <p class="service-tagline"><%= tagline %></p>
+  <% end %>
+
+  <% if description.present? %>
+    <p class="service-description"><%= description %></p>
+  <% end %>
+
+  <% if outcomes.any? %>
+    <ul class="service-outcomes">
+      <% outcomes.first(5).each do |outcome| %>
+        <li><%= outcome %></li>
+      <% end %>
+    </ul>
+  <% end %>
+</div>

@@ -1,0 +1,95 @@
+<% content_for :title, "Contact - Zalu Sottomayor" %>
+<% content_for :meta_description, "Get in touch to discuss your project. Schedule a call, send an email, or fill out the contact form." %>
+
+<div class="page-hero">
+  <div class="container container--narrow">
+    <h1 class="page-title">Let's talk</h1>
+    <p class="page-subtitle">
+      Have a project in mind? Let's discuss how I can help.
+    </p>
+  </div>
+</div>
+
+<section class="contact-section section-padding">
+  <div class="container">
+    <div class="contact-methods">
+      <div class="contact-method-card">
+        <h3 class="contact-method-title">Schedule a call</h3>
+        <p class="contact-method-description">
+          Book a 30-minute call to discuss your project and see how I can help.
+        </p>
+        <%= link_to "View my calendar", book_call_path, class: "cta-button cta-button--primary" %>
+      </div>
+
+      <div class="contact-method-card">
+        <h3 class="contact-method-title">Send an email</h3>
+        <p class="contact-method-description">
+          Prefer email? I typically respond within 24 hours.
+        </p>
+        <a href="mailto:zsottomayor@gmail.com" class="cta-button cta-button--secondary">zsottomayor@gmail.com</a>
+      </div>
+
+      <div class="contact-method-card">
+        <h3 class="contact-method-title">Use the form</h3>
+        <p class="contact-method-description">
+          Fill out the form below with details about your project.
+        </p>
+        <a href="#contact-form" class="cta-button cta-button--text">Jump to form ↓</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact-form" class="contact-form-section section-padding bg-gradient">
+  <div class="container container--narrow">
+    <div class="section-header">
+      <h2 class="section-title">Send me a message</h2>
+      <p class="section-subtitle">I'll respond within 24 hours</p>
+    </div>
+
+    <%= render 'shared/contact_form', contact: @contact %>
+  </div>
+</section>
+
+<section class="contact-faq section-padding">
+  <div class="container container--narrow">
+    <h2 class="section-title">Common questions</h2>
+
+    <div class="faq-list">
+      <div class="faq-item">
+        <h3 class="faq-question">What's your typical timeline?</h3>
+        <p class="faq-answer">
+          It depends on the project scope. Simple automations can be done in a week or two. Web applications typically take several weeks. We'll discuss specific timelines based on what you need.
+        </p>
+      </div>
+
+      <div class="faq-item">
+        <h3 class="faq-question">How do you price projects?</h3>
+        <p class="faq-answer">
+          I work on fixed-scope projects or ongoing engagements. After we discuss your needs, I'll provide a clear proposal outlining what I'll deliver, the timeline, and the cost.
+        </p>
+      </div>
+
+      <div class="faq-item">
+        <h3 class="faq-question">What tools and technologies do you work with?</h3>
+        <p class="faq-answer">
+          Rails, JavaScript, and Python for web development. Claude and OpenAI APIs for AI integration. Make, Zapier, and n8n for automation. I use whatever makes sense for your project.
+        </p>
+      </div>
+
+      <div class="faq-item">
+        <h3 class="faq-question">Do you work with clients outside your timezone?</h3>
+        <p class="faq-answer">
+          Yes. I'm based in Lisbon (GMT+0) and work with clients worldwide. I'm flexible with meeting times and comfortable with async communication.
+        </p>
+      </div>
+
+      <div class="faq-item">
+        <h3 class="faq-question">What do you need from me to get started?</h3>
+        <p class="faq-answer">
+          A clear idea of what you're trying to accomplish, access to any tools or systems we'll be integrating with, and regular availability for updates and feedback.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>

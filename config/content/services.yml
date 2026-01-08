@@ -1,0 +1,33 @@
+automation:
+  title: "Automation Projects"
+  icon: ""
+  tagline: "Connect your tools and eliminate manual data work"
+  description: "I build automation systems that connect your existing tools (Airtable, Notion, CRMs, etc.) to reduce manual data entry and keep everything in sync."
+  outcomes:
+    - "Automated data sync between tools"
+    - "Custom workflows using Make, Zapier, or n8n"
+    - "API integrations for unique business needs"
+    - "Reduction in manual copying and pasting"
+    - "Clean data flows without errors"
+  use_cases:
+    - "Syncing CRM data with project management tools"
+    - "Automated reporting from multiple data sources"
+    - "Lead routing and notification systems"
+  how_we_start: "We map out your current workflow, identify what can be automated, build and test the automation, then hand it off with documentation."
+
+product_development:
+  title: "Product Development"
+  icon: ""
+  tagline: "Build web applications with AI integration"
+  description: "I develop web applications using Rails, integrate AI APIs (Claude, OpenAI), and focus on getting to a working version quickly. My recent work includes UXPilot and AI Talk Coach."
+  outcomes:
+    - "Working web applications in production"
+    - "AI integration using Claude or OpenAI APIs"
+    - "Clean, maintainable Rails codebases"
+    - "User interfaces that work well"
+    - "Focus on solving specific problems"
+  use_cases:
+    - "AI-powered tools and applications"
+    - "Internal dashboards and admin panels"
+    - "Tools that process and analyze data"
+  how_we_start: "We define the core functionality, I build an initial version, you test it, and we refine based on what you learn."

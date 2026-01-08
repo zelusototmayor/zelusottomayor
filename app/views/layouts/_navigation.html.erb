@@ -1,0 +1,30 @@
+<nav class="site-navigation main-navigation" data-controller="scroll-progress">
+  <%# Progress bar %>
+  <div class="scroll-progress-bar" data-scroll-progress-target="bar"></div>
+
+  <div class="nav-container container">
+    <div class="nav-brand">
+      <%= link_to root_path, class: "nav-logo" do %>
+        <span class="logo-text">Zalu Sottomayor</span>
+      <% end %>
+    </div>
+
+    <button class="mobile-menu-toggle" data-action="click->navigation#toggleMenu" aria-label="Toggle menu">
+      <span class="hamburger-line"></span>
+      <span class="hamburger-line"></span>
+      <span class="hamburger-line"></span>
+    </button>
+
+    <div class="nav-menu" data-navigation-target="menu">
+      <ul class="nav-links">
+        <li><%= link_to "Work", work_path, class: "nav-link #{'active' if current_page?(work_path)}" %></li>
+        <li><%= link_to "About", about_path, class: "nav-link #{'active' if current_page?(about_path)}" %></li>
+        <li><%= link_to "Contact", contact_path, class: "nav-link #{'active' if current_page?(contact_path)}" %></li>
+      </ul>
+
+      <div class="nav-cta">
+        <%= link_to "Book a call", book_call_path, class: "cta-button cta-button--primary cta-button--small" %>
+      </div>
+    </div>
+  </div>
+</nav>

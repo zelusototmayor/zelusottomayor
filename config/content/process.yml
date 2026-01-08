@@ -1,0 +1,27 @@
+steps:
+  - number: 1
+    title: "Understanding"
+    description: "We talk about what you're trying to accomplish and what's currently not working. I ask questions about your workflow, tools, and what success looks like."
+    duration: "Initial call"
+
+  - number: 2
+    title: "Planning"
+    description: "I outline what I'll build, how it will work, and what you'll get. This includes any integrations, features, or automation steps. You review and we adjust as needed."
+    duration: "1-2 days"
+
+  - number: 3
+    title: "Building"
+    description: "I develop the application or automation, testing as I go. You get access to see progress and provide feedback. I focus on getting something working first, then refining it."
+    duration: "Varies by scope"
+
+  - number: 4
+    title: "Handoff"
+    description: "Once it's working and tested, I hand it off with documentation. If bugs come up or adjustments are needed, I fix them. Ongoing improvements can be scoped separately."
+    duration: "End of project"
+
+principles:
+  - "Working software over perfect plans"
+  - "Clear deliverables, no ambiguity"
+  - "Regular updates on progress"
+  - "Practical solutions that actually work"
+  - "Direct communication, no corporate speak"

@@ -1,0 +1,39 @@
+headline: "Full-Stack Developer & Automation Specialist"
+
+bio: |
+  I'm Zalu Sottomayor, a full-stack developer based in Lisbon.
+
+  I build AI-powered tools and automation systems for founders and small teams. Most of my work involves connecting existing tools, building custom workflows, and creating web applications that solve specific problems.
+
+  I've worked on projects ranging from AI coaching apps to UX analysis tools, always focusing on practical solutions that work in production.
+
+current_focus: |
+  I'm currently doing freelance development while building my own products. My recent projects include UXPilot (an AI-powered UX analysis tool) and AI Talk Coach (a speaking practice app using Claude).
+
+  Most of my client work falls into two categories:
+
+  1. **Automation projects** - connecting tools like Airtable, Notion, and various APIs to eliminate manual data work.
+  2. **Product development** - building functional web apps with Rails, integrating AI APIs, and getting things to production quickly.
+
+how_i_work:
+  - "I build working prototypes first, then refine based on real usage"
+  - "Every project has clear deliverables and milestones - no vague promises"
+  - "I prefer tools and approaches I know work, rather than chasing trends"
+
+expertise:
+  - "Full-stack development (Ruby on Rails, JavaScript, Python)"
+  - "AI integration (Claude API, OpenAI, prompt engineering)"
+  - "Automation tools (Make, Zapier, n8n, API integrations)"
+  - "Product design and user experience"
+
+credentials:
+  - "Several years building web applications and automation systems"
+  - "Developed products like UXPilot, AI Talk Coach, and various client tools"
+  - "Based in Lisbon, working with clients remotely"
+
+personal_touch: |
+  When I'm not coding, I'm usually exploring Lisbon or testing new AI tools to see what's actually useful versus what's just hype.
+
+  I believe good software solves real problems without unnecessary complexity.
+
+cta_text: "Get in touch"
