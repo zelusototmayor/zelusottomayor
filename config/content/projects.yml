@@ -7,6 +7,14 @@
   metrics:
     - "AI session analysis"
     - "Friction detection"
+  stages:
+    - "Idea"
+    - "Exploring"
+    - "Building"
+    - "MVP"
+    - "Live"
+    - "Dormant"
+  current_stage: "Dormant"
 
 - name: "AI Talk Coach"
   type: "product"
@@ -17,6 +25,14 @@
   metrics:
     - "Speech feedback"
     - "Interview prep"
+  stages:
+    - "Idea"
+    - "Exploring"
+    - "Building"
+    - "MVP"
+    - "Pivot"
+    - "Live"
+  current_stage: "Live"
 
 - name: "Signal Harvester"
   type: "product"
@@ -27,6 +43,13 @@
   metrics:
     - "Intent detection"
     - "DM drafting"
+  stages:
+    - "Idea"
+    - "Exploring"
+    - "Building"
+    - "MVP"
+    - "Live"
+  current_stage: "MVP"
 
 - name: "Floating Clock"
   type: "product"
@@ -37,6 +60,13 @@
   metrics:
     - "Clean overlay"
     - "Customizable"
+  stages:
+    - "Idea"
+    - "Exploring"
+    - "Building"
+    - "MVP"
+    - "Live"
+  current_stage: "Live"
 
 - name: "Image Scraping Tool"
   type: "product"
@@ -47,3 +77,11 @@
   metrics:
     - "Bulk export"
     - "Filterable"
+  stages:
+    - "Idea"
+    - "Exploring"
+    - "Building"
+    - "MVP"
+    - "Live"
+    - "Dormant"
+  current_stage: "Dormant"

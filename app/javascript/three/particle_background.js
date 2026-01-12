@@ -57,16 +57,16 @@ export class ParticleBackground {
   }
 
   createParticles() {
-    const particleCount = window.innerWidth < 768 ? 50 : 100;
+    const particleCount = window.innerWidth < 768 ? 120 : 220;
     const geometry = new THREE.BufferGeometry();
     const positions = new Float32Array(particleCount * 3);
     const colors = new Float32Array(particleCount * 3);
 
-    // Color palette (blue, purple, pink)
+    // Muted palette aligned to site tones
     const colorPalette = [
-      new THREE.Color(0x2563eb), // Blue
-      new THREE.Color(0x9333ea), // Purple
-      new THREE.Color(0xec4899), // Pink
+      new THREE.Color(0x1b2538), // Deep ink
+      new THREE.Color(0x2f6f5e), // Forest
+      new THREE.Color(0xc8a15a), // Gold
     ];
 
     for (let i = 0; i < particleCount; i++) {
@@ -87,10 +87,10 @@ export class ParticleBackground {
 
     // Material
     const material = new THREE.PointsMaterial({
-      size: 0.05,
+      size: 0.065,
       vertexColors: true,
       transparent: true,
-      opacity: 0.6,
+      opacity: 0.75,
       blending: THREE.AdditiveBlending,
       sizeAttenuation: true
     });
@@ -120,16 +120,16 @@ export class ParticleBackground {
 
     // Rotate particles
     if (this.particles) {
-      this.particles.rotation.y += 0.001;
-      this.particles.rotation.x = this.mouse.y * 0.1;
-      this.particles.rotation.y += this.mouse.x * 0.01;
+      this.particles.rotation.y += 0.0006;
+      this.particles.rotation.x = this.mouse.y * 0.06;
+      this.particles.rotation.y += this.mouse.x * 0.006;
 
       // Animate individual particles
       const positions = this.particles.geometry.attributes.position.array;
-      const time = Date.now() * 0.0001;
+      const time = Date.now() * 0.00008;
 
       for (let i = 0; i < positions.length; i += 3) {
-        positions[i + 1] += Math.sin(time + positions[i]) * 0.001;
+        positions[i + 1] += Math.sin(time + positions[i]) * 0.0006;
       }
 
       this.particles.geometry.attributes.position.needsUpdate = true;
@@ -164,9 +164,15 @@ export function initParticleBackground() {
     particleContainer.style.width = '100%';
     particleContainer.style.height = '100%';
     particleContainer.style.pointerEvents = 'none';
-    particleContainer.style.zIndex = '0';
+    particleContainer.style.zIndex = '1';
 
     heroSection.insertBefore(particleContainer, heroSection.firstChild);
+
+    // Debug indicator to confirm canvas is mounting
+    const debugBadge = document.createElement('div');
+    debugBadge.className = 'particle-debug';
+    debugBadge.textContent = 'Particles ON';
+    particleContainer.appendChild(debugBadge);
 
     // Initialize particles
     const particles = new ParticleBackground(particleContainer);

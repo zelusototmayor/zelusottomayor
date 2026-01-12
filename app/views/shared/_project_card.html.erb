@@ -9,6 +9,9 @@
   project_link = project["link"]
   project_icon = project["icon"]
   project_thumbnail = project["thumbnail"]
+  project_stages = project["stages"] || ["Idea", "Exploration", "Building", "MVP", "Live"]
+  current_stage = project["current_stage"] || project_stages.last
+  current_stage_index = project_stages.find_index { |stage| stage.to_s.casecmp?(current_stage.to_s) } || (project_stages.length - 1)
 %>
 
 <div class="case-study-card" data-category="<%= project["type"] %>">
@@ -16,18 +19,22 @@
     <div class="case-study-thumbnail">
       <%= image_tag project_thumbnail, alt: project_name, class: "case-study-image" %>
     </div>
-  <% elsif project_icon.present? %>
-    <div class="case-study-icon-wrapper">
-      <%= image_tag project_icon, alt: project_name, class: "case-study-icon" %>
-    </div>
   <% end %>
 
   <div class="case-study-content">
-    <div class="case-study-type-badge">
-      <%= project_type %>
+    <div class="project-card-header">
+      <% if project_icon.present? %>
+        <div class="project-card-logo">
+          <%= image_tag project_icon, alt: project_name, class: "project-card-logo-image" %>
+        </div>
+      <% end %>
+      <div class="project-card-heading">
+        <div class="project-card-title-row">
+          <h3 class="case-study-title project-card-title"><%= project_name %></h3>
+          <span class="project-card-slash">/ <%= project_type %></span>
+        </div>
+      </div>
     </div>
-
-    <h3 class="case-study-title"><%= project_name %></h3>
 
     <% if project_tagline.present? %>
       <p class="case-study-tagline"><%= project_tagline %></p>
@@ -37,6 +44,19 @@
       <div class="case-study-metrics">
         <% project_metrics.take(2).each do |metric| %>
           <span class="metric-pill"><%= metric %></span>
+        <% end %>
+      </div>
+    <% end %>
+
+    <% if project_stages.any? %>
+      <% progress_percent = project_stages.length > 1 ? ((current_stage_index.to_f / (project_stages.length - 1)) * 100).round(2) : 0 %>
+      <div class="project-progress" aria-label="Project stage" style="--progress-percent: <%= progress_percent %>%;">
+        <% project_stages.each_with_index do |stage, index| %>
+          <% step_state = index == current_stage_index ? "is-active" : (index < current_stage_index ? "is-complete" : "") %>
+          <div class="project-progress-step <%= step_state %>">
+            <span class="project-progress-dot"></span>
+            <span class="project-progress-label"><%= stage %></span>
+          </div>
         <% end %>
       </div>
     <% end %>
