@@ -12,8 +12,18 @@ Rails.application.routes.draw do
   # Contact form submission
   post "/contact", to: "contacts#create", as: :create_contact
 
-  # CTA endpoint (redirects to scheduling tool)
-  get "/book-call", to: "pages#book_call", as: :book_call
+  # Booking system
+  get "/book-call", to: "bookings#new", as: :book_call
+
+  resources :bookings, only: [:create, :show], param: :confirmation_token do
+    collection do
+      get :available_slots
+      get :calendar_days
+    end
+    member do
+      delete :cancel
+    end
+  end
 
   # Keep legacy projects routes for backward compatibility (optional)
   resources :projects, only: [:index, :show]

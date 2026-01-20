@@ -1,0 +1,135 @@
+<% content_for :title, "Booking Confirmation - Ze Lu Sottomayor" %>
+<% content_for :meta_description, "Your booking confirmation details." %>
+
+<div class="page-hero">
+  <div class="container container--narrow">
+    <% if @booking.cancelled? %>
+      <div class="booking-status-badge booking-status-badge--cancelled">Cancelled</div>
+      <h1 class="page-title">Booking Cancelled</h1>
+    <% elsif @booking.confirmed? %>
+      <div class="booking-status-badge booking-status-badge--confirmed">Confirmed</div>
+      <h1 class="page-title">You're all set!</h1>
+    <% else %>
+      <div class="booking-status-badge booking-status-badge--pending">Pending</div>
+      <h1 class="page-title">Booking Received</h1>
+    <% end %>
+    <p class="page-subtitle">
+      <% if @booking.cancelled? %>
+        This booking has been cancelled.
+      <% elsif @booking.confirmed? %>
+        Your call is confirmed. See you soon!
+      <% else %>
+        We're setting up your meeting. You'll receive a confirmation email shortly.
+      <% end %>
+    </p>
+  </div>
+</div>
+
+<section class="booking-confirmation section-padding">
+  <div class="container container--narrow">
+    <div class="confirmation-card">
+      <div class="confirmation-header">
+        <h2>Booking Details</h2>
+      </div>
+
+      <div class="confirmation-body">
+        <div class="confirmation-detail">
+          <span class="detail-icon">&#128197;</span>
+          <div class="detail-content">
+            <span class="detail-label">Date</span>
+            <span class="detail-value"><%= @booking.display_date %></span>
+          </div>
+        </div>
+
+        <div class="confirmation-detail">
+          <span class="detail-icon">&#128336;</span>
+          <div class="detail-content">
+            <span class="detail-label">Time</span>
+            <span class="detail-value"><%= @booking.display_time_range %></span>
+            <span class="detail-subtext">
+              <%= @booking.timezone %><br>
+              (<%= @booking.host_display_time_range %>)
+            </span>
+          </div>
+        </div>
+
+        <div class="confirmation-detail">
+          <span class="detail-icon">&#9203;</span>
+          <div class="detail-content">
+            <span class="detail-label">Duration</span>
+            <span class="detail-value">30 minutes</span>
+          </div>
+        </div>
+
+        <% if @booking.google_meet_link.present? && !@booking.cancelled? %>
+          <div class="confirmation-detail confirmation-detail--highlighted">
+            <span class="detail-icon">&#128249;</span>
+            <div class="detail-content">
+              <span class="detail-label">Google Meet</span>
+              <a href="<%= @booking.google_meet_link %>" target="_blank" rel="noopener" class="meet-link">
+                Join Meeting &rarr;
+              </a>
+            </div>
+          </div>
+        <% end %>
+
+        <div class="confirmation-divider"></div>
+
+        <div class="confirmation-detail">
+          <span class="detail-icon">&#128100;</span>
+          <div class="detail-content">
+            <span class="detail-label">Guest</span>
+            <span class="detail-value"><%= @booking.guest_name %></span>
+            <span class="detail-subtext"><%= @booking.guest_email %></span>
+          </div>
+        </div>
+
+        <% if @booking.guest_company.present? %>
+          <div class="confirmation-detail">
+            <span class="detail-icon">&#127970;</span>
+            <div class="detail-content">
+              <span class="detail-label">Company</span>
+              <span class="detail-value"><%= @booking.guest_company %></span>
+            </div>
+          </div>
+        <% end %>
+
+        <% if @booking.notes.present? %>
+          <div class="confirmation-detail">
+            <span class="detail-icon">&#128221;</span>
+            <div class="detail-content">
+              <span class="detail-label">Notes</span>
+              <span class="detail-value detail-value--notes"><%= @booking.notes %></span>
+            </div>
+          </div>
+        <% end %>
+      </div>
+
+      <div class="confirmation-footer">
+        <% if @booking.cancelled? %>
+          <%= link_to "Book a New Time", book_call_path, class: "cta-button cta-button--primary" %>
+        <% elsif @booking.pending? || @booking.confirmed? %>
+          <% if @booking.starts_at > Time.current %>
+            <%= button_to "Cancel Booking",
+                          cancel_booking_path(@booking.confirmation_token),
+                          method: :delete,
+                          class: "cta-button cta-button--secondary",
+                          data: { turbo_confirm: "Are you sure you want to cancel this booking?" } %>
+          <% end %>
+
+          <% if @booking.google_meet_link.present? %>
+            <%= link_to "Join Meeting", @booking.google_meet_link, target: "_blank", rel: "noopener", class: "cta-button cta-button--primary" %>
+          <% end %>
+        <% end %>
+      </div>
+    </div>
+
+    <div class="confirmation-help">
+      <h3>Need to make changes?</h3>
+      <p>
+        If you need to reschedule, please cancel this booking and create a new one.
+        For questions, email <a href="mailto:zsottomayor@gmail.com">zsottomayor@gmail.com</a>.
+      </p>
+    </div>
+  </div>
+</section>

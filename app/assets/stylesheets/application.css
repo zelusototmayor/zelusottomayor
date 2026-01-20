@@ -3,9 +3,7 @@
  * Organized: Variables → Base → Layout → Components → Pages → Utilities → Responsive
  */
 
-/* Import enhanced design system files */
-@import "typography.css";
-@import "animations.css";
+/* Note: typography.css, animations.css, and bookings.css are loaded separately via stylesheet_link_tag */
 
 /* ========================================
    1. CSS VARIABLES & DESIGN TOKENS

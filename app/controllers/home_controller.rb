@@ -30,6 +30,25 @@ class HomeController < ApplicationController
         description: "Find high-intent comments on Instagram and TikTok, draft replies or DMs, and turn social conversations into new customers.",
         link: "https://signalharvester.com",
         icon: "signal-harvester-logo.png"
+      },
+      {
+        name: "IG Stat Recap",
+        description: "Mobile app that recaps your Instagram stats into shareable visual cards. Live on the App Store.",
+        link: "https://apps.apple.com/us/app/ig-year-wrapped/id6756681246",
+        icon: "ig-stat-recap.png"
+      },
+      {
+        name: "Quinta das Margaridas",
+        description: "A beautiful website for a scenic lodge in the Douro Valley, Portugal with custom services and integrations.",
+      },
+      {
+        name: "Restaurant Line Manager",
+        description: "Custom app for a restaurant group to manage door lines using historical demand and table data.",
+      },
+      {
+        name: "The Becoming App",
+        description: "Goal-setting mobile app that turns goals into identity with daily signals to stay on track.",
+        icon: "becoming-app.png"
       }
     ]
   end

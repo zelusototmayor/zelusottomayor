@@ -2,11 +2,9 @@
 import "@hotwired/turbo-rails"
 import "controllers"
 
-// Import animation modules
-import "./animations/gsap_init"
-import "./animations/scroll_animations"
-import "./animations/hero_animations"
-import "./animations/card_animations"
-
-// Import Three.js particle background
-import "./three/particle_background"
+// Animation modules disabled temporarily - GSAP ScrollSmoother requires paid license
+// import "animations/gsap_init"
+// import "animations/scroll_animations"
+// import "animations/hero_animations"
+// import "animations/card_animations"
+// import "three/particle_background"

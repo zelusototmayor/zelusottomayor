@@ -1,0 +1,84 @@
+<%
+  # Calculate calendar data
+  today = Date.current
+  first_day = current_month.beginning_of_month
+  last_day = current_month.end_of_month
+
+  # Calculate the starting day of the calendar grid (previous month days if needed)
+  start_date = first_day.beginning_of_week(:sunday)
+  end_date = last_day.end_of_week(:sunday)
+
+  prev_month = current_month - 1.month
+  next_month = current_month + 1.month
+
+  # Check if we can go to previous month (can't go before today's month)
+  can_go_prev = current_month.beginning_of_month > today.beginning_of_month
+%>
+
+<div class="calendar" id="calendar">
+  <div class="calendar-header">
+    <% if can_go_prev %>
+      <button type="button"
+              class="calendar-nav-button"
+              data-action="calendar#previousMonth"
+              data-year="<%= prev_month.year %>"
+              data-month="<%= prev_month.month %>">
+        &larr;
+      </button>
+    <% else %>
+      <span class="calendar-nav-button calendar-nav-button--disabled">&larr;</span>
+    <% end %>
+
+    <h3 class="calendar-title"><%= current_month.strftime('%B %Y') %></h3>
+
+    <button type="button"
+            class="calendar-nav-button"
+            data-action="calendar#nextMonth"
+            data-year="<%= next_month.year %>"
+            data-month="<%= next_month.month %>">
+      &rarr;
+    </button>
+  </div>
+
+  <div class="calendar-weekdays">
+    <% %w[Sun Mon Tue Wed Thu Fri Sat].each do |day| %>
+      <div class="calendar-weekday"><%= day %></div>
+    <% end %>
+  </div>
+
+  <div class="calendar-days" id="calendar-days">
+    <% (start_date..end_date).each do |date| %>
+      <%
+        is_current_month = date.month == current_month.month
+        is_past = date < today
+        is_today = date == today
+        is_selectable = is_current_month && !is_past
+
+        classes = ['calendar-day']
+        classes << 'calendar-day--other-month' unless is_current_month
+        classes << 'calendar-day--past' if is_past
+        classes << 'calendar-day--today' if is_today
+        classes << 'calendar-day--selectable' if is_selectable
+      %>
+
+      <% if is_selectable %>
+        <button type="button"
+                class="<%= classes.join(' ') %>"
+                data-action="calendar#selectDate"
+                data-date="<%= date.iso8601 %>"
+                data-display-date="<%= date.strftime('%A, %B %d, %Y') %>">
+          <%= date.day %>
+        </button>
+      <% else %>
+        <span class="<%= classes.join(' ') %>">
+          <%= date.day %>
+        </span>
+      <% end %>
+    <% end %>
+  </div>
+
+  <div class="calendar-timezone">
+    <span class="timezone-label">Times shown in:</span>
+    <span class="timezone-value" data-calendar-target="timezoneDisplay">your local time</span>
+  </div>
+</div>

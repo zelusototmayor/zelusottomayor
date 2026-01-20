@@ -24,12 +24,6 @@ class PagesController < ApplicationController
     @contact = ContactSubmission.new
   end
 
-  def book_call
-    # Redirect to scheduling tool (Calendly, Cal.com, etc.)
-    # Replace this URL with your actual scheduling link
-    redirect_to ENV.fetch('CALENDLY_URL', 'https://calendly.com/zalusottomayor'), allow_other_host: true
-  end
-
   private
 
   def load_content_config

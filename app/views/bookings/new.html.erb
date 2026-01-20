@@ -1,0 +1,112 @@
+<% content_for :title, "Book a Call - Ze Lu Sottomayor" %>
+<% content_for :meta_description, "Schedule a 30-minute call to discuss your project. Available Monday-Sunday, 10 AM - 8 PM Lisbon time." %>
+
+<div class="page-hero">
+  <div class="container container--narrow">
+    <h1 class="page-title">Book a call</h1>
+    <p class="page-subtitle">
+      Schedule a 30-minute call to discuss your project.<br>
+      Available any day, 10 AM - 8 PM Lisbon time.
+    </p>
+  </div>
+</div>
+
+<section class="booking-section section-padding">
+  <div class="container container--narrow">
+    <div class="booking-widget" data-controller="booking">
+      <div class="booking-steps">
+        <div class="booking-step" data-booking-target="step" data-step="1">
+          <span class="step-number">1</span>
+          <span class="step-label">Select Date</span>
+        </div>
+        <div class="booking-step" data-booking-target="step" data-step="2">
+          <span class="step-number">2</span>
+          <span class="step-label">Select Time</span>
+        </div>
+        <div class="booking-step" data-booking-target="step" data-step="3">
+          <span class="step-number">3</span>
+          <span class="step-label">Your Details</span>
+        </div>
+      </div>
+
+      <div class="booking-content">
+        <!-- Step 1: Calendar -->
+        <div class="booking-panel" data-booking-target="panel" data-panel="1">
+          <div class="calendar-container" data-controller="calendar">
+            <%= render 'calendar', current_month: @current_month %>
+          </div>
+        </div>
+
+        <!-- Step 2: Time Slots -->
+        <div class="booking-panel" data-booking-target="panel" data-panel="2" style="display: none;">
+          <div class="selected-date-header">
+            <button type="button" class="back-button" data-action="booking#goToStep" data-step="1">
+              &larr; Back
+            </button>
+            <h3 class="selected-date-title" data-booking-target="selectedDate"></h3>
+          </div>
+          <div id="time-slots-container" data-booking-target="timeSlotsContainer">
+            <div class="loading-slots">Loading available times...</div>
+          </div>
+        </div>
+
+        <!-- Step 3: Booking Form -->
+        <div class="booking-panel" data-booking-target="panel" data-panel="3" style="display: none;">
+          <div class="selected-datetime-header">
+            <button type="button" class="back-button" data-action="booking#goToStep" data-step="2">
+              &larr; Back
+            </button>
+            <div class="booking-summary-mini">
+              <span class="summary-date" data-booking-target="summaryDate"></span>
+              <span class="summary-time" data-booking-target="summaryTime"></span>
+            </div>
+          </div>
+
+          <%= form_with model: @booking, url: bookings_path, class: "booking-form", data: { booking_target: "form" } do |f| %>
+            <% if @booking.errors.any? %>
+              <div class="form-errors">
+                <h4>Please fix the following errors:</h4>
+                <ul>
+                  <% @booking.errors.full_messages.each do |message| %>
+                    <li><%= message %></li>
+                  <% end %>
+                </ul>
+              </div>
+            <% end %>
+
+            <%= f.hidden_field :starts_at, data: { booking_target: "startsAt" } %>
+            <%= f.hidden_field :timezone, value: "", data: { booking_target: "timezone" } %>
+
+            <div class="form-field">
+              <%= f.label :guest_name, "Your name", class: "form-label" %>
+              <%= f.text_field :guest_name, class: "form-input", required: true, placeholder: "John Smith" %>
+            </div>
+
+            <div class="form-field">
+              <%= f.label :guest_email, "Email address", class: "form-label" %>
+              <%= f.email_field :guest_email, class: "form-input", required: true, placeholder: "john@example.com" %>
+            </div>
+
+            <div class="form-field">
+              <%= f.label :guest_company, "Company (optional)", class: "form-label" %>
+              <%= f.text_field :guest_company, class: "form-input", placeholder: "Acme Inc." %>
+            </div>
+
+            <div class="form-field">
+              <%= f.label :notes, "What would you like to discuss? (optional)", class: "form-label" %>
+              <%= f.text_area :notes, class: "form-textarea", rows: 3, placeholder: "Brief description of your project or questions..." %>
+            </div>
+
+            <div class="form-submit">
+              <%= f.submit "Confirm Booking", class: "cta-button cta-button--primary cta-button--full-width" %>
+            </div>
+
+            <p class="form-privacy-note">
+              By booking, you agree to receive email confirmations about your appointment.
+            </p>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

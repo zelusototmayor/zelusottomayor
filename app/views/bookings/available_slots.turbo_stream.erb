@@ -1,0 +1,3 @@
+<%= turbo_stream.update "time-slots-container" do %>
+  <%= render 'time_slots', slots: @slots, date: @date %>
+<% end %>

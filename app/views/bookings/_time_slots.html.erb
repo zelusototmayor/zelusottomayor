@@ -1,0 +1,18 @@
+<% if slots.blank? %>
+  <div class="no-slots-message">
+    <p>No available times on this date.</p>
+    <p class="no-slots-hint">Try selecting another day.</p>
+  </div>
+<% else %>
+  <div class="time-slots-grid">
+    <% slots.each do |slot| %>
+      <button type="button"
+              class="time-slot-button"
+              data-action="booking#selectTimeSlot"
+              data-starts-at="<%= slot[:starts_at].iso8601 %>"
+              data-display-time="<%= slot[:display_time_12h] %>">
+        <%= slot[:display_time_12h] %>
+      </button>
+    <% end %>
+  </div>
+<% end %>

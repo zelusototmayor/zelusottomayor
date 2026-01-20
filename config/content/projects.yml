@@ -85,3 +85,66 @@
     - "Live"
     - "Dormant"
   current_stage: "Dormant"
+
+- name: "IG Stat Recap"
+  type: "product"
+  tagline: "Recap your Instagram statistics with shareable visual cards"
+  link: "https://apps.apple.com/us/app/ig-year-wrapped/id6756681246"
+  icon: "ig-stat-recap.png"
+  featured: false
+  metrics:
+    - "Instagram insights"
+    - "Visual recaps"
+  stages:
+    - "Idea"
+    - "Exploring"
+    - "Building"
+    - "MVP"
+    - "Live"
+  current_stage: "Live"
+
+- name: "Quinta das Margaridas"
+  type: "client"
+  tagline: "A beautiful website for a scenic lodge in the Douro Valley, Portugal with custom integrations"
+  featured: false
+  metrics:
+    - "Hospitality website"
+    - "Custom services"
+  stages:
+    - "Idea"
+    - "Exploring"
+    - "Building"
+    - "MVP"
+    - "Live"
+  current_stage: "Building"
+
+- name: "Restaurant Line Manager"
+  type: "client"
+  tagline: "Custom app that manages door lines using historical demand and table data"
+  featured: false
+  metrics:
+    - "Queue forecasting"
+    - "Table optimization"
+  stages:
+    - "Idea"
+    - "Exploring"
+    - "Building"
+    - "MVP"
+    - "Live"
+  current_stage: "Building"
+
+- name: "The Becoming App"
+  type: "product"
+  tagline: "Turn your goals into an identity with daily signals to stay on track"
+  icon: "becoming-app.png"
+  featured: false
+  metrics:
+    - "Identity habits"
+    - "Daily signals"
+  stages:
+    - "Idea"
+    - "Exploring"
+    - "Building"
+    - "MVP"
+    - "Live"
+  current_stage: "MVP"
