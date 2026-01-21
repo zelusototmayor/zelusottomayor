@@ -32,8 +32,8 @@ class GoogleCalendarService
 
     calendar_busy.map do |busy_period|
       {
-        starts_at: Time.parse(busy_period.start).in_time_zone(timezone),
-        ends_at: Time.parse(busy_period.end).in_time_zone(timezone)
+        starts_at: busy_period.start.to_time.in_time_zone(timezone),
+        ends_at: busy_period.end.to_time.in_time_zone(timezone)
       }
     end
   rescue Google::Apis::Error => e
@@ -44,8 +44,7 @@ class GoogleCalendarService
   def create_event(booking)
     return nil unless configured?
 
-    # Note: Service accounts can't invite attendees without Domain-Wide Delegation
-    # So we create the event without attendees and include Meet link in description
+    # With Domain-Wide Delegation enabled, we can add attendees and they'll receive invites
     event = Google::Apis::CalendarV3::Event.new(
       summary: "Call with #{booking.guest_name}",
       description: event_description(booking),
@@ -57,6 +56,13 @@ class GoogleCalendarService
         date_time: booking.ends_at.iso8601,
         time_zone: Booking::HOST_TIMEZONE
       ),
+      attendees: [
+        Google::Apis::CalendarV3::EventAttendee.new(
+          email: booking.guest_email,
+          display_name: booking.guest_name,
+          response_status: 'needsAction'
+        )
+      ],
       reminders: Google::Apis::CalendarV3::Event::Reminders.new(
         use_default: false,
         overrides: [
@@ -81,7 +87,7 @@ class GoogleCalendarService
         @calendar_id,
         event,
         conference_data_version: 1,
-        send_updates: 'none'
+        send_updates: 'all'
       )
     rescue Google::Apis::ClientError => e
       if e.message.include?('Invalid conference type')
@@ -91,7 +97,7 @@ class GoogleCalendarService
         created_event = @service.insert_event(
           @calendar_id,
           event,
-          send_updates: 'none'
+          send_updates: 'all'
         )
       else
         raise e
@@ -146,9 +152,12 @@ class GoogleCalendarService
       scope: CALENDAR_SCOPE
     )
 
-    # For service accounts to access user calendars, we need to impersonate
-    # The service account needs domain-wide delegation enabled
-    # and the calendar must be shared with the service account email
+    # Enable Domain-Wide Delegation impersonation to act as the host user
+    # This allows the service account to create events with attendees and Meet links
+    if @host_email.present?
+      authorizer.sub = @host_email
+    end
+
     authorizer.fetch_access_token!
     authorizer
   rescue StandardError => e
@@ -168,13 +177,9 @@ class GoogleCalendarService
 
   def event_description(booking)
     parts = ["30-minute call booked via portfolio website."]
-    parts << "Guest: #{booking.guest_name} (#{booking.guest_email})"
     parts << "Company: #{booking.guest_company}" if booking.guest_company.present?
     parts << "Notes: #{booking.notes}" if booking.notes.present?
     parts << "Guest timezone: #{booking.timezone}"
-    parts << ""
-    parts << "---"
-    parts << "To add a Google Meet link: Edit this event and click 'Add Google Meet video conferencing'"
     parts.join("\n\n")
   end
 
