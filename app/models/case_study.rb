@@ -4,6 +4,8 @@ class CaseStudy < ApplicationRecord
 
   # Serialization for metrics stored as JSON in text field
   serialize :metrics, type: Array, coder: JSON
+  serialize :tech_stack, type: Array, coder: JSON
+  serialize :workflow_steps, type: Array, coder: JSON
 
   # Validations
   validates :name, presence: true
@@ -28,6 +30,24 @@ class CaseStudy < ApplicationRecord
   def key_metrics
     return [] unless metrics.present?
     metrics.is_a?(Array) ? metrics : []
+  end
+
+  def technologies
+    return [] unless tech_stack.present?
+    tech_stack.is_a?(Array) ? tech_stack : []
+  end
+
+  def has_admin_panel?
+    admin_panel_url.present?
+  end
+
+  def workflow
+    return [] unless workflow_steps.present?
+    workflow_steps.is_a?(Array) ? workflow_steps : []
+  end
+
+  def has_workflow?
+    workflow.any?
   end
 
   private

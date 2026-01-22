@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.0].define(version: 2026_01_20_151957) do
+ActiveRecord::Schema[8.0].define(version: 2026_01_22_182153) do
   create_table "bookings", force: :cascade do |t|
     t.string "guest_name", null: false
     t.string "guest_email", null: false
@@ -52,6 +52,9 @@ ActiveRecord::Schema[8.0].define(version: 2026_01_20_151957) do
     t.datetime "published_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "admin_panel_url"
+    t.text "tech_stack"
+    t.text "workflow_steps"
     t.index ["client_type"], name: "index_case_studies_on_client_type"
     t.index ["display_order"], name: "index_case_studies_on_display_order"
     t.index ["featured"], name: "index_case_studies_on_featured"
