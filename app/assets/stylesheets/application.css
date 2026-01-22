@@ -636,6 +636,92 @@ section {
   overflow: hidden;
 }
 
+/* ========================================
+   HERO CINEMATIC BACKGROUND
+   Premium animated image background with drift
+   ======================================== */
+.hero-bg-container {
+  position: absolute;
+  inset: -50px;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.hero-bg-image {
+  display: block;
+  position: absolute;
+  inset: -40px;
+  width: calc(100% + 80px);
+  height: calc(100% + 80px);
+}
+
+.hero-bg-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  animation: heroCinematicDrift 18s ease-in-out infinite;
+  will-change: transform;
+}
+
+@keyframes heroCinematicDrift {
+  0% {
+    transform: scale(1.05) translate(0, 0);
+  }
+  25% {
+    transform: scale(1.06) translate(10px, -6px);
+  }
+  50% {
+    transform: scale(1.07) translate(-8px, 10px);
+  }
+  75% {
+    transform: scale(1.05) translate(6px, 4px);
+  }
+  100% {
+    transform: scale(1.05) translate(0, 0);
+  }
+}
+
+/* Subtle vignette + soft-light overlay */
+.hero-bg-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  background:
+    radial-gradient(ellipse 80% 60% at 50% 50%, transparent 40%, rgba(251, 250, 247, 0.4) 100%),
+    linear-gradient(180deg, rgba(251, 250, 247, 0.15) 0%, transparent 30%, transparent 70%, rgba(251, 250, 247, 0.25) 100%);
+}
+
+/* Very subtle noise grain overlay (CSS-only) */
+.hero-bg-overlay::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  opacity: 0.03;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+  background-repeat: repeat;
+  background-size: 150px 150px;
+  pointer-events: none;
+}
+
+/* Mouse parallax support via JS */
+[data-hero-parallax] .hero-bg-image {
+  transition: transform 0.15s ease-out;
+}
+
+/* Reduced motion: disable animations */
+@media (prefers-reduced-motion: reduce) {
+  .hero-bg-img {
+    animation: none;
+    transform: scale(1.02);
+  }
+
+  [data-hero-parallax] .hero-bg-image {
+    transition: none;
+  }
+}
+
 /* Gradient mesh background for hero */
 .gradient-mesh-bg {
   position: absolute;

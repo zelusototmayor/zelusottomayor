@@ -4,11 +4,17 @@
 <%# ======================================
     SECTION 1: ABOVE THE FOLD - ENHANCED WITH BOLD TYPOGRAPHY
     ====================================== %>
-<section class="hero-above-fold" style="position: relative; overflow: hidden;">
-  <%# Gradient mesh background %>
-  <div class="gradient-mesh-bg" style="position: absolute; inset: 0; z-index: 0;"></div>
+<section class="hero-above-fold" data-hero-parallax>
+  <%# Cinematic hero background with drift animation %>
+  <div class="hero-bg-container">
+    <picture class="hero-bg-image">
+      <source srcset="<%= asset_path('hero-perfect.webp') %>" type="image/webp">
+      <%= image_tag 'hero-perfect.png', alt: '', class: 'hero-bg-img', loading: 'eager', fetchpriority: 'high' %>
+    </picture>
+    <div class="hero-bg-overlay"></div>
+  </div>
 
-  <div class="container container--narrow" style="position: relative; z-index: 1;">
+  <div class="container container--narrow" style="position: relative; z-index: 2;">
     <h1 class="hero-headline gradient-text-animated">
       I build custom software and AI-powered automations
     </h1>

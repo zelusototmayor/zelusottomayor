@@ -119,6 +119,57 @@ export function animateNavigation() {
 }
 
 /**
+ * Hero background mouse parallax
+ * Subtle movement based on cursor position (max 10px)
+ */
+export function initHeroParallax() {
+  const hero = document.querySelector('[data-hero-parallax]');
+  if (!hero) return;
+
+  const bgImage = hero.querySelector('.hero-bg-image');
+  if (!bgImage) return;
+
+  // Parallax intensity (px)
+  const maxMove = 10;
+
+  // Throttle for performance
+  let ticking = false;
+
+  function handleMouseMove(e) {
+    if (ticking) return;
+
+    ticking = true;
+    requestAnimationFrame(() => {
+      const rect = hero.getBoundingClientRect();
+      const centerX = rect.width / 2;
+      const centerY = rect.height / 2;
+
+      // Calculate offset from center (normalized -1 to 1)
+      const offsetX = (e.clientX - rect.left - centerX) / centerX;
+      const offsetY = (e.clientY - rect.top - centerY) / centerY;
+
+      // Apply parallax (inverse direction for natural feel)
+      const moveX = -offsetX * maxMove;
+      const moveY = -offsetY * maxMove;
+
+      bgImage.style.transform = `translate(${moveX}px, ${moveY}px)`;
+      ticking = false;
+    });
+  }
+
+  function handleMouseLeave() {
+    // Reset position smoothly
+    bgImage.style.transform = 'translate(0, 0)';
+  }
+
+  // Only enable on non-touch devices
+  if (!('ontouchstart' in window)) {
+    hero.addEventListener('mousemove', handleMouseMove, { passive: true });
+    hero.addEventListener('mouseleave', handleMouseLeave);
+  }
+}
+
+/**
  * Initialize all hero animations
  */
 export function initHeroAnimations() {
@@ -133,6 +184,7 @@ export function initHeroAnimations() {
   animateHeroHeadline();
   animateHeroSubtitle();
   animateHeroCTAs();
+  initHeroParallax();
 }
 
 // Initialize on page load
@@ -144,4 +196,4 @@ document.addEventListener('turbo:load', () => {
 });
 
 // Export for manual initialization if needed
-export default { initHeroAnimations, animateHeroHeadline, animateHeroCTAs, animateHeroSubtitle, animateNavigation };
+export default { initHeroAnimations, animateHeroHeadline, animateHeroCTAs, animateHeroSubtitle, animateNavigation, initHeroParallax };
