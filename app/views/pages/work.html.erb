@@ -2,6 +2,7 @@
 <% content_for :meta_description, "Selected projects including AI tools and automation systems. See how I build practical solutions for real problems." %>
 
 <div class="page-hero">
+  <div class="flowing-lines-bg"></div>
   <div class="container">
     <h1 class="page-hero-title text-reveal">Work & Case Studies</h1>
     <p class="page-subtitle text-lead text-reveal">
@@ -17,6 +18,9 @@
         <div class="tabs-nav">
           <button class="tab-button active" data-action="click->tabs#show" data-category="all">
             All (<%= @projects.count %>)
+          </button>
+          <button class="tab-button" data-action="click->tabs#show" data-category="automation">
+            Automations (<%= @automation_projects.count %>)
           </button>
           <button class="tab-button" data-action="click->tabs#show" data-category="client">
             Client Work (<%= @client_projects.count %>)
