@@ -13,6 +13,7 @@ class PagesController < ApplicationController
     @projects = @config[:projects] || []
     @client_projects = @projects.select { |project| project["type"] == "client" }
     @product_projects = @projects.select { |project| project["type"] == "product" }
+    @automation_projects = @projects.select { |project| project["type"] == "automation" }
   end
 
   def about
