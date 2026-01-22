@@ -1,0 +1,21 @@
+<%
+  # Usage: render 'shared/workflow_pipeline_compact', steps: @case_study.workflow
+  # Compact 2x2 grid version for hero section
+  steps ||= []
+  return if steps.empty?
+%>
+
+<div class="workflow-grid-compact">
+  <% steps.each_with_index do |step, index| %>
+    <div class="workflow-grid-item">
+      <div class="workflow-grid-node">
+        <div class="workflow-grid-icon">
+          <%= render_workflow_icon(step["icon"]) %>
+        </div>
+        <span class="workflow-grid-number"><%= index + 1 %></span>
+      </div>
+      <h4 class="workflow-grid-title"><%= step["title"] %></h4>
+      <p class="workflow-grid-description"><%= step["description"] %></p>
+    </div>
+  <% end %>
+</div>
