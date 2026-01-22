@@ -12,6 +12,7 @@
   project_stages = project["stages"] || ["Idea", "Exploration", "Building", "MVP", "Live"]
   current_stage = project["current_stage"] || project_stages.last
   current_stage_index = project_stages.find_index { |stage| stage.to_s.casecmp?(current_stage.to_s) } || (project_stages.length - 1)
+  is_internal_link = project_link.present? && project_link.start_with?("/")
 %>
 
 <div class="case-study-card" data-category="<%= project["type"] %>">
@@ -62,7 +63,11 @@
     <% end %>
 
     <% if project_link.present? %>
-      <%= link_to "View case study →", project_link, class: "case-study-link", target: "_blank", rel: "noopener" %>
+      <% if is_internal_link %>
+        <%= link_to "View details →", project_link, class: "case-study-link" %>
+      <% else %>
+        <%= link_to "View project →", project_link, class: "case-study-link", target: "_blank", rel: "noopener" %>
+      <% end %>
     <% end %>
   </div>
 </div>

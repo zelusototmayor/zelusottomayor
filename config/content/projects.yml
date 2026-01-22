@@ -1,3 +1,33 @@
+- name: "Content Factory"
+  type: "automation"
+  tagline: "Automated social content creation for Instagram and TikTok"
+  link: "/work/content-factory"
+  featured: true
+  metrics:
+    - "5 posts/day"
+    - "Zero manual design"
+  stages:
+    - "Idea"
+    - "Building"
+    - "MVP"
+    - "Live"
+  current_stage: "Live"
+
+- name: "Full Outbound Automation"
+  type: "automation"
+  tagline: "Automated B2B lead sourcing and personalized cold email outreach"
+  link: "/work/full-outbound-automation"
+  featured: true
+  metrics:
+    - "10 leads/day"
+    - "4-email sequence"
+  stages:
+    - "Idea"
+    - "Building"
+    - "MVP"
+    - "Live"
+  current_stage: "Live"
+
 - name: "UX Audit App"
   type: "product"
   tagline: "AI tool that analyzes user session recordings to find UX problems"
