@@ -96,6 +96,74 @@ CaseStudy.create!(
   published_at: Time.current
 )
 
+# Automations
+puts "Creating automations..."
+
+CaseStudy.create!(
+  name: "Content Factory",
+  client_name: "Content Factory",
+  client_type: :product,
+  tagline: "Automated social content creation for Instagram and TikTok",
+  slug: "content-factory",
+  problem: "Creating consistent daily social content is time-consuming and draining. Manual posting leads to burnout, inconsistency, and missed opportunities. Content creators and brands need to maintain a strong presence but struggle with the relentless demand for fresh posts.",
+  approach: "Built a fully automated content factory that generates and publishes 5 posts per day. The system uses AI-powered quote generation based on motivational psychology principles. Features include:
+
+• Template-locked design system ensuring brand consistency
+• 3 rotating color palettes with anti-repetition logic
+• Automated Instagram publishing via Graph API
+• TikTok video queue with one-tap manual posting
+• Admin dashboard for queue management and analytics
+• Job scheduling with Redis-backed queue processing",
+  results: "The automation runs 24/7 without intervention. Posts are generated, designed, and published automatically on a configurable schedule. The admin panel provides full visibility into the content queue, publishing status, and performance stats. Zero manual design work required after initial setup.",
+  metrics: ["5 posts/day", "3 color palettes", "Zero manual design"],
+  link: nil,
+  admin_panel_url: "https://social-factory.zelusottomayor.com",
+  tech_stack: ["TypeScript", "Node.js", "OpenAI", "Instagram Graph API", "PostgreSQL", "Redis", "BullMQ", "Docker"],
+  workflow_steps: [
+    { "icon" => "brain", "title" => "AI Generation", "description" => "OpenAI generates psychology-based motivational quotes" },
+    { "icon" => "palette", "title" => "Design System", "description" => "Template applies brand colors and rotating palettes" },
+    { "icon" => "list", "title" => "Queue Management", "description" => "Posts scheduled across the day via Redis/BullMQ" },
+    { "icon" => "send", "title" => "Auto-Publish", "description" => "Published to Instagram and queued for TikTok" }
+  ],
+  icon: nil,
+  featured: true,
+  display_order: 10,
+  published_at: Time.current
+)
+
+CaseStudy.create!(
+  name: "Full Outbound Automation",
+  client_name: "Full Outbound Automation",
+  client_type: :product,
+  tagline: "Automated B2B lead sourcing and personalized cold email outreach",
+  slug: "full-outbound-automation",
+  problem: "Manual lead research and email personalization doesn't scale. Finding qualified prospects across multiple cities requires significant time investment. Writing personalized cold emails for each lead is tedious, and most outreach ends up generic and ineffective.",
+  approach: "Built an end-to-end lead generation and outreach automation system that handles the entire pipeline:
+
+• Lead sourcing via Google Maps Places API across 20+ target cities
+• Automatic deduplication against existing CRM
+• B2B enrichment with Apollo.io (contacts, company data, technologies)
+• Lead scoring based on quality factors (website, email verification, company size, industry match)
+• AI-powered email personalization using Claude
+• Automated 4-email sequence delivery via Instantly.ai
+• Google Sheets CRM for lead management and tracking",
+  results: "The system finds and processes 10 qualified leads daily on autopilot. Each email is personalized based on company research and specific pain points. The 4-email sequence runs over 10 days with intelligent follow-ups. Monthly cost is approximately $105-184 depending on volume.",
+  metrics: ["10 leads/day", "4-email sequence", "20+ target cities"],
+  link: nil,
+  admin_panel_url: "https://leads.zelusottomayor.com",
+  tech_stack: ["Python", "Claude AI", "Google Maps API", "Apollo.io", "Instantly.ai", "Google Sheets", "Docker"],
+  workflow_steps: [
+    { "icon" => "search", "title" => "Lead Discovery", "description" => "Google Maps finds agencies across 20+ target cities" },
+    { "icon" => "database", "title" => "Data Enrichment", "description" => "Apollo.io adds contacts, company data, and tech stack" },
+    { "icon" => "sparkle", "title" => "AI Personalization", "description" => "Claude AI writes personalized emails for each lead" },
+    { "icon" => "mail", "title" => "Email Delivery", "description" => "Instantly.ai sends automated 4-email sequence" }
+  ],
+  icon: nil,
+  featured: true,
+  display_order: 11,
+  published_at: Time.current
+)
+
 # Testimonials removed - will add real client feedback when available
 
 puts "Seeding complete!"

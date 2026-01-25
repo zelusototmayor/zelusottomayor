@@ -5,7 +5,7 @@ class ContactMailer < ApplicationMailer
     @contact = contact_submission
 
     mail(
-      to: ENV.fetch('CONTACT_EMAIL', 'zsottomayor@gmail.com'),
+      to: ENV.fetch('CONTACT_EMAIL', 'zelu@zelusottomayor.com'),
       subject: "New Contact Form Submission from #{@contact.name}",
       reply_to: @contact.email
     )

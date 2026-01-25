@@ -35,7 +35,7 @@ class BookingMailer < ApplicationMailer
     @booking_url = booking_url(booking.confirmation_token)
 
     mail(
-      to: ENV.fetch('CONTACT_EMAIL', 'zsottomayor@gmail.com'),
+      to: ENV.fetch('CONTACT_EMAIL', 'zelu@zelusottomayor.com'),
       subject: "New booking from #{booking.guest_name}",
       reply_to: booking.guest_email
     )
