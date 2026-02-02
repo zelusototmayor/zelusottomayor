@@ -1,1 +1,10 @@
-# See https://www.robotstxt.org/robotstxt.html for documentation on how to use the robots.txt file
+# Ze Lu Sottomayor Portfolio robots.txt
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://zelusottomayor.com/sitemap.xml
+
+# Block Rails internals
+Disallow: /rails/
+Disallow: /api/
