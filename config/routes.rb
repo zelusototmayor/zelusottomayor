@@ -2,9 +2,10 @@ Rails.application.routes.draw do
   # Main pages
   root "pages#home"
 
-  get "/work",    to: "pages#work",    as: :work
-  get "/about",   to: "pages#about",   as: :about
-  get "/contact", to: "pages#contact", as: :contact
+  get "/work",       to: "pages#work",       as: :work
+  get "/about",      to: "pages#about",      as: :about
+  get "/contact",    to: "pages#contact",    as: :contact
+  get "/automation", to: "pages#automation", as: :automation
 
   # Case studies (individual project detail pages)
   resources :case_studies, only: [:show], path: 'work'

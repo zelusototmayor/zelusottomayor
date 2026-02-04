@@ -25,6 +25,9 @@ class PagesController < ApplicationController
     @contact = ContactSubmission.new
   end
 
+  def automation
+  end
+
   private
 
   def load_content_config
