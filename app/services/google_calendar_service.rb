@@ -61,6 +61,14 @@ class GoogleCalendarService
           email: booking.guest_email,
           display_name: booking.guest_name,
           response_status: 'needsAction'
+        ),
+        Google::Apis::CalendarV3::EventAttendee.new(
+          email: 'zelu@zelusottomayor.com',
+          response_status: 'accepted'
+        ),
+        Google::Apis::CalendarV3::EventAttendee.new(
+          email: 'max@zelusottomayor.com',
+          response_status: 'accepted'
         )
       ],
       reminders: Google::Apis::CalendarV3::Event::Reminders.new(
