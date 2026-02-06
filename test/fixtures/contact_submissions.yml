@@ -1,0 +1,11 @@
+one:
+  name: John Doe
+  email: john@example.com
+  message: This is a test message with more than ten characters to pass validation.
+  status: pending
+
+two:
+  name: Jane Smith
+  email: jane@example.com
+  message: Another test message that is also long enough to pass the validation.
+  status: contacted
