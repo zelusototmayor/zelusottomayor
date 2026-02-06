@@ -43,6 +43,7 @@ env:
     RAILS_MAX_THREADS: "5"
     WEB_CONCURRENCY: "0"
     PORT: "4000"
+    MIXPANEL_TOKEN: "735ce9cb42f6ffe106ccc0bc16e565ac"
 
 aliases:
   console: app exec --interactive --reuse "bin/rails console"
