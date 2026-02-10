@@ -11,8 +11,60 @@
         "@type" => "Person",
         "name" => "Ze Lu Sottomayor",
         "url" => "https://zelusottomayor.com/",
-        "jobTitle" => "Full-Stack Developer",
-        "knowsAbout" => ["Automation", "AI tools", "Web development"]
+        "jobTitle" => "Founder & Full-Stack Developer",
+        "description" => "Entrepreneur and full-stack developer building AI-powered products. Creator of AI Talk Coach, Becoming App, Better Coaching, and Signal Harvester.",
+        "knowsAbout" => ["Automation", "AI tools", "Web development", "SaaS", "Mobile apps", "Coaching technology", "Social media automation"],
+        "sameAs" => [
+          "https://github.com/zelusototmayor",
+          "https://www.linkedin.com/in/zelusottomayor/"
+        ],
+        "worksFor" => {
+          "@type" => "Organization",
+          "name" => "Ze Lu Sottomayor",
+          "url" => "https://zelusottomayor.com"
+        },
+        "makesOffer" => [
+          {
+            "@type" => "Offer",
+            "itemOffered" => {
+              "@type" => "SoftwareApplication",
+              "name" => "AI Talk Coach",
+              "url" => "https://aitalkcoach.com",
+              "applicationCategory" => "EducationalApplication",
+              "description" => "AI-powered speech and communication coaching app"
+            }
+          },
+          {
+            "@type" => "Offer",
+            "itemOffered" => {
+              "@type" => "SoftwareApplication",
+              "name" => "Becoming: Motivation for You",
+              "url" => "https://apps.apple.com/app/becoming-motivation-for-you/id6757203970",
+              "applicationCategory" => "LifestyleApplication",
+              "description" => "Personal growth and identity-based motivation app"
+            }
+          },
+          {
+            "@type" => "Offer",
+            "itemOffered" => {
+              "@type" => "SoftwareApplication",
+              "name" => "Better Coaching",
+              "url" => "https://bettercoachingapp.com",
+              "applicationCategory" => "BusinessApplication",
+              "description" => "AI coaching marketplace for expert coaches"
+            }
+          },
+          {
+            "@type" => "Offer",
+            "itemOffered" => {
+              "@type" => "SoftwareApplication",
+              "name" => "Signal Harvester",
+              "url" => "https://signalharvester.com",
+              "applicationCategory" => "BusinessApplication",
+              "description" => "AI-powered social media lead generation tool"
+            }
+          }
+        ]
       }.to_json.html_safe %>
     </script>
     <meta name="viewport" content="width=device-width,initial-scale=1">
