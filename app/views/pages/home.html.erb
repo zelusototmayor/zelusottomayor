@@ -1,5 +1,39 @@
 <% content_for :title, "Ze Lu Sottomayor - Developer & AI Automation" %>
 <% content_for :meta_description, "Full-stack developer building AI tools and automation systems. Based in Lisbon, working with clients worldwide on web applications and workflow automation." %>
+<% content_for :head do %>
+  <script type="application/ld+json">
+    <%= {
+      "@context" => "https://schema.org",
+      "@type" => "FAQPage",
+      "mainEntity" => [
+        {
+          "@type" => "Question",
+          "name" => "What kind of automation projects does Ze Lu build?",
+          "acceptedAnswer" => {
+            "@type" => "Answer",
+            "text" => "Ze Lu builds end-to-end automation systems connecting CRMs, communication tools, and internal workflows. Typical projects include lead routing, reporting pipelines, AI-powered assistants, and custom API integrations."
+          }
+        },
+        {
+          "@type" => "Question",
+          "name" => "How fast can a custom AI automation project go live?",
+          "acceptedAnswer" => {
+            "@type" => "Answer",
+            "text" => "Most projects start with a discovery call and a short blueprint phase. Initial production-ready deliverables are often shipped within 2 to 4 weeks, depending on complexity and integrations required."
+          }
+        },
+        {
+          "@type" => "Question",
+          "name" => "Does Ze Lu work as a long-term technical partner?",
+          "acceptedAnswer" => {
+            "@type" => "Answer",
+            "text" => "Yes. Beyond one-off builds, Ze Lu supports iterative product development, optimization, and ongoing automation improvements for founders and small teams."
+          }
+        }
+      ]
+    }.to_json.html_safe %>
+  </script>
+<% end %>
 
 <%# ======================================
     SECTION 1: ABOVE THE FOLD - ENHANCED WITH BOLD TYPOGRAPHY
@@ -249,7 +283,30 @@
 </section>
 
 <%# ======================================
-    SECTION 8: FINAL CTA
+    SECTION 8: SEO FAQ (AEO/GEO)
+    ====================================== %>
+<section class="process-section section-padding bg-gradient">
+  <div class="container container--narrow">
+    <div class="section-header">
+      <h2 class="section-title">Frequently asked questions about custom software and AI automation</h2>
+      <p class="section-subtitle">Quick answers to help founders evaluate fit before booking a call</p>
+    </div>
+
+    <div class="process-principles" style="margin-top: 0;">
+      <h3 class="principles-title">Do you only work with startups?</h3>
+      <p class="about-preview-text">No. I work with startups, agencies, and established small businesses that want better systems, faster delivery, and less manual operational work.</p>
+
+      <h3 class="principles-title">Can you integrate with our existing tools?</h3>
+      <p class="about-preview-text">Yes. Most projects involve integrating with existing tools like CRMs, payment systems, analytics platforms, or internal databases. The goal is to improve your current workflow, not force a full rebuild.</p>
+
+      <h3 class="principles-title">What makes AI automation projects succeed?</h3>
+      <p class="about-preview-text">Clear business outcomes, short iteration cycles, and close feedback loops. We prioritize production-ready deliverables early, then refine based on real usage data.</p>
+    </div>
+  </div>
+</section>
+
+<%# ======================================
+    SECTION 9: FINAL CTA
     ====================================== %>
 <%= render 'shared/cta_section',
     headline: "Have a project in mind?",
