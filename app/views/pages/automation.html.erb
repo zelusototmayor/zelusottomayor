@@ -1,6 +1,40 @@
 <% content_for :title, "Automation Services — 15+ Hours/Week Saved Guaranteed | Ze Lu Sottomayor" %>
 <% content_for :meta_description, "Custom AI-powered workflow automation for agencies and e-commerce brands. We guarantee 15+ hours/week saved — or you don't pay. Book a free operations audit." %>
 <% content_for :body_class, "automation-page" %>
+<% content_for :head do %>
+  <script type="application/ld+json">
+    <%= {
+      "@context" => "https://schema.org",
+      "@type" => "FAQPage",
+      "mainEntity" => [
+        {
+          "@type" => "Question",
+          "name" => "How quickly can workflow automation save time for agencies?",
+          "acceptedAnswer" => {
+            "@type" => "Answer",
+            "text" => "Most agencies see early wins in the first 2-4 weeks when reporting, handoffs, and repetitive admin tasks are automated."
+          }
+        },
+        {
+          "@type" => "Question",
+          "name" => "What tools can you integrate for automation?",
+          "acceptedAnswer" => {
+            "@type" => "Answer",
+            "text" => "We integrate common CRM, project management, ecommerce, and reporting tools, plus custom APIs when needed."
+          }
+        },
+        {
+          "@type" => "Question",
+          "name" => "Do you offer ongoing automation maintenance?",
+          "acceptedAnswer" => {
+            "@type" => "Answer",
+            "text" => "Yes. We provide monitoring and optimization so your automations stay reliable as your business changes."
+          }
+        }
+      ]
+    }.to_json.html_safe %>
+  </script>
+<% end %>
 
 <%# ======================================
     HERO — Bold guarantee headline
@@ -186,6 +220,33 @@
       <div class="auto-proof__audience">
         <h3>Service Businesses</h3>
         <p>Automate scheduling, invoicing, and client onboarding — eliminate the admin that slows down growth.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<%# ======================================
+    FAQ SECTION — AEO support
+    ====================================== %>
+<section class="auto-faq section-padding">
+  <div class="container container--narrow">
+    <div class="section-header">
+      <h2 class="section-title">Automation services FAQ</h2>
+      <p class="section-subtitle">Quick answers before your operations audit call.</p>
+    </div>
+
+    <div class="auto-services__grid">
+      <div class="auto-services__card">
+        <h3 class="auto-services__title">How fast can we launch?</h3>
+        <p class="auto-services__text">Most first automations launch within 2-4 weeks depending on system complexity and API access.</p>
+      </div>
+      <div class="auto-services__card">
+        <h3 class="auto-services__title">What workflows can be automated?</h3>
+        <p class="auto-services__text">Client reporting, CRM updates, lead routing, invoicing handoffs, onboarding sequences, and recurring admin tasks.</p>
+      </div>
+      <div class="auto-services__card">
+        <h3 class="auto-services__title">Do you work with existing tools?</h3>
+        <p class="auto-services__text">Yes — we prioritize your current stack first, then recommend changes only when needed for reliability or ROI.</p>
       </div>
     </div>
   </div>
