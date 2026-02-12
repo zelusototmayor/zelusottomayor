@@ -1,0 +1,19 @@
+# Ze Lu Sottomayor
+> Independent full-stack developer building custom software, AI automation systems, and Rails products.
+
+## Primary URLs
+- https://zelusottomayor.com/
+- https://zelusottomayor.com/work
+- https://zelusottomayor.com/automation
+- https://zelusottomayor.com/about
+- https://zelusottomayor.com/contact
+
+## Service Areas
+- Lisbon (Portugal)
+- Remote worldwide engagements
+
+## Core Topics
+- Rails development
+- AI workflow automation
+- API integrations
+- Product engineering for founders and small teams
