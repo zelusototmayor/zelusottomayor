@@ -1,5 +1,5 @@
-<% content_for :title, "How We Book You 3–5 Qualified Calls in 30 Days | Ze Lu Sottomayor" %>
-<% content_for :meta_description, "See exactly how our outbound system finds your ideal buyers, sends personalised messages at scale, and books qualified calls — without an SDR team." %>
+<% content_for :title, "How Our Outbound Machine Works | Ze Lu Sottomayor" %>
+<% content_for :meta_description, "We scrape the internet daily for your exact buyers, write personalised messages, and run outreach at scale — so your pipeline keeps moving without an SDR team." %>
 
 <style>
   /* ── DEMO PAGE ─────────────────────────────────────── */
@@ -46,7 +46,7 @@
     font-family: var(--font-sans);
     font-size: var(--font-size-lg);
     color: var(--color-text-muted);
-    max-width: 520px;
+    max-width: 560px;
     margin: 0 auto 40px;
     line-height: var(--line-height-relaxed);
   }
@@ -117,6 +117,50 @@
   }
 
   .demo-video-label strong { color: var(--color-text-secondary); }
+
+  /* ── DIFFERENTIATOR CALLOUT ────────────────────────── */
+  .demo-diff-section {
+    padding: 0 0 64px;
+  }
+
+  .demo-diff-box {
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-left: 4px solid var(--color-primary);
+    border-radius: var(--radius-xl);
+    padding: 32px 40px;
+    display: flex;
+    gap: 28px;
+    align-items: flex-start;
+  }
+
+  .demo-diff-icon {
+    font-size: 32px;
+    flex-shrink: 0;
+    margin-top: 2px;
+  }
+
+  .demo-diff-title {
+    font-family: var(--font-display);
+    font-size: var(--font-size-xl);
+    font-weight: var(--font-weight-bold);
+    color: var(--color-text-primary);
+    margin-bottom: 8px;
+    letter-spacing: -0.02em;
+  }
+
+  .demo-diff-body {
+    font-family: var(--font-sans);
+    font-size: var(--font-size-base);
+    color: var(--color-text-secondary);
+    line-height: var(--line-height-relaxed);
+    margin: 0;
+  }
+
+  .demo-diff-body strong {
+    color: var(--color-text-primary);
+    font-weight: var(--font-weight-semibold);
+  }
 
   /* ── PROCESS SECTION ───────────────────────────────── */
   .demo-process-section {
@@ -231,9 +275,56 @@
     color: var(--color-text-muted);
   }
 
+  /* ── WHAT YOU GET ───────────────────────────────────── */
+  .demo-deliverables-section {
+    padding: 64px 0;
+  }
+
+  .demo-deliverables-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+  }
+
+  .demo-deliverable-card {
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-xl);
+    padding: 28px 24px;
+    transition: border-color var(--transition-base), box-shadow var(--transition-base);
+  }
+
+  .demo-deliverable-card:hover {
+    border-color: var(--color-primary);
+    box-shadow: var(--shadow-md);
+  }
+
+  .demo-deliverable-icon {
+    font-size: 24px;
+    margin-bottom: 14px;
+    display: block;
+  }
+
+  .demo-deliverable-title {
+    font-family: var(--font-display);
+    font-size: var(--font-size-base);
+    font-weight: var(--font-weight-bold);
+    color: var(--color-text-primary);
+    margin-bottom: 8px;
+    letter-spacing: -0.01em;
+  }
+
+  .demo-deliverable-desc {
+    font-family: var(--font-sans);
+    font-size: var(--font-size-sm);
+    color: var(--color-text-muted);
+    line-height: var(--line-height-relaxed);
+    margin: 0;
+  }
+
   /* ── PROOF STRIP ───────────────────────────────────── */
   .demo-proof-section {
-    padding: 64px 0;
+    padding: 0 0 64px;
   }
 
   .demo-proof-grid {
@@ -274,19 +365,19 @@
     font-weight: var(--font-weight-medium);
   }
 
-  /* ── GUARANTEE ─────────────────────────────────────── */
-  .demo-guarantee-section {
+  /* ── HONEST SECTION ────────────────────────────────── */
+  .demo-honest-section {
     padding: 0 0 64px;
   }
 
-  .demo-guarantee-box {
+  .demo-honest-box {
     background: linear-gradient(135deg, var(--color-ink-900) 0%, var(--color-ink-700) 100%);
     border-radius: var(--radius-xl);
     padding: 56px 48px;
     text-align: center;
   }
 
-  .demo-guarantee-badge {
+  .demo-honest-badge {
     display: inline-block;
     font-family: var(--font-mono);
     font-size: var(--font-size-xs);
@@ -301,7 +392,7 @@
     margin-bottom: 24px;
   }
 
-  .demo-guarantee-headline {
+  .demo-honest-headline {
     font-family: var(--font-display);
     font-size: clamp(1.5rem, 3vw, 2.25rem);
     font-weight: var(--font-weight-extrabold);
@@ -310,7 +401,7 @@
     margin-bottom: 16px;
   }
 
-  .demo-guarantee-sub {
+  .demo-honest-sub {
     font-family: var(--font-sans);
     font-size: var(--font-size-base);
     color: rgba(255, 255, 255, 0.55);
@@ -333,27 +424,32 @@
   }
 
   /* ── RESPONSIVE ────────────────────────────────────── */
+  @media (max-width: 900px) {
+    .demo-deliverables-grid { grid-template-columns: 1fr 1fr; }
+  }
+
   @media (max-width: 760px) {
     .demo-page-hero { padding: 56px 0 48px; }
     .demo-flow { flex-direction: column; gap: 12px; }
     .demo-step + .demo-step { margin-left: 0; }
     .demo-step-arrow { display: none; }
     .demo-proof-grid { grid-template-columns: 1fr; }
-    .demo-guarantee-box { padding: 36px 24px; }
+    .demo-honest-box { padding: 36px 24px; }
+    .demo-diff-box { flex-direction: column; gap: 16px; padding: 24px; }
+    .demo-deliverables-grid { grid-template-columns: 1fr; }
   }
 </style>
 
 <!-- HERO -->
 <section class="demo-page-hero">
   <div class="container container--narrow">
-    <span class="demo-eyebrow">Agency Demo</span>
+    <span class="demo-eyebrow">How it works</span>
     <h1 class="demo-headline">
-      Here's how we book you<br>
-      <em>3–5 qualified calls</em> in 30 days
+      We build and run your<br>
+      <em>outbound machine</em> — you focus on closing
     </h1>
     <p class="demo-sub">
-      No retainer. No fluff. No SDR headcount.<br>
-      Just meetings with the right people — guaranteed.
+      We scrape the internet daily for your exact buyers, write personalised messages, and send them at scale. No SDR. No static lists. No fluff.
     </p>
     <div class="demo-cta-group">
       <%= link_to book_call_path, class: "cta-button cta-button--primary cta-button--large" do %>
@@ -380,25 +476,42 @@
   </div>
 </section>
 
+<!-- DIFFERENTIATOR -->
+<section class="demo-diff-section">
+  <div class="container container--narrow">
+    <div class="demo-diff-box">
+      <div class="demo-diff-icon">🔎</div>
+      <div>
+        <div class="demo-diff-title">We don't buy lists. We scrape them fresh, every day.</div>
+        <p class="demo-diff-body">
+          Most agencies pull from Apollo or ZoomInfo — the same stale databases everyone else is hammering.
+          We scrape the web daily for companies that match your exact ICP, then drill down to the right individuals.
+          <strong>Fresh leads, new every day, for as long as we're running.</strong>
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- PROCESS FLOW -->
 <section class="demo-process-section" id="process">
   <div class="container">
-    <p class="demo-section-label">The Sprint — how it works</p>
+    <p class="demo-section-label">The system — how it works</p>
     <div class="demo-flow">
 
       <div class="demo-step">
         <div class="demo-step-num">Step 01</div>
         <span class="demo-step-icon">🎯</span>
-        <div class="demo-step-title">Find your buyers</div>
-        <div class="demo-step-desc">We nail your ICP. We find the exact trigger that makes someone ready to buy — a funding round, new hire, product launch.</div>
+        <div class="demo-step-title">Define your ICP</div>
+        <div class="demo-step-desc">We work with you to nail exactly who to target — industry, size, location, role. Precise from day one.</div>
         <div class="demo-step-arrow">→</div>
       </div>
 
       <div class="demo-step">
         <div class="demo-step-num">Step 02</div>
-        <span class="demo-step-icon">🔍</span>
-        <div class="demo-step-title">Enrich & qualify</div>
-        <div class="demo-step-desc">We build a surgical 200–300 company list. Not spray-and-pray — every company matches a buying signal.</div>
+        <span class="demo-step-icon">🕸️</span>
+        <div class="demo-step-title">Daily web scraping</div>
+        <div class="demo-step-desc">Our machine scrapes the internet every day for companies matching your ICP. Fresh leads, not recycled databases.</div>
         <div class="demo-step-arrow">→</div>
       </div>
 
@@ -406,23 +519,69 @@
         <div class="demo-step-num">Step 03</div>
         <span class="demo-step-icon">✍️</span>
         <div class="demo-step-title">Personalise at scale</div>
-        <div class="demo-step-desc">We write messages personalised to each company. Two lines, specific, no fluff. You review and approve the first batch.</div>
+        <div class="demo-step-desc">Every message is written to the specific company. Two lines, relevant, no fluff. Not a template blast.</div>
         <div class="demo-step-arrow">→</div>
       </div>
 
       <div class="demo-step">
         <div class="demo-step-num">Step 04</div>
         <span class="demo-step-icon">📤</span>
-        <div class="demo-step-title">Send the sequence</div>
-        <div class="demo-step-desc">We run the outreach across email and LinkedIn. You get notified on replies. We handle follow-ups.</div>
+        <div class="demo-step-title">Send & track</div>
+        <div class="demo-step-desc">We run the sequences and feed results directly into your CRM. You get notified on replies — we handle follow-ups.</div>
         <div class="demo-step-arrow">→</div>
       </div>
 
       <div class="demo-step demo-step--result">
-        <div class="demo-step-num">Result</div>
-        <span class="demo-step-icon">📅</span>
-        <div class="demo-step-title">Booked calls</div>
-        <div class="demo-step-desc">Not leads. Not "interested"s. Qualified calls on your calendar — with founders and heads of sales who fit your ICP.</div>
+        <div class="demo-step-num">Ongoing</div>
+        <span class="demo-step-icon">♻️</span>
+        <div class="demo-step-title">It keeps running</div>
+        <div class="demo-step-desc">New leads scraped daily, new messages sent daily. This isn't a campaign. It's a machine that runs continuously.</div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- WHAT YOU GET -->
+<section class="demo-deliverables-section">
+  <div class="container container--narrow">
+    <p class="demo-section-label">What you get</p>
+    <div class="demo-deliverables-grid">
+
+      <div class="demo-deliverable-card">
+        <span class="demo-deliverable-icon">📋</span>
+        <div class="demo-deliverable-title">Fresh leads, daily</div>
+        <p class="demo-deliverable-desc">New companies and contacts added every day, scraped from the web to match your ICP. Never the same list twice.</p>
+      </div>
+
+      <div class="demo-deliverable-card">
+        <span class="demo-deliverable-icon">📨</span>
+        <div class="demo-deliverable-title">High-volume outreach</div>
+        <p class="demo-deliverable-desc">Up to 150 personalised emails per day, per inbox. Multiple inboxes available for higher volume.</p>
+      </div>
+
+      <div class="demo-deliverable-card">
+        <span class="demo-deliverable-icon">📊</span>
+        <div class="demo-deliverable-title">Campaign dashboard</div>
+        <p class="demo-deliverable-desc">Real-time visibility into emails sent, open rates, replies, and pipeline movement. You see exactly what's happening.</p>
+      </div>
+
+      <div class="demo-deliverable-card">
+        <span class="demo-deliverable-icon">🔗</span>
+        <div class="demo-deliverable-title">CRM integration</div>
+        <p class="demo-deliverable-desc">Works with whatever you already use — HubSpot, Salesforce, Notion, Google Sheets. No forced migration.</p>
+      </div>
+
+      <div class="demo-deliverable-card">
+        <span class="demo-deliverable-icon">✉️</span>
+        <div class="demo-deliverable-title">Handled follow-ups</div>
+        <p class="demo-deliverable-desc">The sequence runs automatically. Replies come to you. We manage the cadence so nothing falls through the cracks.</p>
+      </div>
+
+      <div class="demo-deliverable-card">
+        <span class="demo-deliverable-icon">🧠</span>
+        <div class="demo-deliverable-title">Built for your ICP</div>
+        <p class="demo-deliverable-desc">Every client gets a system tuned to their exact target. Same machine, different config. Precision, not spray-and-pray.</p>
       </div>
 
     </div>
@@ -434,29 +593,29 @@
   <div class="container container--narrow">
     <div class="demo-proof-grid">
       <div class="demo-proof-cell">
-        <div class="demo-proof-num"><em>30</em></div>
-        <div class="demo-proof-label">Day Sprint timeline</div>
+        <div class="demo-proof-num"><em>150</em></div>
+        <div class="demo-proof-label">Emails sent per inbox, per day</div>
       </div>
       <div class="demo-proof-cell">
-        <div class="demo-proof-num">3–<em>5</em></div>
-        <div class="demo-proof-label">Guaranteed qualified calls</div>
+        <div class="demo-proof-num"><em>Daily</em></div>
+        <div class="demo-proof-label">Fresh leads scraped from the web</div>
       </div>
       <div class="demo-proof-cell">
         <div class="demo-proof-num"><em>0</em></div>
-        <div class="demo-proof-label">SDRs needed</div>
+        <div class="demo-proof-label">Stale list databases used</div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- GUARANTEE -->
-<section class="demo-guarantee-section">
+<!-- HONEST SECTION -->
+<section class="demo-honest-section">
   <div class="container container--narrow">
-    <div class="demo-guarantee-box">
-      <span class="demo-guarantee-badge">Our guarantee</span>
-      <h2 class="demo-guarantee-headline">If we don't hit 3 calls — we keep going.</h2>
-      <p class="demo-guarantee-sub">
-        The Sprint is a fixed-scope 30-day engagement. If we don't deliver minimum 3 qualified calls, we continue working at no additional cost until we do.
+    <div class="demo-honest-box">
+      <span class="demo-honest-badge">What we control</span>
+      <h2 class="demo-honest-headline">We promise volume and precision. Not magic.</h2>
+      <p class="demo-honest-sub">
+        We can't control whether your prospect replies — but we control everything before that moment. Fresh targeting, personalised messages, and consistent daily volume give your pipeline the best possible chance. That's what we're accountable for.
       </p>
     </div>
   </div>
@@ -466,10 +625,10 @@
 <section class="demo-cta-section">
   <div class="container container--narrow">
     <h2 style="font-family: var(--font-display); font-size: clamp(1.5rem, 3vw, 2rem); font-weight: var(--font-weight-extrabold); letter-spacing: -0.02em; color: var(--color-text-primary); margin-bottom: 12px;">
-      Ready to see if this works for you?
+      Want to see if this fits your business?
     </h2>
-    <p style="font-family: var(--font-sans); color: var(--color-text-muted); margin-bottom: 32px;">
-      Book a 20-min call. No pitch. I'll tell you exactly what ICP we'd target and you decide if it's worth doing.
+    <p style="font-family: var(--font-sans); color: var(--color-text-muted); margin-bottom: 32px; max-width: 480px; margin-left: auto; margin-right: auto;">
+      Book a 20-min call. I'll tell you exactly what ICP we'd target, how many leads we'd expect to find daily, and what volume looks like for your market.
     </p>
     <%= link_to book_call_path, class: "cta-button cta-button--primary cta-button--large" do %>
       Book a 20-min call →
