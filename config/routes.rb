@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   get "/about",      to: "pages#about",      as: :about
   get "/contact",    to: "pages#contact",    as: :contact
   get "/automation", to: "pages#automation", as: :automation
+  get "/demo",       to: "pages#demo",       as: :demo
 
   # Case studies (individual project detail pages)
   resources :case_studies, only: [:show], path: 'work'

@@ -1,0 +1,526 @@
+<% content_for :title, "How We Book You 3–5 Qualified Calls in 30 Days | Ze Lu Sottomayor" %>
+<% content_for :meta_description, "See exactly how our outbound system finds your ideal buyers, sends personalised messages at scale, and books qualified calls — without an SDR team." %>
+<% content_for :body_class, "demo-page" %>
+<% content_for :head do %>
+<style>
+  /* ── RESET for demo page ────────────────────────────── */
+  .demo-wrap *, .demo-wrap *::before, .demo-wrap *::after { box-sizing: border-box; }
+
+  /* ── WRAPPER ────────────────────────────────────────── */
+  .demo-wrap {
+    background: #06060a;
+    min-height: 100vh;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    color: #f0f0f4;
+    line-height: 1.5;
+  }
+
+  /* ── NAV ────────────────────────────────────────────── */
+  .demo-nav {
+    padding: 20px 32px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #1a1a22;
+  }
+
+  .demo-nav-logo {
+    font-size: 15px;
+    font-weight: 700;
+    color: #fff;
+    letter-spacing: -0.02em;
+    text-decoration: none;
+  }
+
+  .demo-nav-logo span { color: #4f8ef7; }
+
+  .demo-nav-cta {
+    background: #4f8ef7;
+    color: #fff;
+    font-size: 13px;
+    font-weight: 600;
+    padding: 9px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: background 0.15s, transform 0.1s;
+  }
+
+  .demo-nav-cta:hover { background: #3a7be0; transform: translateY(-1px); }
+
+  /* ── HERO ────────────────────────────────────────────── */
+  .demo-hero {
+    max-width: 780px;
+    margin: 0 auto;
+    padding: 72px 32px 56px;
+    text-align: center;
+  }
+
+  .demo-eyebrow {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: #4f8ef7;
+    background: rgba(79, 142, 247, 0.1);
+    border: 1px solid rgba(79, 142, 247, 0.25);
+    padding: 4px 14px;
+    border-radius: 100px;
+    margin-bottom: 24px;
+  }
+
+  .demo-headline {
+    font-size: clamp(32px, 5vw, 52px);
+    font-weight: 900;
+    letter-spacing: -0.04em;
+    line-height: 1.1;
+    color: #fff;
+    margin-bottom: 20px;
+  }
+
+  .demo-headline em {
+    font-style: normal;
+    color: #4f8ef7;
+  }
+
+  .demo-sub {
+    font-size: 17px;
+    color: #888;
+    max-width: 520px;
+    margin: 0 auto 40px;
+  }
+
+  .demo-cta-group {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .demo-btn-primary {
+    background: #4f8ef7;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 700;
+    padding: 14px 32px;
+    border-radius: 10px;
+    text-decoration: none;
+    transition: background 0.15s, transform 0.1s;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .demo-btn-primary:hover { background: #3a7be0; transform: translateY(-2px); }
+  .demo-btn-primary svg { width: 16px; height: 16px; }
+
+  .demo-btn-ghost {
+    color: #888;
+    font-size: 14px;
+    padding: 14px 20px;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+  }
+
+  .demo-btn-ghost:hover { color: #ccc; }
+
+  /* ── VIDEO ────────────────────────────────────────────── */
+  .demo-video-wrap {
+    max-width: 840px;
+    margin: 0 auto 80px;
+    padding: 0 32px;
+  }
+
+  .demo-video-container {
+    position: relative;
+    border-radius: 16px;
+    overflow: hidden;
+    border: 1px solid #1e1e28;
+    box-shadow: 0 32px 64px rgba(0,0,0,0.5);
+    background: #0e0e16;
+    aspect-ratio: 16/9;
+  }
+
+  .demo-video-placeholder {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    background: linear-gradient(135deg, #0d0d18 0%, #12121f 100%);
+  }
+
+  .demo-play-btn {
+    width: 72px; height: 72px;
+    background: rgba(79, 142, 247, 0.15);
+    border: 2px solid rgba(79, 142, 247, 0.4);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+
+  .demo-play-btn:hover {
+    background: rgba(79, 142, 247, 0.25);
+    border-color: #4f8ef7;
+    transform: scale(1.05);
+  }
+
+  .demo-play-btn svg { width: 28px; height: 28px; fill: #4f8ef7; margin-left: 4px; }
+
+  .demo-video-label {
+    font-size: 14px;
+    color: #555;
+    font-weight: 500;
+  }
+
+  .demo-video-label strong { color: #888; }
+
+  /* ── PROCESS ──────────────────────────────────────────── */
+  .demo-process {
+    max-width: 1060px;
+    margin: 0 auto 80px;
+    padding: 0 32px;
+  }
+
+  .demo-section-label {
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: #444;
+    text-align: center;
+    margin-bottom: 40px;
+  }
+
+  .demo-flow {
+    display: flex;
+    gap: 0;
+    align-items: stretch;
+    position: relative;
+  }
+
+  .demo-step {
+    flex: 1;
+    background: #0e0e16;
+    border: 1px solid #1a1a24;
+    border-radius: 14px;
+    padding: 28px 24px;
+    text-align: center;
+    position: relative;
+    transition: border-color 0.2s, transform 0.15s;
+  }
+
+  .demo-step:hover {
+    border-color: #2a2a38;
+    transform: translateY(-3px);
+  }
+
+  .demo-step + .demo-step {
+    margin-left: 12px;
+  }
+
+  .demo-step-num {
+    font-size: 11px;
+    font-weight: 800;
+    color: #333;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 14px;
+  }
+
+  .demo-step-icon {
+    font-size: 28px;
+    margin-bottom: 12px;
+    display: block;
+  }
+
+  .demo-step-title {
+    font-size: 15px;
+    font-weight: 800;
+    color: #e8e8f0;
+    letter-spacing: -0.02em;
+    margin-bottom: 8px;
+  }
+
+  .demo-step-desc {
+    font-size: 12px;
+    color: #555;
+    line-height: 1.6;
+  }
+
+  .demo-step-arrow {
+    position: absolute;
+    right: -18px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 24px;
+    height: 24px;
+    background: #0e0e16;
+    border: 1px solid #1a1a24;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+    font-size: 10px;
+    color: #444;
+  }
+
+  /* ── GUARANTEE ────────────────────────────────────────── */
+  .demo-guarantee {
+    max-width: 700px;
+    margin: 0 auto 80px;
+    padding: 0 32px;
+  }
+
+  .demo-guarantee-box {
+    background: linear-gradient(135deg, #0e1420 0%, #0a0e1a 100%);
+    border: 1px solid rgba(79, 142, 247, 0.2);
+    border-radius: 16px;
+    padding: 40px;
+    text-align: center;
+  }
+
+  .demo-guarantee-badge {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: #4f8ef7;
+    background: rgba(79, 142, 247, 0.1);
+    padding: 4px 12px;
+    border-radius: 100px;
+    margin-bottom: 20px;
+  }
+
+  .demo-guarantee-headline {
+    font-size: 24px;
+    font-weight: 900;
+    letter-spacing: -0.03em;
+    color: #fff;
+    margin-bottom: 12px;
+  }
+
+  .demo-guarantee-sub {
+    font-size: 15px;
+    color: #666;
+    margin-bottom: 0;
+  }
+
+  /* ── PROOF STRIP ──────────────────────────────────────── */
+  .demo-proof {
+    max-width: 840px;
+    margin: 0 auto 80px;
+    padding: 0 32px;
+  }
+
+  .demo-proof-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1px;
+    background: #1a1a24;
+    border-radius: 14px;
+    overflow: hidden;
+  }
+
+  .demo-proof-cell {
+    background: #0e0e16;
+    padding: 28px 24px;
+    text-align: center;
+  }
+
+  .demo-proof-num {
+    font-size: 36px;
+    font-weight: 900;
+    letter-spacing: -0.04em;
+    color: #fff;
+    margin-bottom: 4px;
+  }
+
+  .demo-proof-num em { font-style: normal; color: #4f8ef7; }
+
+  .demo-proof-label {
+    font-size: 12px;
+    color: #555;
+    font-weight: 500;
+  }
+
+  /* ── CTA FOOTER ───────────────────────────────────────── */
+  .demo-cta-footer {
+    max-width: 600px;
+    margin: 0 auto 80px;
+    padding: 0 32px;
+    text-align: center;
+  }
+
+  .demo-cta-headline {
+    font-size: 28px;
+    font-weight: 900;
+    letter-spacing: -0.03em;
+    color: #fff;
+    margin-bottom: 12px;
+  }
+
+  .demo-cta-sub {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 32px;
+  }
+
+  .demo-cta-note {
+    font-size: 12px;
+    color: #444;
+    margin-top: 16px;
+  }
+
+  /* ── RESPONSIVE ───────────────────────────────────────── */
+  @media (max-width: 760px) {
+    .demo-nav { padding: 16px 20px; }
+    .demo-hero { padding: 48px 20px 40px; }
+    .demo-flow { flex-direction: column; gap: 12px; }
+    .demo-step + .demo-step { margin-left: 0; }
+    .demo-step-arrow { display: none; }
+    .demo-proof-grid { grid-template-columns: 1fr; }
+    .demo-process, .demo-guarantee, .demo-proof, .demo-cta-footer, .demo-video-wrap { padding: 0 20px; }
+    .demo-guarantee-box { padding: 28px 20px; }
+  }
+</style>
+<% end %>
+
+<div class="demo-wrap">
+
+  <!-- NAV -->
+  <nav class="demo-nav">
+    <a href="/" class="demo-nav-logo">Ze Lu<span>.</span></a>
+    <a href="/book-call" class="demo-nav-cta">Book a call →</a>
+  </nav>
+
+  <!-- HERO -->
+  <section class="demo-hero">
+    <span class="demo-eyebrow">Agency Demo</span>
+    <h1 class="demo-headline">
+      Here's how we book you<br>
+      <em>3–5 qualified calls</em> in 30 days
+    </h1>
+    <p class="demo-sub">
+      No retainer. No fluff. No SDR headcount.<br>
+      Just meetings with the right people — guaranteed.
+    </p>
+    <div class="demo-cta-group">
+      <a href="/book-call" class="demo-btn-primary">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+        Book a 20-min call
+      </a>
+      <a href="#process" class="demo-btn-ghost">↓ See how it works</a>
+    </div>
+  </section>
+
+  <!-- VIDEO -->
+  <section class="demo-video-wrap">
+    <div class="demo-video-container">
+      <div class="demo-video-placeholder">
+        <div class="demo-play-btn">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><polygon points="5,3 19,12 5,21" /></svg>
+        </div>
+        <p class="demo-video-label"><strong>90-second walkthrough</strong> — coming soon</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROCESS FLOW -->
+  <section class="demo-process" id="process">
+    <p class="demo-section-label">The Sprint — how it works</p>
+    <div class="demo-flow">
+
+      <div class="demo-step">
+        <div class="demo-step-num">Step 01</div>
+        <span class="demo-step-icon">🎯</span>
+        <div class="demo-step-title">Find your buyers</div>
+        <div class="demo-step-desc">We nail your ICP. We find the exact trigger that makes someone ready to buy — a funding round, new hire, product launch.</div>
+        <div class="demo-step-arrow">→</div>
+      </div>
+
+      <div class="demo-step">
+        <div class="demo-step-num">Step 02</div>
+        <span class="demo-step-icon">🔍</span>
+        <div class="demo-step-title">Enrich & qualify</div>
+        <div class="demo-step-desc">We build a surgical 200–300 company list. Not spray-and-pray — every company matches a buying signal.</div>
+        <div class="demo-step-arrow">→</div>
+      </div>
+
+      <div class="demo-step">
+        <div class="demo-step-num">Step 03</div>
+        <span class="demo-step-icon">✍️</span>
+        <div class="demo-step-title">Personalise at scale</div>
+        <div class="demo-step-desc">We write messages personalised to each company. Two lines, specific, no fluff. You review and approve the first batch.</div>
+        <div class="demo-step-arrow">→</div>
+      </div>
+
+      <div class="demo-step">
+        <div class="demo-step-num">Step 04</div>
+        <span class="demo-step-icon">📤</span>
+        <div class="demo-step-title">Send the sequence</div>
+        <div class="demo-step-desc">We run the outreach across email and LinkedIn. You get notified on replies. We handle follow-ups.</div>
+        <div class="demo-step-arrow">→</div>
+      </div>
+
+      <div class="demo-step" style="border-color: rgba(79,142,247,0.3);">
+        <div class="demo-step-num" style="color:#4f8ef7">Result</div>
+        <span class="demo-step-icon">📅</span>
+        <div class="demo-step-title" style="color:#4f8ef7">Booked calls</div>
+        <div class="demo-step-desc">Not leads. Not "interested"s. Qualified calls on your calendar — with founders and heads of sales who fit your ICP.</div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- PROOF STRIP -->
+  <section class="demo-proof">
+    <div class="demo-proof-grid">
+      <div class="demo-proof-cell">
+        <div class="demo-proof-num"><em>30</em></div>
+        <div class="demo-proof-label">Day Sprint timeline</div>
+      </div>
+      <div class="demo-proof-cell">
+        <div class="demo-proof-num">3–<em>5</em></div>
+        <div class="demo-proof-label">Guaranteed qualified calls</div>
+      </div>
+      <div class="demo-proof-cell">
+        <div class="demo-proof-num"><em>0</em></div>
+        <div class="demo-proof-label">SDRs needed</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GUARANTEE -->
+  <section class="demo-guarantee">
+    <div class="demo-guarantee-box">
+      <span class="demo-guarantee-badge">Our guarantee</span>
+      <h2 class="demo-guarantee-headline">If we don't hit 3 calls — we keep going.</h2>
+      <p class="demo-guarantee-sub">
+        The Sprint is a fixed-scope 30-day engagement. If we don't deliver minimum 3 qualified calls, we continue working at no additional cost until we do.
+      </p>
+    </div>
+  </section>
+
+  <!-- CTA FOOTER -->
+  <section class="demo-cta-footer">
+    <h2 class="demo-cta-headline">Ready to see if this works for you?</h2>
+    <p class="demo-cta-sub">
+      Book a 20-min call. No pitch. I'll tell you exactly what ICP we'd target and you decide if it's worth doing.
+    </p>
+    <a href="/book-call" class="demo-btn-primary" style="font-size:16px;padding:16px 40px">
+      Book a 20-min call →
+    </a>
+    <p class="demo-cta-note">No commitment. Just a conversation.</p>
+  </section>
+
+</div>

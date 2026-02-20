@@ -28,6 +28,10 @@ class PagesController < ApplicationController
   def automation
   end
 
+  def demo
+    render layout: 'demo'
+  end
+
   private
 
   def load_content_config
