@@ -29,7 +29,6 @@ class PagesController < ApplicationController
   end
 
   def demo
-    render layout: 'demo'
   end
 
   private
