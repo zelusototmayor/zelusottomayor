@@ -49,6 +49,27 @@
       ]
     }.to_json.html_safe %>
   </script>
+  <script type="application/ld+json">
+    <%= {
+      "@context" => "https://schema.org",
+      "@type" => "ProfessionalService",
+      "name" => "Ze Lu Sottomayor",
+      "url" => "https://zelusottomayor.com",
+      "areaServed" => "Worldwide",
+      "address" => {
+        "@type" => "PostalAddress",
+        "addressLocality" => "Lisbon",
+        "addressCountry" => "PT"
+      },
+      "description" => "Full-stack development and AI automation consulting for founders, agencies, and startups.",
+      "serviceType" => [
+        "AI workflow automation",
+        "Custom software development",
+        "Rails consulting",
+        "Product engineering"
+      ]
+    }.to_json.html_safe %>
+  </script>
 <% end %>
 
 <%# ======================================
