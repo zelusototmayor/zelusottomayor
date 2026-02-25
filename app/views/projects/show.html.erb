@@ -1,3 +1,34 @@
+<% content_for :title, "#{@project[:name]} — Ze Lu Sottomayor" %>
+<% content_for :meta_description, @project[:description] %>
+<% content_for :head do %>
+  <script type="application/ld+json">
+    <%= {
+      "@context" => "https://schema.org",
+      "@type" => "SoftwareApplication",
+      "name" => @project[:name],
+      "description" => @project[:description],
+      "url" => @project[:link].presence || request.url,
+      "author" => {
+        "@type" => "Person",
+        "name" => "Ze Lu Sottomayor",
+        "url" => "https://zelusottomayor.com",
+        "jobTitle" => "Founder & Full-Stack Developer",
+        "address" => { "@type" => "PostalAddress", "addressLocality" => "Lisbon", "addressCountry" => "PT" }
+      },
+      "applicationCategory" => "WebApplication",
+      "operatingSystem" => "Web",
+      "breadcrumb" => {
+        "@type" => "BreadcrumbList",
+        "itemListElement" => [
+          { "@type" => "ListItem", "position" => 1, "name" => "Home", "item" => "https://zelusottomayor.com" },
+          { "@type" => "ListItem", "position" => 2, "name" => "Projects", "item" => "https://zelusottomayor.com/projects" },
+          { "@type" => "ListItem", "position" => 3, "name" => @project[:name], "item" => request.url }
+        ]
+      }
+    }.to_json.html_safe %>
+  </script>
+<% end %>
+
 <div class="portfolio-container">
   <header class="portfolio-header">
     <h1><%= @project.name %></h1>

@@ -1,3 +1,35 @@
+<% content_for :title, "Projects & Products — Ze Lu Sottomayor | AI Automation Developer Lisbon" %>
+<% content_for :meta_description, "Portfolio of AI products and tools built by Ze Lu Sottomayor: AI Talk Coach, Signal Harvester, Better Coaching, Finny and more. AI automation developer based in Lisbon, Portugal." %>
+<% content_for :head do %>
+  <script type="application/ld+json">
+    <%= {
+      "@context" => "https://schema.org",
+      "@type" => "ItemList",
+      "name" => "Products & Projects by Ze Lu Sottomayor",
+      "description" => "AI products, SaaS tools, and automation systems built by Ze Lu Sottomayor, AI automation developer based in Lisbon, Portugal.",
+      "url" => "https://zelusottomayor.com/projects",
+      "numberOfItems" => @projects.length,
+      "itemListElement" => @projects.each_with_index.map do |project, i|
+        {
+          "@type" => "ListItem",
+          "position" => i + 1,
+          "item" => {
+            "@type" => "SoftwareApplication",
+            "name" => project[:name],
+            "description" => project[:description],
+            "url" => project[:link].presence || "https://zelusottomayor.com/projects/#{project[:name].parameterize}",
+            "author" => {
+              "@type" => "Person",
+              "name" => "Ze Lu Sottomayor",
+              "url" => "https://zelusottomayor.com"
+            }
+          }
+        }
+      end
+    }.to_json.html_safe %>
+  </script>
+<% end %>
+
 <div class="portfolio-container">
   <header class="portfolio-header">
     <h1>All Projects</h1>
