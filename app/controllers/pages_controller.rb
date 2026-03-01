@@ -34,6 +34,9 @@ class PagesController < ApplicationController
   def workflow
   end
 
+  def proposal
+  end
+
   private
 
   def load_content_config

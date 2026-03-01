@@ -1,0 +1,518 @@
+<% content_for :title, "Managed Outbound Proposal | Ze Lu Sottomayor" %>
+<% content_for :meta_description, "A fully managed outbound system that scrapes fresh leads daily, writes personalised messages, and fills your pipeline — so you can focus on closing." %>
+
+<style>
+  /* ── PROPOSAL PAGE ─────────────────────────────────── */
+  .proposal-hero {
+    padding: 80px 0 48px;
+    text-align: center;
+    background: var(--gradient-hero);
+  }
+
+  .proposal-eyebrow {
+    display: inline-block;
+    font-family: var(--font-mono);
+    font-size: var(--font-size-xs);
+    font-weight: var(--font-weight-semibold);
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--color-primary);
+    background: rgba(39, 90, 78, 0.08);
+    border: 1px solid rgba(39, 90, 78, 0.2);
+    padding: 5px 16px;
+    border-radius: var(--radius-full);
+    margin-bottom: 28px;
+  }
+
+  .proposal-headline {
+    font-family: var(--font-display);
+    font-size: clamp(2rem, 5vw, 3.25rem);
+    font-weight: var(--font-weight-extrabold);
+    letter-spacing: -0.03em;
+    line-height: 1.1;
+    color: var(--color-text-primary);
+    margin-bottom: 20px;
+  }
+
+  .proposal-headline em {
+    font-style: normal;
+    background: var(--gradient-text);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .proposal-sub {
+    font-family: var(--font-sans);
+    font-size: var(--font-size-lg);
+    color: var(--color-text-muted);
+    max-width: 580px;
+    margin: 0 auto;
+    line-height: var(--line-height-relaxed);
+  }
+
+  /* ── PROBLEM/SOLUTION ──────────────────────────────── */
+  .proposal-problem {
+    padding: 64px 0;
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .proposal-two-col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+    align-items: start;
+  }
+
+  .proposal-col-label {
+    font-family: var(--font-mono);
+    font-size: var(--font-size-xs);
+    font-weight: var(--font-weight-semibold);
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    margin-bottom: 20px;
+  }
+
+  .proposal-col-label--problem { color: #c0392b; }
+  .proposal-col-label--solution { color: var(--color-primary); }
+
+  .proposal-col-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .proposal-col-list li {
+    font-family: var(--font-sans);
+    font-size: var(--font-size-base);
+    color: var(--color-text-secondary);
+    line-height: var(--line-height-relaxed);
+    padding-left: 28px;
+    position: relative;
+  }
+
+  .proposal-col-list li::before {
+    position: absolute;
+    left: 0;
+    top: 2px;
+  }
+
+  .proposal-col-list--problem li::before { content: "✗"; color: #c0392b; font-weight: 700; }
+  .proposal-col-list--solution li::before { content: "✓"; color: var(--color-primary); font-weight: 700; }
+
+  /* ── RESULTS / CASE STUDY ──────────────────────────── */
+  .proposal-results {
+    padding: 64px 0;
+    background: var(--color-surface);
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .proposal-section-label {
+    font-family: var(--font-mono);
+    font-size: var(--font-size-xs);
+    font-weight: var(--font-weight-semibold);
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--color-text-muted);
+    text-align: center;
+    margin-bottom: 40px;
+  }
+
+  .proposal-section-title {
+    font-family: var(--font-display);
+    font-size: clamp(1.5rem, 3vw, 2.25rem);
+    font-weight: var(--font-weight-extrabold);
+    letter-spacing: -0.02em;
+    color: var(--color-text-primary);
+    text-align: center;
+    margin-bottom: 48px;
+  }
+
+  .proposal-stats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1px;
+    background: var(--color-border);
+    border-radius: var(--radius-xl);
+    overflow: hidden;
+    border: 1px solid var(--color-border);
+    margin-bottom: 40px;
+  }
+
+  .proposal-stat {
+    background: var(--color-surface);
+    padding: 36px 20px;
+    text-align: center;
+  }
+
+  .proposal-stat-num {
+    font-family: var(--font-display);
+    font-size: 2.5rem;
+    font-weight: var(--font-weight-extrabold);
+    letter-spacing: -0.04em;
+    color: var(--color-primary);
+    line-height: 1;
+    margin-bottom: 8px;
+  }
+
+  .proposal-stat-label {
+    font-family: var(--font-sans);
+    font-size: var(--font-size-sm);
+    color: var(--color-text-muted);
+    font-weight: var(--font-weight-medium);
+  }
+
+  .proposal-context {
+    font-family: var(--font-sans);
+    font-size: var(--font-size-base);
+    color: var(--color-text-secondary);
+    line-height: var(--line-height-relaxed);
+    max-width: 640px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .proposal-context strong {
+    color: var(--color-text-primary);
+  }
+
+  /* ── WHY IT WORKS ──────────────────────────────────── */
+  .proposal-why {
+    padding: 64px 0;
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .proposal-why-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+
+  .proposal-why-card {
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-xl);
+    padding: 32px 24px;
+    transition: border-color var(--transition-base), box-shadow var(--transition-base);
+  }
+
+  .proposal-why-card:hover {
+    border-color: var(--color-primary);
+    box-shadow: var(--shadow-md);
+  }
+
+  .proposal-why-icon {
+    font-size: 28px;
+    margin-bottom: 16px;
+    display: block;
+  }
+
+  .proposal-why-title {
+    font-family: var(--font-display);
+    font-size: var(--font-size-lg);
+    font-weight: var(--font-weight-bold);
+    color: var(--color-text-primary);
+    letter-spacing: -0.01em;
+    margin-bottom: 10px;
+  }
+
+  .proposal-why-desc {
+    font-family: var(--font-sans);
+    font-size: var(--font-size-sm);
+    color: var(--color-text-muted);
+    line-height: var(--line-height-relaxed);
+    margin: 0;
+  }
+
+  /* ── PRICING ───────────────────────────────────────── */
+  .proposal-pricing {
+    padding: 64px 0;
+    background: var(--color-surface);
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .proposal-pricing-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    max-width: 720px;
+    margin: 0 auto;
+  }
+
+  .proposal-price-card {
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-xl);
+    padding: 40px 32px;
+    text-align: center;
+    background: #fff;
+    transition: border-color var(--transition-base), box-shadow var(--transition-base);
+  }
+
+  .proposal-price-card:hover {
+    box-shadow: var(--shadow-lg);
+  }
+
+  .proposal-price-card--featured {
+    border-color: var(--color-primary);
+    position: relative;
+  }
+
+  .proposal-price-badge {
+    position: absolute;
+    top: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: var(--font-mono);
+    font-size: var(--font-size-xs);
+    font-weight: var(--font-weight-semibold);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: #fff;
+    background: var(--color-primary);
+    padding: 4px 16px;
+    border-radius: var(--radius-full);
+  }
+
+  .proposal-price-name {
+    font-family: var(--font-display);
+    font-size: var(--font-size-xl);
+    font-weight: var(--font-weight-bold);
+    color: var(--color-text-primary);
+    margin-bottom: 8px;
+  }
+
+  .proposal-price-amount {
+    font-family: var(--font-display);
+    font-size: 2.5rem;
+    font-weight: var(--font-weight-extrabold);
+    color: var(--color-primary);
+    letter-spacing: -0.03em;
+    margin-bottom: 4px;
+  }
+
+  .proposal-price-period {
+    font-family: var(--font-sans);
+    font-size: var(--font-size-sm);
+    color: var(--color-text-muted);
+    margin-bottom: 24px;
+  }
+
+  .proposal-price-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .proposal-price-list li {
+    font-family: var(--font-sans);
+    font-size: var(--font-size-sm);
+    color: var(--color-text-secondary);
+    padding-left: 24px;
+    position: relative;
+    line-height: 1.5;
+  }
+
+  .proposal-price-list li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: var(--color-primary);
+    font-weight: 700;
+  }
+
+  /* ── CTA FOOTER ────────────────────────────────────── */
+  .proposal-cta {
+    padding: 80px 0 96px;
+    text-align: center;
+  }
+
+  .proposal-cta-headline {
+    font-family: var(--font-display);
+    font-size: clamp(1.5rem, 3vw, 2.25rem);
+    font-weight: var(--font-weight-extrabold);
+    letter-spacing: -0.02em;
+    color: var(--color-text-primary);
+    margin-bottom: 16px;
+  }
+
+  .proposal-cta-sub {
+    font-family: var(--font-sans);
+    font-size: var(--font-size-base);
+    color: var(--color-text-muted);
+    max-width: 480px;
+    margin: 0 auto 32px;
+    line-height: var(--line-height-relaxed);
+  }
+
+  .proposal-cta-note {
+    font-family: var(--font-sans);
+    font-size: var(--font-size-sm);
+    color: var(--color-text-muted);
+    margin-top: 16px;
+  }
+
+  /* ── RESPONSIVE ────────────────────────────────────── */
+  @media (max-width: 760px) {
+    .proposal-hero { padding: 56px 0 40px; }
+    .proposal-two-col { grid-template-columns: 1fr; gap: 32px; }
+    .proposal-stats { grid-template-columns: 1fr 1fr; }
+    .proposal-why-grid { grid-template-columns: 1fr; }
+    .proposal-pricing-grid { grid-template-columns: 1fr; }
+  }
+</style>
+
+<!-- HERO -->
+<section class="proposal-hero">
+  <div class="container container--narrow">
+    <span class="proposal-eyebrow">Proposal</span>
+    <h1 class="proposal-headline">
+      A pipeline that fills itself<br>
+      <em>while you focus on closing</em>
+    </h1>
+    <p class="proposal-sub">
+      We build and run a fully managed outbound system — fresh leads scraped daily, personalised messages sent at scale, results delivered to your CRM.
+    </p>
+  </div>
+</section>
+
+<!-- PROBLEM / SOLUTION -->
+<section class="proposal-problem">
+  <div class="container container--narrow">
+    <div class="proposal-two-col">
+      <div>
+        <p class="proposal-col-label proposal-col-label--problem">The problem</p>
+        <ul class="proposal-col-list proposal-col-list--problem">
+          <li>Pipeline depends on referrals and word-of-mouth — inconsistent</li>
+          <li>Hiring an SDR costs $60K+/year before they ramp up</li>
+          <li>Bought lead lists are stale — everyone else is emailing them too</li>
+          <li>You don't have time to prospect and close at the same time</li>
+        </ul>
+      </div>
+      <div>
+        <p class="proposal-col-label proposal-col-label--solution">Our solution</p>
+        <ul class="proposal-col-list proposal-col-list--solution">
+          <li>Fresh leads scraped from the web daily — never the same list twice</li>
+          <li>Every message references something specific about the prospect</li>
+          <li>Up to 150 personalised emails per day, per inbox</li>
+          <li>You only touch the pipeline when someone replies "interested"</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- RESULTS -->
+<section class="proposal-results">
+  <div class="container container--narrow">
+    <p class="proposal-section-label">Real results from a real campaign</p>
+    <h2 class="proposal-section-title">What the system delivered in 30 days</h2>
+
+    <div class="proposal-stats">
+      <div class="proposal-stat">
+        <div class="proposal-stat-num">37%</div>
+        <div class="proposal-stat-label">Open rate</div>
+      </div>
+      <div class="proposal-stat">
+        <div class="proposal-stat-num">525</div>
+        <div class="proposal-stat-label">Emails sent</div>
+      </div>
+      <div class="proposal-stat">
+        <div class="proposal-stat-num">3</div>
+        <div class="proposal-stat-label">Qualified conversations</div>
+      </div>
+      <div class="proposal-stat">
+        <div class="proposal-stat-num">0 hrs</div>
+        <div class="proposal-stat-label">Client time invested</div>
+      </div>
+    </div>
+
+    <p class="proposal-context">
+      Industry average open rate is 20-25%. We hit <strong>37%</strong> because every email was researched
+      and personalised — not templated. The system ran hands-free for 30 days with <strong>zero client involvement</strong>
+      until qualified replies arrived.
+    </p>
+  </div>
+</section>
+
+<!-- WHY IT WORKS -->
+<section class="proposal-why">
+  <div class="container container--narrow">
+    <p class="proposal-section-label">Why it works</p>
+    <div class="proposal-why-grid">
+      <div class="proposal-why-card">
+        <span class="proposal-why-icon">🔍</span>
+        <div class="proposal-why-title">Research-first approach</div>
+        <p class="proposal-why-desc">Each email is crafted after reviewing the prospect's website, LinkedIn, and recent activity. Recipients can tell it's not a template.</p>
+      </div>
+      <div class="proposal-why-card">
+        <span class="proposal-why-icon">📬</span>
+        <div class="proposal-why-title">Deliverability engineering</div>
+        <p class="proposal-why-desc">SPF, DKIM, DMARC, inbox rotation, warm-up, and send volume calibration. Your emails actually reach the inbox.</p>
+      </div>
+      <div class="proposal-why-card">
+        <span class="proposal-why-icon">💬</span>
+        <div class="proposal-why-title">Copy that starts conversations</div>
+        <p class="proposal-why-desc">No "revolutionary AI-powered platform" language. Short, direct emails that ask a relevant question about their business.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section class="proposal-pricing">
+  <div class="container container--narrow">
+    <p class="proposal-section-label">Investment</p>
+    <h2 class="proposal-section-title">Simple pricing, no surprises</h2>
+
+    <div class="proposal-pricing-grid">
+      <div class="proposal-price-card">
+        <div class="proposal-price-name">Quick Win Sprint</div>
+        <div class="proposal-price-amount">$750</div>
+        <div class="proposal-price-period">one-time</div>
+        <ul class="proposal-price-list">
+          <li>ICP definition workshop</li>
+          <li>30-day outbound campaign</li>
+          <li>Daily lead scraping</li>
+          <li>Personalised email sequences</li>
+          <li>Campaign dashboard access</li>
+          <li>End-of-campaign report</li>
+        </ul>
+      </div>
+      <div class="proposal-price-card proposal-price-card--featured">
+        <span class="proposal-price-badge">Most popular</span>
+        <div class="proposal-price-name">Growth Retainer</div>
+        <div class="proposal-price-amount">$750–$1,500</div>
+        <div class="proposal-price-period">per month</div>
+        <ul class="proposal-price-list">
+          <li>Everything in Quick Win Sprint</li>
+          <li>Ongoing lead generation</li>
+          <li>Sequence optimization</li>
+          <li>A/B testing & iteration</li>
+          <li>CRM integration</li>
+          <li>Priority support</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="proposal-cta">
+  <div class="container container--narrow">
+    <h2 class="proposal-cta-headline">Ready to see what this looks like for your business?</h2>
+    <p class="proposal-cta-sub">
+      Book a 20-minute call. I'll show you exactly who we'd target, how many leads we'd find daily, and what your pipeline could look like in 30 days.
+    </p>
+    <%= link_to book_call_path, class: "cta-button cta-button--primary cta-button--large" do %>
+      Book a 20-min call →
+    <% end %>
+    <p class="proposal-cta-note">No commitment. No pitch deck. Just a conversation about your pipeline.</p>
+  </div>
+</section>
