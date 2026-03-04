@@ -168,3 +168,37 @@ CaseStudy.create!(
 
 puts "Seeding complete!"
 puts "Created #{CaseStudy.count} case studies"
+
+CaseStudy.create!(
+  name: "Better Coaching",
+  client_name: "Better Coaching",
+  client_type: :product,
+  tagline: "AI coaching marketplace for experts and learners",
+  slug: "better-coaching",
+  problem: "Most people can't afford executive coaching. Generic AI chatbots lack the structured frameworks and accountability that real coaching provides.",
+  approach: "Built a marketplace where experts can create AI coaching agents based on their unique methodologies. Users get 24/7 access to specialized coaching for leadership, communication, and productivity. Features daily check-ins, structured reflection loops, and persistent memory of user goals.",
+  results: "Democratizes access to high-quality coaching. Experts can scale their impact without trading time for money. Users get personalized, framework-driven guidance at a fraction of the cost.",
+  metrics: [],
+  link: "https://bettercoachingapp.com",
+  icon: "better-coaching.png",
+  featured: true,
+  display_order: 6,
+  published_at: Time.current
+)
+
+CaseStudy.create!(
+  name: "Finny",
+  client_name: "Finny",
+  client_type: :product,
+  tagline: "Telegram personal finance bot for frictionless tracking",
+  slug: "finny",
+  problem: "Budgeting apps fail because logging expenses is too much friction. Opening an app, finding the category, and typing amounts takes too long, so people stop doing it.",
+  approach: "Built a Telegram-native bot that lets you log expenses via text, voice notes, or receipt photos. It uses AI to categorize transactions automatically and provides instant feedback on spending habits. Includes a web dashboard for deeper analysis.",
+  results: "Reduces expense logging time to seconds. Users maintain higher consistency because it lives in the app they already use. Voice logging makes it easy to capture spending on the go.",
+  metrics: [],
+  link: "https://finnybot.com",
+  icon: "finny-logo.png",
+  featured: true,
+  display_order: 7,
+  published_at: Time.current
+)
