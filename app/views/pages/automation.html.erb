@@ -1,5 +1,5 @@
-<% content_for :title, "Workflow Automation Services | Ze Lu Sottomayor" %>
-<% content_for :meta_description, "Workflow automation for operations-heavy teams. Automate reporting, handoffs, routing, and data sync without breaking your existing stack." %>
+<% content_for :title, "Workflow Automation Systems | Ze Lu Sottomayor" %>
+<% content_for :meta_description, "I design and implement workflow automation systems for repetitive operational processes, with clear logic, documentation, and handover." %>
 <% content_for :body_class, "automation-page" %>
 <% content_for :head do %>
   <script type="application/ld+json">
@@ -9,10 +9,10 @@
       "mainEntity" => [
         {
           "@type" => "Question",
-          "name" => "How quickly can workflow automation save time for agencies?",
+          "name" => "How quickly can workflow automation systems be implemented?",
           "acceptedAnswer" => {
             "@type" => "Answer",
-            "text" => "Most agencies see early wins in the first 2-4 weeks when reporting, handoffs, and repetitive admin tasks are automated."
+            "text" => "Initial implementations can usually be shipped in 2–4 weeks, depending on integration complexity and access to existing tools."
           }
         },
         {
@@ -20,182 +20,133 @@
           "name" => "What tools can you integrate for automation?",
           "acceptedAnswer" => {
             "@type" => "Answer",
-            "text" => "We integrate common CRM, project management, ecommerce, and reporting tools, plus custom APIs when needed."
+            "text" => "I integrate common CRM, project management, ecommerce, reporting tools, and custom APIs when required."
           }
         },
         {
           "@type" => "Question",
-          "name" => "Do you offer ongoing automation maintenance?",
+          "name" => "Do you provide documentation and handover?",
           "acceptedAnswer" => {
             "@type" => "Answer",
-            "text" => "Yes. We provide monitoring and optimization so your automations stay reliable as your business changes."
+            "text" => "Yes. Every system includes workflow logic documentation and handover guidance so your team can operate it confidently."
           }
         },
         {
           "@type" => "Question",
-          "name" => "Can you build a custom AI agent for my business workflow?",
+          "name" => "Can you build AI-assisted workflow automation?",
           "acceptedAnswer" => {
             "@type" => "Answer",
-            "text" => "Yes. I build custom AI agents that plug into your CRM, email, Slack, or database and automate multi-step workflows using LLMs and function calling. Common use cases include lead qualification agents, support bots trained on your documentation, and reporting agents that compile data from multiple sources automatically."
-          }
-        },
-        {
-          "@type" => "Question",
-          "name" => "What is the cost of hiring an AI automation developer in Lisbon?",
-          "acceptedAnswer" => {
-            "@type" => "Answer",
-            "text" => "Project rates vary by scope. A simple RAG knowledge bot runs €3,000–€6,000 (2–3 weeks). A task automation agent with API integrations runs €5,000–€12,000 (4–6 weeks). A full conversational agent with a polished interface runs €12,000–€30,000 (6–12 weeks). Book a free audit to get an accurate estimate for your specific workflow."
-          }
-        },
-        {
-          "@type" => "Question",
-          "name" => "How long does it take to build a custom AI automation system?",
-          "acceptedAnswer" => {
-            "@type" => "Answer",
-            "text" => "Simple automations can be live in 2–3 weeks. Complex multi-step agents with integrations, error handling, and monitoring typically take 4–8 weeks. Customer-facing agents that require high reliability and a user interface take 8–12 weeks. The biggest time variable is integration complexity with your existing tools."
+            "text" => "Yes. I can add AI-assisted classification, routing, and draft-generation where useful, while keeping workflows observable and maintainable."
           }
         }
       ]
     }.to_json.html_safe %>
   </script>
-  <script type="application/ld+json">
-    <%= {
-      "@context" => "https://schema.org",
-      "@type" => "ProfessionalService",
-      "name" => "Ze Lu Sottomayor Automation Services",
-      "url" => automation_path,
-      "areaServed" => "Worldwide",
-      "serviceType" => ["Workflow Automation", "AI Agent Development", "Operations Automation"],
-      "description" => "Custom workflow automation and AI agent implementation for agencies and ecommerce teams.",
-      "offers" => {
-        "@type" => "Offer",
-        "availability" => "https://schema.org/InStock",
-        "priceCurrency" => "EUR",
-        "description" => "Free operations audit call followed by scoped automation implementation."
-      }
-    }.to_json.html_safe %>
-  </script>
 <% end %>
 
-<%# ======================================
-    HERO — Bold guarantee headline
-    ====================================== %>
 <section class="auto-hero">
   <div class="auto-hero__bg">
     <div class="auto-hero__orb auto-hero__orb--1"></div>
     <div class="auto-hero__orb auto-hero__orb--2"></div>
   </div>
   <div class="container container--narrow">
-    <span class="auto-badge">Operations Automation</span>
+    <span class="auto-badge">Workflow Automation</span>
     <h1 class="auto-hero__headline">
-      Remove repetitive ops work without breaking your current stack.
+      Workflow automation systems for cleaner operations.
     </h1>
     <p class="auto-hero__sub">
-      We automate reporting, handoffs, routing, and data sync so your team spends time on execution, not admin.
+      I design and implement automation systems for repetitive operational workflows,
+      with clear logic, documentation, and handover.
     </p>
     <div class="auto-hero__cta">
       <%= link_to book_call_path, class: "cta-button cta-button--primary cta-button--large" do %>
-        <span>Book a 20-min call</span>
+        <span>Book an operations audit</span>
       <% end %>
-      <%= link_to "See automation examples", work_path, class: "cta-button cta-button--secondary cta-button--large", style: "margin-left:12px;" %>
-      <p class="auto-hero__cta-note">No obligation · Practical roadmap for your first two automations</p>
+      <p class="auto-hero__cta-note">20-minute call · Scoped around your current workflow</p>
     </div>
   </div>
 </section>
 
-<%# ======================================
-    PAIN POINTS — Problem-aware section
-    ====================================== %>
 <section class="auto-pain section-padding">
   <div class="container">
     <div class="section-header">
-      <h2 class="section-title">Manual ops creates delay, errors, and invisible bottlenecks.</h2>
-      <p class="section-subtitle">These are the highest-friction tasks we target first.</p>
+      <h2 class="section-title">Where teams usually get stuck</h2>
+      <p class="section-subtitle">Common operational friction points before workflow automation is implemented.</p>
     </div>
 
     <div class="auto-pain__grid">
       <div class="auto-pain__card">
-        <div class="auto-pain__icon">⏳</div>
-        <h3 class="auto-pain__title">Repetitive data entry</h3>
-        <p class="auto-pain__text">Your team spends hours copying data between tools — CRM to spreadsheet, spreadsheet to invoice, over and over.</p>
+        <h3 class="auto-pain__title">Repetitive manual steps</h3>
+        <p class="auto-pain__text">Data is copied between tools multiple times, creating delays and avoidable errors.</p>
       </div>
 
       <div class="auto-pain__card">
-        <div class="auto-pain__icon">📊</div>
-        <h3 class="auto-pain__title">Reporting takes all day</h3>
-        <p class="auto-pain__text">Every Monday is lost to pulling numbers, building reports, and formatting slides — instead of doing actual work.</p>
+        <h3 class="auto-pain__title">Inconsistent handoffs</h3>
+        <p class="auto-pain__text">Ownership drops between teams and tasks get delayed when process logic is unclear.</p>
       </div>
 
       <div class="auto-pain__card">
-        <div class="auto-pain__icon">💸</div>
-        <h3 class="auto-pain__title">Tool costs are spiraling</h3>
-        <p class="auto-pain__text">You're paying $500–2,000/month on Zapier, Make, and a dozen SaaS tools — and still doing things manually.</p>
+        <h3 class="auto-pain__title">Fragmented reporting flow</h3>
+        <p class="auto-pain__text">Reporting and status updates consume execution time due to disconnected tools and manual compilation.</p>
       </div>
 
       <div class="auto-pain__card">
-        <div class="auto-pain__icon">🚨</div>
-        <h3 class="auto-pain__title">Manual errors cost you clients</h3>
-        <p class="auto-pain__text">Wrong numbers in a report, missed follow-ups, duplicate entries — small mistakes that erode client trust.</p>
+        <h3 class="auto-pain__title">No fallback logic</h3>
+        <p class="auto-pain__text">When automations fail, there is often no clear recovery path documented for the team.</p>
       </div>
     </div>
   </div>
 </section>
 
-<%# ======================================
-    WHAT WE DO — Service pillars
-    ====================================== %>
 <section class="auto-services section-padding bg-gradient">
   <div class="container">
     <div class="section-header">
-      <h2 class="section-title">What we build for you</h2>
-      <p class="section-subtitle">Not templates. Custom systems built for your exact processes.</p>
+      <h2 class="section-title">How I implement automation systems</h2>
+      <p class="section-subtitle">A practical implementation sequence focused on reliability and handover.</p>
     </div>
 
     <div class="auto-services__grid">
       <div class="auto-services__card">
         <div class="auto-services__number">01</div>
-        <h3 class="auto-services__title">Custom Workflow Automation</h3>
-        <p class="auto-services__text">We map your actual operations and build automations that fit — not force you into someone else's template.</p>
+        <h3 class="auto-services__title">Workflow mapping</h3>
+        <p class="auto-services__text">Map current process, actors, and bottlenecks before building any automation logic.</p>
       </div>
 
       <div class="auto-services__card">
         <div class="auto-services__number">02</div>
-        <h3 class="auto-services__title">AI-Powered Decision Making</h3>
-        <p class="auto-services__text">Intelligent routing, categorization, and responses built into your workflows — so your team handles exceptions, not routine.</p>
+        <h3 class="auto-services__title">Scope + logic definition</h3>
+        <p class="auto-services__text">Define triggers, actions, ownership, and expected behavior for each automated step.</p>
       </div>
 
       <div class="auto-services__card">
         <div class="auto-services__number">03</div>
-        <h3 class="auto-services__title">Full Implementation + Maintenance</h3>
-        <p class="auto-services__text">We don't just build and disappear. Ongoing monitoring, optimization, and support to keep everything running.</p>
+        <h3 class="auto-services__title">Build + QA</h3>
+        <p class="auto-services__text">Implement integrations and validate with error handling and fallback rules.</p>
       </div>
 
       <div class="auto-services__card">
         <div class="auto-services__number">04</div>
-        <h3 class="auto-services__title">End-to-End Integration</h3>
-        <p class="auto-services__text">CRM, reporting, billing, scheduling, client onboarding — all connected and automated as one system.</p>
+        <h3 class="auto-services__title">Documentation + handover</h3>
+        <p class="auto-services__text">Deliver process documentation and transition plan so your team can operate the system confidently.</p>
       </div>
     </div>
   </div>
 </section>
 
-<%# ======================================
-    HOW IT WORKS — 3-step process
-    ====================================== %>
 <section class="auto-process section-padding">
   <div class="container container--narrow">
     <div class="section-header">
-      <h2 class="section-title">How it works</h2>
-      <p class="section-subtitle">Workflow audit → bottleneck selection → build → QA → handover.</p>
+      <h2 class="section-title">What you get</h2>
+      <p class="section-subtitle">Delivery artifacts focused on clarity and operational continuity.</p>
     </div>
 
     <div class="auto-process__steps">
       <div class="auto-process__step">
         <div class="auto-process__step-num">1</div>
         <div class="auto-process__step-body">
-          <h3 class="auto-process__step-title">Workflow audit</h3>
-          <p class="auto-process__step-text">We map your workflow and identify where delay, rework, and manual handoffs are hurting execution.</p>
-          <span class="auto-process__step-tag">Audit first · highest-ROI target selected</span>
+          <h3 class="auto-process__step-title">Workflow map</h3>
+          <p class="auto-process__step-text">Current-state and target-state process mapping for the selected workflow.</p>
+          <span class="auto-process__step-tag">Process visibility</span>
         </div>
       </div>
 
@@ -204,9 +155,9 @@
       <div class="auto-process__step">
         <div class="auto-process__step-num">2</div>
         <div class="auto-process__step-body">
-          <h3 class="auto-process__step-title">Automation build + QA</h3>
-          <p class="auto-process__step-text">We implement the automation using your existing tools (Zapier/Make/APIs/scripts), add fallback rules, and test against real scenarios.</p>
-          <span class="auto-process__step-tag">Built for your exact process + failure cases</span>
+          <h3 class="auto-process__step-title">Automation implementation</h3>
+          <p class="auto-process__step-text">Integrated automation logic, tested with failure handling and clear ownership paths.</p>
+          <span class="auto-process__step-tag">Implemented system</span>
         </div>
       </div>
 
@@ -215,96 +166,48 @@
       <div class="auto-process__step">
         <div class="auto-process__step-num">3</div>
         <div class="auto-process__step-body">
-          <h3 class="auto-process__step-title">Handover + documentation</h3>
-          <p class="auto-process__step-text">You get clear ownership, documentation, and visibility so your team can operate and extend the automation safely.</p>
-          <span class="auto-process__step-tag">No black-box setup</span>
+          <h3 class="auto-process__step-title">Handover package</h3>
+          <p class="auto-process__step-text">Documentation and operating guidance so the workflow remains maintainable after delivery.</p>
+          <span class="auto-process__step-tag">Operational continuity</span>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<%# ======================================
-    SOCIAL PROOF — Stats + audience
-    ====================================== %>
-<section class="auto-proof section-padding bg-gradient">
-  <div class="container">
-    <div class="section-header">
-      <h2 class="section-title">What this looks like in practice</h2>
-      <p class="section-subtitle">Before/after process examples with real execution logic.</p>
-    </div>
-
-    <div class="auto-proof__stats">
-      <div class="auto-proof__stat">
-        <span class="auto-proof__stat-number">15+</span>
-        <span class="auto-proof__stat-label">hours/week saved</span>
-      </div>
-      <div class="auto-proof__stat">
-        <span class="auto-proof__stat-number">$500+</span>
-        <span class="auto-proof__stat-label">monthly tool cost reduction</span>
-      </div>
-      <div class="auto-proof__stat">
-        <span class="auto-proof__stat-number">99.9%</span>
-        <span class="auto-proof__stat-label">automation uptime</span>
-      </div>
-    </div>
-
-    <div class="auto-proof__audiences">
-      <div class="auto-proof__audience">
-        <h3>Before: Manual reporting handoff</h3>
-        <p>Data exported manually, stitched in spreadsheets, sent late. After: automated flow with owner notifications and a clean audit trail.</p>
-      </div>
-      <div class="auto-proof__audience">
-        <h3>Before: Fragmented lead routing</h3>
-        <p>Leads sitting in inboxes and missed follow-ups. After: routing automation with tags, assignment rules, and response SLAs.</p>
-      </div>
-      <div class="auto-proof__audience">
-        <h3>Execution principle</h3>
-        <p>No black-box setup. Full visibility of logic, clear ownership, and documentation from day one.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<%# ======================================
-    FAQ SECTION — AEO support
-    ====================================== %>
 <section class="auto-faq section-padding">
   <div class="container container--narrow">
     <div class="section-header">
-      <h2 class="section-title">Automation services FAQ</h2>
-      <p class="section-subtitle">Quick answers before your operations audit call.</p>
+      <h2 class="section-title">Workflow automation FAQ</h2>
+      <p class="section-subtitle">Common questions before an operations audit.</p>
     </div>
 
     <div class="auto-services__grid">
       <div class="auto-services__card">
-        <h3 class="auto-services__title">How fast can we launch?</h3>
-        <p class="auto-services__text">Most first automations launch within 2-4 weeks depending on system complexity and API access.</p>
+        <h3 class="auto-services__title">How fast can implementation start?</h3>
+        <p class="auto-services__text">Once access and scope are clear, implementation can begin immediately with a staged rollout.</p>
       </div>
       <div class="auto-services__card">
-        <h3 class="auto-services__title">What workflows can be automated?</h3>
-        <p class="auto-services__text">Client reporting, CRM updates, lead routing, invoicing handoffs, onboarding sequences, and recurring admin tasks.</p>
+        <h3 class="auto-services__title">Do you use our existing tools?</h3>
+        <p class="auto-services__text">Yes. The default approach is to integrate your current stack first and only replace tools when necessary.</p>
       </div>
       <div class="auto-services__card">
-        <h3 class="auto-services__title">Do you work with existing tools?</h3>
-        <p class="auto-services__text">Yes — we prioritize your current stack first, then recommend changes only when needed for reliability or ROI.</p>
+        <h3 class="auto-services__title">Can this include AI features?</h3>
+        <p class="auto-services__text">Yes, where useful. AI is added as a component inside a reliable process, not as a black-box replacement.</p>
       </div>
       <div class="auto-services__card">
-        <h3 class="auto-services__title">What is the first automation to build?</h3>
-        <p class="auto-services__text">Usually the highest-volume recurring task: weekly reporting, lead handoff, or client onboarding coordination.</p>
+        <h3 class="auto-services__title">What happens after delivery?</h3>
+        <p class="auto-services__text">You receive documentation, operating guidance, and a clear structure for future iterations.</p>
       </div>
     </div>
   </div>
 </section>
 
-<%# ======================================
-    FINAL CTA
-    ====================================== %>
 <%= render 'shared/cta_section',
-    headline: "If you already use tools but still feel operational drag, let's fix it.",
-    subheadline: "Book a 20-min call and I'll map the first two automations I'd implement for your team.",
-    button_text: "Book a 20-min call",
+    headline: "Book an operations audit.",
+    subheadline: "We’ll review one workflow and map a practical automation system for your team.",
+    button_text: "Book an operations audit",
     button_url: book_call_path,
-    secondary_text: "See workflow page",
-    secondary_url: workflow_path,
-    extra_info: "No obligation. Just a practical implementation map." %>
+    secondary_text: "Or send a message",
+    secondary_url: contact_path,
+    extra_info: "Focused review. Clear next steps." %>
