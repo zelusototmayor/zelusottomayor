@@ -112,7 +112,7 @@
 
     <div class="cta-group hero-cta-group">
       <%= link_to "Schedule a call", book_call_path, class: "cta-button cta-button--primary cta-button--large" %>
-      <%= link_to "View my work", work_path, class: "cta-button cta-button--secondary cta-button--large" %>
+      <%= link_to "See outbound system", workflow_path, class: "cta-button cta-button--secondary cta-button--large" %>
     </div>
 
     <%= render 'shared/trust_strip',
@@ -210,13 +210,13 @@
 </section>
 
 <%# ======================================
-    SECTION 4: SELECTED WORK (Case Studies Preview)
+    SECTION 4: PREVIOUS WORK (Proof Preview)
     ====================================== %>
 <section class="work-preview-section section-padding">
   <div class="container">
     <div class="section-header">
       <h2 class="section-title">Recent wins</h2>
-      <p class="section-subtitle">Selected client work and personal products</p>
+      <p class="section-subtitle">Previous work and shipped systems</p>
     </div>
 
     <% if @featured_projects.present? && @featured_projects.any? %>
@@ -241,11 +241,11 @@
       </div>
 
       <div class="section-cta">
-        <%= link_to "View all case studies →", work_path, class: "cta-button cta-button--text" %>
+        <%= link_to "View previous work →", work_path, class: "cta-button cta-button--text" %>
       </div>
     <% else %>
       <div class="empty-state">
-        <p>Case studies coming soon. Check back shortly!</p>
+        <p>Previous work entries coming soon. Check back shortly!</p>
         <p class="empty-state-note">In the meantime, <%= link_to "reach out", contact_path %> to discuss your project.</p>
       </div>
     <% end %>
