@@ -58,6 +58,23 @@
       ]
     }.to_json.html_safe %>
   </script>
+  <script type="application/ld+json">
+    <%= {
+      "@context" => "https://schema.org",
+      "@type" => "ProfessionalService",
+      "name" => "Ze Lu Sottomayor Automation Services",
+      "url" => automation_path,
+      "areaServed" => "Worldwide",
+      "serviceType" => ["Workflow Automation", "AI Agent Development", "Operations Automation"],
+      "description" => "Custom workflow automation and AI agent implementation for agencies and ecommerce teams.",
+      "offers" => {
+        "@type" => "Offer",
+        "availability" => "https://schema.org/InStock",
+        "priceCurrency" => "EUR",
+        "description" => "Free operations audit call followed by scoped automation implementation."
+      }
+    }.to_json.html_safe %>
+  </script>
 <% end %>
 
 <%# ======================================
