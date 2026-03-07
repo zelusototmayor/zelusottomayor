@@ -1,6 +1,39 @@
 <% content_for :title, "#{@case_study.name} - #{@case_study.product? ? 'Product' : 'Case Study'} - Ze Lu Sottomayor" %>
 <% content_for :meta_description, @case_study.tagline || "See how I helped #{@case_study.client_name} achieve their goals." %>
 
+<% content_for :head do %>
+<script type="application/ld+json">
+<%= {
+  "@context" => "https://schema.org",
+  "@type" => "Article",
+  "headline" => @case_study.name,
+  "description" => @case_study.tagline || "Case study by Ze Lu Sottomayor",
+  "url" => request.original_url,
+  "datePublished" => @case_study.published_at&.iso8601,
+  "author" => {
+    "@type" => "Person",
+    "name" => "Ze Lu Sottomayor",
+    "url" => "https://zelusottomayor.com"
+  },
+  "publisher" => {
+    "@type" => "Person",
+    "name" => "Ze Lu Sottomayor",
+    "url" => "https://zelusottomayor.com"
+  },
+  "about" => @case_study.technologies.map { |t| { "@type" => "Thing", "name" => t } },
+  "keywords" => ([@case_study.client_type, "case study", "automation", "AI", "full-stack development"] + @case_study.technologies).compact.join(", "),
+  "breadcrumb" => {
+    "@type" => "BreadcrumbList",
+    "itemListElement" => [
+      { "@type" => "ListItem", "position" => 1, "name" => "Home", "item" => "https://zelusottomayor.com/" },
+      { "@type" => "ListItem", "position" => 2, "name" => "Work", "item" => "https://zelusottomayor.com/work" },
+      { "@type" => "ListItem", "position" => 3, "name" => @case_study.name, "item" => request.original_url }
+    ]
+  }
+}.to_json.html_safe %>
+</script>
+<% end %>
+
 <div class="case-study-hero case-study-hero--condensed">
   <div class="container">
     <div class="case-study-breadcrumb">
