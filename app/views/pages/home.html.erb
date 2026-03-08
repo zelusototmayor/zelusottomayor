@@ -94,6 +94,26 @@
       ]
     }.to_json.html_safe %>
   </script>
+  <script type="application/ld+json">
+    <%= {
+      "@context" => "https://schema.org",
+      "@type" => "Person",
+      "name" => "Ze Lu Sottomayor",
+      "jobTitle" => "Founder & Lead Developer",
+      "url" => "https://zelusottomayor.com",
+      "sameAs" => [
+        "https://github.com/zelusottomayor",
+        "https://twitter.com/zelusottomayor",
+        "https://linkedin.com/in/zelusottomayor"
+      ],
+      "knowsAbout" => ["Ruby on Rails", "AI Automation", "LLM Integration", "B2B SaaS", "System Architecture"],
+      "worksFor" => {
+        "@type" => "Organization",
+        "name" => "Ze Lu Sottomayor",
+        "url" => "https://zelusottomayor.com"
+      }
+    }.to_json.html_safe %>
+  </script>
 <% end %>
 
 <%# ======================================
