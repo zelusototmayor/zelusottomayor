@@ -37,22 +37,12 @@
     <%= f.text_area :message, class: "form-textarea", rows: 5, placeholder: "Tell me about your project, challenge, or what you're looking to build...", required: true %>
   </div>
 
-  <div class="form-row form-row--split">
-    <div class="form-field">
-      <%= f.label :timeline, "Timeline", class: "form-label" %>
-      <%= f.select :timeline,
-          ["ASAP", "Within 1 month", "1-3 months", "3+ months", "Just exploring"],
-          { prompt: "Select timeline" },
-          class: "form-select" %>
-    </div>
-
-    <div class="form-field">
-      <%= f.label :budget_range, "Budget range (optional)", class: "form-label" %>
-      <%= f.select :budget_range,
-          ["Under $5k", "$5k-$10k", "$10k-$25k", "$25k+", "Not sure yet"],
-          { prompt: "Select budget" },
-          class: "form-select" %>
-    </div>
+  <div class="form-field">
+    <%= f.label :timeline, "Timeline", class: "form-label" %>
+    <%= f.select :timeline,
+        ["ASAP", "Within 1 month", "1-3 months", "3+ months", "Just exploring"],
+        { prompt: "Select timeline" },
+        class: "form-select" %>
   </div>
 
   <div class="form-field">

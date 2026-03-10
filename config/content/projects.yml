@@ -13,10 +13,10 @@
     - "Live"
   current_stage: "Live"
 
-- name: "Full Outbound Automation"
+- name: "Outbound System"
   type: "automation"
-  tagline: "Automated B2B lead sourcing and personalized cold email outreach"
-  link: "/work/full-outbound-automation"
+  tagline: "Automated B2B lead sourcing, enrichment, and personalized cold email outreach"
+  link: "https://leads.zelusottomayor.com"
   featured: true
   metrics:
     - "10 leads/day"
@@ -27,6 +27,7 @@
     - "MVP"
     - "Live"
   current_stage: "Live"
+
 
 - name: "UX Audit App"
   type: "product"
@@ -43,8 +44,7 @@
     - "Building"
     - "MVP"
     - "Live"
-    - "Dormant"
-  current_stage: "Dormant"
+  current_stage: "Live"
 
 - name: "AI Talk Coach"
   type: "product"
@@ -113,8 +113,7 @@
     - "Building"
     - "MVP"
     - "Live"
-    - "Dormant"
-  current_stage: "Dormant"
+  current_stage: "Live"
 
 - name: "IG Stat Recap"
   type: "product"
@@ -133,35 +132,6 @@
     - "Live"
   current_stage: "Live"
 
-- name: "Quinta das Margaridas"
-  type: "client"
-  tagline: "A beautiful website for a scenic lodge in the Douro Valley, Portugal with custom integrations"
-  featured: false
-  metrics:
-    - "Hospitality website"
-    - "Custom services"
-  stages:
-    - "Idea"
-    - "Exploring"
-    - "Building"
-    - "MVP"
-    - "Live"
-  current_stage: "Building"
-
-- name: "Restaurant Line Manager"
-  type: "client"
-  tagline: "Custom app that manages door lines using historical demand and table data"
-  featured: false
-  metrics:
-    - "Queue forecasting"
-    - "Table optimization"
-  stages:
-    - "Idea"
-    - "Exploring"
-    - "Building"
-    - "MVP"
-    - "Live"
-  current_stage: "Building"
 
 - name: "The Becoming App"
   type: "product"

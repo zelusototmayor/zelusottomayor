@@ -1,12 +1,12 @@
-<% content_for :title, "Previous Work - Ze Lu Sottomayor" %>
-<% content_for :meta_description, "Selected projects including AI tools and automation systems. See how I build practical solutions for real problems." %>
+<% content_for :title, "Work & Projects - Ze Lu Sottomayor" %>
+<% content_for :meta_description, "Projects I've built — from AI tools and automation systems to web applications. Practical solutions for real problems." %>
 
 <div class="page-hero">
   <div class="flowing-lines-bg"></div>
   <div class="container">
-    <h1 class="page-hero-title text-reveal">Previous Work</h1>
+    <h1 class="page-hero-title text-reveal">Work & Projects</h1>
     <p class="page-subtitle text-lead text-reveal">
-      Real projects, real results. See how I help teams automate operations and ship products.
+      Things I've built — automations, products, and client projects.
     </p>
   </div>
 </div>
@@ -22,9 +22,6 @@
           <button class="tab-button" data-action="click->tabs#show" data-category="automation">
             Automations (<%= @automation_projects.count %>)
           </button>
-          <button class="tab-button" data-action="click->tabs#show" data-category="client">
-            Client Work (<%= @client_projects.count %>)
-          </button>
           <button class="tab-button" data-action="click->tabs#show" data-category="product">
             Products (<%= @product_projects.count %>)
           </button>
@@ -38,7 +35,7 @@
       </div>
     <% else %>
       <div class="empty-state">
-        <h2>Previous work entries coming soon</h2>
+        <h2>Projects coming soon</h2>
         <p>I'm currently documenting recent projects. Check back soon, or <%= link_to "reach out", contact_path %> to discuss your needs.</p>
         <%= link_to "Contact me", contact_path, class: "cta-button cta-button--primary" %>
       </div>

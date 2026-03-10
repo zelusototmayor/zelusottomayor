@@ -13,7 +13,7 @@ automation:
     - "Syncing CRM data with project management tools"
     - "Automated reporting from multiple data sources"
     - "Lead routing and notification systems"
-  how_we_start: "We map out your current workflow, identify what can be automated, build and test the automation, then hand it off with documentation."
+  how_we_start: "I map out your current workflow, identify what can be automated, build and test the automation, then hand it off with documentation."
 
 product_development:
   title: "Product Development"
@@ -30,4 +30,4 @@ product_development:
     - "AI-powered tools and applications"
     - "Internal dashboards and admin panels"
     - "Tools that process and analyze data"
-  how_we_start: "We define the core functionality, I build an initial version, you test it, and we refine based on what you learn."
+  how_we_start: "I define the core functionality with you, build an initial version, you test it, and I refine based on what you learn."

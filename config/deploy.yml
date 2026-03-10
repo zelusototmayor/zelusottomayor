@@ -39,6 +39,7 @@ registry:
 env:
   secret:
     - RAILS_MASTER_KEY
+    - MIXPANEL_TOKEN
   clear:
     RAILS_MAX_THREADS: "5"
     WEB_CONCURRENCY: "0"
