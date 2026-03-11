@@ -484,9 +484,9 @@
           </div>
           <h3 class="wf-card-title">Outbound Sending</h3>
           <p class="wf-card-desc">
-            Emails go out at volume — up to 150 per day per inbox — with proper deliverability, warm-up, and domain rotation already handled. You never touch a send button.
+            Emails go out at volume — up to 50 per day per account — with proper deliverability, warm-up, and domain rotation already handled. You never touch a send button.
           </p>
-          <span class="wf-card-detail">Up to 150 emails/day/inbox</span>
+          <span class="wf-card-detail">Up to 50 emails/day/account</span>
         </div>
       </div>
 
@@ -517,6 +517,7 @@
             You see everything: emails sent, open rates, reply rates, click-throughs, and pipeline movement. Real-time. No waiting for weekly reports.
           </p>
           <span class="wf-card-detail">Opens · replies · clicks · live</span>
+          <a href="https://leads.zelusottomayor.com" target="_blank" rel="noopener" style="display:inline-block; margin-top:12px; margin-left:8px; font-family:var(--font-mono); font-size:var(--font-size-xs); font-weight:var(--font-weight-semibold); color:var(--color-primary); text-decoration:none; letter-spacing:0.04em;">View live dashboard &rarr;</a>
         </div>
       </div>
 
@@ -548,8 +549,8 @@
         <div class="wf-result-label">Automated steps</div>
       </div>
       <div class="wf-result-cell">
-        <div class="wf-result-num">150</div>
-        <div class="wf-result-label">Emails/day/inbox</div>
+        <div class="wf-result-num">50</div>
+        <div class="wf-result-label">Emails/day/account</div>
       </div>
       <div class="wf-result-cell">
         <div class="wf-result-num">Daily</div>
@@ -592,7 +593,7 @@
 
 <script>
   // Scroll-triggered step reveal animation
-  document.addEventListener('DOMContentLoaded', function() {
+  document.addEventListener('turbo:load', function() {
     const steps = document.querySelectorAll('.wf-step[data-step]');
 
     if ('IntersectionObserver' in window) {
