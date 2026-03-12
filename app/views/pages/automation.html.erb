@@ -82,25 +82,25 @@
 
     <div class="auto-pain__grid">
       <div class="auto-pain__card">
-        <div class="auto-pain__icon">⏳</div>
+        <div class="auto-pain__icon auto-pain__icon--mono">01</div>
         <h3 class="auto-pain__title">Repetitive data entry</h3>
         <p class="auto-pain__text">You're copying data between tools — CRM to spreadsheet, spreadsheet to invoice — over and over, every day.</p>
       </div>
 
       <div class="auto-pain__card">
-        <div class="auto-pain__icon">📊</div>
+        <div class="auto-pain__icon auto-pain__icon--mono">02</div>
         <h3 class="auto-pain__title">Reporting takes all day</h3>
         <p class="auto-pain__text">Every Monday is lost to pulling numbers, building reports, and formatting slides instead of doing actual work.</p>
       </div>
 
       <div class="auto-pain__card">
-        <div class="auto-pain__icon">💸</div>
+        <div class="auto-pain__icon auto-pain__icon--mono">03</div>
         <h3 class="auto-pain__title">Too many tools, still manual</h3>
         <p class="auto-pain__text">You're paying for multiple SaaS tools but still doing things manually because nothing talks to each other.</p>
       </div>
 
       <div class="auto-pain__card">
-        <div class="auto-pain__icon">🚨</div>
+        <div class="auto-pain__icon auto-pain__icon--mono">04</div>
         <h3 class="auto-pain__title">Small mistakes add up</h3>
         <p class="auto-pain__text">Wrong numbers in a report, missed follow-ups, duplicate entries — manual processes break when things get busy.</p>
       </div>
@@ -153,15 +153,19 @@
   <div class="container container--narrow">
     <div class="section-header">
       <h2 class="section-title">See it in action</h2>
-      <p class="section-subtitle">Here's a real system I built and use every day.</p>
+      <p class="section-subtitle">Here's a real system I built and run every day.</p>
     </div>
 
     <div class="auto-services__card" style="text-align: center;">
       <h3 class="auto-services__title">Outbound Lead System</h3>
-      <p class="auto-services__text">An end-to-end outbound system that sources B2B leads, enriches contact data, and sends personalized email sequences — all automated. The CRM dashboard below is where I manage the entire pipeline.</p>
-      <div style="margin-top: 1.5rem;">
-        <%= link_to "https://leads.zelusottomayor.com", target: "_blank", rel: "noopener", class: "cta-button cta-button--primary" do %>
-          <span>View the dashboard</span>
+      <p class="auto-services__text">An end-to-end outbound system that sources B2B leads, enriches contact data, and sends personalized email sequences — all automated. See the full workflow breakdown and a live demo of the dashboard.</p>
+      <div style="margin-top: 1.5rem; display: flex; gap: 12px; justify-content: center; flex-wrap: wrap;">
+        <%= link_to workflow_path, class: "cta-button cta-button--primary" do %>
+          <span>See the full workflow</span>
+          <span class="button-arrow">&rarr;</span>
+        <% end %>
+        <%= link_to demo_path, class: "cta-button cta-button--secondary" do %>
+          <span>Watch the demo</span>
           <span class="button-arrow">&rarr;</span>
         <% end %>
       </div>
@@ -226,16 +230,16 @@
 
     <div class="auto-proof__audiences">
       <div class="auto-proof__audience">
-        <h3>Marketing Agencies</h3>
-        <p>Automate client reporting, campaign tracking, and internal workflows so your team focuses on strategy — not spreadsheets.</p>
+        <h3>B2B SaaS Companies</h3>
+        <p>Automate lead routing, onboarding flows, usage-based alerts, and internal reporting so your ops team can scale without adding headcount.</p>
       </div>
       <div class="auto-proof__audience">
-        <h3>E-Commerce Brands</h3>
-        <p>Sync inventory, automate order processing, and streamline customer communication across channels.</p>
+        <h3>AEC Firms</h3>
+        <p>Streamline project handoffs, RFI tracking, document workflows, and compliance reporting across architecture, engineering, and construction teams.</p>
       </div>
       <div class="auto-proof__audience">
-        <h3>Service Businesses</h3>
-        <p>Automate scheduling, invoicing, and client onboarding — eliminate the admin that slows down growth.</p>
+        <h3>Admin-Heavy Local Services</h3>
+        <p>Logistics, recruiting, real estate, home services — automate scheduling, invoicing, follow-ups, and client communication so you spend less time on paperwork and more time on revenue.</p>
       </div>
     </div>
   </div>

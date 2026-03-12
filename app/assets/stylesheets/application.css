@@ -2896,6 +2896,22 @@ body {
   line-height: 1;
 }
 
+.auto-pain__icon--mono {
+  font-family: var(--font-mono);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-primary);
+  background: rgba(39, 90, 78, 0.08);
+  border: 1px solid rgba(39, 90, 78, 0.2);
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  letter-spacing: 0.05em;
+}
+
 .auto-pain__title {
   font-size: var(--font-size-xl);
   margin-bottom: var(--spacing-sm);
