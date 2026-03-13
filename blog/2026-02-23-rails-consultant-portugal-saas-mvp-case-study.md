@@ -1,3 +1,13 @@
+---
+title: "Rails Consultant Portugal: SaaS MVP Case Study (8-Week Delivery)"
+slug: "rails-consultant-portugal-saas-mvp-case-study"
+date: "2026-02-23"
+meta_description: "Case study: how a Portugal-based Rails consultant shipped a SaaS MVP in 8 weeks with analytics, payments, and a conversion-ready marketing site."
+tags: ["rails consultant", "portugal", "SaaS MVP", "web development", "AI automation"]
+author: "Ze Lu Sottomayor"
+published: true
+---
+
 # Rails Consultant Portugal: SaaS MVP Case Study (8-Week Delivery)
 
 **Target keyword:** rails consultant portugal  

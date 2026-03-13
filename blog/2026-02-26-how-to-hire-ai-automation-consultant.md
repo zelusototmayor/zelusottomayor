@@ -1,3 +1,13 @@
+---
+title: "How to Hire an AI Automation Consultant: What to Look for in 2026"
+slug: "how-to-hire-ai-automation-consultant"
+date: "2026-02-26"
+meta_description: "Hiring an AI automation consultant is harder than it looks. Here's what separates a real expert from someone who's just repackaged ChatGPT — and how to evaluate them before you sign."
+tags: ["AI automation", "hire AI consultant", "AI consulting", "B2B AI", "automation strategy"]
+author: "Ze Lu Sottomayor"
+published: true
+---
+
 # How to Hire an AI Automation Consultant: What to Look for in 2026
 
 **Target keyword:** how to hire an AI automation consultant
