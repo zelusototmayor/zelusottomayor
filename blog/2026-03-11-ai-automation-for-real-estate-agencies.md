@@ -130,3 +130,7 @@ If you want to implement these workflows without building internal technical cap
 The scoping conversation typically covers: current tools and integrations in place, volume of each workflow per week, and which bottleneck has the clearest commercial impact.
 
 If you're a real estate agency looking to automate systematically rather than piecemeal, [book a discovery call](https://zelusottomayor.com/contact) to map out where the best-value automation is for your specific situation.
+
+---
+
+*Related reading: [AI outbound sales: build a B2B system that converts](/blog/ai-outbound-sales-b2b-that-actually-converts) | [Why AI automation projects fail](/blog/why-ai-automation-projects-fail) | [5 business processes SMEs automate first](/blog/5-business-processes-smes-automate-first)*
