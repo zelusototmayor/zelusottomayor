@@ -52,10 +52,16 @@ class BlogController < ApplicationController
       no_intra_emphasis: true
     )
 
+    parsed_date = begin
+      Date.parse(front_matter["date"].to_s)
+    rescue ArgumentError, TypeError
+      Date.today
+    end
+
     {
       title: front_matter["title"],
       slug: front_matter["slug"] || File.basename(path, ".md").gsub(/^\d{4}-\d{2}-\d{2}-/, ""),
-      date: Date.parse(front_matter["date"].to_s) rescue Date.today,
+      date: parsed_date,
       meta_description: front_matter["meta_description"],
       tags: Array(front_matter["tags"]),
       author: front_matter["author"] || "Ze Lu Sottomayor",
