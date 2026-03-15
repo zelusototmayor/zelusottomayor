@@ -1,3 +1,13 @@
+---
+title: "What Does an AI Consultant Actually Deliver?"
+slug: "what-does-an-ai-consultant-actually-deliver"
+date: "2026-03-02"
+meta_description: "Vague promises, decks, and recommendations — or working systems in production? Here's what a good AI consultant actually delivers, and how to tell the difference before you sign."
+tags: ["AI consultant", "AI automation", "consulting deliverables", "B2B AI", "AI implementation"]
+author: "Ze Lu Sottomayor"
+published: true
+---
+
 # What Does an AI Consultant Actually Deliver? A Realistic Breakdown
 
 **Primary keyword:** what does an ai consultant do  

@@ -1,3 +1,13 @@
+---
+title: "The 5 Business Processes SMEs Should Automate First (and Why)"
+slug: "5-business-processes-smes-automate-first"
+date: "2026-03-03"
+meta_description: "Not all automation is equal. These are the 5 business processes that deliver the fastest ROI for SMEs — and the signs that you're ready to automate each one."
+tags: ["business automation", "SME automation", "AI automation", "process optimization", "B2B operations"]
+author: "Ze Lu Sottomayor"
+published: true
+---
+
 # 5 Business Processes Most SMEs Automate First (And Why They Start There)
 
 **Primary keyword:** business processes most smes automate first  

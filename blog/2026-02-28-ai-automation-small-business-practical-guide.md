@@ -1,3 +1,13 @@
+---
+title: "AI Automation for Small Business: A Practical Guide That Skips the Hype"
+slug: "ai-automation-small-business-practical-guide"
+date: "2026-02-28"
+meta_description: "A practical guide to AI automation for small businesses — which processes to automate first, what tools actually work, and how to avoid the most common implementation mistakes."
+tags: ["AI automation", "small business", "automation tools", "business operations", "AI implementation"]
+author: "Ze Lu Sottomayor"
+published: true
+---
+
 # AI Automation for Small Business: A Practical Guide (2026)
 
 **Target keyword:** ai automation for small business  
