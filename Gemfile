@@ -40,6 +40,7 @@ gem "thruster", require: false
 
 # Google Calendar API integration
 gem 'google-apis-calendar_v3', '~> 0.46'
+gem 'redcarpet', '~> 3.6'
 gem 'googleauth', '~> 1.9'
 
 group :development, :test do

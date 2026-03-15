@@ -10,6 +10,10 @@ Rails.application.routes.draw do
   get "/workflow",   to: "pages#workflow",   as: :workflow
   get "/proposal",   to: "pages#proposal",   as: :proposal
 
+  # Blog
+  get "/blog",      to: "blog#index", as: :blog
+  get "/blog/:slug", to: "blog#show", as: :blog_post
+
   # Case studies (individual project detail pages)
   resources :case_studies, only: [:show], path: 'work'
 
