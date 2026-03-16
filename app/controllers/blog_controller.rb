@@ -62,8 +62,8 @@ class BlogController < ApplicationController
       title: front_matter["title"],
       slug: front_matter["slug"] || File.basename(path, ".md").gsub(/^\d{4}-\d{2}-\d{2}-/, ""),
       date: parsed_date,
-      meta_description: front_matter["meta_description"],
-      tags: Array(front_matter["tags"]),
+      meta_description: front_matter["meta_description"] || front_matter["description"],
+      tags: Array(front_matter["tags"] || front_matter["keywords"]),
       author: front_matter["author"] || "Ze Lu Sottomayor",
       content_html: markdown.render(body_md).html_safe,
       excerpt: generate_excerpt(body_md)
