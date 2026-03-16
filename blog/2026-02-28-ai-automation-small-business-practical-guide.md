@@ -7,7 +7,6 @@ tags: ["AI automation", "small business", "automation tools", "business operatio
 author: "Ze Lu Sottomayor"
 published: true
 ---
-
 # AI Automation for Small Business: A Practical Guide (2026)
 
 **Target keyword:** ai automation for small business  

@@ -1,32 +1,65 @@
 <% content_for :title, "Blog — AI Automation & B2B Growth | Ze Lu Sottomayor" %>
 <% content_for :meta_description, "Insights on AI automation, outbound sales, and building lean B2B operations. Written by Ze Lu Sottomayor, AI automation consultant based in Lisbon." %>
 
-<section class="py-16 px-4 max-w-4xl mx-auto">
-  <div class="mb-12">
-    <h1 class="text-4xl font-bold text-gray-900 mb-4">Blog</h1>
-    <p class="text-lg text-gray-600">AI automation, B2B growth, and building things that actually work.</p>
+<section class="py-16 px-4 max-w-5xl mx-auto">
+
+  <!-- Header -->
+  <div class="mb-14 border-b border-gray-100 pb-10">
+    <span class="text-sm font-medium text-blue-600 uppercase tracking-widest">Blog</span>
+    <h1 class="mt-2 text-4xl font-bold text-gray-900 leading-tight">AI automation, B2B growth,<br class="hidden sm:block"> and building things that actually work.</h1>
+    <p class="mt-4 text-gray-500 text-base max-w-xl">Written by Ze Lu Sottomayor — AI implementation consultant based in Lisbon.</p>
   </div>
 
   <% if @posts.empty? %>
-    <p class="text-gray-500">No posts yet — check back soon.</p>
+    <p class="text-gray-400 text-base">No posts yet — check back soon.</p>
   <% else %>
-    <div class="space-y-10">
-      <% @posts.each do |post| %>
-        <article class="border-b border-gray-100 pb-10">
-          <div class="text-sm text-gray-400 mb-2"><%= post[:date].strftime("%-d %B %Y") %></div>
-          <h2 class="text-2xl font-semibold text-gray-900 mb-3">
-            <%= link_to post[:title], blog_post_path(post[:slug]), class: "hover:text-blue-600 transition-colors" %>
-          </h2>
-          <p class="text-gray-600 leading-relaxed mb-4"><%= post[:excerpt] %></p>
-          <% if post[:tags].any? %>
-            <div class="flex flex-wrap gap-2">
-              <% post[:tags].each do |tag| %>
-                <span class="text-xs bg-gray-100 text-gray-600 px-2 py-1 rounded"><%= tag %></span>
-              <% end %>
+
+    <!-- Post grid -->
+    <div class="grid gap-8 sm:grid-cols-2">
+      <% @posts.each_with_index do |post, i| %>
+        <%
+          # Assign a subtle accent colour per post based on index
+          accents = %w[blue-500 violet-500 emerald-500 orange-500 rose-500 sky-500 amber-500 teal-500]
+          accent = accents[i % accents.length]
+          words = post[:excerpt].to_s.split.length
+          read_min = [(words / 200.0).ceil, 1].max
+        %>
+        <article class="group flex flex-col rounded-2xl border border-gray-100 bg-white hover:shadow-md transition-shadow duration-200 overflow-hidden">
+
+          <!-- Colour bar -->
+          <div class="h-1 w-full bg-<%= accent %>"></div>
+
+          <div class="flex flex-col flex-1 p-6">
+
+            <!-- Meta row -->
+            <div class="flex items-center gap-3 text-xs text-gray-400 mb-3">
+              <time datetime="<%= post[:date].iso8601 %>"><%= post[:date].strftime("%-d %b %Y") %></time>
+              <span>·</span>
+              <span><%= read_min %> min read</span>
             </div>
-          <% end %>
+
+            <!-- Title -->
+            <h2 class="text-lg font-semibold text-gray-900 leading-snug mb-3 group-hover:text-blue-600 transition-colors">
+              <%= link_to post[:title], blog_post_path(post[:slug]), class: "stretched-link" %>
+            </h2>
+
+            <!-- Excerpt -->
+            <p class="text-sm text-gray-500 leading-relaxed flex-1 mb-4"><%= post[:excerpt] %></p>
+
+            <!-- Tags -->
+            <% visible_tags = post[:tags].first(3) %>
+            <% if visible_tags.any? %>
+              <div class="flex flex-wrap gap-1.5 mt-auto">
+                <% visible_tags.each do |tag| %>
+                  <span class="text-xs bg-gray-50 border border-gray-200 text-gray-500 px-2 py-0.5 rounded-full"><%= tag %></span>
+                <% end %>
+              </div>
+            <% end %>
+
+          </div>
         </article>
       <% end %>
     </div>
+
   <% end %>
 </section>

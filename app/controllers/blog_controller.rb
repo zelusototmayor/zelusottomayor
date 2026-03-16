@@ -35,7 +35,8 @@ class BlogController < ApplicationController
     front_matter = extract_front_matter(raw)
     body_md = extract_body(raw)
 
-    return nil unless front_matter["published"] != false
+    return nil if front_matter["published"] == false
+    return nil if front_matter["title"].blank?
 
     renderer = Redcarpet::Render::HTML.new(
       hard_wrap: false,

@@ -7,7 +7,6 @@ tags: ["AI ROI", "AI implementation", "AI automation", "business AI", "AI strate
 author: "Ze Lu Sottomayor"
 published: true
 ---
-
 # Why 56% of Companies See Zero ROI from AI (And How to Fix It)
 
 **Target keyword:** why ai investments fail / ai roi for business  

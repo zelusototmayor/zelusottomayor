@@ -7,7 +7,6 @@ tags: ["business automation", "SME automation", "AI automation", "process optimi
 author: "Ze Lu Sottomayor"
 published: true
 ---
-
 # 5 Business Processes Most SMEs Automate First (And Why They Start There)
 
 **Primary keyword:** business processes most smes automate first  

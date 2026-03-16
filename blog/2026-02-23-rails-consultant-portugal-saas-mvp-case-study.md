@@ -7,7 +7,6 @@ tags: ["rails consultant", "portugal", "SaaS MVP", "web development", "AI automa
 author: "Ze Lu Sottomayor"
 published: true
 ---
-
 # Rails Consultant Portugal: SaaS MVP Case Study (8-Week Delivery)
 
 **Target keyword:** rails consultant portugal  

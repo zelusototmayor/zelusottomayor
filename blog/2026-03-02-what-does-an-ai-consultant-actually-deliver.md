@@ -7,7 +7,6 @@ tags: ["AI consultant", "AI automation", "consulting deliverables", "B2B AI", "A
 author: "Ze Lu Sottomayor"
 published: true
 ---
-
 # What Does an AI Consultant Actually Deliver? A Realistic Breakdown
 
 **Primary keyword:** what does an ai consultant do  

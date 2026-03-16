@@ -7,7 +7,6 @@ tags: ["AI automation", "hire AI consultant", "AI consulting", "B2B AI", "automa
 author: "Ze Lu Sottomayor"
 published: true
 ---
-
 # How to Hire an AI Automation Consultant: What to Look for in 2026
 
 **Target keyword:** how to hire an AI automation consultant
