@@ -8,7 +8,7 @@ author: "Ze Lu Sottomayor"
 published: true
 ---
 
-*Related reading: [What does an AI consultant actually deliver](/blog/what-does-an-ai-consultant-actually-deliver) | [Why AI automation projects fail](/blog/why-ai-automation-projects-fail) | [How to measure ROI of AI automation](/blog/how-to-measure-roi-of-ai-automation)*
+*Related reading: [What does an AI consultant actually deliver](/blog/what-does-an-ai-consultant-actually-deliver) | [Why AI automation projects fail](/blog/why-ai-automation-projects-fail) | [How to measure ROI of AI automation](/blog/how-to-measure-roi-of-ai-automation) | [The AI voice problem in outbound: authentic vs. generated](/blog/ai-voice-in-outbound-authentic-vs-generated)*
 
 ---
 
