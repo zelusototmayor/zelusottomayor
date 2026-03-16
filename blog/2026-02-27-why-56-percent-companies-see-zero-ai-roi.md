@@ -9,11 +9,6 @@ published: true
 ---
 # Why 56% of Companies See Zero ROI from AI (And How to Fix It)
 
-**Target keyword:** why ai investments fail / ai roi for business  
-**Secondary keywords:** why companies don't see roi from ai, ai investment return, ai implementation failure, ai roi measurement, ai consulting roi  
-**Slug:** /blog/why-56-percent-companies-see-zero-roi-from-ai  
-**Meta title:** Why 56% of Companies See Zero AI ROI — And How to Fix It  
-**Meta description:** PwC's 2026 CEO survey found 56% of executives report zero financial return from AI investments. Here's the actual reason — and the 3 changes that fix it.  
 **Excerpt:** A new PwC survey of 4,454 CEOs found that more than half report zero measurable financial return from AI. The problem isn't the technology. Here's what it actually is.
 
 ---

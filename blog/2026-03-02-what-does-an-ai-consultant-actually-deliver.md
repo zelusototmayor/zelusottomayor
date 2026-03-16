@@ -9,10 +9,6 @@ published: true
 ---
 # What Does an AI Consultant Actually Deliver? A Realistic Breakdown
 
-**Primary keyword:** what does an ai consultant do  
-**Secondary keywords:** ai consultant deliverables, what to expect from ai consultant, ai automation consultant services, hire ai consultant what you get, ai consultant scope of work  
-**Slug:** `/blog/what-does-an-ai-consultant-actually-deliver`  
-**Meta description:** Considering hiring an AI consultant but not sure what you'd actually get? This is a realistic, no-fluff breakdown of what AI consulting engagements deliver — and what they don't.  
 **Excerpt:** The gap between what people expect from an AI consultant and what they actually get is wide. Here's an honest breakdown of the deliverables, timelines, and outcomes you should realistically expect — before you sign anything.
 
 ---

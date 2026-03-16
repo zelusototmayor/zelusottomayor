@@ -9,10 +9,6 @@ published: true
 ---
 # How to Hire an AI Automation Consultant: What to Look for in 2026
 
-**Target keyword:** how to hire an AI automation consultant
-**Secondary keywords:** ai automation consultant, hire ai consultant, ai consulting for startups, ai automation for small business, ai automation agency, rails ai developer
-**Meta title:** How to Hire an AI Automation Consultant in 2026 | Ze Lu Sotto Mayor
-**Meta description:** Hiring an AI automation consultant is harder than it looks. Here's what separates a real expert from someone who's just repackaged ChatGPT — and how to evaluate them before you sign.
 
 ---
 

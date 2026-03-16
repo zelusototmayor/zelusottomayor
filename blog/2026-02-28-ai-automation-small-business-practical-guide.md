@@ -9,11 +9,6 @@ published: true
 ---
 # AI Automation for Small Business: A Practical Guide (2026)
 
-**Target keyword:** ai automation for small business  
-**Secondary keywords:** how to automate small business with ai, ai tools for small business automation, business process automation small business, ai workflow automation, small business ai implementation  
-**Slug:** /blog/ai-automation-small-business-practical-guide  
-**Meta title:** AI Automation for Small Business: A Practical Guide (2026)  
-**Meta description:** Most small businesses are automating the wrong things with AI. This guide covers the workflows worth automating, the tools that actually work, and how to measure whether it's working.  
 **Excerpt:** Small business AI automation doesn't require a technical team, a big budget, or a vendor consultant. It requires knowing which three or four workflows are actually worth automating — and which ones aren't.
 
 ---

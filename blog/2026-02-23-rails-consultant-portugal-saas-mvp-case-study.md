@@ -9,9 +9,6 @@ published: true
 ---
 # Rails Consultant Portugal: SaaS MVP Case Study (8-Week Delivery)
 
-**Target keyword:** rails consultant portugal  
-**Meta title:** Rails Consultant Portugal: SaaS MVP Case Study in 8 Weeks  
-**Meta description:** Case study: how a Portugal-based Rails consultant shipped a SaaS MVP in 8 weeks with analytics, payments, and a conversion-ready marketing site.
 
 Founders hiring a Rails consultant in Portugal usually care about one thing: shipping quickly without accumulating technical debt.
 

@@ -9,11 +9,6 @@ published: true
 ---
 # 5 Business Processes Most SMEs Automate First (And Why They Start There)
 
-**Primary keyword:** business processes most smes automate first  
-**Secondary keywords:** what to automate in small business, business process automation sme, first things to automate in business, small business automation priorities, business automation for smes  
-**Slug:** `/blog/5-business-processes-smes-automate-first`  
-**Meta title:** 5 Business Processes Most SMEs Automate First (And Why)  
-**Meta description:** Not sure where to start with automation? These are the five processes most small and medium businesses tackle first — and the reasoning behind each one.  
 **Excerpt:** Most SMEs don't start automation with a strategy. They start with the thing that's costing them the most time and money right now. Here's what that usually is — and what to prioritise if you're starting from scratch.  
 **Word count:** ~2,700 words  
 
