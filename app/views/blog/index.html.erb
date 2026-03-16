@@ -1,65 +1,170 @@
 <% content_for :title, "Blog — AI Automation & B2B Growth | Ze Lu Sottomayor" %>
 <% content_for :meta_description, "Insights on AI automation, outbound sales, and building lean B2B operations. Written by Ze Lu Sottomayor, AI automation consultant based in Lisbon." %>
 
-<section class="py-16 px-4 max-w-5xl mx-auto">
+<style>
+  .blog-hero {
+    padding: 80px 0 48px;
+    border-bottom: 1px solid var(--color-ink-700);
+  }
+  .blog-hero .eyebrow {
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--color-accent-blue);
+    margin-bottom: 12px;
+  }
+  .blog-hero h1 {
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 700;
+    color: var(--color-ink-100, #e8ecf2);
+    line-height: 1.15;
+    margin-bottom: 16px;
+  }
+  .blog-hero p {
+    color: var(--color-ink-300, #8692a8);
+    font-size: 1rem;
+    max-width: 480px;
+  }
 
-  <!-- Header -->
-  <div class="mb-14 border-b border-gray-100 pb-10">
-    <span class="text-sm font-medium text-blue-600 uppercase tracking-widest">Blog</span>
-    <h1 class="mt-2 text-4xl font-bold text-gray-900 leading-tight">AI automation, B2B growth,<br class="hidden sm:block"> and building things that actually work.</h1>
-    <p class="mt-4 text-gray-500 text-base max-w-xl">Written by Ze Lu Sottomayor — AI implementation consultant based in Lisbon.</p>
+  .blog-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 24px;
+    padding: 56px 0 80px;
+  }
+
+  .blog-card {
+    background: var(--color-ink-800, #121a2b);
+    border: 1px solid var(--color-ink-700, #1b2538);
+    border-radius: 14px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: border-color 0.2s ease, transform 0.2s ease;
+    position: relative;
+  }
+  .blog-card:hover {
+    border-color: var(--color-accent-blue, #4a8cff);
+    transform: translateY(-3px);
+  }
+
+  .blog-card-accent {
+    height: 3px;
+    width: 100%;
+  }
+
+  .blog-card-body {
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+  }
+
+  .blog-card-meta {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.72rem;
+    color: var(--color-ink-400, #5d6a82);
+    margin-bottom: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+  .blog-card-meta .sep { opacity: 0.4; }
+
+  .blog-card h2 {
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: var(--color-ink-100, #e8ecf2);
+    line-height: 1.4;
+    margin-bottom: 12px;
+  }
+  .blog-card h2 a {
+    color: inherit;
+    text-decoration: none;
+  }
+  .blog-card h2 a::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+  }
+  .blog-card h2 a:hover { color: var(--color-accent-blue, #4a8cff); }
+
+  .blog-card-excerpt {
+    font-size: 0.875rem;
+    color: var(--color-ink-300, #8692a8);
+    line-height: 1.65;
+    flex: 1;
+    margin-bottom: 16px;
+  }
+
+  .blog-card-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-top: auto;
+  }
+  .blog-tag {
+    font-size: 0.7rem;
+    background: var(--color-ink-700, #1b2538);
+    color: var(--color-ink-300, #8692a8);
+    border: 1px solid var(--color-ink-600, #27324a);
+    padding: 3px 9px;
+    border-radius: 20px;
+    white-space: nowrap;
+  }
+
+  /* Accent colour palette (CSS-only, no dynamic class purging) */
+  .accent-0 { background: #4a8cff; }
+  .accent-1 { background: #7c5cfc; }
+  .accent-2 { background: #10b981; }
+  .accent-3 { background: #f59e0b; }
+  .accent-4 { background: #f43f5e; }
+  .accent-5 { background: #0ea5e9; }
+  .accent-6 { background: #8b5cf6; }
+  .accent-7 { background: #14b8a6; }
+</style>
+
+<div class="container container--narrow">
+
+  <div class="blog-hero">
+    <div class="eyebrow">Blog</div>
+    <h1>AI automation, B2B growth,<br>and building things that actually work.</h1>
+    <p>Written by Ze Lu Sottomayor &mdash; AI implementation consultant based in Lisbon.</p>
   </div>
 
   <% if @posts.empty? %>
-    <p class="text-gray-400 text-base">No posts yet — check back soon.</p>
+    <p style="color: var(--color-ink-400); padding: 48px 0;">No posts yet &mdash; check back soon.</p>
   <% else %>
-
-    <!-- Post grid -->
-    <div class="grid gap-8 sm:grid-cols-2">
+    <div class="blog-grid">
       <% @posts.each_with_index do |post, i| %>
         <%
-          # Assign a subtle accent colour per post based on index
-          accents = %w[blue-500 violet-500 emerald-500 orange-500 rose-500 sky-500 amber-500 teal-500]
-          accent = accents[i % accents.length]
           words = post[:excerpt].to_s.split.length
           read_min = [(words / 200.0).ceil, 1].max
+          accent_class = "accent-#{i % 8}"
         %>
-        <article class="group flex flex-col rounded-2xl border border-gray-100 bg-white hover:shadow-md transition-shadow duration-200 overflow-hidden">
-
-          <!-- Colour bar -->
-          <div class="h-1 w-full bg-<%= accent %>"></div>
-
-          <div class="flex flex-col flex-1 p-6">
-
-            <!-- Meta row -->
-            <div class="flex items-center gap-3 text-xs text-gray-400 mb-3">
+        <article class="blog-card">
+          <div class="blog-card-accent <%= accent_class %>"></div>
+          <div class="blog-card-body">
+            <div class="blog-card-meta">
               <time datetime="<%= post[:date].iso8601 %>"><%= post[:date].strftime("%-d %b %Y") %></time>
-              <span>·</span>
+              <span class="sep">·</span>
               <span><%= read_min %> min read</span>
             </div>
-
-            <!-- Title -->
-            <h2 class="text-lg font-semibold text-gray-900 leading-snug mb-3 group-hover:text-blue-600 transition-colors">
-              <%= link_to post[:title], blog_post_path(post[:slug]), class: "stretched-link" %>
-            </h2>
-
-            <!-- Excerpt -->
-            <p class="text-sm text-gray-500 leading-relaxed flex-1 mb-4"><%= post[:excerpt] %></p>
-
-            <!-- Tags -->
-            <% visible_tags = post[:tags].first(3) %>
-            <% if visible_tags.any? %>
-              <div class="flex flex-wrap gap-1.5 mt-auto">
-                <% visible_tags.each do |tag| %>
-                  <span class="text-xs bg-gray-50 border border-gray-200 text-gray-500 px-2 py-0.5 rounded-full"><%= tag %></span>
+            <h2><%= link_to post[:title], blog_post_path(post[:slug]) %></h2>
+            <p class="blog-card-excerpt"><%= post[:excerpt] %></p>
+            <% if post[:tags].any? %>
+              <div class="blog-card-tags">
+                <% post[:tags].first(3).each do |tag| %>
+                  <span class="blog-tag"><%= tag %></span>
                 <% end %>
               </div>
             <% end %>
-
           </div>
         </article>
       <% end %>
     </div>
-
   <% end %>
-</section>
+
+</div>

@@ -86,11 +86,13 @@ class BlogController < ApplicationController
   end
 
   def generate_excerpt(body_md)
-    # Skip Related reading lines and headings, find first real paragraph
+    # Skip Related reading, headings, and SEO metadata lines
     lines = body_md.split("\n")
     clean_lines = lines.reject do |line|
-      line.strip.start_with?("*Related reading", "Related reading", "#") ||
-      line.strip.empty? && lines.index(line) == 0
+      l = line.strip
+      l.start_with?("*Related reading", "Related reading", "#") ||
+      l.match?(/^\*\*(Target keyword|Primary keyword|Secondary keyword|Meta title|Meta description|Slug)\*\*/) ||
+      l.match?(/^(Target keyword|Primary keyword|Secondary keyword|Meta title|Meta description|Slug):/)
     end
 
     # Take first 3 non-empty paragraphs
