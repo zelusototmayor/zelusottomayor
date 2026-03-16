@@ -7,9 +7,6 @@ tags: ["AI consultant", "in-house AI", "AI automation", "B2B AI strategy", "AI i
 author: "Ze Lu Sottomayor"
 published: true
 ---
-
-*Related reading: [What does an AI consultant actually deliver](/blog/what-does-an-ai-consultant-actually-deliver) | [Why AI automation projects fail](/blog/why-ai-automation-projects-fail) | [How to hire an AI automation consultant](/blog/how-to-hire-ai-automation-consultant)*
-
 ---
 
 The question I get more than any other from B2B founders and ops leaders right now: "Should we hire someone to help us with AI, or build this capability ourselves?"
@@ -201,3 +198,7 @@ Working systems in production, not decks and documentation. A good engagement en
 The fastest way to get clarity is a 30-minute conversation about your specific situation. No deck, no sales pitch — just a direct assessment of whether what you're trying to build is better served by in-house expertise, an external consultant, or a hybrid approach.
 
 [Get in touch](https://zelusottomayor.com/contact) and describe the process you want to automate. You'll walk away with a clearer picture of the right path, whatever that turns out to be.
+
+---
+
+*Related reading: [What does an AI consultant actually deliver](/blog/what-does-an-ai-consultant-actually-deliver) | [Why AI automation projects fail](/blog/why-ai-automation-projects-fail) | [How to hire an AI automation consultant](/blog/how-to-hire-ai-automation-consultant)*

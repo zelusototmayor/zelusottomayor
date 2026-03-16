@@ -7,9 +7,6 @@ tags: ["B2B outbound", "AI outbound", "cold email", "outbound sales", "sales aut
 author: "Ze Lu Sottomayor"
 published: true
 ---
-
-*Related reading: [AI outbound sales: how to build a B2B system that actually converts](/blog/ai-outbound-sales-b2b-that-actually-converts) | [Why AI automation projects fail](/blog/why-ai-automation-projects-fail) | [What does an AI consultant actually deliver](/blog/what-does-an-ai-consultant-actually-deliver)*
-
 ---
 
 I've been helping B2B teams build outbound systems for a while now. The conversation I keep having in 2026 is some version of this: "We started using AI for our cold email and the reply rate dropped. What happened?"
@@ -149,3 +146,7 @@ The honest answer: you can't scale it the same way you can scale a spray-and-pra
 The core point is simple: AI-generated outbound is failing because it produces scale without specificity. The solution is a process that uses AI for scale work and humans for voice work. If you're looking at low reply rates and wondering whether to add more AI, the answer is almost always less AI in the wrong place, not more.
 
 If you want to think through how this would work for your specific outbound process, [I'm happy to look at it](https://zelusottomayor.com/contact).
+
+---
+
+*Related reading: [AI outbound sales: how to build a B2B system that actually converts](/blog/ai-outbound-sales-b2b-that-actually-converts) | [Why AI automation projects fail](/blog/why-ai-automation-projects-fail) | [What does an AI consultant actually deliver](/blog/what-does-an-ai-consultant-actually-deliver)*

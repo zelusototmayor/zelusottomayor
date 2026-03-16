@@ -66,7 +66,7 @@ class BlogController < ApplicationController
       tags: Array(front_matter["tags"]),
       author: front_matter["author"] || "Ze Lu Sottomayor",
       content_html: markdown.render(body_md).html_safe,
-      excerpt: body_md.split("\n\n").first(3).join(" ").gsub(/[#*_`]/, "").truncate(200)
+      excerpt: generate_excerpt(body_md)
     }
   end
 
@@ -82,5 +82,26 @@ class BlogController < ApplicationController
     return raw unless raw.start_with?("---")
     parts = raw.split(/^---\s*$/, 3)
     parts[2].to_s.strip
+  end
+
+  def generate_excerpt(body_md)
+    # Skip Related reading lines and headings, find first real paragraph
+    lines = body_md.split("\n")
+    clean_lines = lines.reject do |line|
+      line.strip.start_with?("*Related reading", "Related reading", "#") ||
+      line.strip.empty? && lines.index(line) == 0
+    end
+
+    # Take first 3 non-empty paragraphs
+    paragraphs = clean_lines.join("\n").split("\n\n").reject(&:blank?).first(2).join(" ")
+
+    # Strip all markdown syntax
+    paragraphs
+      .gsub(/\[([^\]]+)\]\([^)]+\)/, '\1')  # [text](url) -> text
+      .gsub(/[#*_`~]/, "")                   # headers, bold, italic, code
+      .gsub(/^\s*[-*+]\s+/, "")             # list bullets
+      .gsub(/\s+/, " ")                      # normalize whitespace
+      .strip
+      .truncate(220)
   end
 end

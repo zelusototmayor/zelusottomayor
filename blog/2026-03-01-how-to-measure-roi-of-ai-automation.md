@@ -3,11 +3,10 @@ title: "How to Measure the ROI of AI Automation (A Framework That Actually Works
 description: "56% of companies report zero measurable ROI from AI investments. Here's why measurement fails — and a practical 4-metric framework to prove whether your AI automation is actually working."
 date: 2026-03-01
 slug: how-to-measure-roi-of-ai-automation
-author: Ze Lu Sotto Mayor
-tags: [ai-automation, roi, strategy, small-business]
-metaTitle: "How to Measure ROI of AI Automation | Ze Lu Sotto Mayor"
-metaDescription: "56% of businesses see zero AI ROI because they're measuring the wrong things. This 4-metric framework shows what actually matters — and how to calculate whether your AI automation is working."
-excerpt: "Most AI ROI calculations fail because they measure effort (tools purchased, prompts written) rather than outcomes (time saved, revenue generated, errors reduced). Here's the framework that changes that."
+author: "Ze Lu Sottomayor"
+tags: ["ai-automation", "roi", "strategy", "small-business"]
+meta_description: "56% of businesses see zero AI ROI because they're measuring the wrong things. This 4-metric framework shows what actually matters — and how to calculate whether your AI automation is working."
+published: true
 ---
 
 # How to Measure the ROI of AI Automation (A Framework That Actually Works)

@@ -7,9 +7,6 @@ tags: ["AI automation", "AI implementation", "AI risks", "business automation", 
 author: "Ze Lu Sottomayor"
 published: true
 ---
-
-*Related reading: [How to measure ROI of AI automation](/blog/how-to-measure-roi-of-ai-automation) | [5 business processes to automate first](/blog/5-business-processes-smes-automate-first) | [What does an AI consultant actually deliver](/blog/what-does-an-ai-consultant-actually-deliver)*
-
 ---
 
 Amazon just mandated that senior engineers sign off on every AI-assisted code change after an AI tool caused a 13-hour production outage. McKinsey's internal AI platform exposed 46 million records after an automated agent was given more access than it needed. These aren't edge cases — they're the predictable result of a pattern that plays out at every scale.
@@ -181,3 +178,7 @@ The difference between AI automation that delivers and AI automation that disapp
 A good consultant will slow you down at the start to make the project faster overall: documenting the current process, defining success metrics, identifying the human checkpoints, and scoping a first phase that's narrow enough to succeed rather than ambitious enough to impress.
 
 If you're considering AI automation for your business and want to start with a realistic assessment of what's possible and what it'll take, [book a discovery call](https://zelusottomayor.com/contact) to talk through your specific situation.
+
+---
+
+*Related reading: [How to measure ROI of AI automation](/blog/how-to-measure-roi-of-ai-automation) | [5 business processes to automate first](/blog/5-business-processes-smes-automate-first) | [What does an AI consultant actually deliver](/blog/what-does-an-ai-consultant-actually-deliver)*
