@@ -1,0 +1,238 @@
+<% content_for :title, "Quote Follow-Up Automation for Logistics | Ze Lu Sottomayor" %>
+<% content_for :meta_description, "A practical quote follow-up automation workflow for logistics teams: detect requests, collect supplier quotes, and respond faster without dropping warm leads." %>
+
+<style>
+  .qf-hero {
+    padding: 96px 0 72px;
+    background: var(--gradient-hero);
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .qf-eyebrow {
+    display: inline-block;
+    font-family: var(--font-mono);
+    font-size: var(--font-size-xs);
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--color-primary);
+    border: 1px solid rgba(39, 90, 78, 0.2);
+    background: rgba(39, 90, 78, 0.08);
+    padding: 6px 14px;
+    border-radius: var(--radius-full);
+    margin-bottom: 20px;
+  }
+
+  .qf-headline {
+    font-size: clamp(2rem, 5vw, 3.8rem);
+    line-height: 1.08;
+    letter-spacing: -0.03em;
+    margin-bottom: 16px;
+  }
+
+  .qf-headline em {
+    font-style: normal;
+    background: var(--gradient-text);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .qf-sub {
+    max-width: 760px;
+    margin: 0 auto 28px;
+    font-size: var(--font-size-lg);
+    color: var(--color-text-muted);
+  }
+
+  .qf-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 18px;
+    margin-top: 28px;
+  }
+
+  .qf-card {
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-xl);
+    padding: 24px;
+    box-shadow: var(--shadow-sm);
+    text-align: left;
+  }
+
+  .qf-step {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--color-primary);
+    margin-bottom: 8px;
+  }
+
+  .qf-card h3 {
+    font-size: var(--font-size-2xl);
+    margin-bottom: 10px;
+  }
+
+  .qf-card p {
+    margin: 0;
+  }
+
+  .qf-section {
+    padding: 72px 0;
+  }
+
+  .qf-process {
+    max-width: 920px;
+    margin: 0 auto;
+  }
+
+  .qf-process-item {
+    display: grid;
+    grid-template-columns: 110px 1fr;
+    gap: 16px;
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-xl);
+    padding: 20px;
+    margin-bottom: 14px;
+  }
+
+  .qf-process-tag {
+    align-self: start;
+    font-family: var(--font-mono);
+    font-size: 12px;
+    color: var(--color-primary);
+    border: 1px solid rgba(39, 90, 78, 0.2);
+    border-radius: var(--radius-full);
+    padding: 4px 10px;
+    text-align: center;
+  }
+
+  .qf-offer {
+    background: linear-gradient(135deg, rgba(39, 90, 78, 0.08) 0%, rgba(200, 161, 90, 0.08) 100%);
+    border: 1px solid rgba(39, 90, 78, 0.22);
+    border-radius: var(--radius-xl);
+    padding: 28px;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  .qf-offer ul {
+    margin-top: 12px;
+    margin-bottom: 0;
+  }
+
+  @media (max-width: 900px) {
+    .qf-grid { grid-template-columns: 1fr; }
+    .qf-process-item { grid-template-columns: 1fr; }
+  }
+</style>
+
+<section class="qf-hero">
+  <div class="container container--narrow">
+    <span class="qf-eyebrow">Logistics Quote Workflow</span>
+    <h1 class="qf-headline">Stop losing warm quote requests in <em>manual follow-up</em>.</h1>
+    <p class="qf-sub">
+      We implement a practical workflow for logistics teams: detect inbound quote requests,
+      collect the right supplier inputs, and send structured responses faster so more opportunities convert.
+    </p>
+    <%= link_to book_call_path, class: "cta-button cta-button--primary cta-button--large" do %>
+      <span>Book a 15-minute pilot call</span>
+    <% end %>
+  </div>
+</section>
+
+<section class="qf-section">
+  <div class="container">
+    <div class="qf-grid">
+      <article class="qf-card">
+        <div class="qf-step">Step 01</div>
+        <h3>Detect inbound quote requests</h3>
+        <p>Every inbound quote request is captured automatically and routed into the workflow immediately.</p>
+      </article>
+
+      <article class="qf-card">
+        <div class="qf-step">Step 02</div>
+        <h3>Acknowledge receipt instantly</h3>
+        <p>The client gets an immediate confirmation that the request was received and is being handled.</p>
+      </article>
+
+      <article class="qf-card">
+        <div class="qf-step">Step 03</div>
+        <h3>Decide direct answer vs supplier quote</h3>
+        <p>The system identifies whether the request can be answered directly or needs supplier pricing first.</p>
+      </article>
+
+      <article class="qf-card">
+        <div class="qf-step">Step 04</div>
+        <h3>Request supplier quotes when needed</h3>
+        <p>When required, quote requests are sent out automatically to the right suppliers with the right details.</p>
+      </article>
+
+      <article class="qf-card">
+        <div class="qf-step">Step 05</div>
+        <h3>Send structured quote response</h3>
+        <p>Client receives a clear, structured quote response quickly so warm demand does not go cold.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="qf-section bg-gradient">
+  <div class="container container--narrow">
+    <div class="section-header">
+      <h2 class="section-title">What the pilot includes</h2>
+      <p class="section-subtitle">Start small, prove value quickly, then decide if it should continue.</p>
+    </div>
+
+    <div class="qf-process">
+      <div class="qf-process-item">
+        <span class="qf-process-tag">Week 1</span>
+        <div>
+          <h3>Workflow setup</h3>
+          <p>Connect inbox flow, define quote categories, and map routing logic for your real process.</p>
+        </div>
+      </div>
+      <div class="qf-process-item">
+        <span class="qf-process-tag">Week 2</span>
+        <div>
+          <h3>Live run and tuning</h3>
+          <p>Run against live requests, adjust edge cases, and tighten response handling with your team.</p>
+        </div>
+      </div>
+      <div class="qf-process-item">
+        <span class="qf-process-tag">Outcome</span>
+        <div>
+          <h3>Go / no-go decision</h3>
+          <p>Review conversion impact and decide whether to continue into ongoing maintenance.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="qf-section">
+  <div class="container">
+    <div class="qf-offer">
+      <h3>Pilot-first approach</h3>
+      <p>We start with a pilot so you can test the system in your real operation with low risk before committing long-term.</p>
+      <ul>
+        <li>One focused quote-follow-up workflow</li>
+        <li>Real data and real response timings</li>
+        <li>Clear handoff into maintenance if useful</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<%= render 'shared/cta_section',
+  headline: "Want to test this in your workflow?",
+  subheadline: "Book a short call and I'll map exactly how this pilot would run for your team.",
+  button_text: "Book a pilot call",
+  button_url: book_call_path,
+  secondary_text: "Send me a message",
+  secondary_url: contact_path,
+  extra_info: "No long deck. Just practical scope + timeline." %>

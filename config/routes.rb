@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   get "/demo",       to: "pages#demo",       as: :demo
   get "/workflow",   to: "pages#workflow",   as: :workflow
   get "/proposal",   to: "pages#proposal",   as: :proposal
+  get "/quote-follow-up", to: "pages#quote_follow_up", as: :quote_follow_up
 
   # Blog
   get "/blog",      to: "blog#index", as: :blog

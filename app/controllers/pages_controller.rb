@@ -37,6 +37,9 @@ class PagesController < ApplicationController
   def proposal
   end
 
+  def quote_follow_up
+  end
+
   private
 
   def load_content_config
