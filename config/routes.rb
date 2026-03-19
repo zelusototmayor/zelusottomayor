@@ -15,6 +15,9 @@ Rails.application.routes.draw do
   get "/blog",      to: "blog#index", as: :blog
   get "/blog/:slug", to: "blog#show", as: :blog_post
 
+  # Dynamic sitemap
+  get "/sitemap.xml", to: "sitemaps#show", as: :sitemap, defaults: { format: :xml }
+
   # Case studies (individual project detail pages)
   resources :case_studies, only: [:show], path: 'work'
 
