@@ -253,4 +253,6 @@ The 56% zero-ROI figure isn't a verdict on AI automation — it's a verdict on h
 
 The framework above takes about two hours to apply per automation: one hour to establish baselines, one hour to do the day-30 calculation. For a good automation, that two hours unlocks months or years of compounding time savings. For a bad automation, it tells you quickly enough that you haven't wasted six months of team morale on something that doesn't work.
 
+*Related reading: [How to Automate Client Onboarding with AI](/blog/how-to-automate-client-onboarding-with-ai) | [The 5 Business Processes SMEs Should Automate First](/blog/5-business-processes-smes-automate-first)*
+
 *Building AI automation for your business and want to get the measurement right from day one? [Get in touch.](https://zelusottomayor.com)*

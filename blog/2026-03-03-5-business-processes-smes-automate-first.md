@@ -252,4 +252,6 @@ Yes, for most common processes. Tools like Zapier and Make are built for non-tec
 
 ---
 
+*Related reading: [How to Automate Client Onboarding with AI](/blog/how-to-automate-client-onboarding-with-ai) | [How to Measure the ROI of AI Automation](/blog/how-to-measure-roi-of-ai-automation)*
+
 *Ze Lu helps SMEs design and implement automation workflows that fit their actual operations — not generic templates. [See how the process works →](https://zelusottomayor.com)*
