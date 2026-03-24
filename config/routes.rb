@@ -10,6 +10,7 @@ Rails.application.routes.draw do
   get "/workflow",   to: "pages#workflow",   as: :workflow
   get "/proposal",   to: "pages#proposal",   as: :proposal
   get "/quote-follow-up", to: "pages#quote_follow_up", as: :quote_follow_up
+  get "/prospect-radar", to: "pages#prospect_radar", as: :prospect_radar
 
   # Blog
   get "/blog",      to: "blog#index", as: :blog

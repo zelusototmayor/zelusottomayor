@@ -1,0 +1,348 @@
+<% content_for :title, "Prospect Radar — 50 Qualified Prospects in 24 Hours | Ze Lu Sottomayor" %>
+<% content_for :meta_description, "Get 50 companies matching your ideal customer profile in 24 hours. Fresh web-scraped data, decision-maker contacts, and personalized outreach angles. EUR 497, one-time." %>
+
+<style>
+  .pr-page {
+    background: var(--color-bg, #fafaf8);
+    padding: 80px 0 48px;
+  }
+  .pr-container {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+
+  /* Hero */
+  .pr-hero {
+    text-align: center;
+    margin-bottom: 64px;
+  }
+  .pr-badge {
+    display: inline-block;
+    background: rgba(39, 90, 78, 0.08);
+    color: var(--color-primary, #275a4e);
+    padding: 6px 16px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 600;
+    margin-bottom: 24px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+  }
+  .pr-hero h1 {
+    font-size: clamp(28px, 5vw, 42px);
+    font-weight: 700;
+    line-height: 1.15;
+    margin-bottom: 20px;
+    color: var(--color-text, #1a1a1a);
+  }
+  .pr-hero h1 span {
+    color: var(--color-primary, #275a4e);
+  }
+  .pr-subtitle {
+    font-size: 18px;
+    color: var(--color-text-muted, #666);
+    max-width: 560px;
+    margin: 0 auto 32px;
+    line-height: 1.6;
+  }
+
+  /* Price block */
+  .pr-price-block {
+    background: #fff;
+    border: 1px solid var(--color-border, #e5e5e5);
+    border-radius: 16px;
+    padding: 32px;
+    margin-bottom: 48px;
+    text-align: center;
+  }
+  .pr-price {
+    font-size: 48px;
+    font-weight: 700;
+    color: var(--color-primary, #275a4e);
+  }
+  .pr-price-note {
+    font-size: 15px;
+    color: var(--color-text-muted, #666);
+    margin-top: 8px;
+  }
+  .pr-price-comparison {
+    margin-top: 16px;
+    padding-top: 16px;
+    border-top: 1px solid var(--color-border, #e5e5e5);
+    font-size: 14px;
+    color: var(--color-text-muted, #666);
+  }
+  .pr-price-comparison s {
+    color: #999;
+  }
+
+  /* Sections */
+  .pr-section {
+    margin-bottom: 48px;
+  }
+  .pr-section h2 {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: var(--color-text, #1a1a1a);
+  }
+
+  /* Checklist */
+  .pr-checklist {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  .pr-checklist li {
+    padding: 12px 0;
+    border-bottom: 1px solid var(--color-border, #e5e5e5);
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    font-size: 15px;
+    line-height: 1.5;
+  }
+  .pr-checklist li:last-child {
+    border-bottom: none;
+  }
+  .pr-check {
+    color: var(--color-primary, #275a4e);
+    font-weight: 700;
+    flex-shrink: 0;
+    margin-top: 2px;
+  }
+
+  /* Steps */
+  .pr-step {
+    padding: 20px 0;
+    border-bottom: 1px solid var(--color-border, #e5e5e5);
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+  }
+  .pr-step:last-child {
+    border-bottom: none;
+  }
+  .pr-step-num {
+    background: rgba(39, 90, 78, 0.08);
+    color: var(--color-primary, #275a4e);
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 14px;
+    flex-shrink: 0;
+  }
+  .pr-step-content h3 {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 4px;
+  }
+  .pr-step-content p {
+    font-size: 14px;
+    color: var(--color-text-muted, #666);
+    line-height: 1.5;
+  }
+
+  /* Proof grid */
+  .pr-proof-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+  .pr-proof-box {
+    background: #fff;
+    border: 1px solid var(--color-border, #e5e5e5);
+    border-radius: 12px;
+    padding: 24px;
+  }
+  .pr-proof-stat {
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--color-primary, #275a4e);
+  }
+  .pr-proof-label {
+    font-size: 14px;
+    color: var(--color-text-muted, #666);
+  }
+
+  /* CTA */
+  .pr-cta-section {
+    text-align: center;
+    padding: 48px 0;
+  }
+  .pr-cta-btn {
+    display: inline-block;
+    background: var(--color-primary, #275a4e);
+    color: #fff;
+    padding: 16px 40px;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: opacity 0.2s;
+  }
+  .pr-cta-btn:hover {
+    opacity: 0.9;
+    color: #fff;
+  }
+  .pr-cta-fine {
+    font-size: 13px;
+    color: var(--color-text-muted, #666);
+    margin-top: 12px;
+  }
+
+  /* FAQ */
+  .pr-faq-item {
+    padding: 16px 0;
+    border-bottom: 1px solid var(--color-border, #e5e5e5);
+  }
+  .pr-faq-item:last-child {
+    border-bottom: none;
+  }
+  .pr-faq-q {
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: var(--color-text, #1a1a1a);
+  }
+  .pr-faq-a {
+    font-size: 14px;
+    color: var(--color-text-muted, #666);
+    line-height: 1.5;
+  }
+
+  @media (max-width: 600px) {
+    .pr-price { font-size: 36px; }
+    .pr-proof-grid { grid-template-columns: 1fr; }
+  }
+</style>
+
+<div class="pr-page">
+  <div class="pr-container">
+
+    <!-- Hero -->
+    <div class="pr-hero">
+      <div class="pr-badge">No meeting required</div>
+      <h1>50 qualified prospects.<br><span>24 hours.</span></h1>
+      <p class="pr-subtitle">
+        We scrape the web for companies matching your exact profile,
+        enrich them with decision-maker contacts, and deliver a ready-to-use prospect list.
+        No databases. No recycled leads. Fresh data, every time.
+      </p>
+    </div>
+
+    <!-- Price -->
+    <div class="pr-price-block">
+      <div class="pr-price">&euro;497</div>
+      <div class="pr-price-note">One-time. No subscription. No contract.</div>
+      <div class="pr-price-comparison">
+        Manual research: <s>20-40 hours of work</s> = &euro;300-600 in labor cost.<br>
+        We deliver in 24 hours.
+      </div>
+    </div>
+
+    <!-- What you get -->
+    <div class="pr-section">
+      <h2>What you get</h2>
+      <ul class="pr-checklist">
+        <li><span class="pr-check">&#10003;</span> 50 companies matching your ideal customer profile</li>
+        <li><span class="pr-check">&#10003;</span> Decision-maker names and verified email addresses</li>
+        <li><span class="pr-check">&#10003;</span> Company signals: hiring, growth, funding, recent activity</li>
+        <li><span class="pr-check">&#10003;</span> Personalized outreach angle for each prospect</li>
+        <li><span class="pr-check">&#10003;</span> Delivered in a Google Sheet &mdash; ready to use immediately</li>
+        <li><span class="pr-check">&#10003;</span> 24-hour turnaround from brief to delivery</li>
+      </ul>
+    </div>
+
+    <!-- How it works -->
+    <div class="pr-section">
+      <h2>How it works</h2>
+      <div>
+        <div class="pr-step">
+          <div class="pr-step-num">1</div>
+          <div class="pr-step-content">
+            <h3>Tell us who you want to reach</h3>
+            <p>5-minute intake: industry, company size, geography, job titles, any specific criteria. We define the targeting together.</p>
+          </div>
+        </div>
+        <div class="pr-step">
+          <div class="pr-step-num">2</div>
+          <div class="pr-step-content">
+            <h3>We scrape and qualify</h3>
+            <p>Our system scrapes the web for matching companies, enriches them with decision-maker data, and scores each prospect on fit signals.</p>
+          </div>
+        </div>
+        <div class="pr-step">
+          <div class="pr-step-num">3</div>
+          <div class="pr-step-content">
+            <h3>You get 50 qualified prospects</h3>
+            <p>Delivered to a Google Sheet within 24 hours. Company name, contact name, email, phone (when available), website, and a personalized outreach angle.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Proof -->
+    <div class="pr-section">
+      <h2>Results from our own system</h2>
+      <div class="pr-proof-grid">
+        <div class="pr-proof-box">
+          <div class="pr-proof-stat">28.1%</div>
+          <div class="pr-proof-label">Email open rate on 235+ contacts</div>
+        </div>
+        <div class="pr-proof-box">
+          <div class="pr-proof-stat">15 min/day</div>
+          <div class="pr-proof-label">vs. 6+ hours/week of manual research</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Who this is for -->
+    <div class="pr-section">
+      <h2>Built for</h2>
+      <ul class="pr-checklist">
+        <li><span class="pr-check">&rarr;</span> Consulting firms that need a steady flow of qualified prospects</li>
+        <li><span class="pr-check">&rarr;</span> Professional services companies doing outbound manually</li>
+        <li><span class="pr-check">&rarr;</span> Small teams without a dedicated BD person</li>
+        <li><span class="pr-check">&rarr;</span> Recruitment agencies looking for companies with hiring needs</li>
+        <li><span class="pr-check">&rarr;</span> Anyone tired of buying the same recycled lead lists</li>
+      </ul>
+    </div>
+
+    <!-- CTA -->
+    <div class="pr-cta-section">
+      <a href="mailto:zelu@zelusottomayor.com?subject=Prospect%20Radar%20-%20I'm%20interested&body=Hi%20Ze%20Lu,%0A%0AI'd%20like%20to%20try%20Prospect%20Radar.%0A%0AMy%20company:%0AMy%20target%20market:%0A%0AThanks" class="pr-cta-btn">Get 50 prospects &mdash; &euro;497</a>
+      <p class="pr-cta-fine">No meeting required. Reply to the confirmation email with your targeting brief and we start immediately.</p>
+    </div>
+
+    <!-- FAQ -->
+    <div class="pr-section">
+      <h2>Questions</h2>
+      <div class="pr-faq-item">
+        <div class="pr-faq-q">What if the prospects don't match?</div>
+        <div class="pr-faq-a">We refine the targeting based on your feedback. If more than 20% don't match your criteria, we replace them at no extra cost.</div>
+      </div>
+      <div class="pr-faq-item">
+        <div class="pr-faq-q">How is this different from Apollo or ZoomInfo?</div>
+        <div class="pr-faq-a">Those are databases &mdash; everyone queries the same stale data. We scrape the live web daily for fresh signals. Your competitors aren't emailing these prospects because they're not in any database yet.</div>
+      </div>
+      <div class="pr-faq-item">
+        <div class="pr-faq-q">Can I get more than 50?</div>
+        <div class="pr-faq-a">Yes. We offer ongoing delivery: 50 prospects/week for &euro;1,200/month. Same quality, continuous pipeline.</div>
+      </div>
+      <div class="pr-faq-item">
+        <div class="pr-faq-q">Do you send the emails too?</div>
+        <div class="pr-faq-a">Prospect Radar is the list. If you want us to run the full outreach (sending, follow-ups, CRM sync), that's our retainer service. Start with the list, upgrade when ready.</div>
+      </div>
+      <div class="pr-faq-item">
+        <div class="pr-faq-q">What industries work best?</div>
+        <div class="pr-faq-a">B2B professional services: consulting, engineering, recruitment, accounting, legal, architecture. Any industry where you're selling to other businesses.</div>
+      </div>
+    </div>
+
+  </div>
+</div>

@@ -40,6 +40,9 @@ class PagesController < ApplicationController
   def quote_follow_up
   end
 
+  def prospect_radar
+  end
+
   private
 
   def load_content_config
