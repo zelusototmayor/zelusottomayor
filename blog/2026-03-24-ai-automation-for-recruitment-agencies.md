@@ -127,3 +127,4 @@ Data security is a legitimate concern, especially given GDPR, CCPA, and industry
 - [AI Automation for Accounting Firms](/blog/ai-automation-for-accounting-firms)
 - [How to Automate Client Onboarding with AI](/blog/how-to-automate-client-onboarding-with-ai)
 - [How to Measure the ROI of AI Automation](/blog/how-to-measure-roi-of-ai-automation)
+- [AI Automation for Marketing Agencies](/blog/ai-automation-for-marketing-agencies)

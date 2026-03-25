@@ -157,3 +157,4 @@ Most AI automation platforms integrate with the major accounting software ecosys
 - [How to Automate Client Onboarding with AI](/blog/how-to-automate-client-onboarding-with-ai)
 - [How to Measure ROI of AI Automation](/blog/how-to-measure-roi-of-ai-automation)
 - [Why AI Automation Projects Fail](/blog/why-ai-automation-projects-fail)
+- [AI Automation for Marketing Agencies](/blog/ai-automation-for-marketing-agencies)

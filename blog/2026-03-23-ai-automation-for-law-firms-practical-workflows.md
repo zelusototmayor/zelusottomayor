@@ -167,4 +167,6 @@ A single workflow (like client intake automation) can be implemented in 2 to 4 w
 - [Why AI Automation Projects Fail (And How to Avoid It)](/blog/why-ai-automation-projects-fail) — Common pitfalls and how to sidestep them
 - [What Does an AI Consultant Actually Deliver?](/blog/what-does-an-ai-consultant-actually-deliver) — What to expect from an implementation engagement
 
+- [AI Automation for Marketing Agencies](/blog/ai-automation-for-marketing-agencies) — 8 workflows that reclaim 25+ hours per week
+
 Ready to explore AI automation for your law firm? [Book a free consultation](https://zelusottomayor.com/workflow) to identify which workflows will have the highest impact for your practice.
