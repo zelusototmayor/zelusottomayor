@@ -74,7 +74,7 @@ class BlogController < ApplicationController
   def extract_front_matter(raw)
     return {} unless raw.start_with?("---")
     parts = raw.split(/^---\s*$/, 3)
-    YAML.safe_load(parts[1] || "") || {}
+    YAML.safe_load(parts[1] || "", permitted_classes: [Date]) || {}
   rescue
     {}
   end
