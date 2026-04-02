@@ -188,3 +188,4 @@ Every automated workflow includes human review checkpoints for critical decision
 - [5 Business Processes SMEs Should Automate First](/blog/5-business-processes-smes-automate-first) — prioritization guide for companies starting their automation journey
 - [Why AI Automation Projects Fail](/blog/why-ai-automation-projects-fail) — common mistakes and how to avoid them
 - [AI Automation for Small Business: A Practical Guide](/blog/ai-automation-small-business-practical-guide) — comprehensive overview for companies new to AI automation
+- [AI Automation for E-Commerce Businesses](/blog/ai-automation-for-ecommerce-businesses) — where AI delivers real ROI for online stores
