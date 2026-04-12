@@ -142,6 +142,7 @@ Done correctly, it reduces total workload while concentrating human effort on hi
 **Related reading:**
 
 - [Why AI Automation Projects Fail — and What Works Instead](/blog/why-ai-automation-projects-fail)
+- [AI Automation for Healthcare Practices: Reducing Admin Burden Without Compliance Risk](/blog/ai-automation-for-healthcare)
 - [What Does an AI Consultant Actually Deliver?](/blog/what-does-an-ai-consultant-actually-deliver)
 - [AI Implementation Services: What to Expect in the First 90 Days](/blog/ai-implementation-services)
 - [5 Business Processes SMEs Should Automate First](/blog/5-business-processes-smes-automate-first)

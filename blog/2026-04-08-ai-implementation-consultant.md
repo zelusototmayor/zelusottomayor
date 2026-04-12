@@ -235,6 +235,7 @@ That approach gives you fast signal on value and avoids the common pattern of ex
 Related reading:
 - [Why Your AI Pilot Failed (And What Real AI Automation Consulting Looks Like)](/blog/ai-automation-consulting-three-disciplines)
 - [AI Automation for Startups: What to Build First and What to Skip](/blog/ai-automation-for-startups)
+- [AI Automation for Healthcare Practices: Reducing Admin Burden Without Compliance Risk](/blog/ai-automation-for-healthcare)
 - [How to Automate Client Onboarding With AI](/blog/how-to-automate-client-onboarding-with-ai)
 - [AI Automation for Logistics Companies](/blog/ai-automation-for-logistics-companies)
 - [Human in the Loop AI: Why the Best Automation Still Needs You](/blog/human-in-the-loop-ai)
