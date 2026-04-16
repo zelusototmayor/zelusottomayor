@@ -43,6 +43,12 @@ class PagesController < ApplicationController
   def prospect_radar
   end
 
+  def logistics_eng
+  end
+
+  def logistics_pt
+  end
+
   private
 
   def load_content_config

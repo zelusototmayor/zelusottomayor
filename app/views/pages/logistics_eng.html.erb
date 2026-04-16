@@ -1,0 +1,311 @@
+<% content_for :title, "AI-Powered Logistics Quote System | Ze Lu Sottomayor" %>
+<% content_for :meta_description, "An AI system that monitors your email, understands freight quote requests, looks up pricing, and sends professional quotations automatically. Try the live demo." %>
+<% content_for :body_class, "logistics-page" %>
+<% content_for :head do %>
+  <script type="application/ld+json">
+    <%= {
+      "@context" => "https://schema.org",
+      "@type" => "FAQPage",
+      "mainEntity" => [
+        {
+          "@type" => "Question",
+          "name" => "How does the AI logistics quote system work?",
+          "acceptedAnswer" => {
+            "@type" => "Answer",
+            "text" => "The system monitors your email inbox using Gmail API with Google Pub/Sub. When a quote request arrives, AI classifies the email, extracts freight details (origin, destination, weight, pallets), looks up your pricing table, and sends a professional quotation — all automatically in under 2 minutes."
+          }
+        },
+        {
+          "@type" => "Question",
+          "name" => "What languages does the logistics AI support?",
+          "acceptedAnswer" => {
+            "@type" => "Answer",
+            "text" => "The system automatically detects and responds in Portuguese, English, and Spanish. It replies in the same language the client used."
+          }
+        },
+        {
+          "@type" => "Question",
+          "name" => "What happens if the AI can't handle a request?",
+          "acceptedAnswer" => {
+            "@type" => "Answer",
+            "text" => "If a request is outside standard service areas or unclear after one clarification attempt, it's escalated to a human operator. The client is always informed immediately."
+          }
+        },
+        {
+          "@type" => "Question",
+          "name" => "How long does it take to set up the AI quote system for my company?",
+          "acceptedAnswer" => {
+            "@type" => "Answer",
+            "text" => "Setup takes days, not months. The system connects to your email, your Google Sheets pricing table, and your workflows. You control the rates and the AI handles the rest."
+          }
+        }
+      ]
+    }.to_json.html_safe %>
+  </script>
+<% end %>
+
+<%= render 'pages/logistics_styles' %>
+
+<%# ======================================
+    HERO
+    ====================================== %>
+<section class="lg-hero">
+  <div class="container container--narrow">
+    <span class="lg-eyebrow">Logistics AI Demo</span>
+    <h1 class="lg-headline">
+      Your inbox receives a quote request. <em>Our AI responds in minutes.</em>
+    </h1>
+    <p class="lg-sub">
+      An AI-powered system that monitors your email, understands freight quote requests, looks up your pricing, and sends professional quotations — automatically, 24/7.
+    </p>
+    <div class="lg-hero__cta">
+      <a href="#lg-try" class="cta-button cta-button--primary cta-button--large">Try it — Send a quote request</a>
+      <a href="#lg-workflow" class="cta-button cta-button--secondary cta-button--large">See how it works</a>
+    </div>
+  </div>
+</section>
+
+<%# ======================================
+    TEST IT (section 2 — form)
+    ====================================== %>
+<section class="lg-try" id="lg-try">
+  <div class="container container--narrow">
+    <div class="section-header">
+      <h2 class="section-title">Send a quote request. Get a response in minutes.</h2>
+      <p class="section-subtitle">Fill in the form below. The AI will process your request and respond with a real quote to your email.</p>
+    </div>
+
+    <div class="lg-email-callout">
+      <%= form_with url: logistics_quote_path, method: :post, class: "lg-quote-form", local: true do |f| %>
+        <div class="form-field">
+          <%= f.label :email, "Your email *", class: "form-label" %>
+          <%= f.email_field :email, class: "form-input", placeholder: "your.email@example.com", required: true, name: "logistics_quote[email]" %>
+        </div>
+
+        <div class="form-row--split">
+          <div class="form-field">
+            <%= f.label :origin, "Origin *", class: "form-label" %>
+            <%= f.text_field :origin, class: "form-input", placeholder: "e.g. Lisbon", required: true, name: "logistics_quote[origin]" %>
+          </div>
+          <div class="form-field">
+            <%= f.label :destination, "Destination *", class: "form-label" %>
+            <%= f.text_field :destination, class: "form-input", placeholder: "e.g. Porto", required: true, name: "logistics_quote[destination]" %>
+          </div>
+        </div>
+
+        <div class="form-row--split">
+          <div class="form-field">
+            <%= f.label :weight, "Weight (kg) *", class: "form-label" %>
+            <%= f.text_field :weight, class: "form-input", placeholder: "e.g. 1200", required: true, name: "logistics_quote[weight]" %>
+          </div>
+          <div class="form-field">
+            <%= f.label :pallets, "Number of pallets", class: "form-label" %>
+            <%= f.text_field :pallets, class: "form-input", placeholder: "e.g. 4", name: "logistics_quote[pallets]" %>
+          </div>
+        </div>
+
+        <div class="form-row--split">
+          <div class="form-field">
+            <%= f.label :cargo_type, "Cargo type", class: "form-label" %>
+            <%= f.text_field :cargo_type, class: "form-input", placeholder: "e.g. Office supplies", name: "logistics_quote[cargo_type]" %>
+          </div>
+          <div class="form-field">
+            <%= f.label :desired_date, "Desired date", class: "form-label" %>
+            <%= f.text_field :desired_date, class: "form-input", placeholder: "e.g. Next Monday", name: "logistics_quote[desired_date]" %>
+          </div>
+        </div>
+
+        <div class="form-field">
+          <%= f.label :extra_info, "Additional information", class: "form-label" %>
+          <%= f.text_area :extra_info, class: "form-textarea", rows: 3, placeholder: "Any extra details about the shipment...", name: "logistics_quote[extra_info]" %>
+        </div>
+
+        <div class="form-submit">
+          <%= f.submit "Send quote request", class: "cta-button cta-button--primary cta-button--large" %>
+        </div>
+      <% end %>
+
+      <div class="lg-next-steps">
+        <span class="lg-next-step"><strong>1</strong> The system detects the request automatically</span>
+        <span class="lg-next-step"><strong>2</strong> Extracts the details and calculates the price</span>
+        <span class="lg-next-step"><strong>3</strong> You get the quote by email in under 2 minutes</span>
+      </div>
+
+      <div class="lg-or-divider">or</div>
+
+      <div class="lg-freeform">
+        <p>Prefer to write the request your own way? Send an email directly.</p>
+        <a href="mailto:max@zelusottomayor.com?subject=Pedido%20de%20Cota%C3%A7%C3%A3o" class="lg-mailto-btn">Email max@zelusottomayor.com &rarr;</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<%# ======================================
+    HOW IT WORKS (3 steps)
+    ====================================== %>
+<section class="lg-workflow" id="lg-workflow">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title">How it works</h2>
+    </div>
+
+    <div class="lg-timeline">
+
+      <div class="lg-step" data-step>
+        <div class="lg-node">1</div>
+        <div class="lg-card">
+          <div class="lg-card-header">
+            <span class="lg-card-icon">IN</span>
+            <span class="lg-card-label">Step 01 — Real-Time</span>
+          </div>
+          <h3 class="lg-card-title">The email arrives</h3>
+          <p class="lg-card-desc">
+            The system monitors your email inbox 24/7. When a quote request comes in, it's detected automatically — regardless of format, language, or level of detail.
+          </p>
+        </div>
+      </div>
+
+      <div class="lg-step" data-step>
+        <div class="lg-node">2</div>
+        <div class="lg-card">
+          <div class="lg-card-header">
+            <span class="lg-card-icon">AI</span>
+            <span class="lg-card-label">Step 02 — Processing</span>
+          </div>
+          <h3 class="lg-card-title">The AI interprets and calculates</h3>
+          <p class="lg-card-desc">
+            The AI reads the email, extracts the relevant information (origin, destination, weight, cargo type), looks up your pricing table, and calculates the total. If information is missing, it asks the client for clarification — listing exactly what's needed.
+          </p>
+        </div>
+      </div>
+
+      <div class="lg-step" data-step>
+        <div class="lg-node">3</div>
+        <div class="lg-card">
+          <div class="lg-card-header">
+            <span class="lg-card-icon">SEND</span>
+            <span class="lg-card-label">Step 03 — Response</span>
+          </div>
+          <h3 class="lg-card-title">The quote is sent</h3>
+          <p class="lg-card-desc">
+            The client receives a professional email with the full quotation: cost breakdown, surcharges, delivery timeline, and validity. In the language they wrote in. In under 2 minutes.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<%# ======================================
+    PRICING TABLE
+    ====================================== %>
+<section class="lg-pricing">
+  <div class="container container--narrow">
+    <div class="section-header">
+      <h2 class="section-title">The pricing table — check it yourself</h2>
+      <p class="section-subtitle">This is the exact table the AI references. Send a request, get the quote, and verify the numbers here. Full transparency.</p>
+    </div>
+
+    <div class="lg-pricing-iframe">
+      <iframe
+        src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQ3j7SwKFhm2FVXBr-jWRmZjWRxJVq07gU2E4MCaCduypG6R0A3FVA6EqMyKX3MvC911tQu7PvA1jyZ/pubhtml"
+        title="Logistics pricing table">
+      </iframe>
+    </div>
+
+    <a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vQ3j7SwKFhm2FVXBr-jWRmZjWRxJVq07gU2E4MCaCduypG6R0A3FVA6EqMyKX3MvC911tQu7PvA1jyZ/pubhtml" target="_blank" rel="noopener" class="lg-pricing-link">
+      Open full pricing table &rarr;
+    </a>
+  </div>
+</section>
+
+<%# ======================================
+    TRUST BUILDERS (3 items)
+    ====================================== %>
+<section class="lg-trust">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title">What about non-standard requests?</h2>
+    </div>
+
+    <div class="lg-trust__grid">
+      <div class="lg-trust__item">
+        <h3 class="lg-trust__item-title">Asks for what's missing</h3>
+        <p class="lg-trust__item-text">If the information isn't enough to generate a quote, the AI replies asking specifically for what's needed — not a generic "please clarify." Origin, destination, weight — listed clearly.</p>
+      </div>
+
+      <div class="lg-trust__item">
+        <h3 class="lg-trust__item-title">Escalates to a human</h3>
+        <p class="lg-trust__item-text">Non-standard requests, special cargo, or situations the AI can't resolve — are forwarded to your team. The client is informed immediately. Never left without a response.</p>
+      </div>
+
+      <div class="lg-trust__item">
+        <h3 class="lg-trust__item-title">Everything logged</h3>
+        <p class="lg-trust__item-text">Every email, every AI decision, every quote sent — is logged. Complete traceability. You keep full control.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<%# ======================================
+    FOR COMPANIES
+    ====================================== %>
+<section class="lg-companies">
+  <div class="container container--narrow">
+    <div class="lg-companies__box">
+      <h2 class="lg-companies__headline">Want this for your company?</h2>
+      <p class="lg-companies__text">
+        This demo uses simulated data. The real system connects to your email and your pricing table. Setup in days.
+      </p>
+      <ul class="lg-companies__list">
+        <li>Your quote inbox monitored 24/7</li>
+        <li>Connected to your pricing table — you control the rates</li>
+        <li>Human escalation when needed</li>
+      </ul>
+      <%= link_to "Let's set up yours", book_call_path, class: "cta-button cta-button--primary cta-button--large" %>
+    </div>
+  </div>
+</section>
+
+<%# ======================================
+    TECHNICAL ARCHITECTURE
+    ====================================== %>
+<section class="lg-tech">
+  <div class="container container--narrow">
+    <details>
+      <summary>Under the hood</summary>
+      <div class="lg-tech__body">
+        <p class="lg-tech__desc">
+          The system is a containerized Python service running on Docker. It uses Gmail API with Google Pub/Sub for real-time email monitoring (no polling), Google Sheets API for pricing data, and Claude AI for natural language understanding. The service runs 24/7 on a dedicated server.
+        </p>
+        <div class="lg-tech__stack">
+          <span class="lg-tech__tag">Python 3.11+</span>
+          <span class="lg-tech__tag">FastAPI</span>
+          <span class="lg-tech__tag">Gmail API</span>
+          <span class="lg-tech__tag">Google Cloud Pub/Sub</span>
+          <span class="lg-tech__tag">Google Sheets API</span>
+          <span class="lg-tech__tag">Anthropic Claude API</span>
+          <span class="lg-tech__tag">Docker</span>
+          <span class="lg-tech__tag">Docker Compose</span>
+          <span class="lg-tech__tag">SQLite / PostgreSQL</span>
+        </div>
+      </div>
+    </details>
+  </div>
+</section>
+
+<%# ======================================
+    FINAL CTA
+    ====================================== %>
+<%= render 'shared/cta_section',
+    headline: "Let's automate your quoting process.",
+    subheadline: "Book a call and I'll walk through how this system would work with your pricing and your inbox.",
+    button_text: "Book a call",
+    button_url: book_call_path,
+    secondary_text: "Or send me a message",
+    secondary_url: contact_path,
+    extra_info: "I typically respond within 24 hours." %>
+
+<%= render 'pages/logistics_scripts' %>

@@ -20,6 +20,7 @@
         <li><%= link_to "Outbound System", workflow_path, class: "nav-link #{'active' if current_page?(workflow_path)}" %></li>
         <li><%= link_to "Workflow Automation", automation_path, class: "nav-link #{'active' if current_page?(automation_path)}" %></li>
         <li><%= link_to "Previous Work", work_path, class: "nav-link #{'active' if current_page?(work_path)}" %></li>
+        <li><%= link_to "Logistics AI", logistics_eng_path, class: "nav-link #{'active' if current_page?(logistics_eng_path) || current_page?(logistics_pt_path)}" %></li>
       </ul>
 
       <div class="nav-cta">

@@ -1,0 +1,15 @@
+Pedido de Cotação
+
+Origem: <%= @params[:origin] %>
+Destino: <%= @params[:destination] %>
+Peso (kg): <%= @params[:weight] %>
+Numero de paletes: <%= @params[:pallets] %>
+Tipo de carga: <%= @params[:cargo_type] %>
+Data pretendida: <%= @params[:desired_date] %>
+<% if @params[:extra_info].present? %>
+
+Informacao adicional:
+<%= @params[:extra_info] %>
+<% end %>
+
+Email do cliente: <%= @params[:email] %>

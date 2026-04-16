@@ -1,0 +1,34 @@
+<script>
+  document.addEventListener('turbo:load', function() {
+    var steps = document.querySelectorAll('.lg-step[data-step]');
+
+    if ('IntersectionObserver' in window) {
+      var observer = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('lg-visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, {
+        threshold: 0.05,
+        rootMargin: '0px 0px -30px 0px'
+      });
+
+      steps.forEach(function(step) {
+        observer.observe(step);
+      });
+    } else {
+      steps.forEach(function(step) {
+        step.classList.add('lg-visible');
+      });
+    }
+  });
+
+  // Fallback: if steps still hidden after 1.5s, show them
+  setTimeout(function() {
+    document.querySelectorAll('.lg-step[data-step]:not(.lg-visible)').forEach(function(step) {
+      step.classList.add('lg-visible');
+    });
+  }, 1500);
+</script>

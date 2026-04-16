@@ -11,6 +11,9 @@ Rails.application.routes.draw do
   get "/proposal",   to: "pages#proposal",   as: :proposal
   get "/quote-follow-up", to: "pages#quote_follow_up", as: :quote_follow_up
   get "/prospect-radar", to: "pages#prospect_radar", as: :prospect_radar
+  get "/logistics/eng", to: "pages#logistics_eng", as: :logistics_eng
+  get "/logistics/pt",  to: "pages#logistics_pt",  as: :logistics_pt
+  post "/logistics/quote", to: "logistics_quotes#create", as: :logistics_quote
 
   # Blog
   get "/blog",      to: "blog#index", as: :blog

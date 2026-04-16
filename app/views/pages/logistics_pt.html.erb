@@ -1,0 +1,311 @@
+<% content_for :title, "Sistema de Cotação Automatica com IA para Logistica | Ze Lu Sottomayor" %>
+<% content_for :meta_description, "Um sistema de IA que monitoriza o seu email, interpreta pedidos de cotação de transporte, consulta a tabela de precos e envia cotacoes profissionais automaticamente. Experimente a demo ao vivo." %>
+<% content_for :body_class, "logistics-page" %>
+<% content_for :head do %>
+  <script type="application/ld+json">
+    <%= {
+      "@context" => "https://schema.org",
+      "@type" => "FAQPage",
+      "mainEntity" => [
+        {
+          "@type" => "Question",
+          "name" => "Como funciona o sistema de cotação automatica com IA?",
+          "acceptedAnswer" => {
+            "@type" => "Answer",
+            "text" => "O sistema monitoriza a sua caixa de email atraves da Gmail API com Google Pub/Sub. Quando chega um pedido de cotação, a IA classifica o email, extrai os detalhes do transporte (origem, destino, peso, paletes), consulta a tabela de precos e envia uma cotação profissional — tudo automaticamente em menos de 2 minutos."
+          }
+        },
+        {
+          "@type" => "Question",
+          "name" => "Que idiomas suporta a IA de logistica?",
+          "acceptedAnswer" => {
+            "@type" => "Answer",
+            "text" => "O sistema deteta automaticamente e responde em Portugues, Ingles e Espanhol. Responde sempre no mesmo idioma em que o cliente escreveu."
+          }
+        },
+        {
+          "@type" => "Question",
+          "name" => "O que acontece se a IA nao conseguir processar um pedido?",
+          "acceptedAnswer" => {
+            "@type" => "Answer",
+            "text" => "Se o pedido estiver fora das areas de servico padrao ou se continuar pouco claro apos uma tentativa de esclarecimento, e encaminhado para um operador humano. O cliente e sempre informado imediatamente."
+          }
+        },
+        {
+          "@type" => "Question",
+          "name" => "Quanto tempo demora a configurar o sistema para a minha empresa?",
+          "acceptedAnswer" => {
+            "@type" => "Answer",
+            "text" => "A configuracao demora dias, nao meses. O sistema liga-se ao seu email, a sua tabela de precos no Google Sheets e aos seus fluxos de trabalho. Voce controla os precos e a IA trata do resto."
+          }
+        }
+      ]
+    }.to_json.html_safe %>
+  </script>
+<% end %>
+
+<%= render 'pages/logistics_styles' %>
+
+<%# ======================================
+    HERO
+    ====================================== %>
+<section class="lg-hero">
+  <div class="container container--narrow">
+    <span class="lg-eyebrow">Demo IA Logistica</span>
+    <h1 class="lg-headline">
+      A sua caixa de entrada recebe um pedido de cotação. <em>A nossa IA responde em minutos.</em>
+    </h1>
+    <p class="lg-sub">
+      Um sistema com inteligencia artificial que monitoriza o seu email, interpreta pedidos de cotação de transporte, consulta a sua tabela de precos e envia cotacoes profissionais — automaticamente, 24/7.
+    </p>
+    <div class="lg-hero__cta">
+      <a href="#lg-try" class="cta-button cta-button--primary cta-button--large">Experimente — Envie um pedido de cotação</a>
+      <a href="#lg-workflow" class="cta-button cta-button--secondary cta-button--large">Veja como funciona</a>
+    </div>
+  </div>
+</section>
+
+<%# ======================================
+    TESTE (section 2 — form)
+    ====================================== %>
+<section class="lg-try" id="lg-try">
+  <div class="container container--narrow">
+    <div class="section-header">
+      <h2 class="section-title">Envie um pedido de cotação. Receba uma resposta em minutos.</h2>
+      <p class="section-subtitle">Preencha o formulario abaixo. A IA vai processar o pedido e responder com uma cotação real para o seu email.</p>
+    </div>
+
+    <div class="lg-email-callout">
+      <%= form_with url: logistics_quote_path, method: :post, class: "lg-quote-form", local: true do |f| %>
+        <div class="form-field">
+          <%= f.label :email, "O seu email *", class: "form-label" %>
+          <%= f.email_field :email, class: "form-input", placeholder: "seu.email@exemplo.com", required: true, name: "logistics_quote[email]" %>
+        </div>
+
+        <div class="form-row--split">
+          <div class="form-field">
+            <%= f.label :origin, "Origem *", class: "form-label" %>
+            <%= f.text_field :origin, class: "form-input", placeholder: "Ex: Lisboa", required: true, name: "logistics_quote[origin]" %>
+          </div>
+          <div class="form-field">
+            <%= f.label :destination, "Destino *", class: "form-label" %>
+            <%= f.text_field :destination, class: "form-input", placeholder: "Ex: Porto", required: true, name: "logistics_quote[destination]" %>
+          </div>
+        </div>
+
+        <div class="form-row--split">
+          <div class="form-field">
+            <%= f.label :weight, "Peso (kg) *", class: "form-label" %>
+            <%= f.text_field :weight, class: "form-input", placeholder: "Ex: 1200", required: true, name: "logistics_quote[weight]" %>
+          </div>
+          <div class="form-field">
+            <%= f.label :pallets, "Numero de paletes", class: "form-label" %>
+            <%= f.text_field :pallets, class: "form-input", placeholder: "Ex: 4", name: "logistics_quote[pallets]" %>
+          </div>
+        </div>
+
+        <div class="form-row--split">
+          <div class="form-field">
+            <%= f.label :cargo_type, "Tipo de carga", class: "form-label" %>
+            <%= f.text_field :cargo_type, class: "form-input", placeholder: "Ex: Materiais de escritorio", name: "logistics_quote[cargo_type]" %>
+          </div>
+          <div class="form-field">
+            <%= f.label :desired_date, "Data pretendida", class: "form-label" %>
+            <%= f.text_field :desired_date, class: "form-input", placeholder: "Ex: Proxima segunda-feira", name: "logistics_quote[desired_date]" %>
+          </div>
+        </div>
+
+        <div class="form-field">
+          <%= f.label :extra_info, "Informacao adicional", class: "form-label" %>
+          <%= f.text_area :extra_info, class: "form-textarea", rows: 3, placeholder: "Qualquer detalhe extra sobre o transporte...", name: "logistics_quote[extra_info]" %>
+        </div>
+
+        <div class="form-submit">
+          <%= f.submit "Enviar pedido de cotação", class: "cta-button cta-button--primary cta-button--large" %>
+        </div>
+      <% end %>
+
+      <div class="lg-next-steps">
+        <span class="lg-next-step"><strong>1</strong> O sistema detecta o pedido automaticamente</span>
+        <span class="lg-next-step"><strong>2</strong> Extrai a informacao e calcula o preco</span>
+        <span class="lg-next-step"><strong>3</strong> Recebe a cotação por email em menos de 2 minutos</span>
+      </div>
+
+      <div class="lg-or-divider">ou</div>
+
+      <div class="lg-freeform">
+        <p>Prefere escrever o pedido a sua maneira? Envie um email diretamente.</p>
+        <a href="mailto:max@zelusottomayor.com?subject=Pedido%20de%20Cota%C3%A7%C3%A3o" class="lg-mailto-btn">Enviar email para max@zelusottomayor.com &rarr;</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<%# ======================================
+    COMO FUNCIONA (3 steps)
+    ====================================== %>
+<section class="lg-workflow" id="lg-workflow">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title">Como funciona</h2>
+    </div>
+
+    <div class="lg-timeline">
+
+      <div class="lg-step" data-step>
+        <div class="lg-node">1</div>
+        <div class="lg-card">
+          <div class="lg-card-header">
+            <span class="lg-card-icon">IN</span>
+            <span class="lg-card-label">Passo 01 — Tempo Real</span>
+          </div>
+          <h3 class="lg-card-title">O email chega</h3>
+          <p class="lg-card-desc">
+            O sistema monitoriza a sua caixa de email 24/7. Quando chega um pedido de cotação, e detectado automaticamente — independentemente do formato, idioma ou nivel de detalhe.
+          </p>
+        </div>
+      </div>
+
+      <div class="lg-step" data-step>
+        <div class="lg-node">2</div>
+        <div class="lg-card">
+          <div class="lg-card-header">
+            <span class="lg-card-icon">AI</span>
+            <span class="lg-card-label">Passo 02 — Processamento</span>
+          </div>
+          <h3 class="lg-card-title">A IA interpreta e calcula</h3>
+          <p class="lg-card-desc">
+            A inteligencia artificial le o email, extrai a informacao relevante (origem, destino, peso, tipo de carga), consulta a sua tabela de precos e calcula o valor. Se faltar informacao, pede esclarecimento ao cliente — listando exatamente o que precisa.
+          </p>
+        </div>
+      </div>
+
+      <div class="lg-step" data-step>
+        <div class="lg-node">3</div>
+        <div class="lg-card">
+          <div class="lg-card-header">
+            <span class="lg-card-icon">SEND</span>
+            <span class="lg-card-label">Passo 03 — Resposta</span>
+          </div>
+          <h3 class="lg-card-title">A cotação e enviada</h3>
+          <p class="lg-card-desc">
+            O cliente recebe um email profissional com a cotação completa: discriminacao de custos, sobretaxas, prazo de entrega e validade. No idioma em que escreveu. Em menos de 2 minutos.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<%# ======================================
+    TABELA DE PRECOS
+    ====================================== %>
+<section class="lg-pricing">
+  <div class="container container--narrow">
+    <div class="section-header">
+      <h2 class="section-title">A tabela de precos — verifique voce mesmo</h2>
+      <p class="section-subtitle">Esta e a tabela exata que a IA consulta. Envie um pedido, receba a cotação, e confirme os valores aqui. Transparencia total.</p>
+    </div>
+
+    <div class="lg-pricing-iframe">
+      <iframe
+        src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQ3j7SwKFhm2FVXBr-jWRmZjWRxJVq07gU2E4MCaCduypG6R0A3FVA6EqMyKX3MvC911tQu7PvA1jyZ/pubhtml"
+        title="Tabela de precos de logistica">
+      </iframe>
+    </div>
+
+    <a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vQ3j7SwKFhm2FVXBr-jWRmZjWRxJVq07gU2E4MCaCduypG6R0A3FVA6EqMyKX3MvC911tQu7PvA1jyZ/pubhtml" target="_blank" rel="noopener" class="lg-pricing-link">
+      Abrir tabela completa &rarr;
+    </a>
+  </div>
+</section>
+
+<%# ======================================
+    TRUST BUILDERS (3 items)
+    ====================================== %>
+<section class="lg-trust">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title">E quando o pedido nao e simples?</h2>
+    </div>
+
+    <div class="lg-trust__grid">
+      <div class="lg-trust__item">
+        <h3 class="lg-trust__item-title">Pede o que falta</h3>
+        <p class="lg-trust__item-text">Se a informacao nao for suficiente para cotação, a IA responde ao cliente a pedir especificamente o que precisa — nao um generico "por favor clarifique". Origem, destino, peso — listado claramente.</p>
+      </div>
+
+      <div class="lg-trust__item">
+        <h3 class="lg-trust__item-title">Escala para humano</h3>
+        <p class="lg-trust__item-text">Pedidos fora do normal, mercadorias especiais, ou situacoes que a IA nao consegue resolver — sao encaminhados para a sua equipa. O cliente e informado de imediato. Nunca fica sem resposta.</p>
+      </div>
+
+      <div class="lg-trust__item">
+        <h3 class="lg-trust__item-title">Tudo registado</h3>
+        <p class="lg-trust__item-text">Cada email, cada decisao da IA, cada cotação enviada — fica registado. Rastreabilidade completa. Voce mantem o controlo total.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<%# ======================================
+    PARA EMPRESAS
+    ====================================== %>
+<section class="lg-companies">
+  <div class="container container--narrow">
+    <div class="lg-companies__box">
+      <h2 class="lg-companies__headline">Quer isto para a sua empresa?</h2>
+      <p class="lg-companies__text">
+        Esta demo usa dados simulados. O sistema real liga-se ao seu email e a sua tabela de precos. Configuracao em dias.
+      </p>
+      <ul class="lg-companies__list">
+        <li>A sua caixa de cotacoes monitorizada 24/7</li>
+        <li>Ligado a sua tabela de precos — voce controla os valores</li>
+        <li>Escalamento humano quando necessario</li>
+      </ul>
+      <%= link_to "Vamos configurar o seu", book_call_path, class: "cta-button cta-button--primary cta-button--large" %>
+    </div>
+  </div>
+</section>
+
+<%# ======================================
+    ARQUITETURA TECNICA
+    ====================================== %>
+<section class="lg-tech">
+  <div class="container container--narrow">
+    <details>
+      <summary>Por dentro do sistema</summary>
+      <div class="lg-tech__body">
+        <p class="lg-tech__desc">
+          O sistema e um servico Python containerizado a correr em Docker. Usa a Gmail API com Google Pub/Sub para monitorizacao de email em tempo real (sem polling), Google Sheets API para dados de precos, e Claude AI para compreensao de linguagem natural. O servico corre 24/7 num servidor dedicado.
+        </p>
+        <div class="lg-tech__stack">
+          <span class="lg-tech__tag">Python 3.11+</span>
+          <span class="lg-tech__tag">FastAPI</span>
+          <span class="lg-tech__tag">Gmail API</span>
+          <span class="lg-tech__tag">Google Cloud Pub/Sub</span>
+          <span class="lg-tech__tag">Google Sheets API</span>
+          <span class="lg-tech__tag">Anthropic Claude API</span>
+          <span class="lg-tech__tag">Docker</span>
+          <span class="lg-tech__tag">Docker Compose</span>
+          <span class="lg-tech__tag">SQLite / PostgreSQL</span>
+        </div>
+      </div>
+    </details>
+  </div>
+</section>
+
+<%# ======================================
+    CTA FINAL
+    ====================================== %>
+<%= render 'shared/cta_section',
+    headline: "Vamos automatizar o seu processo de cotação.",
+    subheadline: "Marque uma chamada e eu mostro como este sistema funcionaria com os seus precos e o seu email.",
+    button_text: "Marcar chamada",
+    button_url: book_call_path,
+    secondary_text: "Ou envie-me uma mensagem",
+    secondary_url: contact_path,
+    extra_info: "Normalmente respondo dentro de 24 horas." %>
+
+<%= render 'pages/logistics_scripts' %>
