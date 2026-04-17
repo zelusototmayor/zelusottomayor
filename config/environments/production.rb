@@ -61,7 +61,6 @@ Rails.application.configure do
 
   # Resend HTTP API for email delivery (bypasses SMTP, uses port 443).
   config.action_mailer.delivery_method = :resend
-  config.action_mailer.resend_settings = { api_key: ENV["RESEND_API_KEY"] }
 
   # Enable locale fallbacks for I18n (makes lookups for any locale fall back to
   # the I18n.default_locale when a translation cannot be found).
