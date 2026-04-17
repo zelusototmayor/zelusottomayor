@@ -38,6 +38,9 @@ gem "thruster", require: false
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
 # gem "image_processing", "~> 1.2"
 
+# Resend email delivery (HTTP API, no SMTP)
+gem "resend"
+
 # Google Calendar API integration
 gem 'google-apis-calendar_v3', '~> 0.46'
 gem 'redcarpet', '~> 3.6'

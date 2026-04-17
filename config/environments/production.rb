@@ -59,18 +59,9 @@ Rails.application.configure do
   # Set host to be used by links generated in mailer templates.
   config.action_mailer.default_url_options = { host: "zelusottomayor.com", protocol: "https" }
 
-  # SMTP configuration — credentials pulled from environment variables (see .kamal/secrets and deploy.yml).
-  # Defaults assume Gmail/Google Workspace SMTP with an app password.
-  config.action_mailer.delivery_method = :smtp
-  config.action_mailer.smtp_settings = {
-    address:              ENV.fetch("SMTP_ADDRESS", "smtp.gmail.com"),
-    port:                 ENV.fetch("SMTP_PORT", 587).to_i,
-    domain:               ENV.fetch("SMTP_DOMAIN", "zelusottomayor.com"),
-    user_name:            ENV["SMTP_USERNAME"],
-    password:             ENV["SMTP_PASSWORD"],
-    authentication:       :plain,
-    enable_starttls_auto: true
-  }
+  # Resend HTTP API for email delivery (bypasses SMTP, uses port 443).
+  config.action_mailer.delivery_method = :resend
+  config.action_mailer.resend_settings = { api_key: ENV["RESEND_API_KEY"] }
 
   # Enable locale fallbacks for I18n (makes lookups for any locale fall back to
   # the I18n.default_locale when a translation cannot be found).
