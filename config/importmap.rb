@@ -9,8 +9,8 @@ pin_all_from "app/javascript/animations", under: "animations"
 pin_all_from "app/javascript/three", under: "three"
 
 # Animation libraries
-pin "gsap", to: "https://cdn.skypack.dev/gsap@3.12.5"
-pin "gsap/ScrollTrigger", to: "https://cdn.skypack.dev/gsap@3.12.5/ScrollTrigger"
-pin "gsap/ScrollSmoother", to: "https://cdn.skypack.dev/gsap@3.12.5/ScrollSmoother"
-pin "three", to: "https://cdn.skypack.dev/three@0.160.0"
-pin "lenis", to: "https://cdn.skypack.dev/@studio-freight/lenis@1.0.42"
+pin "gsap", to: "https://esm.sh/gsap@3.12.5"
+pin "gsap/ScrollTrigger", to: "https://esm.sh/gsap@3.12.5/ScrollTrigger"
+pin "gsap/ScrollSmoother", to: "https://esm.sh/gsap@3.12.5/ScrollSmoother"
+pin "three", to: "https://esm.sh/three@0.160.0"
+pin "lenis", to: "https://esm.sh/@studio-freight/lenis@1.0.42"
