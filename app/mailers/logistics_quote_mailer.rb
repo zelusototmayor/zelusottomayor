@@ -6,7 +6,7 @@ class LogisticsQuoteMailer < ApplicationMailer
 
     mail(
       to: 'max@zelusottomayor.com',
-      subject: 'Pedido de Cotação',
+      subject: "Pedido de Cotação ##{SecureRandom.hex(4)}",
       reply_to: params[:email]
     )
   end
