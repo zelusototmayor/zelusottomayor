@@ -49,6 +49,9 @@ class PagesController < ApplicationController
   def logistics_pt
   end
 
+  def logistics_agent_pt
+  end
+
   private
 
   def load_content_config

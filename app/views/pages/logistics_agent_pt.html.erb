@@ -1,0 +1,241 @@
+<% content_for :title, "Agente de IA para Logística — Cotações e Pedidos de Serviço Automáticos | Ze Lu Sottomayor" %>
+<% content_for :meta_description, "Uma camada de IA sobre a caixa de entrada da sua empresa. Lê, interpreta e responde a pedidos de cotação e pedidos de serviço — 24/7, em PT/EN/ES. Você mantém o controlo dos preços e das regras." %>
+<% content_for :body_class, "logistics-agent-page" %>
+<% content_for :head do %>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;0,9..144,800;1,9..144,600&family=Manrope:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<% end %>
+
+<%= render 'pages/logistics_agent_styles' %>
+
+<div class="lga-wrap">
+
+  <%# ===== TOPBAR ===== %>
+  <div class="lga-topbar">
+    Documento de apresentação <span>·</span> Ze Lu Sottomayor <span>·</span> Abril 2026
+  </div>
+
+  <%# ===== HERO ===== %>
+  <section class="lga-hero">
+    <div class="lga-container lga-container--narrow">
+      <span class="lga-eyebrow">Agente de IA para Operações de Logística</span>
+      <h1>Uma camada de IA sobre a sua caixa de entrada. <em>Lê, responde e escala quando é preciso.</em></h1>
+      <p class="lga-hero__sub">Pedidos de cotação e pedidos de serviço chegam por email, a toda a hora, em vários idiomas. O agente interpreta cada um, consulta os seus dados, e responde em minutos — ou passa ao humano quando o caso o exige. Você mantém o controlo dos preços, das regras e das decisões.</p>
+
+      <div class="lga-hero__metrics">
+        <div class="lga-metric">
+          <div class="lga-metric__value">&lt; 2 min</div>
+          <div class="lga-metric__label">Resposta média</div>
+        </div>
+        <div class="lga-metric">
+          <div class="lga-metric__value">24/7</div>
+          <div class="lga-metric__label">Sem pausa</div>
+        </div>
+        <div class="lga-metric">
+          <div class="lga-metric__value">PT · EN · ES</div>
+          <div class="lga-metric__label">Idiomas suportados</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <%# ===== PROBLEM ===== %>
+  <section>
+    <div class="lga-container">
+      <div class="lga-section-header">
+        <h2>O problema na caixa de entrada de uma operação logística</h2>
+        <p>Três padrões que aparecem em qualquer empresa com volume de email a pedir cotações ou serviços.</p>
+      </div>
+
+      <div class="lga-problem-grid">
+        <div class="lga-problem">
+          <div class="lga-problem__num">01</div>
+          <div class="lga-problem__title">Pedidos chegam em formatos caóticos</div>
+          <p class="lga-problem__desc">Uns são formais, outros são duas linhas. Uns têm peso e paletes, outros dizem "umas caixas". Uns estão em inglês, outros em português com erros. Alguém tem de ler tudo e decidir.</p>
+        </div>
+        <div class="lga-problem">
+          <div class="lga-problem__num">02</div>
+          <div class="lga-problem__title">Resposta lenta = negócio perdido</div>
+          <p class="lga-problem__desc">O cliente que pede cotação a três transportadoras escolhe quem responde primeiro com um preço credível. Se a resposta demora quatro horas, perde-se o pedido mesmo tendo o melhor preço.</p>
+        </div>
+        <div class="lga-problem">
+          <div class="lga-problem__num">03</div>
+          <div class="lga-problem__title">Pedidos de serviço consomem tempo</div>
+          <p class="lga-problem__desc">"Onde está a minha remessa?", "envie-me o POD", "podem entregar na quinta?". São rápidos individualmente, mas o somatório consome horas do comercial e do operacional todos os dias.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <%# ===== MODES ===== %>
+  <section class="lga-modes">
+    <div class="lga-container">
+      <div class="lga-section-header">
+        <h2>Uma plataforma. Dois modos de funcionamento.</h2>
+        <p>A mesma arquitetura — ler email, interpretar, consultar dados, responder — aplicada a dois fluxos distintos. Você ativa o que precisa, quando precisar.</p>
+      </div>
+
+      <div class="lga-modes-grid">
+        <div class="lga-mode">
+          <div class="lga-mode__tag">Modo 1 · Cotações</div>
+          <h3 class="lga-mode__title">Pedidos de cotação automáticos</h3>
+          <p class="lga-mode__desc">O cliente envia um pedido de transporte. O agente extrai origem, destino, peso, paletes, tipo de carga; consulta a sua tabela de preços e zonas; calcula o valor com sobretaxas e IVA; e envia uma cotação profissional no idioma do cliente.</p>
+          <ul class="lga-mode__examples">
+            <li>"Preciso de cotação Lisboa → Porto, 1200kg, 4 paletes, segunda-feira"</li>
+            <li>"Quanto custa levar 3 paletes de mat. escritório para Braga?"</li>
+            <li>"Quote for shipping 800kg from Faro to Madrid next week"</li>
+          </ul>
+          <div class="lga-mode__status lga-status--live">A funcionar · Demo disponível</div>
+        </div>
+
+        <div class="lga-mode">
+          <div class="lga-mode__tag">Modo 2 · Pedidos de Serviço</div>
+          <h3 class="lga-mode__title">Atendimento a clientes existentes</h3>
+          <p class="lga-mode__desc">Clientes que já trabalham convosco perguntam pelo estado de uma remessa, pedem um POD, reagendam uma entrega ou esclarecem uma fatura. O agente liga-se ao vosso TMS/ERP, procura a informação e responde — ou encaminha o caso para a pessoa certa.</p>
+          <ul class="lga-mode__examples">
+            <li>"Onde está o envio com referência #XYZ-4821?"</li>
+            <li>"Podem enviar-me o comprovativo de entrega da fatura 2026/441?"</li>
+            <li>"É possível reagendar a entrega de amanhã para sexta?"</li>
+          </ul>
+          <div class="lga-mode__status lga-status--extension">Extensão · 2–4 semanas a configurar</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <%# ===== FLOW ===== %>
+  <section class="lga-alt">
+    <div class="lga-container">
+      <div class="lga-section-header">
+        <h2>O que acontece em cada email</h2>
+        <p>O mesmo fluxo para os dois modos. Transparente, registado, auditável.</p>
+      </div>
+
+      <div class="lga-flow">
+        <div class="lga-flow-step">
+          <div class="lga-flow-step__num">1</div>
+          <div class="lga-flow-step__title">Deteta</div>
+          <p class="lga-flow-step__desc">Notificação em tempo real da sua caixa de entrada. Sem polling, sem atrasos.</p>
+          <div class="lga-flow-step__time">~1 seg</div>
+        </div>
+        <div class="lga-flow-step">
+          <div class="lga-flow-step__num">2</div>
+          <div class="lga-flow-step__title">Interpreta</div>
+          <p class="lga-flow-step__desc">A IA classifica o pedido, extrai os dados relevantes e identifica o idioma.</p>
+          <div class="lga-flow-step__time">~15 seg</div>
+        </div>
+        <div class="lga-flow-step">
+          <div class="lga-flow-step__num">3</div>
+          <div class="lga-flow-step__title">Consulta</div>
+          <p class="lga-flow-step__desc">Vai à sua tabela de preços, zonas, ou ao TMS. Calcula ou procura a informação.</p>
+          <div class="lga-flow-step__time">~30 seg</div>
+        </div>
+        <div class="lga-flow-step">
+          <div class="lga-flow-step__num">4</div>
+          <div class="lga-flow-step__title">Responde</div>
+          <p class="lga-flow-step__desc">Envia a resposta no idioma do cliente. Ou, se não está seguro, passa para um humano.</p>
+          <div class="lga-flow-step__time">~30 seg</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <%# ===== CONTROL ===== %>
+  <section>
+    <div class="lga-container">
+      <div class="lga-section-header">
+        <h2>Você mantém o controlo</h2>
+        <p>A IA não toma decisões comerciais. Aplica as regras que vocês definem.</p>
+      </div>
+
+      <div class="lga-control-grid">
+        <ul class="lga-control-list">
+          <li><strong>Preços são vossos.</strong> Vivem numa folha que vocês editam. Mudam a folha, a IA usa os novos valores.</li>
+          <li><strong>Regras de escalamento são vossas.</strong> "Acima de X euros vai para humano." "Mercadoria perigosa vai sempre para humano." "Cliente Y tem condições especiais." Tudo configurável.</li>
+          <li><strong>Estilo de resposta é vosso.</strong> Formal, informal, a vossa assinatura, o vosso disclaimer. Uma amostra e afinamos.</li>
+          <li><strong>Modo supervisionado na fase inicial.</strong> As primeiras semanas a IA prepara respostas e alguém da vossa equipa aprova antes de enviar.</li>
+          <li><strong>Tudo registado.</strong> Cada email, cada decisão, cada resposta — ficam em histórico auditável.</li>
+        </ul>
+
+        <div class="lga-escalation-card">
+          <h3>E quando a IA não deve decidir?</h3>
+          <p>Pedidos fora das regras normais, cargas especiais, valores acima do limiar, clientes que exigem tratamento manual — são encaminhados para a pessoa responsável na vossa equipa, com o contexto completo preparado. O cliente é sempre informado de imediato. Nunca fica um email sem resposta.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <%# ===== PRIVACY ===== %>
+  <section class="lga-privacy">
+    <div class="lga-container">
+      <div class="lga-section-header">
+        <h2>Proteção de dados</h2>
+        <p>O que a arquitetura já faz hoje para proteger os vossos dados.</p>
+      </div>
+
+      <div class="lga-privacy-col">
+        <h3>O que já está em vigor</h3>
+        <ul>
+          <li>Comunicações encriptadas em trânsito (TLS/HTTPS) em todas as chamadas externas.</li>
+          <li>Infraestrutura em servidores europeus (DigitalOcean Amesterdão / Frankfurt).</li>
+          <li>Tokens de acesso OAuth revogáveis a qualquer momento pelo vosso administrador de Workspace.</li>
+          <li>Nenhuns dados vendidos, partilhados ou usados para treino de modelos.</li>
+          <li>Registo de todas as ações do agente — auditoria completa do que foi processado.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <%# ===== TIMELINE ===== %>
+  <section class="lga-alt">
+    <div class="lga-container">
+      <div class="lga-section-header">
+        <h2>Do "sim" ao agente a responder</h2>
+        <p>Três a quatro semanas do arranque à operação autónoma, com o vosso controlo em cada fase.</p>
+      </div>
+
+      <div class="lga-timeline">
+        <div class="lga-timeline-row">
+          <div class="lga-timeline-row__phase">Semana 1</div>
+          <div class="lga-timeline-row__content">
+            <h4>Configuração técnica e recolha de dados</h4>
+            <p>OAuth no vosso Workspace, tabela de preços configurada, exemplos reais de pedidos recolhidos, regras de escalamento definidas.</p>
+          </div>
+        </div>
+        <div class="lga-timeline-row">
+          <div class="lga-timeline-row__phase">Semana 2</div>
+          <div class="lga-timeline-row__content">
+            <h4>Piloto supervisionado</h4>
+            <p>A IA prepara cada resposta. A vossa equipa aprova ou edita antes de enviar. Cada edição afina o sistema.</p>
+          </div>
+        </div>
+        <div class="lga-timeline-row">
+          <div class="lga-timeline-row__phase">Semana 3</div>
+          <div class="lga-timeline-row__content">
+            <h4>Envio automático com limites</h4>
+            <p>Envio automático para casos claros; humanos decidem acima de um valor definido por vocês.</p>
+          </div>
+        </div>
+        <div class="lga-timeline-row">
+          <div class="lga-timeline-row__phase">A partir da semana 4</div>
+          <div class="lga-timeline-row__content">
+            <h4>Operação autónoma + relatório semanal</h4>
+            <p>Limiar de automação ajustado ao conforto da equipa. Relatório todas as segundas-feiras com volumes, escalamentos e qualquer anomalia.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <%# ===== CTA ===== %>
+  <section class="lga-cta">
+    <div class="lga-container lga-container--narrow">
+      <h2>Próximo passo: uma demo com os vossos pedidos reais</h2>
+      <p>Enviem-me 10–20 emails anonimizados dos pedidos que recebem — cotação, serviço, qualquer mistura — e eu mostro numa chamada o que a IA faria com cada um. Sem compromisso, sem contrato.</p>
+      <div class="lga-cta__actions">
+        <a href="mailto:zsottomayor@gmail.com?subject=Demo%20Agente%20Log%C3%ADstica" class="lga-btn lga-btn--primary">Marcar demo</a>
+        <%= link_to "Ver demo online ao vivo", logistics_pt_path, class: "lga-btn lga-btn--secondary" %>
+      </div>
+    </div>
+  </section>
+
+</div>

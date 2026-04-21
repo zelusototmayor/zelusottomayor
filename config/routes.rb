@@ -13,6 +13,7 @@ Rails.application.routes.draw do
   get "/prospect-radar", to: "pages#prospect_radar", as: :prospect_radar
   get "/logistics/eng", to: "pages#logistics_eng", as: :logistics_eng
   get "/logistics/pt",  to: "pages#logistics_pt",  as: :logistics_pt
+  get "/logistics-agent/pt", to: "pages#logistics_agent_pt", as: :logistics_agent_pt
   post "/logistics/quote", to: "logistics_quotes#create", as: :logistics_quote
 
   # Blog
